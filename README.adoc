@@ -1,0 +1,36 @@
+# ReactTicToe
+React/Election/Tic-Tac-Toe
+
+## How to Run
+
+
+### Download the Repo with git
+[source,script]
+----
+git clone https://github.com/regcole/ReactTicToe.git
+
+----
+
+### Navigate to the downloaded repo
+[source,script]
+----
+cd ReactTicToe
+----
+
+### Install the Progam wtih 'npm'
+[source,script]
+----
+npm install
+----
+
+### Build the Program 
+[source,script]
+----
+npm run-script build
+----
+
+### Start the prorgam
+source,script]
+----
+npm run-script start
+----
