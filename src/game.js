@@ -6,36 +6,11 @@ import ReactDOM from 'react-dom';
 import Datastore from 'nedb';
 import Board from './board';
 
-
-function PastWinner(pastWinner) {
-    return (
-        <li><
-            span>{pastWinner.id}</span>
-            <span>{pastWinner.player}</span>
-        </li>
-    );
-}
-
-
-
-function reloadWinners(winners , db) {
-    // winners = db.allDocs({include_docs: true, descending: true}, function(err, doc) {
-    //     return doc.rows;
-    //     console.log('Successfully got all winners!');
-    // });
-}
-
+const db = new Datastore({filename: '/app/db/data.db', autoload: true});
 
 
 // The Game will keep track of who's turn it is and the history of moves made.
 class Game extends React.Component {
-
-    renderPastWinner(pastWinner) {
-    return (
-        <PastWinner pastWinner={pastWinner}>
-        </PastWinner>
-    );
-}
 
     constructor() {
         super();
@@ -45,87 +20,27 @@ class Game extends React.Component {
                     squares: Array(9).fill(null)
                 }
             ],
-            db: new Datastore({ filename: 'app/db/data.db',autoload: true }),
-            pastWinners: [],
+            records: new Set(),
             stepNumber: 0,
             xIsNext: true
         };
     }
 
-
-    loadWinners() {
-        this.state.db.find({}, function (err, docs) {
-            console.log('Successfully got all winners!');
-            return docs;
-        });
-    }
-
-    handleMoveForComputer() {
-        const history = this.state.history.slice(0, this.state.stepNumber + 1);
-        const current = history[history.length - 1];
-        const squares = current.squares.slice();
-        const moveForComputer = computerMove(squares);
-        if (calculateWinner(squares) || squares[moveForComputer]) {
-            return;
-        }
-        squares[moveForComputer] =  "O";
-        this.setState({
-            history: history.concat([
-                {
-                    squares: squares
-                }
-            ]),
-            stepNumber: history.length,
-            xIsNext: !this.state.xIsNext
-        });
-
-    }
-
-    handleClick(i) {
-        const history = this.state.history.slice(0, this.state.stepNumber + 1);
-        const current = history[history.length - 1];
-        const squares = current.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-            return;
-        }
-        squares[i] =  "X";
-        this.setState({
-            history: history.concat([
-                {
-                    squares: squares
-                }
-            ]),
-            stepNumber: history.length,
-            xIsNext: !this.state.xIsNext
-        });
-    }
-
-    jumpTo(step) {
-        this.setState({
-            stepNumber: step,
-            xIsNext: (step % 2) === 0
-        });
-    }
-
     componentDidUpdate() {
-        if(!this.state.xIsNext){
+        if (!this.state.xIsNext) {
             this.handleMoveForComputer();
         }
-        const winners = this.state.pastWinners;
-        const db =  this.state.db;
-        // this.state.db.changes({
-        //     since: 'now',
-        //     live: true
-        // }).on('change', function () {
-        //     reloadWinners(winners, db);
-        // });
+        const history = this.state.history;
+        const current = history[this.state.stepNumber];
+        const winner = calculateWinner(current.squares);
+        if (winner) {
+            saveWinner(winner);
+        }
     }
 
     componentDidMount() {
-        this.state.pastWinners = this.loadWinners();
-        reloadWinners()
+        loadWinners(this);
     }
-
 
     render() {
         const history = this.state.history;
@@ -144,23 +59,9 @@ class Game extends React.Component {
         let status;
         if (winner) {
             status = "Winner: " + winner;
-            this.saveWinner(winner);
-
-
         } else {
             status = "Next player: " + (this.state.xIsNext ? "X" : "O");
         }
-
-
-        var records = [];
-        this.state.db.find({}, function (err, docs) {
-            console.log('Successfully got all winners!');
-            records = docs;
-            return docs;
-         });
-
-        let pastFolks = records.map(record => this.renderPastWinner(record));
-
 
         return (
             <div className="game">
@@ -171,14 +72,14 @@ class Game extends React.Component {
                     />
                 </div>
                 <div className="well well-lg game-info-well">
-                        <div className="game-info">
-                            <div>{status}</div>
-                            <ol>{moves}</ol>
-                        </div>
+                    <div className="game-info">
+                        <div>{status}</div>
+                        <ol>{moves}</ol>
+                    </div>
                 </div>
                 <div className="well well-lg game-info-well">
                     <div>Past Winners!</div>
-                    <ol>{pastFolks}</ol>
+                    <ol>{this.state.records}</ol>
                 </div>
 
             </div>
@@ -186,28 +87,124 @@ class Game extends React.Component {
     }
 
     /**
-     * Insert the winner into the DB
-     * @param winner
+     * delegate com move to Computer AI
      */
-    saveWinner(winner) {
-        var winningPlayer = {
-            date: new Date().toISOString(),
-            player: winner
-        };
+    handleMoveForComputer() {
+        const history = this.state.history.slice(0, this.state.stepNumber + 1);
+        const current = history[history.length - 1];
+        const squares = current.squares.slice();
+        const moveForComputer = computerMove(squares);
+        if (calculateWinner(squares) || squares[moveForComputer]) {
+            return;
+        }
+        squares[moveForComputer] = "O";
+        this.setState({
+            history: history.concat([
+                {
+                    squares: squares
+                }
+            ]),
+            stepNumber: history.length,
+            xIsNext: !this.state.xIsNext
+        });
 
-        this.state.db.insert(winningPlayer, function (err, newDoc) {   // Callback is optional
-            // newDoc is the newly inserted document, including its _id
-            if (!err) {
-                console.log('Successfully posted a winner!');
-            }
+    }
+
+    /**
+     * Handle User Click per square
+     * @param i
+     */
+    handleClick(i) {
+        const history = this.state.history.slice(0, this.state.stepNumber + 1);
+        const current = history[history.length - 1];
+        const squares = current.squares.slice();
+        if (calculateWinner(squares) || squares[i]) {
+            return;
+        }
+        squares[i] = "X";
+        this.setState({
+            history: history.concat([
+                {
+                    squares: squares
+                }
+            ]),
+            stepNumber: history.length,
+            xIsNext: !this.state.xIsNext
         });
     }
+
+    /**
+     * Jump too  a particular move
+     * @param step
+     */
+    jumpTo(step) {
+        this.setState({
+            stepNumber: step,
+            xIsNext: (step % 2) === 0
+        });
+    }
+
+
 }
 
 // ========================================
 
 ReactDOM.render(<Game />, document.getElementById("root"));
 
+
+function renderPlayer(doc) {
+    if (doc) {
+        return (
+            <li key={doc._id}>
+                <div>Date Won: {doc.dateWon}</div>
+                <div>Player Mark: {doc.mark}</div>
+            </li>
+
+        );
+    }
+}
+
+/**
+ * Load winners from DB
+ */
+function loadWinners(board) {
+    var winners = new Set();
+    db.find({}, function (err, docs) {
+        for (let doc of docs) {
+            winners.add(renderPlayer(doc));
+        }
+        board.setState({
+            records: winners
+        });
+        console.log('Successfully got all winners!');
+    });
+
+    return winners;
+}
+
+/**
+ * Insert the winner into the DB
+ * @param winner
+ */
+function saveWinner(winner) {
+    var winningPlayer = {
+        dateWon: new Date().toISOString(),
+        mark: winner
+    };
+
+    db.insert(winningPlayer, function (err, newDoc) {   // Callback is optional
+        // newDoc is the newly inserted document, including its _id
+        if (!err) {
+            console.log('Successfully posted a winner!');
+        }
+    });
+}
+
+/**
+ * Helper function to determine Winner
+ * @param squares
+ * @returns {*}
+ */
 function calculateWinner(squares) {
     const lines = [
         [0, 1, 2],
@@ -228,10 +225,20 @@ function calculateWinner(squares) {
     return null;
 }
 
+/**
+ * Helper function to determine if space is free
+ * @param square
+ * @returns {boolean}
+ */
 function probableSpace(square) {
     return square === null;
 }
 
+/**
+ * The AI for deciding computers next move
+ * @param squares
+ * @returns {null}
+ */
 function computerMove(squares) {
     const lines = [
         [0, 1, 2],
@@ -245,17 +252,17 @@ function computerMove(squares) {
     ];
 
     // First See if Computer has a winning move to make
-    for (let i = 0 ; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
 
-        if (squares[a] ==='O' && (squares[b] === 'O') && probableSpace(squares[c])) {
+        if (squares[a] === 'O' && (squares[b] === 'O') && probableSpace(squares[c])) {
             console.log("computer going for win");
             return c;
-        } else if (probableSpace(squares[a]) && (squares[b]==='O') && (squares[c] === 'O')) {
+        } else if (probableSpace(squares[a]) && (squares[b] === 'O') && (squares[c] === 'O')) {
             console.log("computer going for win");
 
             return a;
-        } else if (squares[a] ==='O' && probableSpace(squares[b]) && (squares[c] === 'O')) {
+        } else if (squares[a] === 'O' && probableSpace(squares[b]) && (squares[c] === 'O')) {
             console.log("computer going for win");
 
             return b;
@@ -263,17 +270,17 @@ function computerMove(squares) {
     }
 
     // If not Then prevent player from winning next turn
-    for (let i = 0 ; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
-         if (squares[a] ==='X' && squares[b] === 'X' && probableSpace(squares[c])) {
+        if (squares[a] === 'X' && squares[b] === 'X' && probableSpace(squares[c])) {
             console.log("computer preventing defeat: ");
 
             return c;
-        } else if (probableSpace(squares[a]) && squares[b]==='X' && squares[c] === 'X') {
+        } else if (probableSpace(squares[a]) && squares[b] === 'X' && squares[c] === 'X') {
             console.log("computer preventing defeat");
 
             return a;
-        } else if (squares[a] ==='X' && probableSpace(squares[b]) && squares[c] === 'X') {
+        } else if (squares[a] === 'X' && probableSpace(squares[b]) && squares[c] === 'X') {
             console.log("computer preventing defeat");
 
             return b;
@@ -281,37 +288,37 @@ function computerMove(squares) {
     }
 
     // If not in jeopardy of losing then play a spot to get closer to winning
-    for (let i = 0 ; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
-        if (squares[a] ==='O' && probableSpace(squares[b]) && probableSpace(squares[c])) {
-            console.log("computer making moves c:"+c);
+        if (squares[a] === 'O' && probableSpace(squares[b]) && probableSpace(squares[c])) {
+            console.log("computer making moves c:" + c);
             return c;
-        } else if (probableSpace(squares[a]) && (squares[b]==='O') && probableSpace(squares[c])) {
-            console.log("computer making moves a: "+a);
+        } else if (probableSpace(squares[a]) && (squares[b] === 'O') && probableSpace(squares[c])) {
+            console.log("computer making moves a: " + a);
 
             return a;
         } else if (probableSpace(squares[a]) && probableSpace(squares[b]) && (squares[c] === 'O')) {
-            console.log("computer making moves a: "+a);
+            console.log("computer making moves a: " + a);
 
             return a;
-        } else  if (probableSpace(squares[a]) && probableSpace(squares[b]) && probableSpace(squares[c])) {
-            console.log("computer making moves b:"+b);
+        } else if (probableSpace(squares[a]) && probableSpace(squares[b]) && probableSpace(squares[c])) {
+            console.log("computer making moves b:" + b);
             return b;
         }
     }
 
     // if nothing is open then find nearest available
-    for (let i = 0 ; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
         if (probableSpace(squares[a])) {
-            console.log("computer stalling moves c:"+a);
+            console.log("computer stalling moves c:" + a);
             return a;
         } else if (probableSpace(squares[b])) {
-            console.log("computer stalling moves a: "+b);
+            console.log("computer stalling moves a: " + b);
 
             return b;
-        } else if (probableSpace(squares[c]) ) {
-            console.log("computer stalling move: "+c);
+        } else if (probableSpace(squares[c])) {
+            console.log("computer stalling move: " + c);
             return c;
         }
     }

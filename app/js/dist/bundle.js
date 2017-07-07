@@ -14474,36 +14474,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-function PastWinner(pastWinner) {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'li',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'span',
-            null,
-            pastWinner.id
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'span',
-            null,
-            pastWinner.player
-        )
-    );
-}
-
-function reloadWinners(winners, db) {}
-// winners = db.allDocs({include_docs: true, descending: true}, function(err, doc) {
-//     return doc.rows;
-//     console.log('Successfully got all winners!');
-// });
-
+const db = new __WEBPACK_IMPORTED_MODULE_2_nedb___default.a({ filename: '/app/db/data.db', autoload: true });
 
 // The Game will keep track of who's turn it is and the history of moves made.
 class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-
-    renderPastWinner(pastWinner) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PastWinner, { pastWinner: pastWinner });
-    }
 
     constructor() {
         super();
@@ -14511,79 +14485,26 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             history: [{
                 squares: Array(9).fill(null)
             }],
-            db: new __WEBPACK_IMPORTED_MODULE_2_nedb___default.a({ filename: 'app/db/data.db', autoload: true }),
-            pastWinners: [],
+            records: new Set(),
             stepNumber: 0,
             xIsNext: true
         };
-    }
-
-    loadWinners() {
-        this.state.db.find({}, function (err, docs) {
-            console.log('Successfully got all winners!');
-            return docs;
-        });
-    }
-
-    handleMoveForComputer() {
-        const history = this.state.history.slice(0, this.state.stepNumber + 1);
-        const current = history[history.length - 1];
-        const squares = current.squares.slice();
-        const moveForComputer = computerMove(squares);
-        if (calculateWinner(squares) || squares[moveForComputer]) {
-            return;
-        }
-        squares[moveForComputer] = "O";
-        this.setState({
-            history: history.concat([{
-                squares: squares
-            }]),
-            stepNumber: history.length,
-            xIsNext: !this.state.xIsNext
-        });
-    }
-
-    handleClick(i) {
-        const history = this.state.history.slice(0, this.state.stepNumber + 1);
-        const current = history[history.length - 1];
-        const squares = current.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-            return;
-        }
-        squares[i] = "X";
-        this.setState({
-            history: history.concat([{
-                squares: squares
-            }]),
-            stepNumber: history.length,
-            xIsNext: !this.state.xIsNext
-        });
-    }
-
-    jumpTo(step) {
-        this.setState({
-            stepNumber: step,
-            xIsNext: step % 2 === 0
-        });
     }
 
     componentDidUpdate() {
         if (!this.state.xIsNext) {
             this.handleMoveForComputer();
         }
-        const winners = this.state.pastWinners;
-        const db = this.state.db;
-        // this.state.db.changes({
-        //     since: 'now',
-        //     live: true
-        // }).on('change', function () {
-        //     reloadWinners(winners, db);
-        // });
+        const history = this.state.history;
+        const current = history[this.state.stepNumber];
+        const winner = calculateWinner(current.squares);
+        if (winner) {
+            saveWinner(winner);
+        }
     }
 
     componentDidMount() {
-        this.state.pastWinners = this.loadWinners();
-        reloadWinners();
+        loadWinners(this);
     }
 
     render() {
@@ -14607,19 +14528,9 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         let status;
         if (winner) {
             status = "Winner: " + winner;
-            this.saveWinner(winner);
         } else {
             status = "Next player: " + (this.state.xIsNext ? "X" : "O");
         }
-
-        var records = [];
-        this.state.db.find({}, function (err, docs) {
-            console.log('Successfully got all winners!');
-            records = docs;
-            return docs;
-        });
-
-        let pastFolks = records.map(record => this.renderPastWinner(record));
 
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
@@ -14661,36 +14572,134 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'ol',
                     null,
-                    pastFolks
+                    this.state.records
                 )
             )
         );
     }
 
     /**
-     * Insert the winner into the DB
-     * @param winner
+     * delegate com move to Computer AI
      */
-    saveWinner(winner) {
-        var winningPlayer = {
-            date: new Date().toISOString(),
-            player: winner
-        };
-
-        this.state.db.insert(winningPlayer, function (err, newDoc) {
-            // Callback is optional
-            // newDoc is the newly inserted document, including its _id
-            if (!err) {
-                console.log('Successfully posted a winner!');
-            }
+    handleMoveForComputer() {
+        const history = this.state.history.slice(0, this.state.stepNumber + 1);
+        const current = history[history.length - 1];
+        const squares = current.squares.slice();
+        const moveForComputer = computerMove(squares);
+        if (calculateWinner(squares) || squares[moveForComputer]) {
+            return;
+        }
+        squares[moveForComputer] = "O";
+        this.setState({
+            history: history.concat([{
+                squares: squares
+            }]),
+            stepNumber: history.length,
+            xIsNext: !this.state.xIsNext
         });
     }
+
+    /**
+     * Handle User Click per square
+     * @param i
+     */
+    handleClick(i) {
+        const history = this.state.history.slice(0, this.state.stepNumber + 1);
+        const current = history[history.length - 1];
+        const squares = current.squares.slice();
+        if (calculateWinner(squares) || squares[i]) {
+            return;
+        }
+        squares[i] = "X";
+        this.setState({
+            history: history.concat([{
+                squares: squares
+            }]),
+            stepNumber: history.length,
+            xIsNext: !this.state.xIsNext
+        });
+    }
+
+    /**
+     * Jump too  a particular move
+     * @param step
+     */
+    jumpTo(step) {
+        this.setState({
+            stepNumber: step,
+            xIsNext: step % 2 === 0
+        });
+    }
+
 }
 
 // ========================================
 
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Game, null), document.getElementById("root"));
 
+function renderPlayer(doc) {
+    if (doc) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            { key: doc._id },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                'Date Won: ',
+                doc.dateWon
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                'Player Mark: ',
+                doc.mark
+            )
+        );
+    }
+}
+
+/**
+ * Load winners from DB
+ */
+function loadWinners(board) {
+    var winners = new Set();
+    db.find({}, function (err, docs) {
+        for (let doc of docs) {
+            winners.add(renderPlayer(doc));
+        }
+        board.setState({
+            records: winners
+        });
+        console.log('Successfully got all winners!');
+    });
+
+    return winners;
+}
+
+/**
+ * Insert the winner into the DB
+ * @param winner
+ */
+function saveWinner(winner) {
+    var winningPlayer = {
+        dateWon: new Date().toISOString(),
+        mark: winner
+    };
+
+    db.insert(winningPlayer, function (err, newDoc) {
+        // Callback is optional
+        // newDoc is the newly inserted document, including its _id
+        if (!err) {
+            console.log('Successfully posted a winner!');
+        }
+    });
+}
+
+/**
+ * Helper function to determine Winner
+ * @param squares
+ * @returns {*}
+ */
 function calculateWinner(squares) {
     const lines = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
     for (let i = 0; i < lines.length; i++) {
@@ -14702,10 +14711,20 @@ function calculateWinner(squares) {
     return null;
 }
 
+/**
+ * Helper function to determine if space is free
+ * @param square
+ * @returns {boolean}
+ */
 function probableSpace(square) {
     return square === null;
 }
 
+/**
+ * The AI for deciding computers next move
+ * @param squares
+ * @returns {null}
+ */
 function computerMove(squares) {
     const lines = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 
