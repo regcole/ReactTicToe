@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 196);
+/******/ 	return __webpack_require__(__webpack_require__.s = 209);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -552,7 +552,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var _prodInvariant = __webpack_require__(3);
 
 var DOMProperty = __webpack_require__(13);
-var ReactDOMComponentFlags = __webpack_require__(58);
+var ReactDOMComponentFlags = __webpack_require__(66);
 
 var invariant = __webpack_require__(1);
 
@@ -1182,7 +1182,7 @@ module.exports = ReactComponentTreeHook;
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(138);
+  var ReactDebugTool = __webpack_require__(151);
   debugTool = ReactDebugTool;
 }
 
@@ -1253,11 +1253,11 @@ module.exports = emptyFunction;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(56);
+var CallbackQueue = __webpack_require__(64);
 var PooledClass = __webpack_require__(14);
-var ReactFeatureFlags = __webpack_require__(61);
+var ReactFeatureFlags = __webpack_require__(69);
 var ReactReconciler = __webpack_require__(17);
-var Transaction = __webpack_require__(28);
+var Transaction = __webpack_require__(30);
 
 var invariant = __webpack_require__(1);
 
@@ -2151,10 +2151,10 @@ var _assign = __webpack_require__(4);
 var ReactCurrentOwner = __webpack_require__(11);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(31);
+var canDefineProperty = __webpack_require__(33);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var REACT_ELEMENT_TYPE = __webpack_require__(78);
+var REACT_ELEMENT_TYPE = __webpack_require__(86);
 
 var RESERVED_PROPS = {
   key: true,
@@ -2493,11 +2493,11 @@ module.exports = ReactElement;
 
 
 
-var DOMNamespaces = __webpack_require__(34);
-var setInnerHTML = __webpack_require__(30);
+var DOMNamespaces = __webpack_require__(38);
+var setInnerHTML = __webpack_require__(32);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
-var setTextContent = __webpack_require__(75);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
+var setTextContent = __webpack_require__(83);
 
 var ELEMENT_NODE_TYPE = 1;
 var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -2616,7 +2616,7 @@ module.exports = DOMLazyTree;
 
 
 
-var ReactRef = __webpack_require__(152);
+var ReactRef = __webpack_require__(165);
 var ReactInstrumentation = __webpack_require__(8);
 
 var warning = __webpack_require__(2);
@@ -2790,24 +2790,24 @@ module.exports = ReactReconciler;
 
 var _assign = __webpack_require__(4);
 
-var ReactBaseClasses = __webpack_require__(77);
-var ReactChildren = __webpack_require__(182);
-var ReactDOMFactories = __webpack_require__(183);
+var ReactBaseClasses = __webpack_require__(85);
+var ReactChildren = __webpack_require__(195);
+var ReactDOMFactories = __webpack_require__(196);
 var ReactElement = __webpack_require__(15);
-var ReactPropTypes = __webpack_require__(185);
-var ReactVersion = __webpack_require__(187);
+var ReactPropTypes = __webpack_require__(198);
+var ReactVersion = __webpack_require__(200);
 
-var createReactClass = __webpack_require__(189);
-var onlyChild = __webpack_require__(191);
+var createReactClass = __webpack_require__(202);
+var onlyChild = __webpack_require__(204);
 
 var createElement = ReactElement.createElement;
 var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var lowPriorityWarning = __webpack_require__(48);
-  var canDefineProperty = __webpack_require__(31);
-  var ReactElementValidator = __webpack_require__(79);
+  var lowPriorityWarning = __webpack_require__(52);
+  var canDefineProperty = __webpack_require__(33);
+  var ReactElementValidator = __webpack_require__(87);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
   createFactory = ReactElementValidator.createFactory;
@@ -2972,12 +2972,12 @@ module.exports = reactProdInvariant;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(25);
-var EventPluginUtils = __webpack_require__(35);
-var ReactErrorUtils = __webpack_require__(39);
+var EventPluginRegistry = __webpack_require__(27);
+var EventPluginUtils = __webpack_require__(39);
+var ReactErrorUtils = __webpack_require__(43);
 
-var accumulateInto = __webpack_require__(68);
-var forEachAccumulated = __webpack_require__(69);
+var accumulateInto = __webpack_require__(76);
+var forEachAccumulated = __webpack_require__(77);
 var invariant = __webpack_require__(1);
 
 /**
@@ -3251,10 +3251,10 @@ module.exports = EventPluginHub;
 
 
 var EventPluginHub = __webpack_require__(20);
-var EventPluginUtils = __webpack_require__(35);
+var EventPluginUtils = __webpack_require__(39);
 
-var accumulateInto = __webpack_require__(68);
-var forEachAccumulated = __webpack_require__(69);
+var accumulateInto = __webpack_require__(76);
+var forEachAccumulated = __webpack_require__(77);
 var warning = __webpack_require__(2);
 
 var getListener = EventPluginHub.getListener;
@@ -3443,7 +3443,7 @@ module.exports = ReactInstanceMap;
 
 var SyntheticEvent = __webpack_require__(12);
 
-var getEventTarget = __webpack_require__(44);
+var getEventTarget = __webpack_require__(48);
 
 /**
  * @interface UIEvent
@@ -3492,6 +3492,1238 @@ module.exports = SyntheticUIEvent;
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
+//     Underscore.js 1.4.4
+//     http://underscorejs.org
+//     (c) 2009-2013 Jeremy Ashkenas, DocumentCloud Inc.
+//     Underscore may be freely distributed under the MIT license.
+
+(function() {
+
+  // Baseline setup
+  // --------------
+
+  // Establish the root object, `window` in the browser, or `global` on the server.
+  var root = this;
+
+  // Save the previous value of the `_` variable.
+  var previousUnderscore = root._;
+
+  // Establish the object that gets returned to break out of a loop iteration.
+  var breaker = {};
+
+  // Save bytes in the minified (but not gzipped) version:
+  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+
+  // Create quick reference variables for speed access to core prototypes.
+  var push             = ArrayProto.push,
+      slice            = ArrayProto.slice,
+      concat           = ArrayProto.concat,
+      toString         = ObjProto.toString,
+      hasOwnProperty   = ObjProto.hasOwnProperty;
+
+  // All **ECMAScript 5** native function implementations that we hope to use
+  // are declared here.
+  var
+    nativeForEach      = ArrayProto.forEach,
+    nativeMap          = ArrayProto.map,
+    nativeReduce       = ArrayProto.reduce,
+    nativeReduceRight  = ArrayProto.reduceRight,
+    nativeFilter       = ArrayProto.filter,
+    nativeEvery        = ArrayProto.every,
+    nativeSome         = ArrayProto.some,
+    nativeIndexOf      = ArrayProto.indexOf,
+    nativeLastIndexOf  = ArrayProto.lastIndexOf,
+    nativeIsArray      = Array.isArray,
+    nativeKeys         = Object.keys,
+    nativeBind         = FuncProto.bind;
+
+  // Create a safe reference to the Underscore object for use below.
+  var _ = function(obj) {
+    if (obj instanceof _) return obj;
+    if (!(this instanceof _)) return new _(obj);
+    this._wrapped = obj;
+  };
+
+  // Export the Underscore object for **Node.js**, with
+  // backwards-compatibility for the old `require()` API. If we're in
+  // the browser, add `_` as a global object via a string identifier,
+  // for Closure Compiler "advanced" mode.
+  if (true) {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = _;
+    }
+    exports._ = _;
+  } else {
+    root._ = _;
+  }
+
+  // Current version.
+  _.VERSION = '1.4.4';
+
+  // Collection Functions
+  // --------------------
+
+  // The cornerstone, an `each` implementation, aka `forEach`.
+  // Handles objects with the built-in `forEach`, arrays, and raw objects.
+  // Delegates to **ECMAScript 5**'s native `forEach` if available.
+  var each = _.each = _.forEach = function(obj, iterator, context) {
+    if (obj == null) return;
+    if (nativeForEach && obj.forEach === nativeForEach) {
+      obj.forEach(iterator, context);
+    } else if (obj.length === +obj.length) {
+      for (var i = 0, l = obj.length; i < l; i++) {
+        if (iterator.call(context, obj[i], i, obj) === breaker) return;
+      }
+    } else {
+      for (var key in obj) {
+        if (_.has(obj, key)) {
+          if (iterator.call(context, obj[key], key, obj) === breaker) return;
+        }
+      }
+    }
+  };
+
+  // Return the results of applying the iterator to each element.
+  // Delegates to **ECMAScript 5**'s native `map` if available.
+  _.map = _.collect = function(obj, iterator, context) {
+    var results = [];
+    if (obj == null) return results;
+    if (nativeMap && obj.map === nativeMap) return obj.map(iterator, context);
+    each(obj, function(value, index, list) {
+      results[results.length] = iterator.call(context, value, index, list);
+    });
+    return results;
+  };
+
+  var reduceError = 'Reduce of empty array with no initial value';
+
+  // **Reduce** builds up a single result from a list of values, aka `inject`,
+  // or `foldl`. Delegates to **ECMAScript 5**'s native `reduce` if available.
+  _.reduce = _.foldl = _.inject = function(obj, iterator, memo, context) {
+    var initial = arguments.length > 2;
+    if (obj == null) obj = [];
+    if (nativeReduce && obj.reduce === nativeReduce) {
+      if (context) iterator = _.bind(iterator, context);
+      return initial ? obj.reduce(iterator, memo) : obj.reduce(iterator);
+    }
+    each(obj, function(value, index, list) {
+      if (!initial) {
+        memo = value;
+        initial = true;
+      } else {
+        memo = iterator.call(context, memo, value, index, list);
+      }
+    });
+    if (!initial) throw new TypeError(reduceError);
+    return memo;
+  };
+
+  // The right-associative version of reduce, also known as `foldr`.
+  // Delegates to **ECMAScript 5**'s native `reduceRight` if available.
+  _.reduceRight = _.foldr = function(obj, iterator, memo, context) {
+    var initial = arguments.length > 2;
+    if (obj == null) obj = [];
+    if (nativeReduceRight && obj.reduceRight === nativeReduceRight) {
+      if (context) iterator = _.bind(iterator, context);
+      return initial ? obj.reduceRight(iterator, memo) : obj.reduceRight(iterator);
+    }
+    var length = obj.length;
+    if (length !== +length) {
+      var keys = _.keys(obj);
+      length = keys.length;
+    }
+    each(obj, function(value, index, list) {
+      index = keys ? keys[--length] : --length;
+      if (!initial) {
+        memo = obj[index];
+        initial = true;
+      } else {
+        memo = iterator.call(context, memo, obj[index], index, list);
+      }
+    });
+    if (!initial) throw new TypeError(reduceError);
+    return memo;
+  };
+
+  // Return the first value which passes a truth test. Aliased as `detect`.
+  _.find = _.detect = function(obj, iterator, context) {
+    var result;
+    any(obj, function(value, index, list) {
+      if (iterator.call(context, value, index, list)) {
+        result = value;
+        return true;
+      }
+    });
+    return result;
+  };
+
+  // Return all the elements that pass a truth test.
+  // Delegates to **ECMAScript 5**'s native `filter` if available.
+  // Aliased as `select`.
+  _.filter = _.select = function(obj, iterator, context) {
+    var results = [];
+    if (obj == null) return results;
+    if (nativeFilter && obj.filter === nativeFilter) return obj.filter(iterator, context);
+    each(obj, function(value, index, list) {
+      if (iterator.call(context, value, index, list)) results[results.length] = value;
+    });
+    return results;
+  };
+
+  // Return all the elements for which a truth test fails.
+  _.reject = function(obj, iterator, context) {
+    return _.filter(obj, function(value, index, list) {
+      return !iterator.call(context, value, index, list);
+    }, context);
+  };
+
+  // Determine whether all of the elements match a truth test.
+  // Delegates to **ECMAScript 5**'s native `every` if available.
+  // Aliased as `all`.
+  _.every = _.all = function(obj, iterator, context) {
+    iterator || (iterator = _.identity);
+    var result = true;
+    if (obj == null) return result;
+    if (nativeEvery && obj.every === nativeEvery) return obj.every(iterator, context);
+    each(obj, function(value, index, list) {
+      if (!(result = result && iterator.call(context, value, index, list))) return breaker;
+    });
+    return !!result;
+  };
+
+  // Determine if at least one element in the object matches a truth test.
+  // Delegates to **ECMAScript 5**'s native `some` if available.
+  // Aliased as `any`.
+  var any = _.some = _.any = function(obj, iterator, context) {
+    iterator || (iterator = _.identity);
+    var result = false;
+    if (obj == null) return result;
+    if (nativeSome && obj.some === nativeSome) return obj.some(iterator, context);
+    each(obj, function(value, index, list) {
+      if (result || (result = iterator.call(context, value, index, list))) return breaker;
+    });
+    return !!result;
+  };
+
+  // Determine if the array or object contains a given value (using `===`).
+  // Aliased as `include`.
+  _.contains = _.include = function(obj, target) {
+    if (obj == null) return false;
+    if (nativeIndexOf && obj.indexOf === nativeIndexOf) return obj.indexOf(target) != -1;
+    return any(obj, function(value) {
+      return value === target;
+    });
+  };
+
+  // Invoke a method (with arguments) on every item in a collection.
+  _.invoke = function(obj, method) {
+    var args = slice.call(arguments, 2);
+    var isFunc = _.isFunction(method);
+    return _.map(obj, function(value) {
+      return (isFunc ? method : value[method]).apply(value, args);
+    });
+  };
+
+  // Convenience version of a common use case of `map`: fetching a property.
+  _.pluck = function(obj, key) {
+    return _.map(obj, function(value){ return value[key]; });
+  };
+
+  // Convenience version of a common use case of `filter`: selecting only objects
+  // containing specific `key:value` pairs.
+  _.where = function(obj, attrs, first) {
+    if (_.isEmpty(attrs)) return first ? null : [];
+    return _[first ? 'find' : 'filter'](obj, function(value) {
+      for (var key in attrs) {
+        if (attrs[key] !== value[key]) return false;
+      }
+      return true;
+    });
+  };
+
+  // Convenience version of a common use case of `find`: getting the first object
+  // containing specific `key:value` pairs.
+  _.findWhere = function(obj, attrs) {
+    return _.where(obj, attrs, true);
+  };
+
+  // Return the maximum element or (element-based computation).
+  // Can't optimize arrays of integers longer than 65,535 elements.
+  // See: https://bugs.webkit.org/show_bug.cgi?id=80797
+  _.max = function(obj, iterator, context) {
+    if (!iterator && _.isArray(obj) && obj[0] === +obj[0] && obj.length < 65535) {
+      return Math.max.apply(Math, obj);
+    }
+    if (!iterator && _.isEmpty(obj)) return -Infinity;
+    var result = {computed : -Infinity, value: -Infinity};
+    each(obj, function(value, index, list) {
+      var computed = iterator ? iterator.call(context, value, index, list) : value;
+      computed >= result.computed && (result = {value : value, computed : computed});
+    });
+    return result.value;
+  };
+
+  // Return the minimum element (or element-based computation).
+  _.min = function(obj, iterator, context) {
+    if (!iterator && _.isArray(obj) && obj[0] === +obj[0] && obj.length < 65535) {
+      return Math.min.apply(Math, obj);
+    }
+    if (!iterator && _.isEmpty(obj)) return Infinity;
+    var result = {computed : Infinity, value: Infinity};
+    each(obj, function(value, index, list) {
+      var computed = iterator ? iterator.call(context, value, index, list) : value;
+      computed < result.computed && (result = {value : value, computed : computed});
+    });
+    return result.value;
+  };
+
+  // Shuffle an array.
+  _.shuffle = function(obj) {
+    var rand;
+    var index = 0;
+    var shuffled = [];
+    each(obj, function(value) {
+      rand = _.random(index++);
+      shuffled[index - 1] = shuffled[rand];
+      shuffled[rand] = value;
+    });
+    return shuffled;
+  };
+
+  // An internal function to generate lookup iterators.
+  var lookupIterator = function(value) {
+    return _.isFunction(value) ? value : function(obj){ return obj[value]; };
+  };
+
+  // Sort the object's values by a criterion produced by an iterator.
+  _.sortBy = function(obj, value, context) {
+    var iterator = lookupIterator(value);
+    return _.pluck(_.map(obj, function(value, index, list) {
+      return {
+        value : value,
+        index : index,
+        criteria : iterator.call(context, value, index, list)
+      };
+    }).sort(function(left, right) {
+      var a = left.criteria;
+      var b = right.criteria;
+      if (a !== b) {
+        if (a > b || a === void 0) return 1;
+        if (a < b || b === void 0) return -1;
+      }
+      return left.index < right.index ? -1 : 1;
+    }), 'value');
+  };
+
+  // An internal function used for aggregate "group by" operations.
+  var group = function(obj, value, context, behavior) {
+    var result = {};
+    var iterator = lookupIterator(value || _.identity);
+    each(obj, function(value, index) {
+      var key = iterator.call(context, value, index, obj);
+      behavior(result, key, value);
+    });
+    return result;
+  };
+
+  // Groups the object's values by a criterion. Pass either a string attribute
+  // to group by, or a function that returns the criterion.
+  _.groupBy = function(obj, value, context) {
+    return group(obj, value, context, function(result, key, value) {
+      (_.has(result, key) ? result[key] : (result[key] = [])).push(value);
+    });
+  };
+
+  // Counts instances of an object that group by a certain criterion. Pass
+  // either a string attribute to count by, or a function that returns the
+  // criterion.
+  _.countBy = function(obj, value, context) {
+    return group(obj, value, context, function(result, key) {
+      if (!_.has(result, key)) result[key] = 0;
+      result[key]++;
+    });
+  };
+
+  // Use a comparator function to figure out the smallest index at which
+  // an object should be inserted so as to maintain order. Uses binary search.
+  _.sortedIndex = function(array, obj, iterator, context) {
+    iterator = iterator == null ? _.identity : lookupIterator(iterator);
+    var value = iterator.call(context, obj);
+    var low = 0, high = array.length;
+    while (low < high) {
+      var mid = (low + high) >>> 1;
+      iterator.call(context, array[mid]) < value ? low = mid + 1 : high = mid;
+    }
+    return low;
+  };
+
+  // Safely convert anything iterable into a real, live array.
+  _.toArray = function(obj) {
+    if (!obj) return [];
+    if (_.isArray(obj)) return slice.call(obj);
+    if (obj.length === +obj.length) return _.map(obj, _.identity);
+    return _.values(obj);
+  };
+
+  // Return the number of elements in an object.
+  _.size = function(obj) {
+    if (obj == null) return 0;
+    return (obj.length === +obj.length) ? obj.length : _.keys(obj).length;
+  };
+
+  // Array Functions
+  // ---------------
+
+  // Get the first element of an array. Passing **n** will return the first N
+  // values in the array. Aliased as `head` and `take`. The **guard** check
+  // allows it to work with `_.map`.
+  _.first = _.head = _.take = function(array, n, guard) {
+    if (array == null) return void 0;
+    return (n != null) && !guard ? slice.call(array, 0, n) : array[0];
+  };
+
+  // Returns everything but the last entry of the array. Especially useful on
+  // the arguments object. Passing **n** will return all the values in
+  // the array, excluding the last N. The **guard** check allows it to work with
+  // `_.map`.
+  _.initial = function(array, n, guard) {
+    return slice.call(array, 0, array.length - ((n == null) || guard ? 1 : n));
+  };
+
+  // Get the last element of an array. Passing **n** will return the last N
+  // values in the array. The **guard** check allows it to work with `_.map`.
+  _.last = function(array, n, guard) {
+    if (array == null) return void 0;
+    if ((n != null) && !guard) {
+      return slice.call(array, Math.max(array.length - n, 0));
+    } else {
+      return array[array.length - 1];
+    }
+  };
+
+  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
+  // Especially useful on the arguments object. Passing an **n** will return
+  // the rest N values in the array. The **guard**
+  // check allows it to work with `_.map`.
+  _.rest = _.tail = _.drop = function(array, n, guard) {
+    return slice.call(array, (n == null) || guard ? 1 : n);
+  };
+
+  // Trim out all falsy values from an array.
+  _.compact = function(array) {
+    return _.filter(array, _.identity);
+  };
+
+  // Internal implementation of a recursive `flatten` function.
+  var flatten = function(input, shallow, output) {
+    each(input, function(value) {
+      if (_.isArray(value)) {
+        shallow ? push.apply(output, value) : flatten(value, shallow, output);
+      } else {
+        output.push(value);
+      }
+    });
+    return output;
+  };
+
+  // Return a completely flattened version of an array.
+  _.flatten = function(array, shallow) {
+    return flatten(array, shallow, []);
+  };
+
+  // Return a version of the array that does not contain the specified value(s).
+  _.without = function(array) {
+    return _.difference(array, slice.call(arguments, 1));
+  };
+
+  // Produce a duplicate-free version of the array. If the array has already
+  // been sorted, you have the option of using a faster algorithm.
+  // Aliased as `unique`.
+  _.uniq = _.unique = function(array, isSorted, iterator, context) {
+    if (_.isFunction(isSorted)) {
+      context = iterator;
+      iterator = isSorted;
+      isSorted = false;
+    }
+    var initial = iterator ? _.map(array, iterator, context) : array;
+    var results = [];
+    var seen = [];
+    each(initial, function(value, index) {
+      if (isSorted ? (!index || seen[seen.length - 1] !== value) : !_.contains(seen, value)) {
+        seen.push(value);
+        results.push(array[index]);
+      }
+    });
+    return results;
+  };
+
+  // Produce an array that contains the union: each distinct element from all of
+  // the passed-in arrays.
+  _.union = function() {
+    return _.uniq(concat.apply(ArrayProto, arguments));
+  };
+
+  // Produce an array that contains every item shared between all the
+  // passed-in arrays.
+  _.intersection = function(array) {
+    var rest = slice.call(arguments, 1);
+    return _.filter(_.uniq(array), function(item) {
+      return _.every(rest, function(other) {
+        return _.indexOf(other, item) >= 0;
+      });
+    });
+  };
+
+  // Take the difference between one array and a number of other arrays.
+  // Only the elements present in just the first array will remain.
+  _.difference = function(array) {
+    var rest = concat.apply(ArrayProto, slice.call(arguments, 1));
+    return _.filter(array, function(value){ return !_.contains(rest, value); });
+  };
+
+  // Zip together multiple lists into a single array -- elements that share
+  // an index go together.
+  _.zip = function() {
+    var args = slice.call(arguments);
+    var length = _.max(_.pluck(args, 'length'));
+    var results = new Array(length);
+    for (var i = 0; i < length; i++) {
+      results[i] = _.pluck(args, "" + i);
+    }
+    return results;
+  };
+
+  // Converts lists into objects. Pass either a single array of `[key, value]`
+  // pairs, or two parallel arrays of the same length -- one of keys, and one of
+  // the corresponding values.
+  _.object = function(list, values) {
+    if (list == null) return {};
+    var result = {};
+    for (var i = 0, l = list.length; i < l; i++) {
+      if (values) {
+        result[list[i]] = values[i];
+      } else {
+        result[list[i][0]] = list[i][1];
+      }
+    }
+    return result;
+  };
+
+  // If the browser doesn't supply us with indexOf (I'm looking at you, **MSIE**),
+  // we need this function. Return the position of the first occurrence of an
+  // item in an array, or -1 if the item is not included in the array.
+  // Delegates to **ECMAScript 5**'s native `indexOf` if available.
+  // If the array is large and already in sort order, pass `true`
+  // for **isSorted** to use binary search.
+  _.indexOf = function(array, item, isSorted) {
+    if (array == null) return -1;
+    var i = 0, l = array.length;
+    if (isSorted) {
+      if (typeof isSorted == 'number') {
+        i = (isSorted < 0 ? Math.max(0, l + isSorted) : isSorted);
+      } else {
+        i = _.sortedIndex(array, item);
+        return array[i] === item ? i : -1;
+      }
+    }
+    if (nativeIndexOf && array.indexOf === nativeIndexOf) return array.indexOf(item, isSorted);
+    for (; i < l; i++) if (array[i] === item) return i;
+    return -1;
+  };
+
+  // Delegates to **ECMAScript 5**'s native `lastIndexOf` if available.
+  _.lastIndexOf = function(array, item, from) {
+    if (array == null) return -1;
+    var hasIndex = from != null;
+    if (nativeLastIndexOf && array.lastIndexOf === nativeLastIndexOf) {
+      return hasIndex ? array.lastIndexOf(item, from) : array.lastIndexOf(item);
+    }
+    var i = (hasIndex ? from : array.length);
+    while (i--) if (array[i] === item) return i;
+    return -1;
+  };
+
+  // Generate an integer Array containing an arithmetic progression. A port of
+  // the native Python `range()` function. See
+  // [the Python documentation](http://docs.python.org/library/functions.html#range).
+  _.range = function(start, stop, step) {
+    if (arguments.length <= 1) {
+      stop = start || 0;
+      start = 0;
+    }
+    step = arguments[2] || 1;
+
+    var len = Math.max(Math.ceil((stop - start) / step), 0);
+    var idx = 0;
+    var range = new Array(len);
+
+    while(idx < len) {
+      range[idx++] = start;
+      start += step;
+    }
+
+    return range;
+  };
+
+  // Function (ahem) Functions
+  // ------------------
+
+  // Create a function bound to a given object (assigning `this`, and arguments,
+  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
+  // available.
+  _.bind = function(func, context) {
+    if (func.bind === nativeBind && nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+    var args = slice.call(arguments, 2);
+    return function() {
+      return func.apply(context, args.concat(slice.call(arguments)));
+    };
+  };
+
+  // Partially apply a function by creating a version that has had some of its
+  // arguments pre-filled, without changing its dynamic `this` context.
+  _.partial = function(func) {
+    var args = slice.call(arguments, 1);
+    return function() {
+      return func.apply(this, args.concat(slice.call(arguments)));
+    };
+  };
+
+  // Bind all of an object's methods to that object. Useful for ensuring that
+  // all callbacks defined on an object belong to it.
+  _.bindAll = function(obj) {
+    var funcs = slice.call(arguments, 1);
+    if (funcs.length === 0) funcs = _.functions(obj);
+    each(funcs, function(f) { obj[f] = _.bind(obj[f], obj); });
+    return obj;
+  };
+
+  // Memoize an expensive function by storing its results.
+  _.memoize = function(func, hasher) {
+    var memo = {};
+    hasher || (hasher = _.identity);
+    return function() {
+      var key = hasher.apply(this, arguments);
+      return _.has(memo, key) ? memo[key] : (memo[key] = func.apply(this, arguments));
+    };
+  };
+
+  // Delays a function for the given number of milliseconds, and then calls
+  // it with the arguments supplied.
+  _.delay = function(func, wait) {
+    var args = slice.call(arguments, 2);
+    return setTimeout(function(){ return func.apply(null, args); }, wait);
+  };
+
+  // Defers a function, scheduling it to run after the current call stack has
+  // cleared.
+  _.defer = function(func) {
+    return _.delay.apply(_, [func, 1].concat(slice.call(arguments, 1)));
+  };
+
+  // Returns a function, that, when invoked, will only be triggered at most once
+  // during a given window of time.
+  _.throttle = function(func, wait) {
+    var context, args, timeout, result;
+    var previous = 0;
+    var later = function() {
+      previous = new Date;
+      timeout = null;
+      result = func.apply(context, args);
+    };
+    return function() {
+      var now = new Date;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      if (remaining <= 0) {
+        clearTimeout(timeout);
+        timeout = null;
+        previous = now;
+        result = func.apply(context, args);
+      } else if (!timeout) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+  };
+
+  // Returns a function, that, as long as it continues to be invoked, will not
+  // be triggered. The function will be called after it stops being called for
+  // N milliseconds. If `immediate` is passed, trigger the function on the
+  // leading edge, instead of the trailing.
+  _.debounce = function(func, wait, immediate) {
+    var timeout, result;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) result = func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) result = func.apply(context, args);
+      return result;
+    };
+  };
+
+  // Returns a function that will be executed at most one time, no matter how
+  // often you call it. Useful for lazy initialization.
+  _.once = function(func) {
+    var ran = false, memo;
+    return function() {
+      if (ran) return memo;
+      ran = true;
+      memo = func.apply(this, arguments);
+      func = null;
+      return memo;
+    };
+  };
+
+  // Returns the first function passed as an argument to the second,
+  // allowing you to adjust arguments, run code before and after, and
+  // conditionally execute the original function.
+  _.wrap = function(func, wrapper) {
+    return function() {
+      var args = [func];
+      push.apply(args, arguments);
+      return wrapper.apply(this, args);
+    };
+  };
+
+  // Returns a function that is the composition of a list of functions, each
+  // consuming the return value of the function that follows.
+  _.compose = function() {
+    var funcs = arguments;
+    return function() {
+      var args = arguments;
+      for (var i = funcs.length - 1; i >= 0; i--) {
+        args = [funcs[i].apply(this, args)];
+      }
+      return args[0];
+    };
+  };
+
+  // Returns a function that will only be executed after being called N times.
+  _.after = function(times, func) {
+    if (times <= 0) return func();
+    return function() {
+      if (--times < 1) {
+        return func.apply(this, arguments);
+      }
+    };
+  };
+
+  // Object Functions
+  // ----------------
+
+  // Retrieve the names of an object's properties.
+  // Delegates to **ECMAScript 5**'s native `Object.keys`
+  _.keys = nativeKeys || function(obj) {
+    if (obj !== Object(obj)) throw new TypeError('Invalid object');
+    var keys = [];
+    for (var key in obj) if (_.has(obj, key)) keys[keys.length] = key;
+    return keys;
+  };
+
+  // Retrieve the values of an object's properties.
+  _.values = function(obj) {
+    var values = [];
+    for (var key in obj) if (_.has(obj, key)) values.push(obj[key]);
+    return values;
+  };
+
+  // Convert an object into a list of `[key, value]` pairs.
+  _.pairs = function(obj) {
+    var pairs = [];
+    for (var key in obj) if (_.has(obj, key)) pairs.push([key, obj[key]]);
+    return pairs;
+  };
+
+  // Invert the keys and values of an object. The values must be serializable.
+  _.invert = function(obj) {
+    var result = {};
+    for (var key in obj) if (_.has(obj, key)) result[obj[key]] = key;
+    return result;
+  };
+
+  // Return a sorted list of the function names available on the object.
+  // Aliased as `methods`
+  _.functions = _.methods = function(obj) {
+    var names = [];
+    for (var key in obj) {
+      if (_.isFunction(obj[key])) names.push(key);
+    }
+    return names.sort();
+  };
+
+  // Extend a given object with all the properties in passed-in object(s).
+  _.extend = function(obj) {
+    each(slice.call(arguments, 1), function(source) {
+      if (source) {
+        for (var prop in source) {
+          obj[prop] = source[prop];
+        }
+      }
+    });
+    return obj;
+  };
+
+  // Return a copy of the object only containing the whitelisted properties.
+  _.pick = function(obj) {
+    var copy = {};
+    var keys = concat.apply(ArrayProto, slice.call(arguments, 1));
+    each(keys, function(key) {
+      if (key in obj) copy[key] = obj[key];
+    });
+    return copy;
+  };
+
+   // Return a copy of the object without the blacklisted properties.
+  _.omit = function(obj) {
+    var copy = {};
+    var keys = concat.apply(ArrayProto, slice.call(arguments, 1));
+    for (var key in obj) {
+      if (!_.contains(keys, key)) copy[key] = obj[key];
+    }
+    return copy;
+  };
+
+  // Fill in a given object with default properties.
+  _.defaults = function(obj) {
+    each(slice.call(arguments, 1), function(source) {
+      if (source) {
+        for (var prop in source) {
+          if (obj[prop] == null) obj[prop] = source[prop];
+        }
+      }
+    });
+    return obj;
+  };
+
+  // Create a (shallow-cloned) duplicate of an object.
+  _.clone = function(obj) {
+    if (!_.isObject(obj)) return obj;
+    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
+  };
+
+  // Invokes interceptor with the obj, and then returns obj.
+  // The primary purpose of this method is to "tap into" a method chain, in
+  // order to perform operations on intermediate results within the chain.
+  _.tap = function(obj, interceptor) {
+    interceptor(obj);
+    return obj;
+  };
+
+  // Internal recursive comparison function for `isEqual`.
+  var eq = function(a, b, aStack, bStack) {
+    // Identical objects are equal. `0 === -0`, but they aren't identical.
+    // See the Harmony `egal` proposal: http://wiki.ecmascript.org/doku.php?id=harmony:egal.
+    if (a === b) return a !== 0 || 1 / a == 1 / b;
+    // A strict comparison is necessary because `null == undefined`.
+    if (a == null || b == null) return a === b;
+    // Unwrap any wrapped objects.
+    if (a instanceof _) a = a._wrapped;
+    if (b instanceof _) b = b._wrapped;
+    // Compare `[[Class]]` names.
+    var className = toString.call(a);
+    if (className != toString.call(b)) return false;
+    switch (className) {
+      // Strings, numbers, dates, and booleans are compared by value.
+      case '[object String]':
+        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
+        // equivalent to `new String("5")`.
+        return a == String(b);
+      case '[object Number]':
+        // `NaN`s are equivalent, but non-reflexive. An `egal` comparison is performed for
+        // other numeric values.
+        return a != +a ? b != +b : (a == 0 ? 1 / a == 1 / b : a == +b);
+      case '[object Date]':
+      case '[object Boolean]':
+        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
+        // millisecond representations. Note that invalid dates with millisecond representations
+        // of `NaN` are not equivalent.
+        return +a == +b;
+      // RegExps are compared by their source patterns and flags.
+      case '[object RegExp]':
+        return a.source == b.source &&
+               a.global == b.global &&
+               a.multiline == b.multiline &&
+               a.ignoreCase == b.ignoreCase;
+    }
+    if (typeof a != 'object' || typeof b != 'object') return false;
+    // Assume equality for cyclic structures. The algorithm for detecting cyclic
+    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
+    var length = aStack.length;
+    while (length--) {
+      // Linear search. Performance is inversely proportional to the number of
+      // unique nested structures.
+      if (aStack[length] == a) return bStack[length] == b;
+    }
+    // Add the first object to the stack of traversed objects.
+    aStack.push(a);
+    bStack.push(b);
+    var size = 0, result = true;
+    // Recursively compare objects and arrays.
+    if (className == '[object Array]') {
+      // Compare array lengths to determine if a deep comparison is necessary.
+      size = a.length;
+      result = size == b.length;
+      if (result) {
+        // Deep compare the contents, ignoring non-numeric properties.
+        while (size--) {
+          if (!(result = eq(a[size], b[size], aStack, bStack))) break;
+        }
+      }
+    } else {
+      // Objects with different constructors are not equivalent, but `Object`s
+      // from different frames are.
+      var aCtor = a.constructor, bCtor = b.constructor;
+      if (aCtor !== bCtor && !(_.isFunction(aCtor) && (aCtor instanceof aCtor) &&
+                               _.isFunction(bCtor) && (bCtor instanceof bCtor))) {
+        return false;
+      }
+      // Deep compare objects.
+      for (var key in a) {
+        if (_.has(a, key)) {
+          // Count the expected number of properties.
+          size++;
+          // Deep compare each member.
+          if (!(result = _.has(b, key) && eq(a[key], b[key], aStack, bStack))) break;
+        }
+      }
+      // Ensure that both objects contain the same number of properties.
+      if (result) {
+        for (key in b) {
+          if (_.has(b, key) && !(size--)) break;
+        }
+        result = !size;
+      }
+    }
+    // Remove the first object from the stack of traversed objects.
+    aStack.pop();
+    bStack.pop();
+    return result;
+  };
+
+  // Perform a deep comparison to check if two objects are equal.
+  _.isEqual = function(a, b) {
+    return eq(a, b, [], []);
+  };
+
+  // Is a given array, string, or object empty?
+  // An "empty" object has no enumerable own-properties.
+  _.isEmpty = function(obj) {
+    if (obj == null) return true;
+    if (_.isArray(obj) || _.isString(obj)) return obj.length === 0;
+    for (var key in obj) if (_.has(obj, key)) return false;
+    return true;
+  };
+
+  // Is a given value a DOM element?
+  _.isElement = function(obj) {
+    return !!(obj && obj.nodeType === 1);
+  };
+
+  // Is a given value an array?
+  // Delegates to ECMA5's native Array.isArray
+  _.isArray = nativeIsArray || function(obj) {
+    return toString.call(obj) == '[object Array]';
+  };
+
+  // Is a given variable an object?
+  _.isObject = function(obj) {
+    return obj === Object(obj);
+  };
+
+  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp.
+  each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp'], function(name) {
+    _['is' + name] = function(obj) {
+      return toString.call(obj) == '[object ' + name + ']';
+    };
+  });
+
+  // Define a fallback version of the method in browsers (ahem, IE), where
+  // there isn't any inspectable "Arguments" type.
+  if (!_.isArguments(arguments)) {
+    _.isArguments = function(obj) {
+      return !!(obj && _.has(obj, 'callee'));
+    };
+  }
+
+  // Optimize `isFunction` if appropriate.
+  if (true) {
+    _.isFunction = function(obj) {
+      return typeof obj === 'function';
+    };
+  }
+
+  // Is a given object a finite number?
+  _.isFinite = function(obj) {
+    return isFinite(obj) && !isNaN(parseFloat(obj));
+  };
+
+  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
+  _.isNaN = function(obj) {
+    return _.isNumber(obj) && obj != +obj;
+  };
+
+  // Is a given value a boolean?
+  _.isBoolean = function(obj) {
+    return obj === true || obj === false || toString.call(obj) == '[object Boolean]';
+  };
+
+  // Is a given value equal to null?
+  _.isNull = function(obj) {
+    return obj === null;
+  };
+
+  // Is a given variable undefined?
+  _.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+
+  // Shortcut function for checking if an object has a given property directly
+  // on itself (in other words, not on a prototype).
+  _.has = function(obj, key) {
+    return hasOwnProperty.call(obj, key);
+  };
+
+  // Utility Functions
+  // -----------------
+
+  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
+  // previous owner. Returns a reference to the Underscore object.
+  _.noConflict = function() {
+    root._ = previousUnderscore;
+    return this;
+  };
+
+  // Keep the identity function around for default iterators.
+  _.identity = function(value) {
+    return value;
+  };
+
+  // Run a function **n** times.
+  _.times = function(n, iterator, context) {
+    var accum = Array(n);
+    for (var i = 0; i < n; i++) accum[i] = iterator.call(context, i);
+    return accum;
+  };
+
+  // Return a random integer between min and max (inclusive).
+  _.random = function(min, max) {
+    if (max == null) {
+      max = min;
+      min = 0;
+    }
+    return min + Math.floor(Math.random() * (max - min + 1));
+  };
+
+  // List of HTML entities for escaping.
+  var entityMap = {
+    escape: {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '/': '&#x2F;'
+    }
+  };
+  entityMap.unescape = _.invert(entityMap.escape);
+
+  // Regexes containing the keys and values listed immediately above.
+  var entityRegexes = {
+    escape:   new RegExp('[' + _.keys(entityMap.escape).join('') + ']', 'g'),
+    unescape: new RegExp('(' + _.keys(entityMap.unescape).join('|') + ')', 'g')
+  };
+
+  // Functions for escaping and unescaping strings to/from HTML interpolation.
+  _.each(['escape', 'unescape'], function(method) {
+    _[method] = function(string) {
+      if (string == null) return '';
+      return ('' + string).replace(entityRegexes[method], function(match) {
+        return entityMap[method][match];
+      });
+    };
+  });
+
+  // If the value of the named property is a function then invoke it;
+  // otherwise, return it.
+  _.result = function(object, property) {
+    if (object == null) return null;
+    var value = object[property];
+    return _.isFunction(value) ? value.call(object) : value;
+  };
+
+  // Add your own custom functions to the Underscore object.
+  _.mixin = function(obj) {
+    each(_.functions(obj), function(name){
+      var func = _[name] = obj[name];
+      _.prototype[name] = function() {
+        var args = [this._wrapped];
+        push.apply(args, arguments);
+        return result.call(this, func.apply(_, args));
+      };
+    });
+  };
+
+  // Generate a unique integer id (unique within the entire client session).
+  // Useful for temporary DOM ids.
+  var idCounter = 0;
+  _.uniqueId = function(prefix) {
+    var id = ++idCounter + '';
+    return prefix ? prefix + id : id;
+  };
+
+  // By default, Underscore uses ERB-style template delimiters, change the
+  // following template settings to use alternative delimiters.
+  _.templateSettings = {
+    evaluate    : /<%([\s\S]+?)%>/g,
+    interpolate : /<%=([\s\S]+?)%>/g,
+    escape      : /<%-([\s\S]+?)%>/g
+  };
+
+  // When customizing `templateSettings`, if you don't want to define an
+  // interpolation, evaluation or escaping regex, we need one that is
+  // guaranteed not to match.
+  var noMatch = /(.)^/;
+
+  // Certain characters need to be escaped so that they can be put into a
+  // string literal.
+  var escapes = {
+    "'":      "'",
+    '\\':     '\\',
+    '\r':     'r',
+    '\n':     'n',
+    '\t':     't',
+    '\u2028': 'u2028',
+    '\u2029': 'u2029'
+  };
+
+  var escaper = /\\|'|\r|\n|\t|\u2028|\u2029/g;
+
+  // JavaScript micro-templating, similar to John Resig's implementation.
+  // Underscore templating handles arbitrary delimiters, preserves whitespace,
+  // and correctly escapes quotes within interpolated code.
+  _.template = function(text, data, settings) {
+    var render;
+    settings = _.defaults({}, settings, _.templateSettings);
+
+    // Combine delimiters into one regular expression via alternation.
+    var matcher = new RegExp([
+      (settings.escape || noMatch).source,
+      (settings.interpolate || noMatch).source,
+      (settings.evaluate || noMatch).source
+    ].join('|') + '|$', 'g');
+
+    // Compile the template source, escaping string literals appropriately.
+    var index = 0;
+    var source = "__p+='";
+    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+      source += text.slice(index, offset)
+        .replace(escaper, function(match) { return '\\' + escapes[match]; });
+
+      if (escape) {
+        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
+      }
+      if (interpolate) {
+        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
+      }
+      if (evaluate) {
+        source += "';\n" + evaluate + "\n__p+='";
+      }
+      index = offset + match.length;
+      return match;
+    });
+    source += "';\n";
+
+    // If a variable is not specified, place data values in local scope.
+    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+
+    source = "var __t,__p='',__j=Array.prototype.join," +
+      "print=function(){__p+=__j.call(arguments,'');};\n" +
+      source + "return __p;\n";
+
+    try {
+      render = new Function(settings.variable || 'obj', '_', source);
+    } catch (e) {
+      e.source = source;
+      throw e;
+    }
+
+    if (data) return render(data, _);
+    var template = function(data) {
+      return render.call(this, data, _);
+    };
+
+    // Provide the compiled function source as a convenience for precompilation.
+    template.source = 'function(' + (settings.variable || 'obj') + '){\n' + source + '}';
+
+    return template;
+  };
+
+  // Add a "chain" function, which will delegate to the wrapper.
+  _.chain = function(obj) {
+    return _(obj).chain();
+  };
+
+  // OOP
+  // ---------------
+  // If Underscore is called as a function, it returns a wrapped object that
+  // can be used OO-style. This wrapper holds altered versions of all the
+  // underscore functions. Wrapped objects may be chained.
+
+  // Helper function to continue chaining intermediate results.
+  var result = function(obj) {
+    return this._chain ? _(obj).chain() : obj;
+  };
+
+  // Add all of the Underscore functions to the wrapper object.
+  _.mixin(_);
+
+  // Add all mutator Array functions to the wrapper.
+  each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      var obj = this._wrapped;
+      method.apply(obj, arguments);
+      if ((name == 'shift' || name == 'splice') && obj.length === 0) delete obj[0];
+      return result.call(this, obj);
+    };
+  });
+
+  // Add all accessor Array functions to the wrapper.
+  each(['concat', 'join', 'slice'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      return result.call(this, method.apply(this._wrapped, arguments));
+    };
+  });
+
+  _.extend(_.prototype, {
+
+    // Start chaining a wrapped Underscore object.
+    chain: function() {
+      this._chain = true;
+      return this;
+    },
+
+    // Extracts the result from a wrapped and chained object.
+    value: function() {
+      return this._wrapped;
+    }
+
+  });
+
+}).call(this);
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -3515,7 +4747,848 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 25 */
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Handle models (i.e. docs)
+ * Serialization/deserialization
+ * Copying
+ * Querying, update
+ */
+
+var util = __webpack_require__(34)
+  , _ = __webpack_require__(24)
+  , modifierFunctions = {}
+  , lastStepModifierFunctions = {}
+  , comparisonFunctions = {}
+  , logicalOperators = {}
+  , arrayComparisonFunctions = {}
+  ;
+
+
+/**
+ * Check a key, throw an error if the key is non valid
+ * @param {String} k key
+ * @param {Model} v value, needed to treat the Date edge case
+ * Non-treatable edge cases here: if part of the object if of the form { $$date: number } or { $$deleted: true }
+ * Its serialized-then-deserialized version it will transformed into a Date object
+ * But you really need to want it to trigger such behaviour, even when warned not to use '$' at the beginning of the field names...
+ */
+function checkKey (k, v) {
+  if (typeof k === 'number') {
+    k = k.toString();
+  }
+
+  if (k[0] === '$' && !(k === '$$date' && typeof v === 'number') && !(k === '$$deleted' && v === true) && !(k === '$$indexCreated') && !(k === '$$indexRemoved')) {
+    throw new Error('Field names cannot begin with the $ character');
+  }
+
+  if (k.indexOf('.') !== -1) {
+    throw new Error('Field names cannot contain a .');
+  }
+}
+
+
+/**
+ * Check a DB object and throw an error if it's not valid
+ * Works by applying the above checkKey function to all fields recursively
+ */
+function checkObject (obj) {
+  if (util.isArray(obj)) {
+    obj.forEach(function (o) {
+      checkObject(o);
+    });
+  }
+
+  if (typeof obj === 'object' && obj !== null) {
+    Object.keys(obj).forEach(function (k) {
+      checkKey(k, obj[k]);
+      checkObject(obj[k]);
+    });
+  }
+}
+
+
+/**
+ * Serialize an object to be persisted to a one-line string
+ * For serialization/deserialization, we use the native JSON parser and not eval or Function
+ * That gives us less freedom but data entered in the database may come from users
+ * so eval and the like are not safe
+ * Accepted primitive types: Number, String, Boolean, Date, null
+ * Accepted secondary types: Objects, Arrays
+ */
+function serialize (obj) {
+  var res;
+
+  res = JSON.stringify(obj, function (k, v) {
+    checkKey(k, v);
+
+    if (v === undefined) { return undefined; }
+    if (v === null) { return null; }
+
+    // Hackish way of checking if object is Date (this way it works between execution contexts in node-webkit).
+    // We can't use value directly because for dates it is already string in this function (date.toJSON was already called), so we use this
+    if (typeof this[k].getTime === 'function') { return { $$date: this[k].getTime() }; }
+
+    return v;
+  });
+
+  return res;
+}
+
+
+/**
+ * From a one-line representation of an object generate by the serialize function
+ * Return the object itself
+ */
+function deserialize (rawData) {
+  return JSON.parse(rawData, function (k, v) {
+    if (k === '$$date') { return new Date(v); }
+    if (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean' || v === null) { return v; }
+    if (v && v.$$date) { return v.$$date; }
+
+    return v;
+  });
+}
+
+
+/**
+ * Deep copy a DB object
+ * The optional strictKeys flag (defaulting to false) indicates whether to copy everything or only fields
+ * where the keys are valid, i.e. don't begin with $ and don't contain a .
+ */
+function deepCopy (obj, strictKeys) {
+  var res;
+
+  if ( typeof obj === 'boolean' ||
+       typeof obj === 'number' ||
+       typeof obj === 'string' ||
+       obj === null ||
+       (util.isDate(obj)) ) {
+    return obj;
+  }
+
+  if (util.isArray(obj)) {
+    res = [];
+    obj.forEach(function (o) { res.push(deepCopy(o, strictKeys)); });
+    return res;
+  }
+
+  if (typeof obj === 'object') {
+    res = {};
+    Object.keys(obj).forEach(function (k) {
+      if (!strictKeys || (k[0] !== '$' && k.indexOf('.') === -1)) {
+        res[k] = deepCopy(obj[k], strictKeys);
+      }
+    });
+    return res;
+  }
+
+  return undefined;   // For now everything else is undefined. We should probably throw an error instead
+}
+
+
+/**
+ * Tells if an object is a primitive type or a "real" object
+ * Arrays are considered primitive
+ */
+function isPrimitiveType (obj) {
+  return ( typeof obj === 'boolean' ||
+       typeof obj === 'number' ||
+       typeof obj === 'string' ||
+       obj === null ||
+       util.isDate(obj) ||
+       util.isArray(obj));
+}
+
+
+/**
+ * Utility functions for comparing things
+ * Assumes type checking was already done (a and b already have the same type)
+ * compareNSB works for numbers, strings and booleans
+ */
+function compareNSB (a, b) {
+  if (a < b) { return -1; }
+  if (a > b) { return 1; }
+  return 0;
+}
+
+function compareArrays (a, b) {
+  var i, comp;
+
+  for (i = 0; i < Math.min(a.length, b.length); i += 1) {
+    comp = compareThings(a[i], b[i]);
+
+    if (comp !== 0) { return comp; }
+  }
+
+  // Common section was identical, longest one wins
+  return compareNSB(a.length, b.length);
+}
+
+
+/**
+ * Compare { things U undefined }
+ * Things are defined as any native types (string, number, boolean, null, date) and objects
+ * We need to compare with undefined as it will be used in indexes
+ * In the case of objects and arrays, we deep-compare
+ * If two objects dont have the same type, the (arbitrary) type hierarchy is: undefined, null, number, strings, boolean, dates, arrays, objects
+ * Return -1 if a < b, 1 if a > b and 0 if a = b (note that equality here is NOT the same as defined in areThingsEqual!)
+ *
+ * @param {Function} _compareStrings String comparing function, returning -1, 0 or 1, overriding default string comparison (useful for languages with accented letters)
+ */
+function compareThings (a, b, _compareStrings) {
+  var aKeys, bKeys, comp, i
+    , compareStrings = _compareStrings || compareNSB;
+
+  // undefined
+  if (a === undefined) { return b === undefined ? 0 : -1; }
+  if (b === undefined) { return a === undefined ? 0 : 1; }
+
+  // null
+  if (a === null) { return b === null ? 0 : -1; }
+  if (b === null) { return a === null ? 0 : 1; }
+
+  // Numbers
+  if (typeof a === 'number') { return typeof b === 'number' ? compareNSB(a, b) : -1; }
+  if (typeof b === 'number') { return typeof a === 'number' ? compareNSB(a, b) : 1; }
+
+  // Strings
+  if (typeof a === 'string') { return typeof b === 'string' ? compareStrings(a, b) : -1; }
+  if (typeof b === 'string') { return typeof a === 'string' ? compareStrings(a, b) : 1; }
+
+  // Booleans
+  if (typeof a === 'boolean') { return typeof b === 'boolean' ? compareNSB(a, b) : -1; }
+  if (typeof b === 'boolean') { return typeof a === 'boolean' ? compareNSB(a, b) : 1; }
+
+  // Dates
+  if (util.isDate(a)) { return util.isDate(b) ? compareNSB(a.getTime(), b.getTime()) : -1; }
+  if (util.isDate(b)) { return util.isDate(a) ? compareNSB(a.getTime(), b.getTime()) : 1; }
+
+  // Arrays (first element is most significant and so on)
+  if (util.isArray(a)) { return util.isArray(b) ? compareArrays(a, b) : -1; }
+  if (util.isArray(b)) { return util.isArray(a) ? compareArrays(a, b) : 1; }
+
+  // Objects
+  aKeys = Object.keys(a).sort();
+  bKeys = Object.keys(b).sort();
+
+  for (i = 0; i < Math.min(aKeys.length, bKeys.length); i += 1) {
+    comp = compareThings(a[aKeys[i]], b[bKeys[i]]);
+
+    if (comp !== 0) { return comp; }
+  }
+
+  return compareNSB(aKeys.length, bKeys.length);
+}
+
+
+
+// ==============================================================
+// Updating documents
+// ==============================================================
+
+/**
+ * The signature of modifier functions is as follows
+ * Their structure is always the same: recursively follow the dot notation while creating
+ * the nested documents if needed, then apply the "last step modifier"
+ * @param {Object} obj The model to modify
+ * @param {String} field Can contain dots, in that case that means we will set a subfield recursively
+ * @param {Model} value
+ */
+
+/**
+ * Set a field to a new value
+ */
+lastStepModifierFunctions.$set = function (obj, field, value) {
+  obj[field] = value;
+};
+
+
+/**
+ * Unset a field
+ */
+lastStepModifierFunctions.$unset = function (obj, field, value) {
+  delete obj[field];
+};
+
+
+/**
+ * Push an element to the end of an array field
+ * Optional modifier $each instead of value to push several values
+ * Optional modifier $slice to slice the resulting array, see https://docs.mongodb.org/manual/reference/operator/update/slice/
+ * Différeence with MongoDB: if $slice is specified and not $each, we act as if value is an empty array
+ */
+lastStepModifierFunctions.$push = function (obj, field, value) {
+  // Create the array if it doesn't exist
+  if (!obj.hasOwnProperty(field)) { obj[field] = []; }
+
+  if (!util.isArray(obj[field])) { throw new Error("Can't $push an element on non-array values"); }
+
+  if (value !== null && typeof value === 'object' && value.$slice && value.$each === undefined) {
+    value.$each = [];
+  }
+
+  if (value !== null && typeof value === 'object' && value.$each) {
+    if (Object.keys(value).length >= 3 || (Object.keys(value).length === 2 && value.$slice === undefined)) { throw new Error("Can only use $slice in cunjunction with $each when $push to array"); }
+    if (!util.isArray(value.$each)) { throw new Error("$each requires an array value"); }
+
+    value.$each.forEach(function (v) {
+      obj[field].push(v);
+    });
+
+    if (value.$slice === undefined || typeof value.$slice !== 'number') { return; }
+
+    if (value.$slice === 0) {
+      obj[field] = [];
+    } else {
+      var start, end, n = obj[field].length;
+      if (value.$slice < 0) {
+        start = Math.max(0, n + value.$slice);
+        end = n;
+      } else if (value.$slice > 0) {
+        start = 0;
+        end = Math.min(n, value.$slice);
+      }
+      obj[field] = obj[field].slice(start, end);
+    }
+  } else {
+    obj[field].push(value);
+  }
+};
+
+
+/**
+ * Add an element to an array field only if it is not already in it
+ * No modification if the element is already in the array
+ * Note that it doesn't check whether the original array contains duplicates
+ */
+lastStepModifierFunctions.$addToSet = function (obj, field, value) {
+  var addToSet = true;
+
+  // Create the array if it doesn't exist
+  if (!obj.hasOwnProperty(field)) { obj[field] = []; }
+
+  if (!util.isArray(obj[field])) { throw new Error("Can't $addToSet an element on non-array values"); }
+
+  if (value !== null && typeof value === 'object' && value.$each) {
+    if (Object.keys(value).length > 1) { throw new Error("Can't use another field in conjunction with $each"); }
+    if (!util.isArray(value.$each)) { throw new Error("$each requires an array value"); }
+
+    value.$each.forEach(function (v) {
+      lastStepModifierFunctions.$addToSet(obj, field, v);
+    });
+  } else {
+    obj[field].forEach(function (v) {
+      if (compareThings(v, value) === 0) { addToSet = false; }
+    });
+    if (addToSet) { obj[field].push(value); }
+  }
+};
+
+
+/**
+ * Remove the first or last element of an array
+ */
+lastStepModifierFunctions.$pop = function (obj, field, value) {
+  if (!util.isArray(obj[field])) { throw new Error("Can't $pop an element from non-array values"); }
+  if (typeof value !== 'number') { throw new Error(value + " isn't an integer, can't use it with $pop"); }
+  if (value === 0) { return; }
+
+  if (value > 0) {
+    obj[field] = obj[field].slice(0, obj[field].length - 1);
+  } else {
+    obj[field] = obj[field].slice(1);
+  }
+};
+
+
+/**
+ * Removes all instances of a value from an existing array
+ */
+lastStepModifierFunctions.$pull = function (obj, field, value) {
+  var arr, i;
+
+  if (!util.isArray(obj[field])) { throw new Error("Can't $pull an element from non-array values"); }
+
+  arr = obj[field];
+  for (i = arr.length - 1; i >= 0; i -= 1) {
+    if (match(arr[i], value)) {
+      arr.splice(i, 1);
+    }
+  }
+};
+
+
+/**
+ * Increment a numeric field's value
+ */
+lastStepModifierFunctions.$inc = function (obj, field, value) {
+  if (typeof value !== 'number') { throw new Error(value + " must be a number"); }
+
+  if (typeof obj[field] !== 'number') {
+    if (!_.has(obj, field)) {
+      obj[field] = value;
+    } else {
+      throw new Error("Don't use the $inc modifier on non-number fields");
+    }
+  } else {
+    obj[field] += value;
+  }
+};
+
+/**
+ * Updates the value of the field, only if specified field is greater than the current value of the field
+ */
+lastStepModifierFunctions.$max = function (obj, field, value) {
+  if (typeof obj[field] === 'undefined') {
+    obj[field] = value;
+  } else if (value > obj[field]) {
+    obj[field] = value;
+  }
+};
+
+/**
+ * Updates the value of the field, only if specified field is smaller than the current value of the field
+ */
+lastStepModifierFunctions.$min = function (obj, field, value) {
+  if (typeof obj[field] === 'undefined') { 
+    obj[field] = value;
+  } else if (value < obj[field]) {
+    obj[field] = value;
+  }
+};
+
+// Given its name, create the complete modifier function
+function createModifierFunction (modifier) {
+  return function (obj, field, value) {
+    var fieldParts = typeof field === 'string' ? field.split('.') : field;
+
+    if (fieldParts.length === 1) {
+      lastStepModifierFunctions[modifier](obj, field, value);
+    } else {
+      if (obj[fieldParts[0]] === undefined) {
+        if (modifier === '$unset') { return; }   // Bad looking specific fix, needs to be generalized modifiers that behave like $unset are implemented
+        obj[fieldParts[0]] = {};
+      }
+      modifierFunctions[modifier](obj[fieldParts[0]], fieldParts.slice(1), value);
+    }
+  };
+}
+
+// Actually create all modifier functions
+Object.keys(lastStepModifierFunctions).forEach(function (modifier) {
+  modifierFunctions[modifier] = createModifierFunction(modifier);
+});
+
+
+/**
+ * Modify a DB object according to an update query
+ */
+function modify (obj, updateQuery) {
+  var keys = Object.keys(updateQuery)
+    , firstChars = _.map(keys, function (item) { return item[0]; })
+    , dollarFirstChars = _.filter(firstChars, function (c) { return c === '$'; })
+    , newDoc, modifiers
+    ;
+
+  if (keys.indexOf('_id') !== -1 && updateQuery._id !== obj._id) { throw new Error("You cannot change a document's _id"); }
+
+  if (dollarFirstChars.length !== 0 && dollarFirstChars.length !== firstChars.length) {
+    throw new Error("You cannot mix modifiers and normal fields");
+  }
+
+  if (dollarFirstChars.length === 0) {
+    // Simply replace the object with the update query contents
+    newDoc = deepCopy(updateQuery);
+    newDoc._id = obj._id;
+  } else {
+    // Apply modifiers
+    modifiers = _.uniq(keys);
+    newDoc = deepCopy(obj);
+    modifiers.forEach(function (m) {
+      var keys;
+
+      if (!modifierFunctions[m]) { throw new Error("Unknown modifier " + m); }
+
+      // Can't rely on Object.keys throwing on non objects since ES6
+      // Not 100% satisfying as non objects can be interpreted as objects but no false negatives so we can live with it
+      if (typeof updateQuery[m] !== 'object') {
+        throw new Error("Modifier " + m + "'s argument must be an object");
+      }
+
+      keys = Object.keys(updateQuery[m]);
+      keys.forEach(function (k) {
+        modifierFunctions[m](newDoc, k, updateQuery[m][k]);
+      });
+    });
+  }
+
+  // Check result is valid and return it
+  checkObject(newDoc);
+
+  if (obj._id !== newDoc._id) { throw new Error("You can't change a document's _id"); }
+  return newDoc;
+};
+
+
+// ==============================================================
+// Finding documents
+// ==============================================================
+
+/**
+ * Get a value from object with dot notation
+ * @param {Object} obj
+ * @param {String} field
+ */
+function getDotValue (obj, field) {
+  var fieldParts = typeof field === 'string' ? field.split('.') : field
+    , i, objs;
+
+  if (!obj) { return undefined; }   // field cannot be empty so that means we should return undefined so that nothing can match
+
+  if (fieldParts.length === 0) { return obj; }
+
+  if (fieldParts.length === 1) { return obj[fieldParts[0]]; }
+
+  if (util.isArray(obj[fieldParts[0]])) {
+    // If the next field is an integer, return only this item of the array
+    i = parseInt(fieldParts[1], 10);
+    if (typeof i === 'number' && !isNaN(i)) {
+      return getDotValue(obj[fieldParts[0]][i], fieldParts.slice(2))
+    }
+
+    // Return the array of values
+    objs = new Array();
+    for (i = 0; i < obj[fieldParts[0]].length; i += 1) {
+       objs.push(getDotValue(obj[fieldParts[0]][i], fieldParts.slice(1)));
+    }
+    return objs;
+  } else {
+    return getDotValue(obj[fieldParts[0]], fieldParts.slice(1));
+  }
+}
+
+
+/**
+ * Check whether 'things' are equal
+ * Things are defined as any native types (string, number, boolean, null, date) and objects
+ * In the case of object, we check deep equality
+ * Returns true if they are, false otherwise
+ */
+function areThingsEqual (a, b) {
+  var aKeys , bKeys , i;
+
+  // Strings, booleans, numbers, null
+  if (a === null || typeof a === 'string' || typeof a === 'boolean' || typeof a === 'number' ||
+      b === null || typeof b === 'string' || typeof b === 'boolean' || typeof b === 'number') { return a === b; }
+
+  // Dates
+  if (util.isDate(a) || util.isDate(b)) { return util.isDate(a) && util.isDate(b) && a.getTime() === b.getTime(); }
+
+  // Arrays (no match since arrays are used as a $in)
+  // undefined (no match since they mean field doesn't exist and can't be serialized)
+  if ((!(util.isArray(a) && util.isArray(b)) && (util.isArray(a) || util.isArray(b))) || a === undefined || b === undefined) { return false; }
+
+  // General objects (check for deep equality)
+  // a and b should be objects at this point
+  try {
+    aKeys = Object.keys(a);
+    bKeys = Object.keys(b);
+  } catch (e) {
+    return false;
+  }
+
+  if (aKeys.length !== bKeys.length) { return false; }
+  for (i = 0; i < aKeys.length; i += 1) {
+    if (bKeys.indexOf(aKeys[i]) === -1) { return false; }
+    if (!areThingsEqual(a[aKeys[i]], b[aKeys[i]])) { return false; }
+  }
+  return true;
+}
+
+
+/**
+ * Check that two values are comparable
+ */
+function areComparable (a, b) {
+  if (typeof a !== 'string' && typeof a !== 'number' && !util.isDate(a) &&
+      typeof b !== 'string' && typeof b !== 'number' && !util.isDate(b)) {
+    return false;
+  }
+
+  if (typeof a !== typeof b) { return false; }
+
+  return true;
+}
+
+
+/**
+ * Arithmetic and comparison operators
+ * @param {Native value} a Value in the object
+ * @param {Native value} b Value in the query
+ */
+comparisonFunctions.$lt = function (a, b) {
+  return areComparable(a, b) && a < b;
+};
+
+comparisonFunctions.$lte = function (a, b) {
+  return areComparable(a, b) && a <= b;
+};
+
+comparisonFunctions.$gt = function (a, b) {
+  return areComparable(a, b) && a > b;
+};
+
+comparisonFunctions.$gte = function (a, b) {
+  return areComparable(a, b) && a >= b;
+};
+
+comparisonFunctions.$ne = function (a, b) {
+  if (a === undefined) { return true; }
+  return !areThingsEqual(a, b);
+};
+
+comparisonFunctions.$in = function (a, b) {
+  var i;
+
+  if (!util.isArray(b)) { throw new Error("$in operator called with a non-array"); }
+
+  for (i = 0; i < b.length; i += 1) {
+    if (areThingsEqual(a, b[i])) { return true; }
+  }
+
+  return false;
+};
+
+comparisonFunctions.$nin = function (a, b) {
+  if (!util.isArray(b)) { throw new Error("$nin operator called with a non-array"); }
+
+  return !comparisonFunctions.$in(a, b);
+};
+
+comparisonFunctions.$regex = function (a, b) {
+  if (!util.isRegExp(b)) { throw new Error("$regex operator called with non regular expression"); }
+
+  if (typeof a !== 'string') {
+    return false
+  } else {
+    return b.test(a);
+  }
+};
+
+comparisonFunctions.$exists = function (value, exists) {
+  if (exists || exists === '') {   // This will be true for all values of exists except false, null, undefined and 0
+    exists = true;                 // That's strange behaviour (we should only use true/false) but that's the way Mongo does it...
+  } else {
+    exists = false;
+  }
+
+  if (value === undefined) {
+    return !exists
+  } else {
+    return exists;
+  }
+};
+
+// Specific to arrays
+comparisonFunctions.$size = function (obj, value) {
+    if (!util.isArray(obj)) { return false; }
+    if (value % 1 !== 0) { throw new Error("$size operator called without an integer"); }
+
+    return (obj.length == value);
+};
+comparisonFunctions.$elemMatch = function (obj, value) {
+  if (!util.isArray(obj)) { return false; }
+  var i = obj.length;
+  var result = false;   // Initialize result
+  while (i--) {
+    if (match(obj[i], value)) {   // If match for array element, return true
+      result = true;
+      break;
+    }
+  }
+  return result;
+};
+arrayComparisonFunctions.$size = true;
+arrayComparisonFunctions.$elemMatch = true;
+
+
+/**
+ * Match any of the subqueries
+ * @param {Model} obj
+ * @param {Array of Queries} query
+ */
+logicalOperators.$or = function (obj, query) {
+  var i;
+
+  if (!util.isArray(query)) { throw new Error("$or operator used without an array"); }
+
+  for (i = 0; i < query.length; i += 1) {
+    if (match(obj, query[i])) { return true; }
+  }
+
+  return false;
+};
+
+
+/**
+ * Match all of the subqueries
+ * @param {Model} obj
+ * @param {Array of Queries} query
+ */
+logicalOperators.$and = function (obj, query) {
+  var i;
+
+  if (!util.isArray(query)) { throw new Error("$and operator used without an array"); }
+
+  for (i = 0; i < query.length; i += 1) {
+    if (!match(obj, query[i])) { return false; }
+  }
+
+  return true;
+};
+
+
+/**
+ * Inverted match of the query
+ * @param {Model} obj
+ * @param {Query} query
+ */
+logicalOperators.$not = function (obj, query) {
+  return !match(obj, query);
+};
+
+
+/**
+ * Use a function to match
+ * @param {Model} obj
+ * @param {Query} query
+ */
+logicalOperators.$where = function (obj, fn) {
+  var result;
+
+  if (!_.isFunction(fn)) { throw new Error("$where operator used without a function"); }
+
+  result = fn.call(obj);
+  if (!_.isBoolean(result)) { throw new Error("$where function must return boolean"); }
+
+  return result;
+};
+
+
+/**
+ * Tell if a given document matches a query
+ * @param {Object} obj Document to check
+ * @param {Object} query
+ */
+function match (obj, query) {
+  var queryKeys, queryKey, queryValue, i;
+
+  // Primitive query against a primitive type
+  // This is a bit of a hack since we construct an object with an arbitrary key only to dereference it later
+  // But I don't have time for a cleaner implementation now
+  if (isPrimitiveType(obj) || isPrimitiveType(query)) {
+    return matchQueryPart({ needAKey: obj }, 'needAKey', query);
+  }
+
+  // Normal query
+  queryKeys = Object.keys(query);
+  for (i = 0; i < queryKeys.length; i += 1) {
+    queryKey = queryKeys[i];
+    queryValue = query[queryKey];
+
+    if (queryKey[0] === '$') {
+      if (!logicalOperators[queryKey]) { throw new Error("Unknown logical operator " + queryKey); }
+      if (!logicalOperators[queryKey](obj, queryValue)) { return false; }
+    } else {
+      if (!matchQueryPart(obj, queryKey, queryValue)) { return false; }
+    }
+  }
+
+  return true;
+};
+
+
+/**
+ * Match an object against a specific { key: value } part of a query
+ * if the treatObjAsValue flag is set, don't try to match every part separately, but the array as a whole
+ */
+function matchQueryPart (obj, queryKey, queryValue, treatObjAsValue) {
+  var objValue = getDotValue(obj, queryKey)
+    , i, keys, firstChars, dollarFirstChars;
+
+  // Check if the value is an array if we don't force a treatment as value
+  if (util.isArray(objValue) && !treatObjAsValue) {
+    // If the queryValue is an array, try to perform an exact match
+    if (util.isArray(queryValue)) {
+      return matchQueryPart(obj, queryKey, queryValue, true);
+    }
+
+    // Check if we are using an array-specific comparison function
+    if (queryValue !== null && typeof queryValue === 'object' && !util.isRegExp(queryValue)) {
+      keys = Object.keys(queryValue);
+      for (i = 0; i < keys.length; i += 1) {
+        if (arrayComparisonFunctions[keys[i]]) { return matchQueryPart(obj, queryKey, queryValue, true); }
+      }
+    }
+
+    // If not, treat it as an array of { obj, query } where there needs to be at least one match
+    for (i = 0; i < objValue.length; i += 1) {
+      if (matchQueryPart({ k: objValue[i] }, 'k', queryValue)) { return true; }   // k here could be any string
+    }
+    return false;
+  }
+
+  // queryValue is an actual object. Determine whether it contains comparison operators
+  // or only normal fields. Mixed objects are not allowed
+  if (queryValue !== null && typeof queryValue === 'object' && !util.isRegExp(queryValue) && !util.isArray(queryValue)) {
+    keys = Object.keys(queryValue);
+    firstChars = _.map(keys, function (item) { return item[0]; });
+    dollarFirstChars = _.filter(firstChars, function (c) { return c === '$'; });
+
+    if (dollarFirstChars.length !== 0 && dollarFirstChars.length !== firstChars.length) {
+      throw new Error("You cannot mix operators and normal fields");
+    }
+
+    // queryValue is an object of this form: { $comparisonOperator1: value1, ... }
+    if (dollarFirstChars.length > 0) {
+      for (i = 0; i < keys.length; i += 1) {
+        if (!comparisonFunctions[keys[i]]) { throw new Error("Unknown comparison function " + keys[i]); }
+
+        if (!comparisonFunctions[keys[i]](objValue, queryValue[keys[i]])) { return false; }
+      }
+      return true;
+    }
+  }
+
+  // Using regular expressions with basic querying
+  if (util.isRegExp(queryValue)) { return comparisonFunctions.$regex(objValue, queryValue); }
+
+  // queryValue is either a native value or a normal object
+  // Basic matching is possible
+  if (!areThingsEqual(objValue, queryValue)) { return false; }
+
+  return true;
+}
+
+
+// Interface
+module.exports.serialize = serialize;
+module.exports.deserialize = deserialize;
+module.exports.deepCopy = deepCopy;
+module.exports.checkObject = checkObject;
+module.exports.isPrimitiveType = isPrimitiveType;
+module.exports.modify = modify;
+module.exports.getDotValue = getDotValue;
+module.exports.match = match;
+module.exports.areThingsEqual = areThingsEqual;
+module.exports.compareThings = compareThings;
+
+
+/***/ }),
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3774,7 +5847,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3792,12 +5865,12 @@ module.exports = EventPluginRegistry;
 
 var _assign = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(25);
-var ReactEventEmitterMixin = __webpack_require__(142);
-var ViewportMetrics = __webpack_require__(67);
+var EventPluginRegistry = __webpack_require__(27);
+var ReactEventEmitterMixin = __webpack_require__(155);
+var ViewportMetrics = __webpack_require__(75);
 
-var getVendorPrefixedEventName = __webpack_require__(177);
-var isEventSupported = __webpack_require__(45);
+var getVendorPrefixedEventName = __webpack_require__(190);
+var isEventSupported = __webpack_require__(49);
 
 /**
  * Summary of `ReactBrowserEventEmitter` event handling:
@@ -4103,7 +6176,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4120,9 +6193,9 @@ module.exports = ReactBrowserEventEmitter;
 
 
 var SyntheticUIEvent = __webpack_require__(23);
-var ViewportMetrics = __webpack_require__(67);
+var ViewportMetrics = __webpack_require__(75);
 
-var getEventModifierState = __webpack_require__(43);
+var getEventModifierState = __webpack_require__(47);
 
 /**
  * @interface MouseEvent
@@ -4180,7 +6253,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4414,7 +6487,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4541,7 +6614,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4558,12 +6631,12 @@ module.exports = escapeTextContentForBrowser;
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var DOMNamespaces = __webpack_require__(34);
+var DOMNamespaces = __webpack_require__(38);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
 
 // SVG temp container for IE lacking innerHTML
 var reusableSVGContainer;
@@ -4644,7 +6717,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4676,7 +6749,600 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 32 */
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var formatRegExp = /%[sdj%]/g;
+exports.format = function(f) {
+  if (!isString(f)) {
+    var objects = [];
+    for (var i = 0; i < arguments.length; i++) {
+      objects.push(inspect(arguments[i]));
+    }
+    return objects.join(' ');
+  }
+
+  var i = 1;
+  var args = arguments;
+  var len = args.length;
+  var str = String(f).replace(formatRegExp, function(x) {
+    if (x === '%%') return '%';
+    if (i >= len) return x;
+    switch (x) {
+      case '%s': return String(args[i++]);
+      case '%d': return Number(args[i++]);
+      case '%j':
+        try {
+          return JSON.stringify(args[i++]);
+        } catch (_) {
+          return '[Circular]';
+        }
+      default:
+        return x;
+    }
+  });
+  for (var x = args[i]; i < len; x = args[++i]) {
+    if (isNull(x) || !isObject(x)) {
+      str += ' ' + x;
+    } else {
+      str += ' ' + inspect(x);
+    }
+  }
+  return str;
+};
+
+
+// Mark that a method should not be used.
+// Returns a modified function which warns once by default.
+// If --no-deprecation is set, then it is a no-op.
+exports.deprecate = function(fn, msg) {
+  // Allow for deprecating things in the process of starting up.
+  if (isUndefined(global.process)) {
+    return function() {
+      return exports.deprecate(fn, msg).apply(this, arguments);
+    };
+  }
+
+  if (process.noDeprecation === true) {
+    return fn;
+  }
+
+  var warned = false;
+  function deprecated() {
+    if (!warned) {
+      if (process.throwDeprecation) {
+        throw new Error(msg);
+      } else if (process.traceDeprecation) {
+        console.trace(msg);
+      } else {
+        console.error(msg);
+      }
+      warned = true;
+    }
+    return fn.apply(this, arguments);
+  }
+
+  return deprecated;
+};
+
+
+var debugs = {};
+var debugEnviron;
+exports.debuglog = function(set) {
+  if (isUndefined(debugEnviron))
+    debugEnviron = process.env.NODE_DEBUG || '';
+  set = set.toUpperCase();
+  if (!debugs[set]) {
+    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
+      var pid = process.pid;
+      debugs[set] = function() {
+        var msg = exports.format.apply(exports, arguments);
+        console.error('%s %d: %s', set, pid, msg);
+      };
+    } else {
+      debugs[set] = function() {};
+    }
+  }
+  return debugs[set];
+};
+
+
+/**
+ * Echos the value of a value. Trys to print the value out
+ * in the best way possible given the different types.
+ *
+ * @param {Object} obj The object to print out.
+ * @param {Object} opts Optional options object that alters the output.
+ */
+/* legacy: obj, showHidden, depth, colors*/
+function inspect(obj, opts) {
+  // default options
+  var ctx = {
+    seen: [],
+    stylize: stylizeNoColor
+  };
+  // legacy...
+  if (arguments.length >= 3) ctx.depth = arguments[2];
+  if (arguments.length >= 4) ctx.colors = arguments[3];
+  if (isBoolean(opts)) {
+    // legacy...
+    ctx.showHidden = opts;
+  } else if (opts) {
+    // got an "options" object
+    exports._extend(ctx, opts);
+  }
+  // set default options
+  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
+  if (isUndefined(ctx.depth)) ctx.depth = 2;
+  if (isUndefined(ctx.colors)) ctx.colors = false;
+  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
+  if (ctx.colors) ctx.stylize = stylizeWithColor;
+  return formatValue(ctx, obj, ctx.depth);
+}
+exports.inspect = inspect;
+
+
+// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+inspect.colors = {
+  'bold' : [1, 22],
+  'italic' : [3, 23],
+  'underline' : [4, 24],
+  'inverse' : [7, 27],
+  'white' : [37, 39],
+  'grey' : [90, 39],
+  'black' : [30, 39],
+  'blue' : [34, 39],
+  'cyan' : [36, 39],
+  'green' : [32, 39],
+  'magenta' : [35, 39],
+  'red' : [31, 39],
+  'yellow' : [33, 39]
+};
+
+// Don't use 'blue' not visible on cmd.exe
+inspect.styles = {
+  'special': 'cyan',
+  'number': 'yellow',
+  'boolean': 'yellow',
+  'undefined': 'grey',
+  'null': 'bold',
+  'string': 'green',
+  'date': 'magenta',
+  // "name": intentionally not styling
+  'regexp': 'red'
+};
+
+
+function stylizeWithColor(str, styleType) {
+  var style = inspect.styles[styleType];
+
+  if (style) {
+    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
+           '\u001b[' + inspect.colors[style][1] + 'm';
+  } else {
+    return str;
+  }
+}
+
+
+function stylizeNoColor(str, styleType) {
+  return str;
+}
+
+
+function arrayToHash(array) {
+  var hash = {};
+
+  array.forEach(function(val, idx) {
+    hash[val] = true;
+  });
+
+  return hash;
+}
+
+
+function formatValue(ctx, value, recurseTimes) {
+  // Provide a hook for user-specified inspect functions.
+  // Check that value is an object with an inspect function on it
+  if (ctx.customInspect &&
+      value &&
+      isFunction(value.inspect) &&
+      // Filter out the util module, it's inspect function is special
+      value.inspect !== exports.inspect &&
+      // Also filter out any prototype objects using the circular check.
+      !(value.constructor && value.constructor.prototype === value)) {
+    var ret = value.inspect(recurseTimes, ctx);
+    if (!isString(ret)) {
+      ret = formatValue(ctx, ret, recurseTimes);
+    }
+    return ret;
+  }
+
+  // Primitive types cannot have properties
+  var primitive = formatPrimitive(ctx, value);
+  if (primitive) {
+    return primitive;
+  }
+
+  // Look up the keys of the object.
+  var keys = Object.keys(value);
+  var visibleKeys = arrayToHash(keys);
+
+  if (ctx.showHidden) {
+    keys = Object.getOwnPropertyNames(value);
+  }
+
+  // IE doesn't make error fields non-enumerable
+  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+  if (isError(value)
+      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
+    return formatError(value);
+  }
+
+  // Some type of object without properties can be shortcutted.
+  if (keys.length === 0) {
+    if (isFunction(value)) {
+      var name = value.name ? ': ' + value.name : '';
+      return ctx.stylize('[Function' + name + ']', 'special');
+    }
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    }
+    if (isDate(value)) {
+      return ctx.stylize(Date.prototype.toString.call(value), 'date');
+    }
+    if (isError(value)) {
+      return formatError(value);
+    }
+  }
+
+  var base = '', array = false, braces = ['{', '}'];
+
+  // Make Array say that they are Array
+  if (isArray(value)) {
+    array = true;
+    braces = ['[', ']'];
+  }
+
+  // Make functions say that they are functions
+  if (isFunction(value)) {
+    var n = value.name ? ': ' + value.name : '';
+    base = ' [Function' + n + ']';
+  }
+
+  // Make RegExps say that they are RegExps
+  if (isRegExp(value)) {
+    base = ' ' + RegExp.prototype.toString.call(value);
+  }
+
+  // Make dates with properties first say the date
+  if (isDate(value)) {
+    base = ' ' + Date.prototype.toUTCString.call(value);
+  }
+
+  // Make error with message first say the error
+  if (isError(value)) {
+    base = ' ' + formatError(value);
+  }
+
+  if (keys.length === 0 && (!array || value.length == 0)) {
+    return braces[0] + base + braces[1];
+  }
+
+  if (recurseTimes < 0) {
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    } else {
+      return ctx.stylize('[Object]', 'special');
+    }
+  }
+
+  ctx.seen.push(value);
+
+  var output;
+  if (array) {
+    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+  } else {
+    output = keys.map(function(key) {
+      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+    });
+  }
+
+  ctx.seen.pop();
+
+  return reduceToSingleString(output, base, braces);
+}
+
+
+function formatPrimitive(ctx, value) {
+  if (isUndefined(value))
+    return ctx.stylize('undefined', 'undefined');
+  if (isString(value)) {
+    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+                                             .replace(/'/g, "\\'")
+                                             .replace(/\\"/g, '"') + '\'';
+    return ctx.stylize(simple, 'string');
+  }
+  if (isNumber(value))
+    return ctx.stylize('' + value, 'number');
+  if (isBoolean(value))
+    return ctx.stylize('' + value, 'boolean');
+  // For some reason typeof null is "object", so special case here.
+  if (isNull(value))
+    return ctx.stylize('null', 'null');
+}
+
+
+function formatError(value) {
+  return '[' + Error.prototype.toString.call(value) + ']';
+}
+
+
+function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+  var output = [];
+  for (var i = 0, l = value.length; i < l; ++i) {
+    if (hasOwnProperty(value, String(i))) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          String(i), true));
+    } else {
+      output.push('');
+    }
+  }
+  keys.forEach(function(key) {
+    if (!key.match(/^\d+$/)) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          key, true));
+    }
+  });
+  return output;
+}
+
+
+function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+  var name, str, desc;
+  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
+  if (desc.get) {
+    if (desc.set) {
+      str = ctx.stylize('[Getter/Setter]', 'special');
+    } else {
+      str = ctx.stylize('[Getter]', 'special');
+    }
+  } else {
+    if (desc.set) {
+      str = ctx.stylize('[Setter]', 'special');
+    }
+  }
+  if (!hasOwnProperty(visibleKeys, key)) {
+    name = '[' + key + ']';
+  }
+  if (!str) {
+    if (ctx.seen.indexOf(desc.value) < 0) {
+      if (isNull(recurseTimes)) {
+        str = formatValue(ctx, desc.value, null);
+      } else {
+        str = formatValue(ctx, desc.value, recurseTimes - 1);
+      }
+      if (str.indexOf('\n') > -1) {
+        if (array) {
+          str = str.split('\n').map(function(line) {
+            return '  ' + line;
+          }).join('\n').substr(2);
+        } else {
+          str = '\n' + str.split('\n').map(function(line) {
+            return '   ' + line;
+          }).join('\n');
+        }
+      }
+    } else {
+      str = ctx.stylize('[Circular]', 'special');
+    }
+  }
+  if (isUndefined(name)) {
+    if (array && key.match(/^\d+$/)) {
+      return str;
+    }
+    name = JSON.stringify('' + key);
+    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
+      name = name.substr(1, name.length - 2);
+      name = ctx.stylize(name, 'name');
+    } else {
+      name = name.replace(/'/g, "\\'")
+                 .replace(/\\"/g, '"')
+                 .replace(/(^"|"$)/g, "'");
+      name = ctx.stylize(name, 'string');
+    }
+  }
+
+  return name + ': ' + str;
+}
+
+
+function reduceToSingleString(output, base, braces) {
+  var numLinesEst = 0;
+  var length = output.reduce(function(prev, cur) {
+    numLinesEst++;
+    if (cur.indexOf('\n') >= 0) numLinesEst++;
+    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
+  }, 0);
+
+  if (length > 60) {
+    return braces[0] +
+           (base === '' ? '' : base + '\n ') +
+           ' ' +
+           output.join(',\n  ') +
+           ' ' +
+           braces[1];
+  }
+
+  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
+}
+
+
+// NOTE: These type checking functions intentionally don't use `instanceof`
+// because it is fragile and can be easily faked with `Object.create()`.
+function isArray(ar) {
+  return Array.isArray(ar);
+}
+exports.isArray = isArray;
+
+function isBoolean(arg) {
+  return typeof arg === 'boolean';
+}
+exports.isBoolean = isBoolean;
+
+function isNull(arg) {
+  return arg === null;
+}
+exports.isNull = isNull;
+
+function isNullOrUndefined(arg) {
+  return arg == null;
+}
+exports.isNullOrUndefined = isNullOrUndefined;
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+exports.isNumber = isNumber;
+
+function isString(arg) {
+  return typeof arg === 'string';
+}
+exports.isString = isString;
+
+function isSymbol(arg) {
+  return typeof arg === 'symbol';
+}
+exports.isSymbol = isSymbol;
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+exports.isUndefined = isUndefined;
+
+function isRegExp(re) {
+  return isObject(re) && objectToString(re) === '[object RegExp]';
+}
+exports.isRegExp = isRegExp;
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+exports.isObject = isObject;
+
+function isDate(d) {
+  return isObject(d) && objectToString(d) === '[object Date]';
+}
+exports.isDate = isDate;
+
+function isError(e) {
+  return isObject(e) &&
+      (objectToString(e) === '[object Error]' || e instanceof Error);
+}
+exports.isError = isError;
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+exports.isFunction = isFunction;
+
+function isPrimitive(arg) {
+  return arg === null ||
+         typeof arg === 'boolean' ||
+         typeof arg === 'number' ||
+         typeof arg === 'string' ||
+         typeof arg === 'symbol' ||  // ES6 symbol
+         typeof arg === 'undefined';
+}
+exports.isPrimitive = isPrimitive;
+
+exports.isBuffer = __webpack_require__(208);
+
+function objectToString(o) {
+  return Object.prototype.toString.call(o);
+}
+
+
+function pad(n) {
+  return n < 10 ? '0' + n.toString(10) : n.toString(10);
+}
+
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+              'Oct', 'Nov', 'Dec'];
+
+// 26 Feb 16:19:34
+function timestamp() {
+  var d = new Date();
+  var time = [pad(d.getHours()),
+              pad(d.getMinutes()),
+              pad(d.getSeconds())].join(':');
+  return [d.getDate(), months[d.getMonth()], time].join(' ');
+}
+
+
+// log is just a thin wrapper to console.log that prepends a timestamp
+exports.log = function() {
+  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
+};
+
+
+/**
+ * Inherit the prototype methods from one constructor into another.
+ *
+ * The Function.prototype.inherits from lang.js rewritten as a standalone
+ * function (not on Function.prototype). NOTE: If this file is to be loaded
+ * during bootstrapping this function needs to be rewritten using some native
+ * functions as prototype setup using normal JavaScript does not work as
+ * expected during bootstrapping (see mirror.js in r114903).
+ *
+ * @param {function} ctor Constructor function which needs to inherit the
+ *     prototype.
+ * @param {function} superCtor Constructor function to inherit prototype from.
+ */
+exports.inherits = __webpack_require__(207);
+
+exports._extend = function(origin, add) {
+  // Don't do anything if add isn't an object
+  if (!add || !isObject(add)) return origin;
+
+  var keys = Object.keys(add);
+  var i = keys.length;
+  while (i--) {
+    origin[keys[i]] = add[keys[i]];
+  }
+  return origin;
+};
+
+function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53), __webpack_require__(0)))
+
+/***/ }),
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4749,7 +7415,973 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 33 */
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process, setImmediate) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*global setImmediate: false, setTimeout: false, console: false */
+(function () {
+
+    var async = {};
+
+    // global on the server, window in the browser
+    var root, previous_async;
+
+    root = this;
+    if (root != null) {
+      previous_async = root.async;
+    }
+
+    async.noConflict = function () {
+        root.async = previous_async;
+        return async;
+    };
+
+    function only_once(fn) {
+        var called = false;
+        return function() {
+            if (called) throw new Error("Callback was already called.");
+            called = true;
+            fn.apply(root, arguments);
+        }
+    }
+
+    //// cross-browser compatiblity functions ////
+
+    var _each = function (arr, iterator) {
+        if (arr.forEach) {
+            return arr.forEach(iterator);
+        }
+        for (var i = 0; i < arr.length; i += 1) {
+            iterator(arr[i], i, arr);
+        }
+    };
+
+    var _map = function (arr, iterator) {
+        if (arr.map) {
+            return arr.map(iterator);
+        }
+        var results = [];
+        _each(arr, function (x, i, a) {
+            results.push(iterator(x, i, a));
+        });
+        return results;
+    };
+
+    var _reduce = function (arr, iterator, memo) {
+        if (arr.reduce) {
+            return arr.reduce(iterator, memo);
+        }
+        _each(arr, function (x, i, a) {
+            memo = iterator(memo, x, i, a);
+        });
+        return memo;
+    };
+
+    var _keys = function (obj) {
+        if (Object.keys) {
+            return Object.keys(obj);
+        }
+        var keys = [];
+        for (var k in obj) {
+            if (obj.hasOwnProperty(k)) {
+                keys.push(k);
+            }
+        }
+        return keys;
+    };
+
+    //// exported async module functions ////
+
+    //// nextTick implementation with browser-compatible fallback ////
+    if (typeof process === 'undefined' || !(process.nextTick)) {
+        if (typeof setImmediate === 'function') {
+            async.nextTick = function (fn) {
+                // not a direct alias for IE10 compatibility
+                setImmediate(fn);
+            };
+            async.setImmediate = async.nextTick;
+        }
+        else {
+            async.nextTick = function (fn) {
+                setTimeout(fn, 0);
+            };
+            async.setImmediate = async.nextTick;
+        }
+    }
+    else {
+        async.nextTick = process.nextTick;
+        if (typeof setImmediate !== 'undefined') {
+            async.setImmediate = function (fn) {
+              // not a direct alias for IE10 compatibility
+              setImmediate(fn);
+            };
+        }
+        else {
+            async.setImmediate = async.nextTick;
+        }
+    }
+
+    async.each = function (arr, iterator, callback) {
+        callback = callback || function () {};
+        if (!arr.length) {
+            return callback();
+        }
+        var completed = 0;
+        _each(arr, function (x) {
+            iterator(x, only_once(function (err) {
+                if (err) {
+                    callback(err);
+                    callback = function () {};
+                }
+                else {
+                    completed += 1;
+                    if (completed >= arr.length) {
+                        callback(null);
+                    }
+                }
+            }));
+        });
+    };
+    async.forEach = async.each;
+
+    async.eachSeries = function (arr, iterator, callback) {
+        callback = callback || function () {};
+        if (!arr.length) {
+            return callback();
+        }
+        var completed = 0;
+        var iterate = function () {
+            iterator(arr[completed], function (err) {
+                if (err) {
+                    callback(err);
+                    callback = function () {};
+                }
+                else {
+                    completed += 1;
+                    if (completed >= arr.length) {
+                        callback(null);
+                    }
+                    else {
+                        iterate();
+                    }
+                }
+            });
+        };
+        iterate();
+    };
+    async.forEachSeries = async.eachSeries;
+
+    async.eachLimit = function (arr, limit, iterator, callback) {
+        var fn = _eachLimit(limit);
+        fn.apply(null, [arr, iterator, callback]);
+    };
+    async.forEachLimit = async.eachLimit;
+
+    var _eachLimit = function (limit) {
+
+        return function (arr, iterator, callback) {
+            callback = callback || function () {};
+            if (!arr.length || limit <= 0) {
+                return callback();
+            }
+            var completed = 0;
+            var started = 0;
+            var running = 0;
+
+            (function replenish () {
+                if (completed >= arr.length) {
+                    return callback();
+                }
+
+                while (running < limit && started < arr.length) {
+                    started += 1;
+                    running += 1;
+                    iterator(arr[started - 1], function (err) {
+                        if (err) {
+                            callback(err);
+                            callback = function () {};
+                        }
+                        else {
+                            completed += 1;
+                            running -= 1;
+                            if (completed >= arr.length) {
+                                callback();
+                            }
+                            else {
+                                replenish();
+                            }
+                        }
+                    });
+                }
+            })();
+        };
+    };
+
+
+    var doParallel = function (fn) {
+        return function () {
+            var args = Array.prototype.slice.call(arguments);
+            return fn.apply(null, [async.each].concat(args));
+        };
+    };
+    var doParallelLimit = function(limit, fn) {
+        return function () {
+            var args = Array.prototype.slice.call(arguments);
+            return fn.apply(null, [_eachLimit(limit)].concat(args));
+        };
+    };
+    var doSeries = function (fn) {
+        return function () {
+            var args = Array.prototype.slice.call(arguments);
+            return fn.apply(null, [async.eachSeries].concat(args));
+        };
+    };
+
+
+    var _asyncMap = function (eachfn, arr, iterator, callback) {
+        var results = [];
+        arr = _map(arr, function (x, i) {
+            return {index: i, value: x};
+        });
+        eachfn(arr, function (x, callback) {
+            iterator(x.value, function (err, v) {
+                results[x.index] = v;
+                callback(err);
+            });
+        }, function (err) {
+            callback(err, results);
+        });
+    };
+    async.map = doParallel(_asyncMap);
+    async.mapSeries = doSeries(_asyncMap);
+    async.mapLimit = function (arr, limit, iterator, callback) {
+        return _mapLimit(limit)(arr, iterator, callback);
+    };
+
+    var _mapLimit = function(limit) {
+        return doParallelLimit(limit, _asyncMap);
+    };
+
+    // reduce only has a series version, as doing reduce in parallel won't
+    // work in many situations.
+    async.reduce = function (arr, memo, iterator, callback) {
+        async.eachSeries(arr, function (x, callback) {
+            iterator(memo, x, function (err, v) {
+                memo = v;
+                callback(err);
+            });
+        }, function (err) {
+            callback(err, memo);
+        });
+    };
+    // inject alias
+    async.inject = async.reduce;
+    // foldl alias
+    async.foldl = async.reduce;
+
+    async.reduceRight = function (arr, memo, iterator, callback) {
+        var reversed = _map(arr, function (x) {
+            return x;
+        }).reverse();
+        async.reduce(reversed, memo, iterator, callback);
+    };
+    // foldr alias
+    async.foldr = async.reduceRight;
+
+    var _filter = function (eachfn, arr, iterator, callback) {
+        var results = [];
+        arr = _map(arr, function (x, i) {
+            return {index: i, value: x};
+        });
+        eachfn(arr, function (x, callback) {
+            iterator(x.value, function (v) {
+                if (v) {
+                    results.push(x);
+                }
+                callback();
+            });
+        }, function (err) {
+            callback(_map(results.sort(function (a, b) {
+                return a.index - b.index;
+            }), function (x) {
+                return x.value;
+            }));
+        });
+    };
+    async.filter = doParallel(_filter);
+    async.filterSeries = doSeries(_filter);
+    // select alias
+    async.select = async.filter;
+    async.selectSeries = async.filterSeries;
+
+    var _reject = function (eachfn, arr, iterator, callback) {
+        var results = [];
+        arr = _map(arr, function (x, i) {
+            return {index: i, value: x};
+        });
+        eachfn(arr, function (x, callback) {
+            iterator(x.value, function (v) {
+                if (!v) {
+                    results.push(x);
+                }
+                callback();
+            });
+        }, function (err) {
+            callback(_map(results.sort(function (a, b) {
+                return a.index - b.index;
+            }), function (x) {
+                return x.value;
+            }));
+        });
+    };
+    async.reject = doParallel(_reject);
+    async.rejectSeries = doSeries(_reject);
+
+    var _detect = function (eachfn, arr, iterator, main_callback) {
+        eachfn(arr, function (x, callback) {
+            iterator(x, function (result) {
+                if (result) {
+                    main_callback(x);
+                    main_callback = function () {};
+                }
+                else {
+                    callback();
+                }
+            });
+        }, function (err) {
+            main_callback();
+        });
+    };
+    async.detect = doParallel(_detect);
+    async.detectSeries = doSeries(_detect);
+
+    async.some = function (arr, iterator, main_callback) {
+        async.each(arr, function (x, callback) {
+            iterator(x, function (v) {
+                if (v) {
+                    main_callback(true);
+                    main_callback = function () {};
+                }
+                callback();
+            });
+        }, function (err) {
+            main_callback(false);
+        });
+    };
+    // any alias
+    async.any = async.some;
+
+    async.every = function (arr, iterator, main_callback) {
+        async.each(arr, function (x, callback) {
+            iterator(x, function (v) {
+                if (!v) {
+                    main_callback(false);
+                    main_callback = function () {};
+                }
+                callback();
+            });
+        }, function (err) {
+            main_callback(true);
+        });
+    };
+    // all alias
+    async.all = async.every;
+
+    async.sortBy = function (arr, iterator, callback) {
+        async.map(arr, function (x, callback) {
+            iterator(x, function (err, criteria) {
+                if (err) {
+                    callback(err);
+                }
+                else {
+                    callback(null, {value: x, criteria: criteria});
+                }
+            });
+        }, function (err, results) {
+            if (err) {
+                return callback(err);
+            }
+            else {
+                var fn = function (left, right) {
+                    var a = left.criteria, b = right.criteria;
+                    return a < b ? -1 : a > b ? 1 : 0;
+                };
+                callback(null, _map(results.sort(fn), function (x) {
+                    return x.value;
+                }));
+            }
+        });
+    };
+
+    async.auto = function (tasks, callback) {
+        callback = callback || function () {};
+        var keys = _keys(tasks);
+        if (!keys.length) {
+            return callback(null);
+        }
+
+        var results = {};
+
+        var listeners = [];
+        var addListener = function (fn) {
+            listeners.unshift(fn);
+        };
+        var removeListener = function (fn) {
+            for (var i = 0; i < listeners.length; i += 1) {
+                if (listeners[i] === fn) {
+                    listeners.splice(i, 1);
+                    return;
+                }
+            }
+        };
+        var taskComplete = function () {
+            _each(listeners.slice(0), function (fn) {
+                fn();
+            });
+        };
+
+        addListener(function () {
+            if (_keys(results).length === keys.length) {
+                callback(null, results);
+                callback = function () {};
+            }
+        });
+
+        _each(keys, function (k) {
+            var task = (tasks[k] instanceof Function) ? [tasks[k]]: tasks[k];
+            var taskCallback = function (err) {
+                var args = Array.prototype.slice.call(arguments, 1);
+                if (args.length <= 1) {
+                    args = args[0];
+                }
+                if (err) {
+                    var safeResults = {};
+                    _each(_keys(results), function(rkey) {
+                        safeResults[rkey] = results[rkey];
+                    });
+                    safeResults[k] = args;
+                    callback(err, safeResults);
+                    // stop subsequent errors hitting callback multiple times
+                    callback = function () {};
+                }
+                else {
+                    results[k] = args;
+                    async.setImmediate(taskComplete);
+                }
+            };
+            var requires = task.slice(0, Math.abs(task.length - 1)) || [];
+            var ready = function () {
+                return _reduce(requires, function (a, x) {
+                    return (a && results.hasOwnProperty(x));
+                }, true) && !results.hasOwnProperty(k);
+            };
+            if (ready()) {
+                task[task.length - 1](taskCallback, results);
+            }
+            else {
+                var listener = function () {
+                    if (ready()) {
+                        removeListener(listener);
+                        task[task.length - 1](taskCallback, results);
+                    }
+                };
+                addListener(listener);
+            }
+        });
+    };
+
+    async.waterfall = function (tasks, callback) {
+        callback = callback || function () {};
+        if (tasks.constructor !== Array) {
+          var err = new Error('First argument to waterfall must be an array of functions');
+          return callback(err);
+        }
+        if (!tasks.length) {
+            return callback();
+        }
+        var wrapIterator = function (iterator) {
+            return function (err) {
+                if (err) {
+                    callback.apply(null, arguments);
+                    callback = function () {};
+                }
+                else {
+                    var args = Array.prototype.slice.call(arguments, 1);
+                    var next = iterator.next();
+                    if (next) {
+                        args.push(wrapIterator(next));
+                    }
+                    else {
+                        args.push(callback);
+                    }
+                    async.setImmediate(function () {
+                        iterator.apply(null, args);
+                    });
+                }
+            };
+        };
+        wrapIterator(async.iterator(tasks))();
+    };
+
+    var _parallel = function(eachfn, tasks, callback) {
+        callback = callback || function () {};
+        if (tasks.constructor === Array) {
+            eachfn.map(tasks, function (fn, callback) {
+                if (fn) {
+                    fn(function (err) {
+                        var args = Array.prototype.slice.call(arguments, 1);
+                        if (args.length <= 1) {
+                            args = args[0];
+                        }
+                        callback.call(null, err, args);
+                    });
+                }
+            }, callback);
+        }
+        else {
+            var results = {};
+            eachfn.each(_keys(tasks), function (k, callback) {
+                tasks[k](function (err) {
+                    var args = Array.prototype.slice.call(arguments, 1);
+                    if (args.length <= 1) {
+                        args = args[0];
+                    }
+                    results[k] = args;
+                    callback(err);
+                });
+            }, function (err) {
+                callback(err, results);
+            });
+        }
+    };
+
+    async.parallel = function (tasks, callback) {
+        _parallel({ map: async.map, each: async.each }, tasks, callback);
+    };
+
+    async.parallelLimit = function(tasks, limit, callback) {
+        _parallel({ map: _mapLimit(limit), each: _eachLimit(limit) }, tasks, callback);
+    };
+
+    async.series = function (tasks, callback) {
+        callback = callback || function () {};
+        if (tasks.constructor === Array) {
+            async.mapSeries(tasks, function (fn, callback) {
+                if (fn) {
+                    fn(function (err) {
+                        var args = Array.prototype.slice.call(arguments, 1);
+                        if (args.length <= 1) {
+                            args = args[0];
+                        }
+                        callback.call(null, err, args);
+                    });
+                }
+            }, callback);
+        }
+        else {
+            var results = {};
+            async.eachSeries(_keys(tasks), function (k, callback) {
+                tasks[k](function (err) {
+                    var args = Array.prototype.slice.call(arguments, 1);
+                    if (args.length <= 1) {
+                        args = args[0];
+                    }
+                    results[k] = args;
+                    callback(err);
+                });
+            }, function (err) {
+                callback(err, results);
+            });
+        }
+    };
+
+    async.iterator = function (tasks) {
+        var makeCallback = function (index) {
+            var fn = function () {
+                if (tasks.length) {
+                    tasks[index].apply(null, arguments);
+                }
+                return fn.next();
+            };
+            fn.next = function () {
+                return (index < tasks.length - 1) ? makeCallback(index + 1): null;
+            };
+            return fn;
+        };
+        return makeCallback(0);
+    };
+
+    async.apply = function (fn) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        return function () {
+            return fn.apply(
+                null, args.concat(Array.prototype.slice.call(arguments))
+            );
+        };
+    };
+
+    var _concat = function (eachfn, arr, fn, callback) {
+        var r = [];
+        eachfn(arr, function (x, cb) {
+            fn(x, function (err, y) {
+                r = r.concat(y || []);
+                cb(err);
+            });
+        }, function (err) {
+            callback(err, r);
+        });
+    };
+    async.concat = doParallel(_concat);
+    async.concatSeries = doSeries(_concat);
+
+    async.whilst = function (test, iterator, callback) {
+        if (test()) {
+            iterator(function (err) {
+                if (err) {
+                    return callback(err);
+                }
+                async.whilst(test, iterator, callback);
+            });
+        }
+        else {
+            callback();
+        }
+    };
+
+    async.doWhilst = function (iterator, test, callback) {
+        iterator(function (err) {
+            if (err) {
+                return callback(err);
+            }
+            if (test()) {
+                async.doWhilst(iterator, test, callback);
+            }
+            else {
+                callback();
+            }
+        });
+    };
+
+    async.until = function (test, iterator, callback) {
+        if (!test()) {
+            iterator(function (err) {
+                if (err) {
+                    return callback(err);
+                }
+                async.until(test, iterator, callback);
+            });
+        }
+        else {
+            callback();
+        }
+    };
+
+    async.doUntil = function (iterator, test, callback) {
+        iterator(function (err) {
+            if (err) {
+                return callback(err);
+            }
+            if (!test()) {
+                async.doUntil(iterator, test, callback);
+            }
+            else {
+                callback();
+            }
+        });
+    };
+
+    async.queue = function (worker, concurrency) {
+        if (concurrency === undefined) {
+            concurrency = 1;
+        }
+        function _insert(q, data, pos, callback) {
+          if(data.constructor !== Array) {
+              data = [data];
+          }
+          _each(data, function(task) {
+              var item = {
+                  data: task,
+                  callback: typeof callback === 'function' ? callback : null
+              };
+
+              if (pos) {
+                q.tasks.unshift(item);
+              } else {
+                q.tasks.push(item);
+              }
+
+              if (q.saturated && q.tasks.length === concurrency) {
+                  q.saturated();
+              }
+              async.setImmediate(q.process);
+          });
+        }
+
+        var workers = 0;
+        var q = {
+            tasks: [],
+            concurrency: concurrency,
+            saturated: null,
+            empty: null,
+            drain: null,
+            push: function (data, callback) {
+              _insert(q, data, false, callback);
+            },
+            unshift: function (data, callback) {
+              _insert(q, data, true, callback);
+            },
+            process: function () {
+                if (workers < q.concurrency && q.tasks.length) {
+                    var task = q.tasks.shift();
+                    if (q.empty && q.tasks.length === 0) {
+                        q.empty();
+                    }
+                    workers += 1;
+                    var next = function () {
+                        workers -= 1;
+                        if (task.callback) {
+                            task.callback.apply(task, arguments);
+                        }
+                        if (q.drain && q.tasks.length + workers === 0) {
+                            q.drain();
+                        }
+                        q.process();
+                    };
+                    var cb = only_once(next);
+                    worker(task.data, cb);
+                }
+            },
+            length: function () {
+                return q.tasks.length;
+            },
+            running: function () {
+                return workers;
+            }
+        };
+        return q;
+    };
+
+    async.cargo = function (worker, payload) {
+        var working     = false,
+            tasks       = [];
+
+        var cargo = {
+            tasks: tasks,
+            payload: payload,
+            saturated: null,
+            empty: null,
+            drain: null,
+            push: function (data, callback) {
+                if(data.constructor !== Array) {
+                    data = [data];
+                }
+                _each(data, function(task) {
+                    tasks.push({
+                        data: task,
+                        callback: typeof callback === 'function' ? callback : null
+                    });
+                    if (cargo.saturated && tasks.length === payload) {
+                        cargo.saturated();
+                    }
+                });
+                async.setImmediate(cargo.process);
+            },
+            process: function process() {
+                if (working) return;
+                if (tasks.length === 0) {
+                    if(cargo.drain) cargo.drain();
+                    return;
+                }
+
+                var ts = typeof payload === 'number'
+                            ? tasks.splice(0, payload)
+                            : tasks.splice(0);
+
+                var ds = _map(ts, function (task) {
+                    return task.data;
+                });
+
+                if(cargo.empty) cargo.empty();
+                working = true;
+                worker(ds, function () {
+                    working = false;
+
+                    var args = arguments;
+                    _each(ts, function (data) {
+                        if (data.callback) {
+                            data.callback.apply(null, args);
+                        }
+                    });
+
+                    process();
+                });
+            },
+            length: function () {
+                return tasks.length;
+            },
+            running: function () {
+                return working;
+            }
+        };
+        return cargo;
+    };
+
+    var _console_fn = function (name) {
+        return function (fn) {
+            var args = Array.prototype.slice.call(arguments, 1);
+            fn.apply(null, args.concat([function (err) {
+                var args = Array.prototype.slice.call(arguments, 1);
+                if (typeof console !== 'undefined') {
+                    if (err) {
+                        if (console.error) {
+                            console.error(err);
+                        }
+                    }
+                    else if (console[name]) {
+                        _each(args, function (x) {
+                            console[name](x);
+                        });
+                    }
+                }
+            }]));
+        };
+    };
+    async.log = _console_fn('log');
+    async.dir = _console_fn('dir');
+    /*async.info = _console_fn('info');
+    async.warn = _console_fn('warn');
+    async.error = _console_fn('error');*/
+
+    async.memoize = function (fn, hasher) {
+        var memo = {};
+        var queues = {};
+        hasher = hasher || function (x) {
+            return x;
+        };
+        var memoized = function () {
+            var args = Array.prototype.slice.call(arguments);
+            var callback = args.pop();
+            var key = hasher.apply(null, args);
+            if (key in memo) {
+                callback.apply(null, memo[key]);
+            }
+            else if (key in queues) {
+                queues[key].push(callback);
+            }
+            else {
+                queues[key] = [callback];
+                fn.apply(null, args.concat([function () {
+                    memo[key] = arguments;
+                    var q = queues[key];
+                    delete queues[key];
+                    for (var i = 0, l = q.length; i < l; i++) {
+                      q[i].apply(null, arguments);
+                    }
+                }]));
+            }
+        };
+        memoized.memo = memo;
+        memoized.unmemoized = fn;
+        return memoized;
+    };
+
+    async.unmemoize = function (fn) {
+      return function () {
+        return (fn.unmemoized || fn).apply(null, arguments);
+      };
+    };
+
+    async.times = function (count, iterator, callback) {
+        var counter = [];
+        for (var i = 0; i < count; i++) {
+            counter.push(i);
+        }
+        return async.map(counter, iterator, callback);
+    };
+
+    async.timesSeries = function (count, iterator, callback) {
+        var counter = [];
+        for (var i = 0; i < count; i++) {
+            counter.push(i);
+        }
+        return async.mapSeries(counter, iterator, callback);
+    };
+
+    async.compose = function (/* functions... */) {
+        var fns = Array.prototype.reverse.call(arguments);
+        return function () {
+            var that = this;
+            var args = Array.prototype.slice.call(arguments);
+            var callback = args.pop();
+            async.reduce(fns, args, function (newargs, fn, cb) {
+                fn.apply(that, newargs.concat([function () {
+                    var err = arguments[0];
+                    var nextargs = Array.prototype.slice.call(arguments, 1);
+                    cb(err, nextargs);
+                }]))
+            },
+            function (err, results) {
+                callback.apply(that, [err].concat(results));
+            });
+        };
+    };
+
+    var _applyEach = function (eachfn, fns /*args...*/) {
+        var go = function () {
+            var that = this;
+            var args = Array.prototype.slice.call(arguments);
+            var callback = args.pop();
+            return eachfn(fns, function (fn, cb) {
+                fn.apply(that, args.concat([cb]));
+            },
+            callback);
+        };
+        if (arguments.length > 2) {
+            var args = Array.prototype.slice.call(arguments, 2);
+            return go.apply(this, args);
+        }
+        else {
+            return go;
+        }
+    };
+    async.applyEach = doParallel(_applyEach);
+    async.applyEachSeries = doSeries(_applyEach);
+
+    async.forever = function (fn, callback) {
+        function next(err) {
+            if (err) {
+                if (callback) {
+                    return callback(err);
+                }
+                throw err;
+            }
+            fn(next);
+        }
+        next();
+    };
+
+    // AMD / RequireJS
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+            return async;
+        }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    }
+    // Node.js
+    else if (typeof module !== 'undefined' && module.exports) {
+        module.exports = async;
+    }
+    // included directly via <script> tag
+    else {
+        root.async = async;
+    }
+
+}());
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(91).setImmediate))
+
+/***/ }),
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4766,13 +8398,13 @@ module.exports = shallowEqual;
 
 
 var DOMLazyTree = __webpack_require__(16);
-var Danger = __webpack_require__(115);
+var Danger = __webpack_require__(128);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(41);
-var setInnerHTML = __webpack_require__(30);
-var setTextContent = __webpack_require__(75);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
+var setInnerHTML = __webpack_require__(32);
+var setTextContent = __webpack_require__(83);
 
 function getNodeAfter(parentNode, node) {
   // Special case for text components, which return [open, close] comments
@@ -4981,7 +8613,7 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5006,7 +8638,7 @@ var DOMNamespaces = {
 module.exports = DOMNamespaces;
 
 /***/ }),
-/* 35 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5024,7 +8656,7 @@ module.exports = DOMNamespaces;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactErrorUtils = __webpack_require__(39);
+var ReactErrorUtils = __webpack_require__(43);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -5238,7 +8870,7 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 36 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5302,7 +8934,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 37 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5320,8 +8952,8 @@ module.exports = KeyEscapeUtils;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypesSecret = __webpack_require__(66);
-var propTypesFactory = __webpack_require__(53);
+var ReactPropTypesSecret = __webpack_require__(74);
+var propTypesFactory = __webpack_require__(61);
 
 var React = __webpack_require__(18);
 var PropTypes = propTypesFactory(React.isValidElement);
@@ -5446,7 +9078,7 @@ module.exports = LinkedValueUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5496,7 +9128,7 @@ module.exports = ReactComponentEnvironment;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5578,7 +9210,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5818,7 +9450,7 @@ module.exports = ReactUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5855,7 +9487,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ }),
-/* 42 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5910,7 +9542,7 @@ function getEventCharCode(nativeEvent) {
 module.exports = getEventCharCode;
 
 /***/ }),
-/* 43 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5958,7 +9590,7 @@ function getEventModifierState(nativeEvent) {
 module.exports = getEventModifierState;
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5998,7 +9630,7 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6063,7 +9695,7 @@ function isEventSupported(eventNameSuffix, capture) {
 module.exports = isEventSupported;
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6110,7 +9742,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 /***/ }),
-/* 47 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6487,7 +10119,7 @@ module.exports = validateDOMNesting;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 48 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6558,7 +10190,630 @@ module.exports = lowPriorityWarning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 49 */
+/* 53 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Simple binary search tree
+ */
+var customUtils = __webpack_require__(55);
+
+
+/**
+ * Constructor
+ * @param {Object} options Optional
+ * @param {Boolean}  options.unique Whether to enforce a 'unique' constraint on the key or not
+ * @param {Key}      options.key Initialize this BST's key with key
+ * @param {Value}    options.value Initialize this BST's data with [value]
+ * @param {Function} options.compareKeys Initialize this BST's compareKeys
+ */
+function BinarySearchTree (options) {
+  options = options || {};
+
+  this.left = null;
+  this.right = null;
+  this.parent = options.parent !== undefined ? options.parent : null;
+  if (options.hasOwnProperty('key')) { this.key = options.key; }
+  this.data = options.hasOwnProperty('value') ? [options.value] : [];
+  this.unique = options.unique || false;
+
+  this.compareKeys = options.compareKeys || customUtils.defaultCompareKeysFunction;
+  this.checkValueEquality = options.checkValueEquality || customUtils.defaultCheckValueEquality;
+}
+
+
+// ================================
+// Methods used to test the tree
+// ================================
+
+
+/**
+ * Get the descendant with max key
+ */
+BinarySearchTree.prototype.getMaxKeyDescendant = function () {
+  if (this.right) {
+    return this.right.getMaxKeyDescendant();
+  } else {
+    return this;
+  }
+};
+
+
+/**
+ * Get the maximum key
+ */
+BinarySearchTree.prototype.getMaxKey = function () {
+  return this.getMaxKeyDescendant().key;
+};
+
+
+/**
+ * Get the descendant with min key
+ */
+BinarySearchTree.prototype.getMinKeyDescendant = function () {
+  if (this.left) {
+    return this.left.getMinKeyDescendant()
+  } else {
+    return this;
+  }
+};
+
+
+/**
+ * Get the minimum key
+ */
+BinarySearchTree.prototype.getMinKey = function () {
+  return this.getMinKeyDescendant().key;
+};
+
+
+/**
+ * Check that all nodes (incl. leaves) fullfil condition given by fn
+ * test is a function passed every (key, data) and which throws if the condition is not met
+ */
+BinarySearchTree.prototype.checkAllNodesFullfillCondition = function (test) {
+  if (!this.hasOwnProperty('key')) { return; }
+
+  test(this.key, this.data);
+  if (this.left) { this.left.checkAllNodesFullfillCondition(test); }
+  if (this.right) { this.right.checkAllNodesFullfillCondition(test); }
+};
+
+
+/**
+ * Check that the core BST properties on node ordering are verified
+ * Throw if they aren't
+ */
+BinarySearchTree.prototype.checkNodeOrdering = function () {
+  var self = this;
+
+  if (!this.hasOwnProperty('key')) { return; }
+
+  if (this.left) {
+    this.left.checkAllNodesFullfillCondition(function (k) {
+      if (self.compareKeys(k, self.key) >= 0) {
+        throw new Error('Tree with root ' + self.key + ' is not a binary search tree');
+      }
+    });
+    this.left.checkNodeOrdering();
+  }
+
+  if (this.right) {
+    this.right.checkAllNodesFullfillCondition(function (k) {
+      if (self.compareKeys(k, self.key) <= 0) {
+        throw new Error('Tree with root ' + self.key + ' is not a binary search tree');
+      }
+    });
+    this.right.checkNodeOrdering();
+  }
+};
+
+
+/**
+ * Check that all pointers are coherent in this tree
+ */
+BinarySearchTree.prototype.checkInternalPointers = function () {
+  if (this.left) {
+    if (this.left.parent !== this) { throw new Error('Parent pointer broken for key ' + this.key); }
+    this.left.checkInternalPointers();
+  }
+
+  if (this.right) {
+    if (this.right.parent !== this) { throw new Error('Parent pointer broken for key ' + this.key); }
+    this.right.checkInternalPointers();
+  }
+};
+
+
+/**
+ * Check that a tree is a BST as defined here (node ordering and pointer references)
+ */
+BinarySearchTree.prototype.checkIsBST = function () {
+  this.checkNodeOrdering();
+  this.checkInternalPointers();
+  if (this.parent) { throw new Error("The root shouldn't have a parent"); }
+};
+
+
+/**
+ * Get number of keys inserted
+ */
+BinarySearchTree.prototype.getNumberOfKeys = function () {
+  var res;
+
+  if (!this.hasOwnProperty('key')) { return 0; }
+
+  res = 1;
+  if (this.left) { res += this.left.getNumberOfKeys(); }
+  if (this.right) { res += this.right.getNumberOfKeys(); }
+
+  return res;
+};
+
+
+
+// ============================================
+// Methods used to actually work on the tree
+// ============================================
+
+/**
+ * Create a BST similar (i.e. same options except for key and value) to the current one
+ * Use the same constructor (i.e. BinarySearchTree, AVLTree etc)
+ * @param {Object} options see constructor
+ */
+BinarySearchTree.prototype.createSimilar = function (options) {
+  options = options || {};
+  options.unique = this.unique;
+  options.compareKeys = this.compareKeys;
+  options.checkValueEquality = this.checkValueEquality;
+
+  return new this.constructor(options);
+};
+
+
+/**
+ * Create the left child of this BST and return it
+ */
+BinarySearchTree.prototype.createLeftChild = function (options) {
+  var leftChild = this.createSimilar(options);
+  leftChild.parent = this;
+  this.left = leftChild;
+
+  return leftChild;
+};
+
+
+/**
+ * Create the right child of this BST and return it
+ */
+BinarySearchTree.prototype.createRightChild = function (options) {
+  var rightChild = this.createSimilar(options);
+  rightChild.parent = this;
+  this.right = rightChild;
+
+  return rightChild;
+};
+
+
+/**
+ * Insert a new element
+ */
+BinarySearchTree.prototype.insert = function (key, value) {
+  // Empty tree, insert as root
+  if (!this.hasOwnProperty('key')) {
+    this.key = key;
+    this.data.push(value);
+    return;
+  }
+
+  // Same key as root
+  if (this.compareKeys(this.key, key) === 0) {
+    if (this.unique) {
+      var err = new Error("Can't insert key " + key + ", it violates the unique constraint");
+      err.key = key;
+      err.errorType = 'uniqueViolated';
+      throw err;
+    } else {
+      this.data.push(value);
+    }
+    return;
+  }
+
+  if (this.compareKeys(key, this.key) < 0) {
+    // Insert in left subtree
+    if (this.left) {
+      this.left.insert(key, value);
+    } else {
+      this.createLeftChild({ key: key, value: value });
+    }
+  } else {
+    // Insert in right subtree
+    if (this.right) {
+      this.right.insert(key, value);
+    } else {
+      this.createRightChild({ key: key, value: value });
+    }
+  }
+};
+
+
+/**
+ * Search for all data corresponding to a key
+ */
+BinarySearchTree.prototype.search = function (key) {
+  if (!this.hasOwnProperty('key')) { return []; }
+
+  if (this.compareKeys(this.key, key) === 0) { return this.data; }
+
+  if (this.compareKeys(key, this.key) < 0) {
+    if (this.left) {
+      return this.left.search(key);
+    } else {
+      return [];
+    }
+  } else {
+    if (this.right) {
+      return this.right.search(key);
+    } else {
+      return [];
+    }
+  }
+};
+
+
+/**
+ * Return a function that tells whether a given key matches a lower bound
+ */
+BinarySearchTree.prototype.getLowerBoundMatcher = function (query) {
+  var self = this;
+
+  // No lower bound
+  if (!query.hasOwnProperty('$gt') && !query.hasOwnProperty('$gte')) {
+    return function () { return true; };
+  }
+
+  if (query.hasOwnProperty('$gt') && query.hasOwnProperty('$gte')) {
+    if (self.compareKeys(query.$gte, query.$gt) === 0) {
+      return function (key) { return self.compareKeys(key, query.$gt) > 0; };
+    }
+
+    if (self.compareKeys(query.$gte, query.$gt) > 0) {
+      return function (key) { return self.compareKeys(key, query.$gte) >= 0; };
+    } else {
+      return function (key) { return self.compareKeys(key, query.$gt) > 0; };
+    }
+  }
+
+  if (query.hasOwnProperty('$gt')) {
+    return function (key) { return self.compareKeys(key, query.$gt) > 0; };
+  } else {
+    return function (key) { return self.compareKeys(key, query.$gte) >= 0; };
+  }
+};
+
+
+/**
+ * Return a function that tells whether a given key matches an upper bound
+ */
+BinarySearchTree.prototype.getUpperBoundMatcher = function (query) {
+  var self = this;
+
+  // No lower bound
+  if (!query.hasOwnProperty('$lt') && !query.hasOwnProperty('$lte')) {
+    return function () { return true; };
+  }
+
+  if (query.hasOwnProperty('$lt') && query.hasOwnProperty('$lte')) {
+    if (self.compareKeys(query.$lte, query.$lt) === 0) {
+      return function (key) { return self.compareKeys(key, query.$lt) < 0; };
+    }
+
+    if (self.compareKeys(query.$lte, query.$lt) < 0) {
+      return function (key) { return self.compareKeys(key, query.$lte) <= 0; };
+    } else {
+      return function (key) { return self.compareKeys(key, query.$lt) < 0; };
+    }
+  }
+
+  if (query.hasOwnProperty('$lt')) {
+    return function (key) { return self.compareKeys(key, query.$lt) < 0; };
+  } else {
+    return function (key) { return self.compareKeys(key, query.$lte) <= 0; };
+  }
+};
+
+
+// Append all elements in toAppend to array
+function append (array, toAppend) {
+  var i;
+
+  for (i = 0; i < toAppend.length; i += 1) {
+    array.push(toAppend[i]);
+  }
+}
+
+
+/**
+ * Get all data for a key between bounds
+ * Return it in key order
+ * @param {Object} query Mongo-style query where keys are $lt, $lte, $gt or $gte (other keys are not considered)
+ * @param {Functions} lbm/ubm matching functions calculated at the first recursive step
+ */
+BinarySearchTree.prototype.betweenBounds = function (query, lbm, ubm) {
+  var res = [];
+
+  if (!this.hasOwnProperty('key')) { return []; }   // Empty tree
+
+  lbm = lbm || this.getLowerBoundMatcher(query);
+  ubm = ubm || this.getUpperBoundMatcher(query);
+
+  if (lbm(this.key) && this.left) { append(res, this.left.betweenBounds(query, lbm, ubm)); }
+  if (lbm(this.key) && ubm(this.key)) { append(res, this.data); }
+  if (ubm(this.key) && this.right) { append(res, this.right.betweenBounds(query, lbm, ubm)); }
+
+  return res;
+};
+
+
+/**
+ * Delete the current node if it is a leaf
+ * Return true if it was deleted
+ */
+BinarySearchTree.prototype.deleteIfLeaf = function () {
+  if (this.left || this.right) { return false; }
+
+  // The leaf is itself a root
+  if (!this.parent) {
+    delete this.key;
+    this.data = [];
+    return true;
+  }
+
+  if (this.parent.left === this) {
+    this.parent.left = null;
+  } else {
+    this.parent.right = null;
+  }
+
+  return true;
+};
+
+
+/**
+ * Delete the current node if it has only one child
+ * Return true if it was deleted
+ */
+BinarySearchTree.prototype.deleteIfOnlyOneChild = function () {
+  var child;
+
+  if (this.left && !this.right) { child = this.left; }
+  if (!this.left && this.right) { child = this.right; }
+  if (!child) { return false; }
+
+  // Root
+  if (!this.parent) {
+    this.key = child.key;
+    this.data = child.data;
+
+    this.left = null;
+    if (child.left) {
+      this.left = child.left;
+      child.left.parent = this;
+    }
+
+    this.right = null;
+    if (child.right) {
+      this.right = child.right;
+      child.right.parent = this;
+    }
+
+    return true;
+  }
+
+  if (this.parent.left === this) {
+    this.parent.left = child;
+    child.parent = this.parent;
+  } else {
+    this.parent.right = child;
+    child.parent = this.parent;
+  }
+
+  return true;
+};
+
+
+/**
+ * Delete a key or just a value
+ * @param {Key} key
+ * @param {Value} value Optional. If not set, the whole key is deleted. If set, only this value is deleted
+ */
+BinarySearchTree.prototype.delete = function (key, value) {
+  var newData = [], replaceWith
+    , self = this
+    ;
+
+  if (!this.hasOwnProperty('key')) { return; }
+
+  if (this.compareKeys(key, this.key) < 0) {
+    if (this.left) { this.left.delete(key, value); }
+    return;
+  }
+
+  if (this.compareKeys(key, this.key) > 0) {
+    if (this.right) { this.right.delete(key, value); }
+    return;
+  }
+
+  if (!this.compareKeys(key, this.key) === 0) { return; }
+
+  // Delete only a value
+  if (this.data.length > 1 && value !== undefined) {
+    this.data.forEach(function (d) {
+      if (!self.checkValueEquality(d, value)) { newData.push(d); }
+    });
+    self.data = newData;
+    return;
+  }
+
+  // Delete the whole node
+  if (this.deleteIfLeaf()) {
+    return;
+  }
+  if (this.deleteIfOnlyOneChild()) {
+    return;
+  }
+
+  // We are in the case where the node to delete has two children
+  if (Math.random() >= 0.5) {   // Randomize replacement to avoid unbalancing the tree too much
+    // Use the in-order predecessor
+    replaceWith = this.left.getMaxKeyDescendant();
+
+    this.key = replaceWith.key;
+    this.data = replaceWith.data;
+
+    if (this === replaceWith.parent) {   // Special case
+      this.left = replaceWith.left;
+      if (replaceWith.left) { replaceWith.left.parent = replaceWith.parent; }
+    } else {
+      replaceWith.parent.right = replaceWith.left;
+      if (replaceWith.left) { replaceWith.left.parent = replaceWith.parent; }
+    }
+  } else {
+    // Use the in-order successor
+    replaceWith = this.right.getMinKeyDescendant();
+
+    this.key = replaceWith.key;
+    this.data = replaceWith.data;
+
+    if (this === replaceWith.parent) {   // Special case
+      this.right = replaceWith.right;
+      if (replaceWith.right) { replaceWith.right.parent = replaceWith.parent; }
+    } else {
+      replaceWith.parent.left = replaceWith.right;
+      if (replaceWith.right) { replaceWith.right.parent = replaceWith.parent; }
+    }
+  }
+};
+
+
+/**
+ * Execute a function on every node of the tree, in key order
+ * @param {Function} fn Signature: node. Most useful will probably be node.key and node.data
+ */
+BinarySearchTree.prototype.executeOnEveryNode = function (fn) {
+  if (this.left) { this.left.executeOnEveryNode(fn); }
+  fn(this);
+  if (this.right) { this.right.executeOnEveryNode(fn); }
+};
+
+
+/**
+ * Pretty print a tree
+ * @param {Boolean} printData To print the nodes' data along with the key
+ */
+BinarySearchTree.prototype.prettyPrint = function (printData, spacing) {
+  spacing = spacing || "";
+
+  console.log(spacing + "* " + this.key);
+  if (printData) { console.log(spacing + "* " + this.data); }
+
+  if (!this.left && !this.right) { return; }
+
+  if (this.left) {
+    this.left.prettyPrint(printData, spacing + "  ");
+  } else {
+    console.log(spacing + "  *");
+  }
+  if (this.right) {
+    this.right.prettyPrint(printData, spacing + "  ");
+  } else {
+    console.log(spacing + "  *");
+  }
+};
+
+
+
+
+// Interface
+module.exports = BinarySearchTree;
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports) {
+
+/**
+ * Return an array with the numbers from 0 to n-1, in a random order
+ */
+function getRandomArray (n) {
+  var res, next;
+
+  if (n === 0) { return []; }
+  if (n === 1) { return [0]; }
+
+  res = getRandomArray(n - 1);
+  next = Math.floor(Math.random() * n);
+  res.splice(next, 0, n - 1);   // Add n-1 at a random position in the array
+
+  return res;
+};
+module.exports.getRandomArray = getRandomArray;
+
+
+/*
+ * Default compareKeys function will work for numbers, strings and dates
+ */
+function defaultCompareKeysFunction (a, b) {
+  if (a < b) { return -1; }
+  if (a > b) { return 1; }
+  if (a === b) { return 0; }
+
+  var err = new Error("Couldn't compare elements");
+  err.a = a;
+  err.b = b;
+  throw err;
+}
+module.exports.defaultCompareKeysFunction = defaultCompareKeysFunction;
+
+
+/**
+ * Check whether two values are equal (used in non-unique deletion)
+ */
+function defaultCheckValueEquality (a, b) {
+  return a === b;
+}
+module.exports.defaultCheckValueEquality = defaultCheckValueEquality;
+
+
+/***/ }),
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6648,7 +10903,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 50 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6680,7 +10935,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 51 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6724,84 +10979,391 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 59 */
+/***/ (function(module, exports) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-var Mutation = global.MutationObserver || global.WebKitMutationObserver;
+/**
+ * Specific customUtils for the browser, where we don't have access to the Crypto and Buffer modules
+ */
 
-var scheduleDrain;
+/**
+ * Taken from the crypto-browserify module
+ * https://github.com/dominictarr/crypto-browserify
+ * NOTE: Math.random() does not guarantee "cryptographic quality" but we actually don't need it
+ */
+function randomBytes (size) {
+  var bytes = new Array(size);
+  var r;
 
-{
-  if (Mutation) {
-    var called = 0;
-    var observer = new Mutation(nextTick);
-    var element = global.document.createTextNode('');
-    observer.observe(element, {
-      characterData: true
-    });
-    scheduleDrain = function () {
-      element.data = (called = ++called % 2);
-    };
-  } else if (!global.setImmediate && typeof global.MessageChannel !== 'undefined') {
-    var channel = new global.MessageChannel();
-    channel.port1.onmessage = nextTick;
-    scheduleDrain = function () {
-      channel.port2.postMessage(0);
-    };
-  } else if ('document' in global && 'onreadystatechange' in global.document.createElement('script')) {
-    scheduleDrain = function () {
-
-      // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
-      // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
-      var scriptEl = global.document.createElement('script');
-      scriptEl.onreadystatechange = function () {
-        nextTick();
-
-        scriptEl.onreadystatechange = null;
-        scriptEl.parentNode.removeChild(scriptEl);
-        scriptEl = null;
-      };
-      global.document.documentElement.appendChild(scriptEl);
-    };
-  } else {
-    scheduleDrain = function () {
-      setTimeout(nextTick, 0);
-    };
+  for (var i = 0, r; i < size; i++) {
+    if ((i & 0x03) == 0) r = Math.random() * 0x100000000;
+    bytes[i] = r >>> ((i & 0x03) << 3) & 0xff;
   }
+
+  return bytes;
 }
 
-var draining;
-var queue = [];
-//named nextTick for less confusing stack traces
-function nextTick() {
-  draining = true;
-  var i, oldQueue;
-  var len = queue.length;
-  while (len) {
-    oldQueue = queue;
-    queue = [];
-    i = -1;
-    while (++i < len) {
-      oldQueue[i]();
-    }
-    len = queue.length;
+
+/**
+ * Taken from the base64-js module
+ * https://github.com/beatgammit/base64-js/
+ */
+function byteArrayToBase64 (uint8) {
+  var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+    , extraBytes = uint8.length % 3   // if we have 1 byte left, pad 2 bytes
+    , output = ""
+    , temp, length, i;
+
+  function tripletToBase64 (num) {
+    return lookup[num >> 18 & 0x3F] + lookup[num >> 12 & 0x3F] + lookup[num >> 6 & 0x3F] + lookup[num & 0x3F];
+  };
+
+  // go through the array every three bytes, we'll deal with trailing stuff later
+  for (i = 0, length = uint8.length - extraBytes; i < length; i += 3) {
+    temp = (uint8[i] << 16) + (uint8[i + 1] << 8) + (uint8[i + 2]);
+    output += tripletToBase64(temp);
   }
-  draining = false;
+
+  // pad the end with zeros, but make sure to not forget the extra bytes
+  switch (extraBytes) {
+    case 1:
+      temp = uint8[uint8.length - 1];
+      output += lookup[temp >> 2];
+      output += lookup[(temp << 4) & 0x3F];
+      output += '==';
+      break;
+    case 2:
+      temp = (uint8[uint8.length - 2] << 8) + (uint8[uint8.length - 1]);
+      output += lookup[temp >> 10];
+      output += lookup[(temp >> 4) & 0x3F];
+      output += lookup[(temp << 2) & 0x3F];
+      output += '=';
+      break;
+  }
+
+  return output;
 }
 
-module.exports = immediate;
-function immediate(task) {
-  if (queue.push(task) === 1 && !draining) {
-    scheduleDrain();
-  }
+
+/**
+ * Return a random alphanumerical string of length len
+ * There is a very small probability (less than 1/1,000,000) for the length to be less than len
+ * (il the base64 conversion yields too many pluses and slashes) but
+ * that's not an issue here
+ * The probability of a collision is extremely small (need 3*10^12 documents to have one chance in a million of a collision)
+ * See http://en.wikipedia.org/wiki/Birthday_problem
+ */
+function uid (len) {
+  return byteArrayToBase64(randomBytes(Math.ceil(Math.max(8, len * 2)))).replace(/[+\/]/g, '').slice(0, len);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
+
+
+module.exports.uid = uid;
+
 
 /***/ }),
-/* 53 */
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var BinarySearchTree = __webpack_require__(94).AVLTree
+  , model = __webpack_require__(26)
+  , _ = __webpack_require__(24)
+  , util = __webpack_require__(34)
+  ;
+
+/**
+ * Two indexed pointers are equal iif they point to the same place
+ */
+function checkValueEquality (a, b) {
+  return a === b;
+}
+
+/**
+ * Type-aware projection
+ */
+function projectForUnique (elt) {
+  if (elt === null) { return '$null'; }
+  if (typeof elt === 'string') { return '$string' + elt; }
+  if (typeof elt === 'boolean') { return '$boolean' + elt; }
+  if (typeof elt === 'number') { return '$number' + elt; }
+  if (util.isArray(elt)) { return '$date' + elt.getTime(); }
+
+  return elt;   // Arrays and objects, will check for pointer equality
+}
+
+
+/**
+ * Create a new index
+ * All methods on an index guarantee that either the whole operation was successful and the index changed
+ * or the operation was unsuccessful and an error is thrown while the index is unchanged
+ * @param {String} options.fieldName On which field should the index apply (can use dot notation to index on sub fields)
+ * @param {Boolean} options.unique Optional, enforce a unique constraint (default: false)
+ * @param {Boolean} options.sparse Optional, allow a sparse index (we can have documents for which fieldName is undefined) (default: false)
+ */
+function Index (options) {
+  this.fieldName = options.fieldName;
+  this.unique = options.unique || false;
+  this.sparse = options.sparse || false;
+
+  this.treeOptions = { unique: this.unique, compareKeys: model.compareThings, checkValueEquality: checkValueEquality };
+
+  this.reset();   // No data in the beginning
+}
+
+
+/**
+ * Reset an index
+ * @param {Document or Array of documents} newData Optional, data to initialize the index with
+ *                                                 If an error is thrown during insertion, the index is not modified
+ */
+Index.prototype.reset = function (newData) {
+  this.tree = new BinarySearchTree(this.treeOptions);
+
+  if (newData) { this.insert(newData); }
+};
+
+
+/**
+ * Insert a new document in the index
+ * If an array is passed, we insert all its elements (if one insertion fails the index is not modified)
+ * O(log(n))
+ */
+Index.prototype.insert = function (doc) {
+  var key, self = this
+    , keys, i, failingI, error
+    ;
+
+  if (util.isArray(doc)) { this.insertMultipleDocs(doc); return; }
+
+  key = model.getDotValue(doc, this.fieldName);
+
+  // We don't index documents that don't contain the field if the index is sparse
+  if (key === undefined && this.sparse) { return; }
+
+  if (!util.isArray(key)) {
+    this.tree.insert(key, doc);
+  } else {
+    // If an insert fails due to a unique constraint, roll back all inserts before it
+    keys = _.uniq(key, projectForUnique);
+
+    for (i = 0; i < keys.length; i += 1) {
+      try {
+        this.tree.insert(keys[i], doc);
+      } catch (e) {
+        error = e;
+        failingI = i;
+        break;
+      }
+    }
+
+    if (error) {
+      for (i = 0; i < failingI; i += 1) {
+        this.tree.delete(keys[i], doc);
+      }
+
+      throw error;
+    }
+  }
+};
+
+
+/**
+ * Insert an array of documents in the index
+ * If a constraint is violated, the changes should be rolled back and an error thrown
+ *
+ * @API private
+ */
+Index.prototype.insertMultipleDocs = function (docs) {
+  var i, error, failingI;
+
+  for (i = 0; i < docs.length; i += 1) {
+    try {
+      this.insert(docs[i]);
+    } catch (e) {
+      error = e;
+      failingI = i;
+      break;
+    }
+  }
+
+  if (error) {
+    for (i = 0; i < failingI; i += 1) {
+      this.remove(docs[i]);
+    }
+
+    throw error;
+  }
+};
+
+
+/**
+ * Remove a document from the index
+ * If an array is passed, we remove all its elements
+ * The remove operation is safe with regards to the 'unique' constraint
+ * O(log(n))
+ */
+Index.prototype.remove = function (doc) {
+  var key, self = this;
+
+  if (util.isArray(doc)) { doc.forEach(function (d) { self.remove(d); }); return; }
+
+  key = model.getDotValue(doc, this.fieldName);
+
+  if (key === undefined && this.sparse) { return; }
+
+  if (!util.isArray(key)) {
+    this.tree.delete(key, doc);
+  } else {
+    _.uniq(key, projectForUnique).forEach(function (_key) {
+      self.tree.delete(_key, doc);
+    });
+  }
+};
+
+
+/**
+ * Update a document in the index
+ * If a constraint is violated, changes are rolled back and an error thrown
+ * Naive implementation, still in O(log(n))
+ */
+Index.prototype.update = function (oldDoc, newDoc) {
+  if (util.isArray(oldDoc)) { this.updateMultipleDocs(oldDoc); return; }
+
+  this.remove(oldDoc);
+
+  try {
+    this.insert(newDoc);
+  } catch (e) {
+    this.insert(oldDoc);
+    throw e;
+  }
+};
+
+
+/**
+ * Update multiple documents in the index
+ * If a constraint is violated, the changes need to be rolled back
+ * and an error thrown
+ * @param {Array of oldDoc, newDoc pairs} pairs
+ *
+ * @API private
+ */
+Index.prototype.updateMultipleDocs = function (pairs) {
+  var i, failingI, error;
+
+  for (i = 0; i < pairs.length; i += 1) {
+    this.remove(pairs[i].oldDoc);
+  }
+
+  for (i = 0; i < pairs.length; i += 1) {
+    try {
+      this.insert(pairs[i].newDoc);
+    } catch (e) {
+      error = e;
+      failingI = i;
+      break;
+    }
+  }
+
+  // If an error was raised, roll back changes in the inverse order
+  if (error) {
+    for (i = 0; i < failingI; i += 1) {
+      this.remove(pairs[i].newDoc);
+    }
+
+    for (i = 0; i < pairs.length; i += 1) {
+      this.insert(pairs[i].oldDoc);
+    }
+
+    throw error;
+  }
+};
+
+
+/**
+ * Revert an update
+ */
+Index.prototype.revertUpdate = function (oldDoc, newDoc) {
+  var revert = [];
+
+  if (!util.isArray(oldDoc)) {
+    this.update(newDoc, oldDoc);
+  } else {
+    oldDoc.forEach(function (pair) {
+      revert.push({ oldDoc: pair.newDoc, newDoc: pair.oldDoc });
+    });
+    this.update(revert);
+  }
+};
+
+
+/**
+ * Get all documents in index whose key match value (if it is a Thing) or one of the elements of value (if it is an array of Things)
+ * @param {Thing} value Value to match the key against
+ * @return {Array of documents}
+ */
+Index.prototype.getMatching = function (value) {
+  var self = this;
+
+  if (!util.isArray(value)) {
+    return self.tree.search(value);
+  } else {
+    var _res = {}, res = [];
+
+    value.forEach(function (v) {
+      self.getMatching(v).forEach(function (doc) {
+        _res[doc._id] = doc;
+      });
+    });
+
+    Object.keys(_res).forEach(function (_id) {
+      res.push(_res[_id]);
+    });
+
+    return res;
+  }
+};
+
+
+/**
+ * Get all documents in index whose key is between bounds are they are defined by query
+ * Documents are sorted by key
+ * @param {Query} query
+ * @return {Array of documents}
+ */
+Index.prototype.getBetweenBounds = function (query) {
+  return this.tree.betweenBounds(query);
+};
+
+
+/**
+ * Get all elements in the index
+ * @return {Array of documents}
+ */
+Index.prototype.getAll = function () {
+  var res = [];
+
+  this.tree.executeOnEveryNode(function (node) {
+    var i;
+
+    for (i = 0; i < node.data.length; i += 1) {
+      res.push(node.data[i]);
+    }
+  });
+
+  return res;
+};
+
+
+
+
+// Interface
+module.exports = Index;
+
+
+/***/ }),
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6820,7 +11382,7 @@ function immediate(task) {
 // Therefore we re-export development-only version with all the PropTypes checks here.
 // However if one is migrating to the `prop-types` npm library, they will go through the
 // `index.js` entry point, and it will branch depending on the environment.
-var factory = __webpack_require__(108);
+var factory = __webpack_require__(121);
 module.exports = function(isValidElement) {
   // It is still allowed in 15.5.
   var throwOnDirectAccess = false;
@@ -6829,7 +11391,7 @@ module.exports = function(isValidElement) {
 
 
 /***/ }),
-/* 54 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6850,7 +11412,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 55 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7009,7 +11571,7 @@ var CSSProperty = {
 module.exports = CSSProperty;
 
 /***/ }),
-/* 56 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7134,7 +11696,7 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 57 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7154,7 +11716,7 @@ var DOMProperty = __webpack_require__(13);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
-var quoteAttributeValueForBrowser = __webpack_require__(178);
+var quoteAttributeValueForBrowser = __webpack_require__(191);
 var warning = __webpack_require__(2);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -7375,7 +11937,7 @@ module.exports = DOMPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 58 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7398,7 +11960,7 @@ var ReactDOMComponentFlags = {
 module.exports = ReactDOMComponentFlags;
 
 /***/ }),
-/* 59 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7416,7 +11978,7 @@ module.exports = ReactDOMComponentFlags;
 
 var _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(37);
+var LinkedValueUtils = __webpack_require__(41);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(10);
 
@@ -7604,7 +12166,7 @@ module.exports = ReactDOMSelect;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 60 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7639,7 +12201,7 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 module.exports = ReactEmptyComponent;
 
 /***/ }),
-/* 61 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7666,7 +12228,7 @@ var ReactFeatureFlags = {
 module.exports = ReactFeatureFlags;
 
 /***/ }),
-/* 62 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7740,7 +12302,7 @@ module.exports = ReactHostComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 63 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7756,11 +12318,11 @@ module.exports = ReactHostComponent;
 
 
 
-var ReactDOMSelection = __webpack_require__(133);
+var ReactDOMSelection = __webpack_require__(146);
 
-var containsNode = __webpack_require__(91);
-var focusNode = __webpack_require__(50);
-var getActiveElement = __webpack_require__(51);
+var containsNode = __webpack_require__(100);
+var focusNode = __webpack_require__(57);
+var getActiveElement = __webpack_require__(58);
 
 function isInDocument(node) {
   return containsNode(document.documentElement, node);
@@ -7868,7 +12430,7 @@ var ReactInputSelection = {
 module.exports = ReactInputSelection;
 
 /***/ }),
-/* 64 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7889,24 +12451,24 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(16);
 var DOMProperty = __webpack_require__(13);
 var React = __webpack_require__(18);
-var ReactBrowserEventEmitter = __webpack_require__(26);
+var ReactBrowserEventEmitter = __webpack_require__(28);
 var ReactCurrentOwner = __webpack_require__(11);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMContainerInfo = __webpack_require__(125);
-var ReactDOMFeatureFlags = __webpack_require__(127);
-var ReactFeatureFlags = __webpack_require__(61);
+var ReactDOMContainerInfo = __webpack_require__(138);
+var ReactDOMFeatureFlags = __webpack_require__(140);
+var ReactFeatureFlags = __webpack_require__(69);
 var ReactInstanceMap = __webpack_require__(22);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactMarkupChecksum = __webpack_require__(147);
+var ReactMarkupChecksum = __webpack_require__(160);
 var ReactReconciler = __webpack_require__(17);
-var ReactUpdateQueue = __webpack_require__(40);
+var ReactUpdateQueue = __webpack_require__(44);
 var ReactUpdates = __webpack_require__(10);
 
-var emptyObject = __webpack_require__(24);
-var instantiateReactComponent = __webpack_require__(73);
+var emptyObject = __webpack_require__(25);
+var instantiateReactComponent = __webpack_require__(81);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(30);
-var shouldUpdateReactComponent = __webpack_require__(46);
+var setInnerHTML = __webpack_require__(32);
+var shouldUpdateReactComponent = __webpack_require__(50);
 var warning = __webpack_require__(2);
 
 var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -8412,7 +12974,7 @@ module.exports = ReactMount;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 65 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8458,7 +13020,7 @@ module.exports = ReactNodeTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 66 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8480,7 +13042,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 67 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8510,7 +13072,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 68 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8574,7 +13136,7 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 69 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8610,7 +13172,7 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 70 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8626,7 +13188,7 @@ module.exports = forEachAccumulated;
 
 
 
-var ReactNodeTypes = __webpack_require__(65);
+var ReactNodeTypes = __webpack_require__(73);
 
 function getHostComponentFromComposite(inst) {
   var type;
@@ -8645,7 +13207,7 @@ function getHostComponentFromComposite(inst) {
 module.exports = getHostComponentFromComposite;
 
 /***/ }),
-/* 71 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8683,7 +13245,7 @@ function getTextContentAccessor() {
 module.exports = getTextContentAccessor;
 
 /***/ }),
-/* 72 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8811,7 +13373,7 @@ var inputValueTracking = {
 module.exports = inputValueTracking;
 
 /***/ }),
-/* 73 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8830,11 +13392,11 @@ module.exports = inputValueTracking;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var ReactCompositeComponent = __webpack_require__(122);
-var ReactEmptyComponent = __webpack_require__(60);
-var ReactHostComponent = __webpack_require__(62);
+var ReactCompositeComponent = __webpack_require__(135);
+var ReactEmptyComponent = __webpack_require__(68);
+var ReactHostComponent = __webpack_require__(70);
 
-var getNextDebugID = __webpack_require__(190);
+var getNextDebugID = __webpack_require__(203);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -8946,7 +13508,7 @@ module.exports = instantiateReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 74 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9002,7 +13564,7 @@ function isTextInputElement(elem) {
 module.exports = isTextInputElement;
 
 /***/ }),
-/* 75 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9019,8 +13581,8 @@ module.exports = isTextInputElement;
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var escapeTextContentForBrowser = __webpack_require__(29);
-var setInnerHTML = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
+var setInnerHTML = __webpack_require__(32);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -9059,7 +13621,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setTextContent;
 
 /***/ }),
-/* 76 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9078,11 +13640,11 @@ module.exports = setTextContent;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(11);
-var REACT_ELEMENT_TYPE = __webpack_require__(141);
+var REACT_ELEMENT_TYPE = __webpack_require__(154);
 
-var getIteratorFn = __webpack_require__(175);
+var getIteratorFn = __webpack_require__(188);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(36);
+var KeyEscapeUtils = __webpack_require__(40);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -9241,7 +13803,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 77 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9260,12 +13822,12 @@ module.exports = traverseAllChildren;
 var _prodInvariant = __webpack_require__(19),
     _assign = __webpack_require__(4);
 
-var ReactNoopUpdateQueue = __webpack_require__(80);
+var ReactNoopUpdateQueue = __webpack_require__(88);
 
-var canDefineProperty = __webpack_require__(31);
-var emptyObject = __webpack_require__(24);
+var canDefineProperty = __webpack_require__(33);
+var emptyObject = __webpack_require__(25);
 var invariant = __webpack_require__(1);
-var lowPriorityWarning = __webpack_require__(48);
+var lowPriorityWarning = __webpack_require__(52);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -9390,7 +13952,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 78 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9415,7 +13977,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 79 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9442,12 +14004,12 @@ var ReactCurrentOwner = __webpack_require__(11);
 var ReactComponentTreeHook = __webpack_require__(7);
 var ReactElement = __webpack_require__(15);
 
-var checkReactTypeSpec = __webpack_require__(188);
+var checkReactTypeSpec = __webpack_require__(201);
 
-var canDefineProperty = __webpack_require__(31);
-var getIteratorFn = __webpack_require__(81);
+var canDefineProperty = __webpack_require__(33);
+var getIteratorFn = __webpack_require__(89);
 var warning = __webpack_require__(2);
-var lowPriorityWarning = __webpack_require__(48);
+var lowPriorityWarning = __webpack_require__(52);
 
 function getDeclarationErrorAddendum() {
   if (ReactCurrentOwner.current) {
@@ -9676,7 +14238,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 80 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9777,7 +14339,7 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 81 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9823,44 +14385,87 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 82 */
-/***/ (function(module, exports) {
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
 
-var g;
+"use strict";
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
 
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
-/* 83 */
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var apply = Function.prototype.apply;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
+  }
+};
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(window, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// setimmediate attaches itself to the global object
+__webpack_require__(206);
+exports.setImmediate = setImmediate;
+exports.clearImmediate = clearImmediate;
+
+
+/***/ }),
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_pouchDB__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_pouchDB___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_pouchDB__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nedb__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nedb___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_nedb__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__board__ = __webpack_require__(93);
 /**
  * Created by reggiecole on 5/13/17.
  */
@@ -9868,14 +14473,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-// Define a Square on the board
-function Square(props) {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'button',
-        { className: 'square', onClick: props.onClick },
-        props.value
-    );
-}
 
 function PastWinner(pastWinner) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -9894,50 +14491,12 @@ function PastWinner(pastWinner) {
     );
 }
 
-// Define the Board
-class Board extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    renderSquare(i) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Square, {
-            value: this.props.squares[i],
-            onClick: () => this.props.onClick(i)
-        });
-    }
+function reloadWinners(winners, db) {}
+// winners = db.allDocs({include_docs: true, descending: true}, function(err, doc) {
+//     return doc.rows;
+//     console.log('Successfully got all winners!');
+// });
 
-    render() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'board-row' },
-                this.renderSquare(0),
-                this.renderSquare(1),
-                this.renderSquare(2)
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'board-row' },
-                this.renderSquare(3),
-                this.renderSquare(4),
-                this.renderSquare(5)
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'board-row' },
-                this.renderSquare(6),
-                this.renderSquare(7),
-                this.renderSquare(8)
-            )
-        );
-    }
-}
-
-function reloadWinners(winners, db) {
-    winners = db.allDocs({ include_docs: true, descending: true }, function (err, doc) {
-        return doc.rows;
-        console.log('Successfully got all winners!');
-    });
-}
 
 // The Game will keep track of who's turn it is and the history of moves made.
 class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
@@ -9952,7 +14511,7 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             history: [{
                 squares: Array(9).fill(null)
             }],
-            db: new __WEBPACK_IMPORTED_MODULE_2_pouchDB___default.a('app/db/data'),
+            db: new __WEBPACK_IMPORTED_MODULE_2_nedb___default.a({ filename: 'app/db/data.db', autoload: true }),
             pastWinners: [],
             stepNumber: 0,
             xIsNext: true
@@ -9960,9 +14519,9 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
 
     loadWinners() {
-        this.state.db.allDocs({ include_docs: true, descending: true }, function (err, doc) {
-            return doc.rows;
+        this.state.db.find({}, function (err, docs) {
             console.log('Successfully got all winners!');
+            return docs;
         });
     }
 
@@ -10014,16 +14573,17 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         }
         const winners = this.state.pastWinners;
         const db = this.state.db;
-        this.state.db.changes({
-            since: 'now',
-            live: true
-        }).on('change', function () {
-            reloadWinners(winners, db);
-        });
+        // this.state.db.changes({
+        //     since: 'now',
+        //     live: true
+        // }).on('change', function () {
+        //     reloadWinners(winners, db);
+        // });
     }
 
     componentDidMount() {
         this.state.pastWinners = this.loadWinners();
+        reloadWinners();
     }
 
     render() {
@@ -10047,20 +14607,19 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         let status;
         if (winner) {
             status = "Winner: " + winner;
-            var winningPlayer = {
-                _id: new Date().toISOString(),
-                player: winner
-            };
-            this.state.db.put(winningPlayer, function callback(err, result) {
-                if (!err) {
-                    console.log('Successfully posted a winner!');
-                }
-            });
+            this.saveWinner(winner);
         } else {
             status = "Next player: " + (this.state.xIsNext ? "X" : "O");
         }
 
-        const pastFolks = this.state.pastWinners;
+        var records = [];
+        this.state.db.find({}, function (err, docs) {
+            console.log('Successfully got all winners!');
+            records = docs;
+            return docs;
+        });
+
+        let pastFolks = records.map(record => this.renderPastWinner(record));
 
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
@@ -10068,7 +14627,7 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'game-board panel panel-default' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Board, {
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__board__["a" /* default */], {
                     squares: current.squares,
                     onClick: i => this.handleClick(i)
                 })
@@ -10106,6 +14665,25 @@ class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 )
             )
         );
+    }
+
+    /**
+     * Insert the winner into the DB
+     * @param winner
+     */
+    saveWinner(winner) {
+        var winningPlayer = {
+            date: new Date().toISOString(),
+            player: winner
+        };
+
+        this.state.db.insert(winningPlayer, function (err, newDoc) {
+            // Callback is optional
+            // newDoc is the newly inserted document, including its _id
+            if (!err) {
+                console.log('Successfully posted a winner!');
+            }
+        });
     }
 }
 
@@ -10207,32 +14785,536 @@ function computerMove(squares) {
 }
 
 /***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/**
+ * Created by reggiecole on 7/7/17.
+ */
 
 
-module.exports = argsArray;
-
-function argsArray(fun) {
-  return function () {
-    var len = arguments.length;
-    if (len) {
-      var args = [];
-      var i = -1;
-      while (++i < len) {
-        args[i] = arguments[i];
-      }
-      return fun.call(this, args);
-    } else {
-      return fun.call(this, []);
-    }
-  };
+// Define a Square on the board
+function Square(props) {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "button",
+        { className: "square", onClick: props.onClick },
+        props.value
+    );
 }
 
+class Board extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+    renderSquare(i) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Square, {
+            value: this.props.squares[i],
+            onClick: () => this.props.onClick(i)
+        });
+    }
+
+    render() {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "board-row" },
+                this.renderSquare(0),
+                this.renderSquare(1),
+                this.renderSquare(2)
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "board-row" },
+                this.renderSquare(3),
+                this.renderSquare(4),
+                this.renderSquare(5)
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "board-row" },
+                this.renderSquare(6),
+                this.renderSquare(7),
+                this.renderSquare(8)
+            )
+        );
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Board;
+
+
 /***/ }),
-/* 85 */
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports.BinarySearchTree = __webpack_require__(54);
+module.exports.AVLTree = __webpack_require__(95);
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Self-balancing binary search tree using the AVL implementation
+ */
+var BinarySearchTree = __webpack_require__(54)
+  , customUtils = __webpack_require__(55)
+  , util = __webpack_require__(34)
+  , _ = __webpack_require__(24)
+  ;
+
+
+/**
+ * Constructor
+ * We can't use a direct pointer to the root node (as in the simple binary search tree)
+ * as the root will change during tree rotations
+ * @param {Boolean}  options.unique Whether to enforce a 'unique' constraint on the key or not
+ * @param {Function} options.compareKeys Initialize this BST's compareKeys
+ */
+function AVLTree (options) {
+  this.tree = new _AVLTree(options);
+}
+
+
+/**
+ * Constructor of the internal AVLTree
+ * @param {Object} options Optional
+ * @param {Boolean}  options.unique Whether to enforce a 'unique' constraint on the key or not
+ * @param {Key}      options.key Initialize this BST's key with key
+ * @param {Value}    options.value Initialize this BST's data with [value]
+ * @param {Function} options.compareKeys Initialize this BST's compareKeys
+ */
+function _AVLTree (options) {
+  options = options || {};
+
+  this.left = null;
+  this.right = null;
+  this.parent = options.parent !== undefined ? options.parent : null;
+  if (options.hasOwnProperty('key')) { this.key = options.key; }
+  this.data = options.hasOwnProperty('value') ? [options.value] : [];
+  this.unique = options.unique || false;
+
+  this.compareKeys = options.compareKeys || customUtils.defaultCompareKeysFunction;
+  this.checkValueEquality = options.checkValueEquality || customUtils.defaultCheckValueEquality;
+}
+
+
+/**
+ * Inherit basic functions from the basic binary search tree
+ */
+util.inherits(_AVLTree, BinarySearchTree);
+
+/**
+ * Keep a pointer to the internal tree constructor for testing purposes
+ */
+AVLTree._AVLTree = _AVLTree;
+
+
+/**
+ * Check the recorded height is correct for every node
+ * Throws if one height doesn't match
+ */
+_AVLTree.prototype.checkHeightCorrect = function () {
+  var leftH, rightH;
+
+  if (!this.hasOwnProperty('key')) { return; }   // Empty tree
+
+  if (this.left && this.left.height === undefined) { throw new Error("Undefined height for node " + this.left.key); }
+  if (this.right && this.right.height === undefined) { throw new Error("Undefined height for node " + this.right.key); }
+  if (this.height === undefined) { throw new Error("Undefined height for node " + this.key); }
+
+  leftH = this.left ? this.left.height : 0;
+  rightH = this.right ? this.right.height : 0;
+
+  if (this.height !== 1 + Math.max(leftH, rightH)) { throw new Error("Height constraint failed for node " + this.key); }
+  if (this.left) { this.left.checkHeightCorrect(); }
+  if (this.right) { this.right.checkHeightCorrect(); }
+};
+
+
+/**
+ * Return the balance factor
+ */
+_AVLTree.prototype.balanceFactor = function () {
+  var leftH = this.left ? this.left.height : 0
+    , rightH = this.right ? this.right.height : 0
+    ;
+  return leftH - rightH;
+};
+
+
+/**
+ * Check that the balance factors are all between -1 and 1
+ */
+_AVLTree.prototype.checkBalanceFactors = function () {
+  if (Math.abs(this.balanceFactor()) > 1) { throw new Error('Tree is unbalanced at node ' + this.key); }
+
+  if (this.left) { this.left.checkBalanceFactors(); }
+  if (this.right) { this.right.checkBalanceFactors(); }
+};
+
+
+/**
+ * When checking if the BST conditions are met, also check that the heights are correct
+ * and the tree is balanced
+ */
+_AVLTree.prototype.checkIsAVLT = function () {
+  _AVLTree.super_.prototype.checkIsBST.call(this);
+  this.checkHeightCorrect();
+  this.checkBalanceFactors();
+};
+AVLTree.prototype.checkIsAVLT = function () { this.tree.checkIsAVLT(); };
+
+
+/**
+ * Perform a right rotation of the tree if possible
+ * and return the root of the resulting tree
+ * The resulting tree's nodes' heights are also updated
+ */
+_AVLTree.prototype.rightRotation = function () {
+  var q = this
+    , p = this.left
+    , b
+    , ah, bh, ch;
+
+  if (!p) { return this; }   // No change
+
+  b = p.right;
+
+  // Alter tree structure
+  if (q.parent) {
+    p.parent = q.parent;
+    if (q.parent.left === q) { q.parent.left = p; } else { q.parent.right = p; }
+  } else {
+    p.parent = null;
+  }
+  p.right = q;
+  q.parent = p;
+  q.left = b;
+  if (b) { b.parent = q; }
+
+  // Update heights
+  ah = p.left ? p.left.height : 0;
+  bh = b ? b.height : 0;
+  ch = q.right ? q.right.height : 0;
+  q.height = Math.max(bh, ch) + 1;
+  p.height = Math.max(ah, q.height) + 1;
+
+  return p;
+};
+
+
+/**
+ * Perform a left rotation of the tree if possible
+ * and return the root of the resulting tree
+ * The resulting tree's nodes' heights are also updated
+ */
+_AVLTree.prototype.leftRotation = function () {
+  var p = this
+    , q = this.right
+    , b
+    , ah, bh, ch;
+
+  if (!q) { return this; }   // No change
+
+  b = q.left;
+
+  // Alter tree structure
+  if (p.parent) {
+    q.parent = p.parent;
+    if (p.parent.left === p) { p.parent.left = q; } else { p.parent.right = q; }
+  } else {
+    q.parent = null;
+  }
+  q.left = p;
+  p.parent = q;
+  p.right = b;
+  if (b) { b.parent = p; }
+
+  // Update heights
+  ah = p.left ? p.left.height : 0;
+  bh = b ? b.height : 0;
+  ch = q.right ? q.right.height : 0;
+  p.height = Math.max(ah, bh) + 1;
+  q.height = Math.max(ch, p.height) + 1;
+
+  return q;
+};
+
+
+/**
+ * Modify the tree if its right subtree is too small compared to the left
+ * Return the new root if any
+ */
+_AVLTree.prototype.rightTooSmall = function () {
+  if (this.balanceFactor() <= 1) { return this; }   // Right is not too small, don't change
+
+  if (this.left.balanceFactor() < 0) {
+    this.left.leftRotation();
+  }
+
+  return this.rightRotation();
+};
+
+
+/**
+ * Modify the tree if its left subtree is too small compared to the right
+ * Return the new root if any
+ */
+_AVLTree.prototype.leftTooSmall = function () {
+  if (this.balanceFactor() >= -1) { return this; }   // Left is not too small, don't change
+
+  if (this.right.balanceFactor() > 0) {
+    this.right.rightRotation();
+  }
+
+  return this.leftRotation();
+};
+
+
+/**
+ * Rebalance the tree along the given path. The path is given reversed (as he was calculated
+ * in the insert and delete functions).
+ * Returns the new root of the tree
+ * Of course, the first element of the path must be the root of the tree
+ */
+_AVLTree.prototype.rebalanceAlongPath = function (path) {
+  var newRoot = this
+    , rotated
+    , i;
+
+  if (!this.hasOwnProperty('key')) { delete this.height; return this; }   // Empty tree
+
+  // Rebalance the tree and update all heights
+  for (i = path.length - 1; i >= 0; i -= 1) {
+    path[i].height = 1 + Math.max(path[i].left ? path[i].left.height : 0, path[i].right ? path[i].right.height : 0);
+
+    if (path[i].balanceFactor() > 1) {
+      rotated = path[i].rightTooSmall();
+      if (i === 0) { newRoot = rotated; }
+    }
+
+    if (path[i].balanceFactor() < -1) {
+      rotated = path[i].leftTooSmall();
+      if (i === 0) { newRoot = rotated; }
+    }
+  }
+
+  return newRoot;
+};
+
+
+/**
+ * Insert a key, value pair in the tree while maintaining the AVL tree height constraint
+ * Return a pointer to the root node, which may have changed
+ */
+_AVLTree.prototype.insert = function (key, value) {
+  var insertPath = []
+    , currentNode = this
+    ;
+
+  // Empty tree, insert as root
+  if (!this.hasOwnProperty('key')) {
+    this.key = key;
+    this.data.push(value);
+    this.height = 1;
+    return this;
+  }
+
+  // Insert new leaf at the right place
+  while (true) {
+    // Same key: no change in the tree structure
+    if (currentNode.compareKeys(currentNode.key, key) === 0) {
+      if (currentNode.unique) {
+        var err = new Error("Can't insert key " + key + ", it violates the unique constraint");
+        err.key = key;
+        err.errorType = 'uniqueViolated';
+        throw err;
+      } else {
+        currentNode.data.push(value);
+      }
+      return this;
+    }
+
+    insertPath.push(currentNode);
+
+    if (currentNode.compareKeys(key, currentNode.key) < 0) {
+      if (!currentNode.left) {
+        insertPath.push(currentNode.createLeftChild({ key: key, value: value }));
+        break;
+      } else {
+        currentNode = currentNode.left;
+      }
+    } else {
+      if (!currentNode.right) {
+        insertPath.push(currentNode.createRightChild({ key: key, value: value }));
+        break;
+      } else {
+        currentNode = currentNode.right;
+      }
+    }
+  }
+
+  return this.rebalanceAlongPath(insertPath);
+};
+
+// Insert in the internal tree, update the pointer to the root if needed
+AVLTree.prototype.insert = function (key, value) {
+  var newTree = this.tree.insert(key, value);
+
+  // If newTree is undefined, that means its structure was not modified
+  if (newTree) { this.tree = newTree; }
+};
+
+
+/**
+ * Delete a key or just a value and return the new root of the tree
+ * @param {Key} key
+ * @param {Value} value Optional. If not set, the whole key is deleted. If set, only this value is deleted
+ */
+_AVLTree.prototype.delete = function (key, value) {
+  var newData = [], replaceWith
+    , self = this
+    , currentNode = this
+    , deletePath = []
+    ;
+
+  if (!this.hasOwnProperty('key')) { return this; }   // Empty tree
+
+  // Either no match is found and the function will return from within the loop
+  // Or a match is found and deletePath will contain the path from the root to the node to delete after the loop
+  while (true) {
+    if (currentNode.compareKeys(key, currentNode.key) === 0) { break; }
+
+    deletePath.push(currentNode);
+
+    if (currentNode.compareKeys(key, currentNode.key) < 0) {
+      if (currentNode.left) {
+        currentNode = currentNode.left;
+      } else {
+        return this;   // Key not found, no modification
+      }
+    } else {
+      // currentNode.compareKeys(key, currentNode.key) is > 0
+      if (currentNode.right) {
+        currentNode = currentNode.right;
+      } else {
+        return this;   // Key not found, no modification
+      }
+    }
+  }
+
+  // Delete only a value (no tree modification)
+  if (currentNode.data.length > 1 && value) {
+    currentNode.data.forEach(function (d) {
+      if (!currentNode.checkValueEquality(d, value)) { newData.push(d); }
+    });
+    currentNode.data = newData;
+    return this;
+  }
+
+  // Delete a whole node
+
+  // Leaf
+  if (!currentNode.left && !currentNode.right) {
+    if (currentNode === this) {   // This leaf is also the root
+      delete currentNode.key;
+      currentNode.data = [];
+      delete currentNode.height;
+      return this;
+    } else {
+      if (currentNode.parent.left === currentNode) {
+        currentNode.parent.left = null;
+      } else {
+        currentNode.parent.right = null;
+      }
+      return this.rebalanceAlongPath(deletePath);
+    }
+  }
+
+
+  // Node with only one child
+  if (!currentNode.left || !currentNode.right) {
+    replaceWith = currentNode.left ? currentNode.left : currentNode.right;
+
+    if (currentNode === this) {   // This node is also the root
+      replaceWith.parent = null;
+      return replaceWith;   // height of replaceWith is necessarily 1 because the tree was balanced before deletion
+    } else {
+      if (currentNode.parent.left === currentNode) {
+        currentNode.parent.left = replaceWith;
+        replaceWith.parent = currentNode.parent;
+      } else {
+        currentNode.parent.right = replaceWith;
+        replaceWith.parent = currentNode.parent;
+      }
+
+      return this.rebalanceAlongPath(deletePath);
+    }
+  }
+
+
+  // Node with two children
+  // Use the in-order predecessor (no need to randomize since we actively rebalance)
+  deletePath.push(currentNode);
+  replaceWith = currentNode.left;
+
+  // Special case: the in-order predecessor is right below the node to delete
+  if (!replaceWith.right) {
+    currentNode.key = replaceWith.key;
+    currentNode.data = replaceWith.data;
+    currentNode.left = replaceWith.left;
+    if (replaceWith.left) { replaceWith.left.parent = currentNode; }
+    return this.rebalanceAlongPath(deletePath);
+  }
+
+  // After this loop, replaceWith is the right-most leaf in the left subtree
+  // and deletePath the path from the root (inclusive) to replaceWith (exclusive)
+  while (true) {
+    if (replaceWith.right) {
+      deletePath.push(replaceWith);
+      replaceWith = replaceWith.right;
+    } else {
+      break;
+    }
+  }
+
+  currentNode.key = replaceWith.key;
+  currentNode.data = replaceWith.data;
+
+  replaceWith.parent.right = replaceWith.left;
+  if (replaceWith.left) { replaceWith.left.parent = replaceWith.parent; }
+
+  return this.rebalanceAlongPath(deletePath);
+};
+
+// Delete a value
+AVLTree.prototype.delete = function (key, value) {
+  var newTree = this.tree.delete(key, value);
+
+  // If newTree is undefined, that means its structure was not modified
+  if (newTree) { this.tree = newTree; }
+};
+
+
+/**
+ * Other functions we want to use on an AVLTree as if it were the internal _AVLTree
+ */
+['getNumberOfKeys', 'search', 'betweenBounds', 'prettyPrint', 'executeOnEveryNode'].forEach(function (fn) {
+  AVLTree.prototype[fn] = function () {
+    return this.tree[fn].apply(this.tree, arguments);
+  };
+});
+
+
+// Interface
+module.exports = AVLTree;
+
+
+/***/ }),
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10250,7 +15332,7 @@ function argsArray(fun) {
 
 var _assign = __webpack_require__(4);
 
-var emptyObject = __webpack_require__(24);
+var emptyObject = __webpack_require__(25);
 var _invariant = __webpack_require__(1);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -11112,404 +16194,7 @@ module.exports = factory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * This is the web browser implementation of `debug()`.
- *
- * Expose `debug()` as the module.
- */
-
-exports = module.exports = __webpack_require__(87);
-exports.log = log;
-exports.formatArgs = formatArgs;
-exports.save = save;
-exports.load = load;
-exports.useColors = useColors;
-exports.storage = 'undefined' != typeof chrome
-               && 'undefined' != typeof chrome.storage
-                  ? chrome.storage.local
-                  : localstorage();
-
-/**
- * Colors.
- */
-
-exports.colors = [
-  'lightseagreen',
-  'forestgreen',
-  'goldenrod',
-  'dodgerblue',
-  'darkorchid',
-  'crimson'
-];
-
-/**
- * Currently only WebKit-based Web Inspectors, Firefox >= v31,
- * and the Firebug extension (any Firefox version) are known
- * to support "%c" CSS customizations.
- *
- * TODO: add a `localStorage` variable to explicitly enable/disable colors
- */
-
-function useColors() {
-  // NB: In an Electron preload script, document will be defined but not fully
-  // initialized. Since we know we're in Chrome, we'll just detect this case
-  // explicitly
-  if (typeof window !== 'undefined' && window && typeof window.process !== 'undefined' && window.process.type === 'renderer') {
-    return true;
-  }
-
-  // is webkit? http://stackoverflow.com/a/16459606/376773
-  // document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
-  return (typeof document !== 'undefined' && document && 'WebkitAppearance' in document.documentElement.style) ||
-    // is firebug? http://stackoverflow.com/a/398120/376773
-    (typeof window !== 'undefined' && window && window.console && (console.firebug || (console.exception && console.table))) ||
-    // is firefox >= v31?
-    // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-    (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
-    // double check webkit in userAgent just in case we are in a worker
-    (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
-}
-
-/**
- * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
- */
-
-exports.formatters.j = function(v) {
-  try {
-    return JSON.stringify(v);
-  } catch (err) {
-    return '[UnexpectedJSONParseError]: ' + err.message;
-  }
-};
-
-
-/**
- * Colorize log arguments if enabled.
- *
- * @api public
- */
-
-function formatArgs(args) {
-  var useColors = this.useColors;
-
-  args[0] = (useColors ? '%c' : '')
-    + this.namespace
-    + (useColors ? ' %c' : ' ')
-    + args[0]
-    + (useColors ? '%c ' : ' ')
-    + '+' + exports.humanize(this.diff);
-
-  if (!useColors) return;
-
-  var c = 'color: ' + this.color;
-  args.splice(1, 0, c, 'color: inherit')
-
-  // the final "%c" is somewhat tricky, because there could be other
-  // arguments passed either before or after the %c, so we need to
-  // figure out the correct index to insert the CSS into
-  var index = 0;
-  var lastC = 0;
-  args[0].replace(/%[a-zA-Z%]/g, function(match) {
-    if ('%%' === match) return;
-    index++;
-    if ('%c' === match) {
-      // we only are interested in the *last* %c
-      // (the user may have provided their own)
-      lastC = index;
-    }
-  });
-
-  args.splice(lastC, 0, c);
-}
-
-/**
- * Invokes `console.log()` when available.
- * No-op when `console.log` is not a "function".
- *
- * @api public
- */
-
-function log() {
-  // this hackery is required for IE8/9, where
-  // the `console.log` function doesn't have 'apply'
-  return 'object' === typeof console
-    && console.log
-    && Function.prototype.apply.call(console.log, console, arguments);
-}
-
-/**
- * Save `namespaces`.
- *
- * @param {String} namespaces
- * @api private
- */
-
-function save(namespaces) {
-  try {
-    if (null == namespaces) {
-      exports.storage.removeItem('debug');
-    } else {
-      exports.storage.debug = namespaces;
-    }
-  } catch(e) {}
-}
-
-/**
- * Load `namespaces`.
- *
- * @return {String} returns the previously persisted debug modes
- * @api private
- */
-
-function load() {
-  try {
-    return exports.storage.debug;
-  } catch(e) {}
-
-  // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
-  if (typeof process !== 'undefined' && 'env' in process) {
-    return process.env.DEBUG;
-  }
-}
-
-/**
- * Enable namespaces listed in `localStorage.debug` initially.
- */
-
-exports.enable(load());
-
-/**
- * Localstorage attempts to return the localstorage.
- *
- * This is necessary because safari throws
- * when a user disables cookies/localstorage
- * and you attempt to access it.
- *
- * @return {LocalStorage}
- * @api private
- */
-
-function localstorage() {
-  try {
-    return window.localStorage;
-  } catch (e) {}
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * This is the common logic for both the Node.js and web browser
- * implementations of `debug()`.
- *
- * Expose `debug()` as the module.
- */
-
-exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
-exports.coerce = coerce;
-exports.disable = disable;
-exports.enable = enable;
-exports.enabled = enabled;
-exports.humanize = __webpack_require__(105);
-
-/**
- * The currently active debug mode names, and names to skip.
- */
-
-exports.names = [];
-exports.skips = [];
-
-/**
- * Map of special "%n" handling functions, for the debug "format" argument.
- *
- * Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
- */
-
-exports.formatters = {};
-
-/**
- * Previous log timestamp.
- */
-
-var prevTime;
-
-/**
- * Select a color.
- * @param {String} namespace
- * @return {Number}
- * @api private
- */
-
-function selectColor(namespace) {
-  var hash = 0, i;
-
-  for (i in namespace) {
-    hash  = ((hash << 5) - hash) + namespace.charCodeAt(i);
-    hash |= 0; // Convert to 32bit integer
-  }
-
-  return exports.colors[Math.abs(hash) % exports.colors.length];
-}
-
-/**
- * Create a debugger with the given `namespace`.
- *
- * @param {String} namespace
- * @return {Function}
- * @api public
- */
-
-function createDebug(namespace) {
-
-  function debug() {
-    // disabled?
-    if (!debug.enabled) return;
-
-    var self = debug;
-
-    // set `diff` timestamp
-    var curr = +new Date();
-    var ms = curr - (prevTime || curr);
-    self.diff = ms;
-    self.prev = prevTime;
-    self.curr = curr;
-    prevTime = curr;
-
-    // turn the `arguments` into a proper Array
-    var args = new Array(arguments.length);
-    for (var i = 0; i < args.length; i++) {
-      args[i] = arguments[i];
-    }
-
-    args[0] = exports.coerce(args[0]);
-
-    if ('string' !== typeof args[0]) {
-      // anything else let's inspect with %O
-      args.unshift('%O');
-    }
-
-    // apply any `formatters` transformations
-    var index = 0;
-    args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
-      // if we encounter an escaped % then don't increase the array index
-      if (match === '%%') return match;
-      index++;
-      var formatter = exports.formatters[format];
-      if ('function' === typeof formatter) {
-        var val = args[index];
-        match = formatter.call(self, val);
-
-        // now we need to remove `args[index]` since it's inlined in the `format`
-        args.splice(index, 1);
-        index--;
-      }
-      return match;
-    });
-
-    // apply env-specific formatting (colors, etc.)
-    exports.formatArgs.call(self, args);
-
-    var logFn = debug.log || exports.log || console.log.bind(console);
-    logFn.apply(self, args);
-  }
-
-  debug.namespace = namespace;
-  debug.enabled = exports.enabled(namespace);
-  debug.useColors = exports.useColors();
-  debug.color = selectColor(namespace);
-
-  // env-specific initialization logic for debug instances
-  if ('function' === typeof exports.init) {
-    exports.init(debug);
-  }
-
-  return debug;
-}
-
-/**
- * Enables a debug mode by namespaces. This can include modes
- * separated by a colon and wildcards.
- *
- * @param {String} namespaces
- * @api public
- */
-
-function enable(namespaces) {
-  exports.save(namespaces);
-
-  exports.names = [];
-  exports.skips = [];
-
-  var split = (namespaces || '').split(/[\s,]+/);
-  var len = split.length;
-
-  for (var i = 0; i < len; i++) {
-    if (!split[i]) continue; // ignore empty strings
-    namespaces = split[i].replace(/\*/g, '.*?');
-    if (namespaces[0] === '-') {
-      exports.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
-    } else {
-      exports.names.push(new RegExp('^' + namespaces + '$'));
-    }
-  }
-}
-
-/**
- * Disable debug output.
- *
- * @api public
- */
-
-function disable() {
-  exports.enable('');
-}
-
-/**
- * Returns true if the given mode name is enabled, false otherwise.
- *
- * @param {String} name
- * @return {Boolean}
- * @api public
- */
-
-function enabled(name) {
-  var i, len;
-  for (i = 0, len = exports.skips.length; i < len; i++) {
-    if (exports.skips[i].test(name)) {
-      return false;
-    }
-  }
-  for (i = 0, len = exports.names.length; i < len; i++) {
-    if (exports.names[i].test(name)) {
-      return true;
-    }
-  }
-  return false;
-}
-
-/**
- * Coerce `val`.
- *
- * @param {Mixed} val
- * @return {Mixed}
- * @api private
- */
-
-function coerce(val) {
-  if (val instanceof Error) return val.stack || val.message;
-  return val;
-}
-
-
-/***/ }),
-/* 88 */
+/* 97 */
 /***/ (function(module, exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -11817,7 +16502,7 @@ function isUndefined(arg) {
 
 
 /***/ }),
-/* 89 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11854,7 +16539,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 90 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11871,7 +16556,7 @@ module.exports = camelize;
 
 
 
-var camelize = __webpack_require__(89);
+var camelize = __webpack_require__(98);
 
 var msPattern = /^-ms-/;
 
@@ -11899,7 +16584,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 91 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11916,7 +16601,7 @@ module.exports = camelizeStyleName;
  * 
  */
 
-var isTextNode = __webpack_require__(99);
+var isTextNode = __webpack_require__(108);
 
 /*eslint-disable no-bitwise */
 
@@ -11944,7 +16629,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 92 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12077,7 +16762,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 93 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12098,8 +16783,8 @@ module.exports = createArrayFromMixed;
 
 var ExecutionEnvironment = __webpack_require__(6);
 
-var createArrayFromMixed = __webpack_require__(92);
-var getMarkupWrap = __webpack_require__(94);
+var createArrayFromMixed = __webpack_require__(101);
+var getMarkupWrap = __webpack_require__(103);
 var invariant = __webpack_require__(1);
 
 /**
@@ -12167,7 +16852,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 94 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12268,7 +16953,7 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 95 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12312,7 +16997,7 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ }),
-/* 96 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12350,7 +17035,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 97 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12367,7 +17052,7 @@ module.exports = hyphenate;
 
 
 
-var hyphenate = __webpack_require__(96);
+var hyphenate = __webpack_require__(105);
 
 var msPattern = /^ms-/;
 
@@ -12394,7 +17079,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 98 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12424,7 +17109,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 99 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12441,7 +17126,7 @@ module.exports = isNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(98);
+var isNode = __webpack_require__(107);
 
 /**
  * @param {*} object The object to check.
@@ -12454,7 +17139,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 100 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12489,7 +17174,7 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ }),
-/* 101 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12517,7 +17202,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 102 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12534,7 +17219,7 @@ module.exports = performance || {};
  * @typechecks
  */
 
-var performance = __webpack_require__(101);
+var performance = __webpack_require__(110);
 
 var performanceNow;
 
@@ -12556,41 +17241,91 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 103 */
-/***/ (function(module, exports) {
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
 
-if (typeof Object.create === 'function') {
-  // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    ctor.prototype = Object.create(superCtor.prototype, {
-      constructor: {
-        value: ctor,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
+/* WEBPACK VAR INJECTION */(function(global) {var require;var require;/*!
+    localForage -- Offline Storage, Improved
+    Version 1.5.0
+    https://localforage.github.io/localForage
+    (c) 2013-2017 Mozilla, Apache License 2.0
+*/
+(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.localforage = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw (f.code="MODULE_NOT_FOUND", f)}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+(function (global){
+'use strict';
+var Mutation = global.MutationObserver || global.WebKitMutationObserver;
+
+var scheduleDrain;
+
+{
+  if (Mutation) {
+    var called = 0;
+    var observer = new Mutation(nextTick);
+    var element = global.document.createTextNode('');
+    observer.observe(element, {
+      characterData: true
     });
-  };
-} else {
-  // old school shim for old browsers
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    var TempCtor = function () {}
-    TempCtor.prototype = superCtor.prototype
-    ctor.prototype = new TempCtor()
-    ctor.prototype.constructor = ctor
+    scheduleDrain = function () {
+      element.data = (called = ++called % 2);
+    };
+  } else if (!global.setImmediate && typeof global.MessageChannel !== 'undefined') {
+    var channel = new global.MessageChannel();
+    channel.port1.onmessage = nextTick;
+    scheduleDrain = function () {
+      channel.port2.postMessage(0);
+    };
+  } else if ('document' in global && 'onreadystatechange' in global.document.createElement('script')) {
+    scheduleDrain = function () {
+
+      // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+      // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+      var scriptEl = global.document.createElement('script');
+      scriptEl.onreadystatechange = function () {
+        nextTick();
+
+        scriptEl.onreadystatechange = null;
+        scriptEl.parentNode.removeChild(scriptEl);
+        scriptEl = null;
+      };
+      global.document.documentElement.appendChild(scriptEl);
+    };
+  } else {
+    scheduleDrain = function () {
+      setTimeout(nextTick, 0);
+    };
   }
 }
 
+var draining;
+var queue = [];
+//named nextTick for less confusing stack traces
+function nextTick() {
+  draining = true;
+  var i, oldQueue;
+  var len = queue.length;
+  while (len) {
+    oldQueue = queue;
+    queue = [];
+    i = -1;
+    while (++i < len) {
+      oldQueue[i]();
+    }
+    len = queue.length;
+  }
+  draining = false;
+}
 
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
+module.exports = immediate;
+function immediate(task) {
+  if (queue.push(task) === 1 && !draining) {
+    scheduleDrain();
+  }
+}
 
-"use strict";
-
-var immediate = __webpack_require__(52);
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],2:[function(_dereq_,module,exports){
+'use strict';
+var immediate = _dereq_(1);
 
 /* istanbul ignore next */
 function INTERNAL() {}
@@ -12601,7 +17336,7 @@ var REJECTED = ['REJECTED'];
 var FULFILLED = ['FULFILLED'];
 var PENDING = ['PENDING'];
 
-module.exports = Promise;
+module.exports = exports = Promise;
 
 function Promise(resolver) {
   if (typeof resolver !== 'function') {
@@ -12707,7 +17442,7 @@ handlers.reject = function (self, error) {
 function getThen(obj) {
   // Make sure we only access the accessor once as required by the spec
   var then = obj && obj.then;
-  if (obj && (typeof obj === 'object' || typeof obj === 'function') && typeof then === 'function') {
+  if (obj && typeof obj === 'object' && typeof then === 'function') {
     return function appyThen() {
       then.apply(obj, arguments);
     };
@@ -12755,7 +17490,7 @@ function tryCatch(func, value) {
   return out;
 }
 
-Promise.resolve = resolve;
+exports.resolve = resolve;
 function resolve(value) {
   if (value instanceof this) {
     return value;
@@ -12763,13 +17498,13 @@ function resolve(value) {
   return handlers.resolve(new this(INTERNAL), value);
 }
 
-Promise.reject = reject;
+exports.reject = reject;
 function reject(reason) {
   var promise = new this(INTERNAL);
   return handlers.reject(promise, reason);
 }
 
-Promise.all = all;
+exports.all = all;
 function all(iterable) {
   var self = this;
   if (Object.prototype.toString.call(iterable) !== '[object Array]') {
@@ -12808,7 +17543,7 @@ function all(iterable) {
   }
 }
 
-Promise.race = race;
+exports.race = race;
 function race(iterable) {
   var self = this;
   if (Object.prototype.toString.call(iterable) !== '[object Array]') {
@@ -12843,5618 +17578,157 @@ function race(iterable) {
   }
 }
 
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports) {
-
-/**
- * Helpers.
- */
-
-var s = 1000
-var m = s * 60
-var h = m * 60
-var d = h * 24
-var y = d * 365.25
-
-/**
- * Parse or format the given `val`.
- *
- * Options:
- *
- *  - `long` verbose formatting [false]
- *
- * @param {String|Number} val
- * @param {Object} options
- * @throws {Error} throw an error if val is not a non-empty string or a number
- * @return {String|Number}
- * @api public
- */
-
-module.exports = function (val, options) {
-  options = options || {}
-  var type = typeof val
-  if (type === 'string' && val.length > 0) {
-    return parse(val)
-  } else if (type === 'number' && isNaN(val) === false) {
-    return options.long ?
-			fmtLong(val) :
-			fmtShort(val)
-  }
-  throw new Error('val is not a non-empty string or a valid number. val=' + JSON.stringify(val))
+},{"1":1}],3:[function(_dereq_,module,exports){
+(function (global){
+'use strict';
+if (typeof global.Promise !== 'function') {
+  global.Promise = _dereq_(2);
 }
 
-/**
- * Parse the given `str` and return milliseconds.
- *
- * @param {String} str
- * @return {Number}
- * @api private
- */
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"2":2}],4:[function(_dereq_,module,exports){
+'use strict';
 
-function parse(str) {
-  str = String(str)
-  if (str.length > 10000) {
-    return
-  }
-  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(str)
-  if (!match) {
-    return
-  }
-  var n = parseFloat(match[1])
-  var type = (match[2] || 'ms').toLowerCase()
-  switch (type) {
-    case 'years':
-    case 'year':
-    case 'yrs':
-    case 'yr':
-    case 'y':
-      return n * y
-    case 'days':
-    case 'day':
-    case 'd':
-      return n * d
-    case 'hours':
-    case 'hour':
-    case 'hrs':
-    case 'hr':
-    case 'h':
-      return n * h
-    case 'minutes':
-    case 'minute':
-    case 'mins':
-    case 'min':
-    case 'm':
-      return n * m
-    case 'seconds':
-    case 'second':
-    case 'secs':
-    case 'sec':
-    case 's':
-      return n * s
-    case 'milliseconds':
-    case 'millisecond':
-    case 'msecs':
-    case 'msec':
-    case 'ms':
-      return n
-    default:
-      return undefined
-  }
-}
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-/**
- * Short format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function fmtShort(ms) {
-  if (ms >= d) {
-    return Math.round(ms / d) + 'd'
-  }
-  if (ms >= h) {
-    return Math.round(ms / h) + 'h'
-  }
-  if (ms >= m) {
-    return Math.round(ms / m) + 'm'
-  }
-  if (ms >= s) {
-    return Math.round(ms / s) + 's'
-  }
-  return ms + 'ms'
-}
-
-/**
- * Long format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
-
-function fmtLong(ms) {
-  return plural(ms, d, 'day') ||
-    plural(ms, h, 'hour') ||
-    plural(ms, m, 'minute') ||
-    plural(ms, s, 'second') ||
-    ms + ' ms'
-}
-
-/**
- * Pluralization helper.
- */
-
-function plural(ms, n, name) {
-  if (ms < n) {
-    return
-  }
-  if (ms < n * 1.5) {
-    return Math.floor(ms / n) + ' ' + name
-  }
-  return Math.ceil(ms / n) + ' ' + name + 's'
-}
-
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var lie = _interopDefault(__webpack_require__(104));
-var getArguments = _interopDefault(__webpack_require__(84));
-var events = __webpack_require__(88);
-var inherits = _interopDefault(__webpack_require__(103));
-var nextTick = _interopDefault(__webpack_require__(52));
-var debug = _interopDefault(__webpack_require__(86));
-var Md5 = _interopDefault(__webpack_require__(194));
-var vuvuzela = _interopDefault(__webpack_require__(195));
-
-/* istanbul ignore next */
-var PouchPromise$1 = typeof Promise === 'function' ? Promise : lie;
-
-function isBinaryObject(object) {
-  return (typeof ArrayBuffer !== 'undefined' && object instanceof ArrayBuffer) ||
-    (typeof Blob !== 'undefined' && object instanceof Blob);
-}
-
-function cloneArrayBuffer(buff) {
-  if (typeof buff.slice === 'function') {
-    return buff.slice(0);
-  }
-  // IE10-11 slice() polyfill
-  var target = new ArrayBuffer(buff.byteLength);
-  var targetArray = new Uint8Array(target);
-  var sourceArray = new Uint8Array(buff);
-  targetArray.set(sourceArray);
-  return target;
-}
-
-function cloneBinaryObject(object) {
-  if (object instanceof ArrayBuffer) {
-    return cloneArrayBuffer(object);
-  }
-  var size = object.size;
-  var type = object.type;
-  // Blob
-  if (typeof object.slice === 'function') {
-    return object.slice(0, size, type);
-  }
-  // PhantomJS slice() replacement
-  return object.webkitSlice(0, size, type);
-}
-
-// most of this is borrowed from lodash.isPlainObject:
-// https://github.com/fis-components/lodash.isplainobject/
-// blob/29c358140a74f252aeb08c9eb28bef86f2217d4a/index.js
-
-var funcToString = Function.prototype.toString;
-var objectCtorString = funcToString.call(Object);
-
-function isPlainObject(value) {
-  var proto = Object.getPrototypeOf(value);
-  /* istanbul ignore if */
-  if (proto === null) { // not sure when this happens, but I guess it can
-    return true;
-  }
-  var Ctor = proto.constructor;
-  return (typeof Ctor == 'function' &&
-    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
-}
-
-function clone(object) {
-  var newObject;
-  var i;
-  var len;
-
-  if (!object || typeof object !== 'object') {
-    return object;
-  }
-
-  if (Array.isArray(object)) {
-    newObject = [];
-    for (i = 0, len = object.length; i < len; i++) {
-      newObject[i] = clone(object[i]);
-    }
-    return newObject;
-  }
-
-  // special case: to avoid inconsistencies between IndexedDB
-  // and other backends, we automatically stringify Dates
-  if (object instanceof Date) {
-    return object.toISOString();
-  }
-
-  if (isBinaryObject(object)) {
-    return cloneBinaryObject(object);
-  }
-
-  if (!isPlainObject(object)) {
-    return object; // don't clone objects like Workers
-  }
-
-  newObject = {};
-  for (i in object) {
-    /* istanbul ignore else */
-    if (Object.prototype.hasOwnProperty.call(object, i)) {
-      var value = clone(object[i]);
-      if (typeof value !== 'undefined') {
-        newObject[i] = value;
-      }
-    }
-  }
-  return newObject;
-}
-
-function once(fun) {
-  var called = false;
-  return getArguments(function (args) {
-    /* istanbul ignore if */
-    if (called) {
-      // this is a smoke test and should never actually happen
-      throw new Error('once called more than once');
-    } else {
-      called = true;
-      fun.apply(this, args);
-    }
-  });
-}
-
-function toPromise(func) {
-  //create the function we will be returning
-  return getArguments(function (args) {
-    // Clone arguments
-    args = clone(args);
-    var self = this;
-    // if the last argument is a function, assume its a callback
-    var usedCB = (typeof args[args.length - 1] === 'function') ? args.pop() : false;
-    var promise = new PouchPromise$1(function (fulfill, reject) {
-      var resp;
-      try {
-        var callback = once(function (err, mesg) {
-          if (err) {
-            reject(err);
-          } else {
-            fulfill(mesg);
-          }
-        });
-        // create a callback for this invocation
-        // apply the function in the orig context
-        args.push(callback);
-        resp = func.apply(self, args);
-        if (resp && typeof resp.then === 'function') {
-          fulfill(resp);
+function getIDB() {
+    /* global indexedDB,webkitIndexedDB,mozIndexedDB,OIndexedDB,msIndexedDB */
+    try {
+        if (typeof indexedDB !== 'undefined') {
+            return indexedDB;
         }
-      } catch (e) {
-        reject(e);
-      }
-    });
-    // if there is a callback, call it back
-    if (usedCB) {
-      promise.then(function (result) {
-        usedCB(null, result);
-      }, usedCB);
-    }
-    return promise;
-  });
-}
-
-function logApiCall(self, name, args) {
-  /* istanbul ignore if */
-  if (self.constructor.listeners('debug').length) {
-    var logArgs = ['api', self.name, name];
-    for (var i = 0; i < args.length - 1; i++) {
-      logArgs.push(args[i]);
-    }
-    self.constructor.emit('debug', logArgs);
-
-    // override the callback itself to log the response
-    var origCallback = args[args.length - 1];
-    args[args.length - 1] = function (err, res) {
-      var responseArgs = ['api', self.name, name];
-      responseArgs = responseArgs.concat(
-        err ? ['error', err] : ['success', res]
-      );
-      self.constructor.emit('debug', responseArgs);
-      origCallback(err, res);
-    };
-  }
-}
-
-function adapterFun(name, callback) {
-  return toPromise(getArguments(function (args) {
-    if (this._closed) {
-      return PouchPromise$1.reject(new Error('database is closed'));
-    }
-    if (this._destroyed) {
-      return PouchPromise$1.reject(new Error('database is destroyed'));
-    }
-    var self = this;
-    logApiCall(self, name, args);
-    if (!this.taskqueue.isReady) {
-      return new PouchPromise$1(function (fulfill, reject) {
-        self.taskqueue.addTask(function (failed) {
-          if (failed) {
-            reject(failed);
-          } else {
-            fulfill(self[name].apply(self, args));
-          }
-        });
-      });
-    }
-    return callback.apply(this, args);
-  }));
-}
-
-function mangle(key) {
-  return '$' + key;
-}
-function unmangle(key) {
-  return key.substring(1);
-}
-function Map$1() {
-  this._store = {};
-}
-Map$1.prototype.get = function (key) {
-  var mangled = mangle(key);
-  return this._store[mangled];
-};
-Map$1.prototype.set = function (key, value) {
-  var mangled = mangle(key);
-  this._store[mangled] = value;
-  return true;
-};
-Map$1.prototype.has = function (key) {
-  var mangled = mangle(key);
-  return mangled in this._store;
-};
-Map$1.prototype.delete = function (key) {
-  var mangled = mangle(key);
-  var res = mangled in this._store;
-  delete this._store[mangled];
-  return res;
-};
-Map$1.prototype.forEach = function (cb) {
-  var keys = Object.keys(this._store);
-  for (var i = 0, len = keys.length; i < len; i++) {
-    var key = keys[i];
-    var value = this._store[key];
-    key = unmangle(key);
-    cb(value, key);
-  }
-};
-Object.defineProperty(Map$1.prototype, 'size', {
-  get: function () {
-    return Object.keys(this._store).length;
-  }
-});
-
-function Set$1(array) {
-  this._store = new Map$1();
-
-  // init with an array
-  if (array && Array.isArray(array)) {
-    for (var i = 0, len = array.length; i < len; i++) {
-      this.add(array[i]);
-    }
-  }
-}
-Set$1.prototype.add = function (key) {
-  return this._store.set(key, true);
-};
-Set$1.prototype.has = function (key) {
-  return this._store.has(key);
-};
-Set$1.prototype.forEach = function (cb) {
-  this._store.forEach(function (value, key) {
-    cb(key);
-  });
-};
-Object.defineProperty(Set$1.prototype, 'size', {
-  get: function () {
-    return this._store.size;
-  }
-});
-
-/* global Map,Set,Symbol */
-// Based on https://kangax.github.io/compat-table/es6/ we can sniff out
-// incomplete Map/Set implementations which would otherwise cause our tests to fail.
-// Notably they fail in IE11 and iOS 8.4, which this prevents.
-function supportsMapAndSet() {
-  if (typeof Symbol === 'undefined' || typeof Map === 'undefined' || typeof Set === 'undefined') {
-    return false;
-  }
-  var prop = Object.getOwnPropertyDescriptor(Map, Symbol.species);
-  return prop && 'get' in prop && Map[Symbol.species] === Map;
-}
-
-// based on https://github.com/montagejs/collections
-/* global Map,Set */
-
-var ExportedSet;
-var ExportedMap;
-
-{
-  if (supportsMapAndSet()) { // prefer built-in Map/Set
-    ExportedSet = Set;
-    ExportedMap = Map;
-  } else { // fall back to our polyfill
-    ExportedSet = Set$1;
-    ExportedMap = Map$1;
-  }
-}
-
-// like underscore/lodash _.pick()
-function pick(obj, arr) {
-  var res = {};
-  for (var i = 0, len = arr.length; i < len; i++) {
-    var prop = arr[i];
-    if (prop in obj) {
-      res[prop] = obj[prop];
-    }
-  }
-  return res;
-}
-
-// Most browsers throttle concurrent requests at 6, so it's silly
-// to shim _bulk_get by trying to launch potentially hundreds of requests
-// and then letting the majority time out. We can handle this ourselves.
-var MAX_NUM_CONCURRENT_REQUESTS = 6;
-
-function identityFunction(x) {
-  return x;
-}
-
-function formatResultForOpenRevsGet(result) {
-  return [{
-    ok: result
-  }];
-}
-
-// shim for P/CouchDB adapters that don't directly implement _bulk_get
-function bulkGet(db, opts, callback) {
-  var requests = opts.docs;
-
-  // consolidate into one request per doc if possible
-  var requestsById = new ExportedMap();
-  requests.forEach(function (request) {
-    if (requestsById.has(request.id)) {
-      requestsById.get(request.id).push(request);
-    } else {
-      requestsById.set(request.id, [request]);
-    }
-  });
-
-  var numDocs = requestsById.size;
-  var numDone = 0;
-  var perDocResults = new Array(numDocs);
-
-  function collapseResultsAndFinish() {
-    var results = [];
-    perDocResults.forEach(function (res) {
-      res.docs.forEach(function (info) {
-        results.push({
-          id: res.id,
-          docs: [info]
-        });
-      });
-    });
-    callback(null, {results: results});
-  }
-
-  function checkDone() {
-    if (++numDone === numDocs) {
-      collapseResultsAndFinish();
-    }
-  }
-
-  function gotResult(docIndex, id, docs) {
-    perDocResults[docIndex] = {id: id, docs: docs};
-    checkDone();
-  }
-
-  var allRequests = [];
-  requestsById.forEach(function (value, key) {
-    allRequests.push(key);
-  });
-
-  var i = 0;
-
-  function nextBatch() {
-
-    if (i >= allRequests.length) {
-      return;
-    }
-
-    var upTo = Math.min(i + MAX_NUM_CONCURRENT_REQUESTS, allRequests.length);
-    var batch = allRequests.slice(i, upTo);
-    processBatch(batch, i);
-    i += batch.length;
-  }
-
-  function processBatch(batch, offset) {
-    batch.forEach(function (docId, j) {
-      var docIdx = offset + j;
-      var docRequests = requestsById.get(docId);
-
-      // just use the first request as the "template"
-      // TODO: The _bulk_get API allows for more subtle use cases than this,
-      // but for now it is unlikely that there will be a mix of different
-      // "atts_since" or "attachments" in the same request, since it's just
-      // replicate.js that is using this for the moment.
-      // Also, atts_since is aspirational, since we don't support it yet.
-      var docOpts = pick(docRequests[0], ['atts_since', 'attachments']);
-      docOpts.open_revs = docRequests.map(function (request) {
-        // rev is optional, open_revs disallowed
-        return request.rev;
-      });
-
-      // remove falsey / undefined revisions
-      docOpts.open_revs = docOpts.open_revs.filter(identityFunction);
-
-      var formatResult = identityFunction;
-
-      if (docOpts.open_revs.length === 0) {
-        delete docOpts.open_revs;
-
-        // when fetching only the "winning" leaf,
-        // transform the result so it looks like an open_revs
-        // request
-        formatResult = formatResultForOpenRevsGet;
-      }
-
-      // globally-supplied options
-      ['revs', 'attachments', 'binary', 'ajax', 'latest'].forEach(function (param) {
-        if (param in opts) {
-          docOpts[param] = opts[param];
+        if (typeof webkitIndexedDB !== 'undefined') {
+            return webkitIndexedDB;
         }
-      });
-      db.get(docId, docOpts, function (err, res) {
-        var result;
-        /* istanbul ignore if */
-        if (err) {
-          result = [{error: err}];
-        } else {
-          result = formatResult(res);
+        if (typeof mozIndexedDB !== 'undefined') {
+            return mozIndexedDB;
         }
-        gotResult(docIdx, docId, result);
-        nextBatch();
-      });
-    });
-  }
-
-  nextBatch();
-
-}
-
-function isChromeApp() {
-  return (typeof chrome !== "undefined" &&
-    typeof chrome.storage !== "undefined" &&
-    typeof chrome.storage.local !== "undefined");
-}
-
-var hasLocal;
-
-if (isChromeApp()) {
-  hasLocal = false;
-} else {
-  try {
-    localStorage.setItem('_pouch_check_localstorage', 1);
-    hasLocal = !!localStorage.getItem('_pouch_check_localstorage');
-  } catch (e) {
-    hasLocal = false;
-  }
-}
-
-function hasLocalStorage() {
-  return hasLocal;
-}
-
-// Custom nextTick() shim for browsers. In node, this will just be process.nextTick(). We
-// avoid using process.nextTick() directly because the polyfill is very large and we don't
-// need all of it (see: https://github.com/defunctzombie/node-process).
-// "immediate" 3.0.8 is used by lie, and it's a smaller version of the latest "immediate"
-// package, so it's the one we use.
-// When we use nextTick() in our codebase, we only care about not releasing Zalgo
-// (see: http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony).
-// Microtask vs macrotask doesn't matter to us. So we're free to use the fastest
-// (least latency) option, which is "immediate" due to use of microtasks.
-// All of our nextTicks are isolated to this one function so we can easily swap out one
-// implementation for another.
-
-inherits(Changes, events.EventEmitter);
-
-/* istanbul ignore next */
-function attachBrowserEvents(self) {
-  if (isChromeApp()) {
-    chrome.storage.onChanged.addListener(function (e) {
-      // make sure it's event addressed to us
-      if (e.db_name != null) {
-        //object only has oldValue, newValue members
-        self.emit(e.dbName.newValue);
-      }
-    });
-  } else if (hasLocalStorage()) {
-    if (typeof addEventListener !== 'undefined') {
-      addEventListener("storage", function (e) {
-        self.emit(e.key);
-      });
-    } else { // old IE
-      window.attachEvent("storage", function (e) {
-        self.emit(e.key);
-      });
-    }
-  }
-}
-
-function Changes() {
-  events.EventEmitter.call(this);
-  this._listeners = {};
-
-  attachBrowserEvents(this);
-}
-Changes.prototype.addListener = function (dbName, id, db, opts) {
-  /* istanbul ignore if */
-  if (this._listeners[id]) {
-    return;
-  }
-  var self = this;
-  var inprogress = false;
-  function eventFunction() {
-    /* istanbul ignore if */
-    if (!self._listeners[id]) {
-      return;
-    }
-    if (inprogress) {
-      inprogress = 'waiting';
-      return;
-    }
-    inprogress = true;
-    var changesOpts = pick(opts, [
-      'style', 'include_docs', 'attachments', 'conflicts', 'filter',
-      'doc_ids', 'view', 'since', 'query_params', 'binary'
-    ]);
-
-    /* istanbul ignore next */
-    function onError() {
-      inprogress = false;
-    }
-
-    db.changes(changesOpts).on('change', function (c) {
-      if (c.seq > opts.since && !opts.cancelled) {
-        opts.since = c.seq;
-        opts.onChange(c);
-      }
-    }).on('complete', function () {
-      if (inprogress === 'waiting') {
-        nextTick(eventFunction);
-      }
-      inprogress = false;
-    }).on('error', onError);
-  }
-  this._listeners[id] = eventFunction;
-  this.on(dbName, eventFunction);
-};
-
-Changes.prototype.removeListener = function (dbName, id) {
-  /* istanbul ignore if */
-  if (!(id in this._listeners)) {
-    return;
-  }
-  events.EventEmitter.prototype.removeListener.call(this, dbName,
-    this._listeners[id]);
-  delete this._listeners[id];
-};
-
-
-/* istanbul ignore next */
-Changes.prototype.notifyLocalWindows = function (dbName) {
-  //do a useless change on a storage thing
-  //in order to get other windows's listeners to activate
-  if (isChromeApp()) {
-    chrome.storage.local.set({dbName: dbName});
-  } else if (hasLocalStorage()) {
-    localStorage[dbName] = (localStorage[dbName] === "a") ? "b" : "a";
-  }
-};
-
-Changes.prototype.notify = function (dbName) {
-  this.emit(dbName);
-  this.notifyLocalWindows(dbName);
-};
-
-function guardedConsole(method) {
-  /* istanbul ignore else */
-  if (console !== 'undefined' && method in console) {
-    var args = Array.prototype.slice.call(arguments, 1);
-    console[method].apply(console, args);
-  }
-}
-
-function randomNumber(min, max) {
-  var maxTimeout = 600000; // Hard-coded default of 10 minutes
-  min = parseInt(min, 10) || 0;
-  max = parseInt(max, 10);
-  if (max !== max || max <= min) {
-    max = (min || 1) << 1; //doubling
-  } else {
-    max = max + 1;
-  }
-  // In order to not exceed maxTimeout, pick a random value between half of maxTimeout and maxTimeout
-  if (max > maxTimeout) {
-    min = maxTimeout >> 1; // divide by two
-    max = maxTimeout;
-  }
-  var ratio = Math.random();
-  var range = max - min;
-
-  return ~~(range * ratio + min); // ~~ coerces to an int, but fast.
-}
-
-function defaultBackOff(min) {
-  var max = 0;
-  if (!min) {
-    max = 2000;
-  }
-  return randomNumber(min, max);
-}
-
-// designed to give info to browser users, who are disturbed
-// when they see http errors in the console
-function explainError(status, str) {
-  guardedConsole('info', 'The above ' + status + ' is totally normal. ' + str);
-}
-
-var assign;
-{
-  if (typeof Object.assign === 'function') {
-    assign = Object.assign;
-  } else {
-    // lite Object.assign polyfill based on
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-    assign = function (target) {
-      var to = Object(target);
-
-      for (var index = 1; index < arguments.length; index++) {
-        var nextSource = arguments[index];
-
-        if (nextSource != null) { // Skip over if undefined or null
-          for (var nextKey in nextSource) {
-            // Avoid bugs when hasOwnProperty is shadowed
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              to[nextKey] = nextSource[nextKey];
-            }
-          }
+        if (typeof OIndexedDB !== 'undefined') {
+            return OIndexedDB;
         }
-      }
-      return to;
-    };
-  }
-}
-
-var $inject_Object_assign = assign;
-
-inherits(PouchError, Error);
-
-function PouchError(status, error, reason) {
-  Error.call(this, reason);
-  this.status = status;
-  this.name = error;
-  this.message = reason;
-  this.error = true;
-}
-
-PouchError.prototype.toString = function () {
-  return JSON.stringify({
-    status: this.status,
-    name: this.name,
-    message: this.message,
-    reason: this.reason
-  });
-};
-
-var UNAUTHORIZED = new PouchError(401, 'unauthorized', "Name or password is incorrect.");
-var MISSING_BULK_DOCS = new PouchError(400, 'bad_request', "Missing JSON list of 'docs'");
-var MISSING_DOC = new PouchError(404, 'not_found', 'missing');
-var REV_CONFLICT = new PouchError(409, 'conflict', 'Document update conflict');
-var INVALID_ID = new PouchError(400, 'bad_request', '_id field must contain a string');
-var MISSING_ID = new PouchError(412, 'missing_id', '_id is required for puts');
-var RESERVED_ID = new PouchError(400, 'bad_request', 'Only reserved document ids may start with underscore.');
-var NOT_OPEN = new PouchError(412, 'precondition_failed', 'Database not open');
-var UNKNOWN_ERROR = new PouchError(500, 'unknown_error', 'Database encountered an unknown error');
-var BAD_ARG = new PouchError(500, 'badarg', 'Some query argument is invalid');
-var INVALID_REQUEST = new PouchError(400, 'invalid_request', 'Request was invalid');
-var QUERY_PARSE_ERROR = new PouchError(400, 'query_parse_error', 'Some query parameter is invalid');
-var DOC_VALIDATION = new PouchError(500, 'doc_validation', 'Bad special document member');
-var BAD_REQUEST = new PouchError(400, 'bad_request', 'Something wrong with the request');
-var NOT_AN_OBJECT = new PouchError(400, 'bad_request', 'Document must be a JSON object');
-var DB_MISSING = new PouchError(404, 'not_found', 'Database not found');
-var IDB_ERROR = new PouchError(500, 'indexed_db_went_bad', 'unknown');
-var WSQ_ERROR = new PouchError(500, 'web_sql_went_bad', 'unknown');
-var LDB_ERROR = new PouchError(500, 'levelDB_went_went_bad', 'unknown');
-var FORBIDDEN = new PouchError(403, 'forbidden', 'Forbidden by design doc validate_doc_update function');
-var INVALID_REV = new PouchError(400, 'bad_request', 'Invalid rev format');
-var FILE_EXISTS = new PouchError(412, 'file_exists', 'The database could not be created, the file already exists.');
-var MISSING_STUB = new PouchError(412, 'missing_stub', 'A pre-existing attachment stub wasn\'t found');
-var INVALID_URL = new PouchError(413, 'invalid_url', 'Provided URL is invalid');
-
-function createError(error, reason) {
-  function CustomPouchError(reason) {
-    // inherit error properties from our parent error manually
-    // so as to allow proper JSON parsing.
-    /* jshint ignore:start */
-    for (var p in error) {
-      if (typeof error[p] !== 'function') {
-        this[p] = error[p];
-      }
-    }
-    /* jshint ignore:end */
-    if (reason !== undefined) {
-      this.reason = reason;
-    }
-  }
-  CustomPouchError.prototype = PouchError.prototype;
-  return new CustomPouchError(reason);
-}
-
-function generateErrorFromResponse(err) {
-
-  if (typeof err !== 'object') {
-    var data = err;
-    err = UNKNOWN_ERROR;
-    err.data = data;
-  }
-
-  if ('error' in err && err.error === 'conflict') {
-    err.name = 'conflict';
-    err.status = 409;
-  }
-
-  if (!('name' in err)) {
-    err.name = err.error || 'unknown';
-  }
-
-  if (!('status' in err)) {
-    err.status = 500;
-  }
-
-  if (!('message' in err)) {
-    err.message = err.message || err.reason;
-  }
-
-  return err;
-}
-
-function tryFilter(filter, doc, req) {
-  try {
-    return !filter(doc, req);
-  } catch (err) {
-    var msg = 'Filter function threw: ' + err.toString();
-    return createError(BAD_REQUEST, msg);
-  }
-}
-
-function filterChange(opts) {
-  var req = {};
-  var hasFilter = opts.filter && typeof opts.filter === 'function';
-  req.query = opts.query_params;
-
-  return function filter(change) {
-    if (!change.doc) {
-      // CSG sends events on the changes feed that don't have documents,
-      // this hack makes a whole lot of existing code robust.
-      change.doc = {};
-    }
-
-    var filterReturn = hasFilter && tryFilter(opts.filter, change.doc, req);
-
-    if (typeof filterReturn === 'object') {
-      return filterReturn;
-    }
-
-    if (filterReturn) {
-      return false;
-    }
-
-    if (!opts.include_docs) {
-      delete change.doc;
-    } else if (!opts.attachments) {
-      for (var att in change.doc._attachments) {
-        /* istanbul ignore else */
-        if (change.doc._attachments.hasOwnProperty(att)) {
-          change.doc._attachments[att].stub = true;
+        if (typeof msIndexedDB !== 'undefined') {
+            return msIndexedDB;
         }
-      }
-    }
-    return true;
-  };
+    } catch (e) {}
 }
 
-function flatten(arrs) {
-  var res = [];
-  for (var i = 0, len = arrs.length; i < len; i++) {
-    res = res.concat(arrs[i]);
-  }
-  return res;
-}
+var idb = getIDB();
 
-// shim for Function.prototype.name,
-// for browsers that don't support it like IE
-
-/* istanbul ignore next */
-function f() {}
-
-var hasName = f.name;
-var res;
-
-// We dont run coverage in IE
-/* istanbul ignore else */
-if (hasName) {
-  res = function (fun) {
-    return fun.name;
-  };
-} else {
-  res = function (fun) {
-    return fun.toString().match(/^\s*function\s*(\S*)\s*\(/)[1];
-  };
-}
-
-// Determine id an ID is valid
-//   - invalid IDs begin with an underescore that does not begin '_design' or
-//     '_local'
-//   - any other string value is a valid id
-// Returns the specific error object for each case
-function invalidIdError(id) {
-  var err;
-  if (!id) {
-    err = createError(MISSING_ID);
-  } else if (typeof id !== 'string') {
-    err = createError(INVALID_ID);
-  } else if (/^_/.test(id) && !(/^_(design|local)/).test(id)) {
-    err = createError(RESERVED_ID);
-  }
-  if (err) {
-    throw err;
-  }
-}
-
-// Checks if a PouchDB object is "remote" or not. This is
-// designed to opt-in to certain optimizations, such as
-// avoiding checks for "dependentDbs" and other things that
-// we know only apply to local databases. In general, "remote"
-// should be true for the http adapter, and for third-party
-// adapters with similar expensive boundaries to cross for
-// every API call, such as socket-pouch and worker-pouch.
-// Previously, this was handled via db.type() === 'http'
-// which is now deprecated.
-
-function isRemote(db) {
-  if (typeof db._remote === 'boolean') {
-    return db._remote;
-  }
-  /* istanbul ignore next */
-  if (typeof db.type === 'function') {
-    guardedConsole('warn',
-      'db.type() is deprecated and will be removed in ' +
-      'a future version of PouchDB');
-    return db.type() === 'http';
-  }
-  /* istanbul ignore next */
-  return false;
-}
-
-function listenerCount(ee, type) {
-  return 'listenerCount' in ee ? ee.listenerCount(type) :
-                                 events.EventEmitter.listenerCount(ee, type);
-}
-
-function parseDesignDocFunctionName(s) {
-  if (!s) {
-    return null;
-  }
-  var parts = s.split('/');
-  if (parts.length === 2) {
-    return parts;
-  }
-  if (parts.length === 1) {
-    return [s, s];
-  }
-  return null;
-}
-
-function normalizeDesignDocFunctionName(s) {
-  var normalized = parseDesignDocFunctionName(s);
-  return normalized ? normalized.join('/') : null;
-}
-
-// originally parseUri 1.2.2, now patched by us
-// (c) Steven Levithan <stevenlevithan.com>
-// MIT License
-var keys = ["source", "protocol", "authority", "userInfo", "user", "password",
-    "host", "port", "relative", "path", "directory", "file", "query", "anchor"];
-var qName ="queryKey";
-var qParser = /(?:^|&)([^&=]*)=?([^&]*)/g;
-
-// use the "loose" parser
-/* jshint maxlen: false */
-var parser = /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/;
-
-function parseUri(str) {
-  var m = parser.exec(str);
-  var uri = {};
-  var i = 14;
-
-  while (i--) {
-    var key = keys[i];
-    var value = m[i] || "";
-    var encoded = ['user', 'password'].indexOf(key) !== -1;
-    uri[key] = encoded ? decodeURIComponent(value) : value;
-  }
-
-  uri[qName] = {};
-  uri[keys[12]].replace(qParser, function ($0, $1, $2) {
-    if ($1) {
-      uri[qName][$1] = $2;
-    }
-  });
-
-  return uri;
-}
-
-// Based on https://github.com/alexdavid/scope-eval v0.0.3
-// (source: https://unpkg.com/scope-eval@0.0.3/scope_eval.js)
-// This is basically just a wrapper around new Function()
-
-function scopeEval(source, scope) {
-  var keys = [];
-  var values = [];
-  for (var key in scope) {
-    if (scope.hasOwnProperty(key)) {
-      keys.push(key);
-      values.push(scope[key]);
-    }
-  }
-  keys.push(source);
-  return Function.apply(null, keys).apply(null, values);
-}
-
-// this is essentially the "update sugar" function from daleharvey/pouchdb#1388
-// the diffFun tells us what delta to apply to the doc.  it either returns
-// the doc, or false if it doesn't need to do an update after all
-function upsert(db, docId, diffFun) {
-  return new PouchPromise$1(function (fulfill, reject) {
-    db.get(docId, function (err, doc) {
-      if (err) {
-        /* istanbul ignore next */
-        if (err.status !== 404) {
-          return reject(err);
+function isIndexedDBValid() {
+    try {
+        // Initialize IndexedDB; fall back to vendor-prefixed versions
+        // if needed.
+        if (!idb) {
+            return false;
         }
-        doc = {};
-      }
+        // We mimic PouchDB here;
+        //
+        // We test for openDatabase because IE Mobile identifies itself
+        // as Safari. Oh the lulz...
+        var isSafari = typeof openDatabase !== 'undefined' && /(Safari|iPhone|iPad|iPod)/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) && !/BlackBerry/.test(navigator.platform);
 
-      // the user might change the _rev, so save it for posterity
-      var docRev = doc._rev;
-      var newDoc = diffFun(doc);
+        var hasFetch = typeof fetch === 'function' && fetch.toString().indexOf('[native code') !== -1;
 
-      if (!newDoc) {
-        // if the diffFun returns falsy, we short-circuit as
-        // an optimization
-        return fulfill({updated: false, rev: docRev});
-      }
-
-      // users aren't allowed to modify these values,
-      // so reset them here
-      newDoc._id = docId;
-      newDoc._rev = docRev;
-      fulfill(tryAndPut(db, newDoc, diffFun));
-    });
-  });
-}
-
-function tryAndPut(db, doc, diffFun) {
-  return db.put(doc).then(function (res) {
-    return {
-      updated: true,
-      rev: res.rev
-    };
-  }, function (err) {
-    /* istanbul ignore next */
-    if (err.status !== 409) {
-      throw err;
-    }
-    return upsert(db, doc._id, diffFun);
-  });
-}
-
-// BEGIN Math.uuid.js
-
-/*!
-Math.uuid.js (v1.4)
-http://www.broofa.com
-mailto:robert@broofa.com
-
-Copyright (c) 2010 Robert Kieffer
-Dual licensed under the MIT and GPL licenses.
-*/
-
-/*
- * Generate a random uuid.
- *
- * USAGE: Math.uuid(length, radix)
- *   length - the desired number of characters
- *   radix  - the number of allowable values for each character.
- *
- * EXAMPLES:
- *   // No arguments  - returns RFC4122, version 4 ID
- *   >>> Math.uuid()
- *   "92329D39-6F5C-4520-ABFC-AAB64544E172"
- *
- *   // One argument - returns ID of the specified length
- *   >>> Math.uuid(15)     // 15 character ID (default base=62)
- *   "VcydxgltxrVZSTV"
- *
- *   // Two arguments - returns ID of the specified length, and radix. 
- *   // (Radix must be <= 62)
- *   >>> Math.uuid(8, 2)  // 8 character ID (base=2)
- *   "01001010"
- *   >>> Math.uuid(8, 10) // 8 character ID (base=10)
- *   "47473046"
- *   >>> Math.uuid(8, 16) // 8 character ID (base=16)
- *   "098F4D35"
- */
-var chars = (
-  '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
-  'abcdefghijklmnopqrstuvwxyz'
-).split('');
-function getValue(radix) {
-  return 0 | Math.random() * radix;
-}
-function uuid(len, radix) {
-  radix = radix || chars.length;
-  var out = '';
-  var i = -1;
-
-  if (len) {
-    // Compact form
-    while (++i < len) {
-      out += chars[getValue(radix)];
-    }
-    return out;
-  }
-    // rfc4122, version 4 form
-    // Fill in random data.  At i==19 set the high bits of clock sequence as
-    // per rfc4122, sec. 4.1.5
-  while (++i < 36) {
-    switch (i) {
-      case 8:
-      case 13:
-      case 18:
-      case 23:
-        out += '-';
-        break;
-      case 19:
-        out += chars[(getValue(16) & 0x3) | 0x8];
-        break;
-      default:
-        out += chars[getValue(16)];
-    }
-  }
-
-  return out;
-}
-
-// We fetch all leafs of the revision tree, and sort them based on tree length
-// and whether they were deleted, undeleted documents with the longest revision
-// tree (most edits) win
-// The final sort algorithm is slightly documented in a sidebar here:
-// http://guide.couchdb.org/draft/conflicts.html
-function winningRev(metadata) {
-  var winningId;
-  var winningPos;
-  var winningDeleted;
-  var toVisit = metadata.rev_tree.slice();
-  var node;
-  while ((node = toVisit.pop())) {
-    var tree = node.ids;
-    var branches = tree[2];
-    var pos = node.pos;
-    if (branches.length) { // non-leaf
-      for (var i = 0, len = branches.length; i < len; i++) {
-        toVisit.push({pos: pos + 1, ids: branches[i]});
-      }
-      continue;
-    }
-    var deleted = !!tree[1].deleted;
-    var id = tree[0];
-    // sort by deleted, then pos, then id
-    if (!winningId || (winningDeleted !== deleted ? winningDeleted :
-        winningPos !== pos ? winningPos < pos : winningId < id)) {
-      winningId = id;
-      winningPos = pos;
-      winningDeleted = deleted;
-    }
-  }
-
-  return winningPos + '-' + winningId;
-}
-
-// Pretty much all below can be combined into a higher order function to
-// traverse revisions
-// The return value from the callback will be passed as context to all
-// children of that node
-function traverseRevTree(revs, callback) {
-  var toVisit = revs.slice();
-
-  var node;
-  while ((node = toVisit.pop())) {
-    var pos = node.pos;
-    var tree = node.ids;
-    var branches = tree[2];
-    var newCtx =
-      callback(branches.length === 0, pos, tree[0], node.ctx, tree[1]);
-    for (var i = 0, len = branches.length; i < len; i++) {
-      toVisit.push({pos: pos + 1, ids: branches[i], ctx: newCtx});
-    }
-  }
-}
-
-function sortByPos(a, b) {
-  return a.pos - b.pos;
-}
-
-function collectLeaves(revs) {
-  var leaves = [];
-  traverseRevTree(revs, function (isLeaf, pos, id, acc, opts) {
-    if (isLeaf) {
-      leaves.push({rev: pos + "-" + id, pos: pos, opts: opts});
-    }
-  });
-  leaves.sort(sortByPos).reverse();
-  for (var i = 0, len = leaves.length; i < len; i++) {
-    delete leaves[i].pos;
-  }
-  return leaves;
-}
-
-// returns revs of all conflicts that is leaves such that
-// 1. are not deleted and
-// 2. are different than winning revision
-function collectConflicts(metadata) {
-  var win = winningRev(metadata);
-  var leaves = collectLeaves(metadata.rev_tree);
-  var conflicts = [];
-  for (var i = 0, len = leaves.length; i < len; i++) {
-    var leaf = leaves[i];
-    if (leaf.rev !== win && !leaf.opts.deleted) {
-      conflicts.push(leaf.rev);
-    }
-  }
-  return conflicts;
-}
-
-// compact a tree by marking its non-leafs as missing,
-// and return a list of revs to delete
-function compactTree(metadata) {
-  var revs = [];
-  traverseRevTree(metadata.rev_tree, function (isLeaf, pos,
-                                               revHash, ctx, opts) {
-    if (opts.status === 'available' && !isLeaf) {
-      revs.push(pos + '-' + revHash);
-      opts.status = 'missing';
-    }
-  });
-  return revs;
-}
-
-// build up a list of all the paths to the leafs in this revision tree
-function rootToLeaf(revs) {
-  var paths = [];
-  var toVisit = revs.slice();
-  var node;
-  while ((node = toVisit.pop())) {
-    var pos = node.pos;
-    var tree = node.ids;
-    var id = tree[0];
-    var opts = tree[1];
-    var branches = tree[2];
-    var isLeaf = branches.length === 0;
-
-    var history = node.history ? node.history.slice() : [];
-    history.push({id: id, opts: opts});
-    if (isLeaf) {
-      paths.push({pos: (pos + 1 - history.length), ids: history});
-    }
-    for (var i = 0, len = branches.length; i < len; i++) {
-      toVisit.push({pos: pos + 1, ids: branches[i], history: history});
-    }
-  }
-  return paths.reverse();
-}
-
-// for a better overview of what this is doing, read:
-// https://github.com/apache/couchdb-couch/blob/master/src/couch_key_tree.erl
-//
-// But for a quick intro, CouchDB uses a revision tree to store a documents
-// history, A -> B -> C, when a document has conflicts, that is a branch in the
-// tree, A -> (B1 | B2 -> C), We store these as a nested array in the format
-//
-// KeyTree = [Path ... ]
-// Path = {pos: position_from_root, ids: Tree}
-// Tree = [Key, Opts, [Tree, ...]], in particular single node: [Key, []]
-
-function sortByPos$1(a, b) {
-  return a.pos - b.pos;
-}
-
-// classic binary search
-function binarySearch(arr, item, comparator) {
-  var low = 0;
-  var high = arr.length;
-  var mid;
-  while (low < high) {
-    mid = (low + high) >>> 1;
-    if (comparator(arr[mid], item) < 0) {
-      low = mid + 1;
-    } else {
-      high = mid;
-    }
-  }
-  return low;
-}
-
-// assuming the arr is sorted, insert the item in the proper place
-function insertSorted(arr, item, comparator) {
-  var idx = binarySearch(arr, item, comparator);
-  arr.splice(idx, 0, item);
-}
-
-// Turn a path as a flat array into a tree with a single branch.
-// If any should be stemmed from the beginning of the array, that's passed
-// in as the second argument
-function pathToTree(path, numStemmed) {
-  var root;
-  var leaf;
-  for (var i = numStemmed, len = path.length; i < len; i++) {
-    var node = path[i];
-    var currentLeaf = [node.id, node.opts, []];
-    if (leaf) {
-      leaf[2].push(currentLeaf);
-      leaf = currentLeaf;
-    } else {
-      root = leaf = currentLeaf;
-    }
-  }
-  return root;
-}
-
-// compare the IDs of two trees
-function compareTree(a, b) {
-  return a[0] < b[0] ? -1 : 1;
-}
-
-// Merge two trees together
-// The roots of tree1 and tree2 must be the same revision
-function mergeTree(in_tree1, in_tree2) {
-  var queue = [{tree1: in_tree1, tree2: in_tree2}];
-  var conflicts = false;
-  while (queue.length > 0) {
-    var item = queue.pop();
-    var tree1 = item.tree1;
-    var tree2 = item.tree2;
-
-    if (tree1[1].status || tree2[1].status) {
-      tree1[1].status =
-        (tree1[1].status ===  'available' ||
-        tree2[1].status === 'available') ? 'available' : 'missing';
-    }
-
-    for (var i = 0; i < tree2[2].length; i++) {
-      if (!tree1[2][0]) {
-        conflicts = 'new_leaf';
-        tree1[2][0] = tree2[2][i];
-        continue;
-      }
-
-      var merged = false;
-      for (var j = 0; j < tree1[2].length; j++) {
-        if (tree1[2][j][0] === tree2[2][i][0]) {
-          queue.push({tree1: tree1[2][j], tree2: tree2[2][i]});
-          merged = true;
-        }
-      }
-      if (!merged) {
-        conflicts = 'new_branch';
-        insertSorted(tree1[2], tree2[2][i], compareTree);
-      }
-    }
-  }
-  return {conflicts: conflicts, tree: in_tree1};
-}
-
-function doMerge(tree, path, dontExpand) {
-  var restree = [];
-  var conflicts = false;
-  var merged = false;
-  var res;
-
-  if (!tree.length) {
-    return {tree: [path], conflicts: 'new_leaf'};
-  }
-
-  for (var i = 0, len = tree.length; i < len; i++) {
-    var branch = tree[i];
-    if (branch.pos === path.pos && branch.ids[0] === path.ids[0]) {
-      // Paths start at the same position and have the same root, so they need
-      // merged
-      res = mergeTree(branch.ids, path.ids);
-      restree.push({pos: branch.pos, ids: res.tree});
-      conflicts = conflicts || res.conflicts;
-      merged = true;
-    } else if (dontExpand !== true) {
-      // The paths start at a different position, take the earliest path and
-      // traverse up until it as at the same point from root as the path we
-      // want to merge.  If the keys match we return the longer path with the
-      // other merged After stemming we dont want to expand the trees
-
-      var t1 = branch.pos < path.pos ? branch : path;
-      var t2 = branch.pos < path.pos ? path : branch;
-      var diff = t2.pos - t1.pos;
-
-      var candidateParents = [];
-
-      var trees = [];
-      trees.push({ids: t1.ids, diff: diff, parent: null, parentIdx: null});
-      while (trees.length > 0) {
-        var item = trees.pop();
-        if (item.diff === 0) {
-          if (item.ids[0] === t2.ids[0]) {
-            candidateParents.push(item);
-          }
-          continue;
-        }
-        var elements = item.ids[2];
-        for (var j = 0, elementsLen = elements.length; j < elementsLen; j++) {
-          trees.push({
-            ids: elements[j],
-            diff: item.diff - 1,
-            parent: item.ids,
-            parentIdx: j
-          });
-        }
-      }
-
-      var el = candidateParents[0];
-
-      if (!el) {
-        restree.push(branch);
-      } else {
-        res = mergeTree(el.ids, t2.ids);
-        el.parent[2][el.parentIdx] = res.tree;
-        restree.push({pos: t1.pos, ids: t1.ids});
-        conflicts = conflicts || res.conflicts;
-        merged = true;
-      }
-    } else {
-      restree.push(branch);
-    }
-  }
-
-  // We didnt find
-  if (!merged) {
-    restree.push(path);
-  }
-
-  restree.sort(sortByPos$1);
-
-  return {
-    tree: restree,
-    conflicts: conflicts || 'internal_node'
-  };
-}
-
-// To ensure we dont grow the revision tree infinitely, we stem old revisions
-function stem(tree, depth) {
-  // First we break out the tree into a complete list of root to leaf paths
-  var paths = rootToLeaf(tree);
-  var stemmedRevs;
-
-  var result;
-  for (var i = 0, len = paths.length; i < len; i++) {
-    // Then for each path, we cut off the start of the path based on the
-    // `depth` to stem to, and generate a new set of flat trees
-    var path = paths[i];
-    var stemmed = path.ids;
-    var node;
-    if (stemmed.length > depth) {
-      // only do the stemming work if we actually need to stem
-      if (!stemmedRevs) {
-        stemmedRevs = {}; // avoid allocating this object unnecessarily
-      }
-      var numStemmed = stemmed.length - depth;
-      node = {
-        pos: path.pos + numStemmed,
-        ids: pathToTree(stemmed, numStemmed)
-      };
-
-      for (var s = 0; s < numStemmed; s++) {
-        var rev = (path.pos + s) + '-' + stemmed[s].id;
-        stemmedRevs[rev] = true;
-      }
-    } else { // no need to actually stem
-      node = {
-        pos: path.pos,
-        ids: pathToTree(stemmed, 0)
-      };
-    }
-
-    // Then we remerge all those flat trees together, ensuring that we dont
-    // connect trees that would go beyond the depth limit
-    if (result) {
-      result = doMerge(result, node, true).tree;
-    } else {
-      result = [node];
-    }
-  }
-
-  // this is memory-heavy per Chrome profiler, avoid unless we actually stemmed
-  if (stemmedRevs) {
-    traverseRevTree(result, function (isLeaf, pos, revHash) {
-      // some revisions may have been removed in a branch but not in another
-      delete stemmedRevs[pos + '-' + revHash];
-    });
-  }
-
-  return {
-    tree: result,
-    revs: stemmedRevs ? Object.keys(stemmedRevs) : []
-  };
-}
-
-function merge(tree, path, depth) {
-  var newTree = doMerge(tree, path);
-  var stemmed = stem(newTree.tree, depth);
-  return {
-    tree: stemmed.tree,
-    stemmedRevs: stemmed.revs,
-    conflicts: newTree.conflicts
-  };
-}
-
-// return true if a rev exists in the rev tree, false otherwise
-function revExists(revs, rev) {
-  var toVisit = revs.slice();
-  var splitRev = rev.split('-');
-  var targetPos = parseInt(splitRev[0], 10);
-  var targetId = splitRev[1];
-
-  var node;
-  while ((node = toVisit.pop())) {
-    if (node.pos === targetPos && node.ids[0] === targetId) {
-      return true;
-    }
-    var branches = node.ids[2];
-    for (var i = 0, len = branches.length; i < len; i++) {
-      toVisit.push({pos: node.pos + 1, ids: branches[i]});
-    }
-  }
-  return false;
-}
-
-function getTrees(node) {
-  return node.ids;
-}
-
-// check if a specific revision of a doc has been deleted
-//  - metadata: the metadata object from the doc store
-//  - rev: (optional) the revision to check. defaults to winning revision
-function isDeleted(metadata, rev) {
-  if (!rev) {
-    rev = winningRev(metadata);
-  }
-  var id = rev.substring(rev.indexOf('-') + 1);
-  var toVisit = metadata.rev_tree.map(getTrees);
-
-  var tree;
-  while ((tree = toVisit.pop())) {
-    if (tree[0] === id) {
-      return !!tree[1].deleted;
-    }
-    toVisit = toVisit.concat(tree[2]);
-  }
-}
-
-function isLocalId(id) {
-  return (/^_local/).test(id);
-}
-
-// returns the current leaf node for a given revision
-function latest(rev, metadata) {
-  var toVisit = metadata.rev_tree.slice();
-  var node;
-  while ((node = toVisit.pop())) {
-    var pos = node.pos;
-    var tree = node.ids;
-    var id = tree[0];
-    var opts = tree[1];
-    var branches = tree[2];
-    var isLeaf = branches.length === 0;
-
-    var history = node.history ? node.history.slice() : [];
-    history.push({id: id, pos: pos, opts: opts});
-
-    if (isLeaf) {
-      for (var i = 0, len = history.length; i < len; i++) {
-        var historyNode = history[i];
-        var historyRev = historyNode.pos + '-' + historyNode.id;
-
-        if (historyRev === rev) {
-          // return the rev of this leaf
-          return pos + '-' + id;
-        }
-      }
-    }
-
-    for (var j = 0, l = branches.length; j < l; j++) {
-      toVisit.push({pos: pos + 1, ids: branches[j], history: history});
-    }
-  }
-
-  /* istanbul ignore next */
-  throw new Error('Unable to resolve latest revision for id ' + metadata.id + ', rev ' + rev);
-}
-
-inherits(Changes$2, events.EventEmitter);
-
-function tryCatchInChangeListener(self, change) {
-  // isolate try/catches to avoid V8 deoptimizations
-  try {
-    self.emit('change', change);
-  } catch (e) {
-    guardedConsole('error', 'Error in .on("change", function):', e);
-  }
-}
-
-function Changes$2(db, opts, callback) {
-  events.EventEmitter.call(this);
-  var self = this;
-  this.db = db;
-  opts = opts ? clone(opts) : {};
-  var complete = opts.complete = once(function (err, resp) {
-    if (err) {
-      if (listenerCount(self, 'error') > 0) {
-        self.emit('error', err);
-      }
-    } else {
-      self.emit('complete', resp);
-    }
-    self.removeAllListeners();
-    db.removeListener('destroyed', onDestroy);
-  });
-  if (callback) {
-    self.on('complete', function (resp) {
-      callback(null, resp);
-    });
-    self.on('error', callback);
-  }
-  function onDestroy() {
-    self.cancel();
-  }
-  db.once('destroyed', onDestroy);
-
-  opts.onChange = function (change) {
-    /* istanbul ignore if */
-    if (self.isCancelled) {
-      return;
-    }
-    tryCatchInChangeListener(self, change);
-  };
-
-  var promise = new PouchPromise$1(function (fulfill, reject) {
-    opts.complete = function (err, res) {
-      if (err) {
-        reject(err);
-      } else {
-        fulfill(res);
-      }
-    };
-  });
-  self.once('cancel', function () {
-    db.removeListener('destroyed', onDestroy);
-    opts.complete(null, {status: 'cancelled'});
-  });
-  this.then = promise.then.bind(promise);
-  this['catch'] = promise['catch'].bind(promise);
-  this.then(function (result) {
-    complete(null, result);
-  }, complete);
-
-
-
-  if (!db.taskqueue.isReady) {
-    db.taskqueue.addTask(function (failed) {
-      if (failed) {
-        opts.complete(failed);
-      } else if (self.isCancelled) {
-        self.emit('cancel');
-      } else {
-        self.validateChanges(opts);
-      }
-    });
-  } else {
-    self.validateChanges(opts);
-  }
-}
-Changes$2.prototype.cancel = function () {
-  this.isCancelled = true;
-  if (this.db.taskqueue.isReady) {
-    this.emit('cancel');
-  }
-};
-function processChange(doc, metadata, opts) {
-  var changeList = [{rev: doc._rev}];
-  if (opts.style === 'all_docs') {
-    changeList = collectLeaves(metadata.rev_tree)
-    .map(function (x) { return {rev: x.rev}; });
-  }
-  var change = {
-    id: metadata.id,
-    changes: changeList,
-    doc: doc
-  };
-
-  if (isDeleted(metadata, doc._rev)) {
-    change.deleted = true;
-  }
-  if (opts.conflicts) {
-    change.doc._conflicts = collectConflicts(metadata);
-    if (!change.doc._conflicts.length) {
-      delete change.doc._conflicts;
-    }
-  }
-  return change;
-}
-
-Changes$2.prototype.validateChanges = function (opts) {
-  var callback = opts.complete;
-  var self = this;
-
-  /* istanbul ignore else */
-  if (PouchDB$5._changesFilterPlugin) {
-    PouchDB$5._changesFilterPlugin.validate(opts, function (err) {
-      if (err) {
-        return callback(err);
-      }
-      self.doChanges(opts);
-    });
-  } else {
-    self.doChanges(opts);
-  }
-};
-
-Changes$2.prototype.doChanges = function (opts) {
-  var self = this;
-  var callback = opts.complete;
-
-  opts = clone(opts);
-  if ('live' in opts && !('continuous' in opts)) {
-    opts.continuous = opts.live;
-  }
-  opts.processChange = processChange;
-
-  if (opts.since === 'latest') {
-    opts.since = 'now';
-  }
-  if (!opts.since) {
-    opts.since = 0;
-  }
-  if (opts.since === 'now') {
-    this.db.info().then(function (info) {
-      /* istanbul ignore if */
-      if (self.isCancelled) {
-        callback(null, {status: 'cancelled'});
-        return;
-      }
-      opts.since = info.update_seq;
-      self.doChanges(opts);
-    }, callback);
-    return;
-  }
-
-  /* istanbul ignore else */
-  if (PouchDB$5._changesFilterPlugin) {
-    PouchDB$5._changesFilterPlugin.normalize(opts);
-    if (PouchDB$5._changesFilterPlugin.shouldFilter(this, opts)) {
-      return PouchDB$5._changesFilterPlugin.filter(this, opts);
-    }
-  } else {
-    ['doc_ids', 'filter', 'selector', 'view'].forEach(function (key) {
-      if (key in opts) {
-        guardedConsole('warn',
-          'The "' + key + '" option was passed in to changes/replicate, ' +
-          'but pouchdb-changes-filter plugin is not installed, so it ' +
-          'was ignored. Please install the plugin to enable filtering.'
-        );
-      }
-    });
-  }
-
-  if (!('descending' in opts)) {
-    opts.descending = false;
-  }
-
-  // 0 and 1 should return 1 document
-  opts.limit = opts.limit === 0 ? 1 : opts.limit;
-  opts.complete = callback;
-  var newPromise = this.db._changes(opts);
-  /* istanbul ignore else */
-  if (newPromise && typeof newPromise.cancel === 'function') {
-    var cancel = self.cancel;
-    self.cancel = getArguments(function (args) {
-      newPromise.cancel();
-      cancel.apply(this, args);
-    });
-  }
-};
-
-/*
- * A generic pouch adapter
- */
-
-function compare(left, right) {
-  return left < right ? -1 : left > right ? 1 : 0;
-}
-
-// Wrapper for functions that call the bulkdocs api with a single doc,
-// if the first result is an error, return an error
-function yankError(callback) {
-  return function (err, results) {
-    if (err || (results[0] && results[0].error)) {
-      callback(err || results[0]);
-    } else {
-      callback(null, results.length ? results[0]  : results);
-    }
-  };
-}
-
-// clean docs given to us by the user
-function cleanDocs(docs) {
-  for (var i = 0; i < docs.length; i++) {
-    var doc = docs[i];
-    if (doc._deleted) {
-      delete doc._attachments; // ignore atts for deleted docs
-    } else if (doc._attachments) {
-      // filter out extraneous keys from _attachments
-      var atts = Object.keys(doc._attachments);
-      for (var j = 0; j < atts.length; j++) {
-        var att = atts[j];
-        doc._attachments[att] = pick(doc._attachments[att],
-          ['data', 'digest', 'content_type', 'length', 'revpos', 'stub']);
-      }
-    }
-  }
-}
-
-// compare two docs, first by _id then by _rev
-function compareByIdThenRev(a, b) {
-  var idCompare = compare(a._id, b._id);
-  if (idCompare !== 0) {
-    return idCompare;
-  }
-  var aStart = a._revisions ? a._revisions.start : 0;
-  var bStart = b._revisions ? b._revisions.start : 0;
-  return compare(aStart, bStart);
-}
-
-// for every node in a revision tree computes its distance from the closest
-// leaf
-function computeHeight(revs) {
-  var height = {};
-  var edges = [];
-  traverseRevTree(revs, function (isLeaf, pos, id, prnt) {
-    var rev = pos + "-" + id;
-    if (isLeaf) {
-      height[rev] = 0;
-    }
-    if (prnt !== undefined) {
-      edges.push({from: prnt, to: rev});
-    }
-    return rev;
-  });
-
-  edges.reverse();
-  edges.forEach(function (edge) {
-    if (height[edge.from] === undefined) {
-      height[edge.from] = 1 + height[edge.to];
-    } else {
-      height[edge.from] = Math.min(height[edge.from], 1 + height[edge.to]);
-    }
-  });
-  return height;
-}
-
-function allDocsKeysQuery(api, opts, callback) {
-  var keys =  ('limit' in opts) ?
-      opts.keys.slice(opts.skip, opts.limit + opts.skip) :
-      (opts.skip > 0) ? opts.keys.slice(opts.skip) : opts.keys;
-  if (opts.descending) {
-    keys.reverse();
-  }
-  if (!keys.length) {
-    return api._allDocs({limit: 0}, callback);
-  }
-  var finalResults = {
-    offset: opts.skip
-  };
-  return PouchPromise$1.all(keys.map(function (key) {
-    var subOpts = $inject_Object_assign({key: key, deleted: 'ok'}, opts);
-    ['limit', 'skip', 'keys'].forEach(function (optKey) {
-      delete subOpts[optKey];
-    });
-    return new PouchPromise$1(function (resolve, reject) {
-      api._allDocs(subOpts, function (err, res) {
-        /* istanbul ignore if */
-        if (err) {
-          return reject(err);
-        }
-        finalResults.total_rows = res.total_rows;
-        resolve(res.rows[0] || {key: key, error: 'not_found'});
-      });
-    });
-  })).then(function (results) {
-    finalResults.rows = results;
-    return finalResults;
-  });
-}
-
-// all compaction is done in a queue, to avoid attaching
-// too many listeners at once
-function doNextCompaction(self) {
-  var task = self._compactionQueue[0];
-  var opts = task.opts;
-  var callback = task.callback;
-  self.get('_local/compaction').catch(function () {
-    return false;
-  }).then(function (doc) {
-    if (doc && doc.last_seq) {
-      opts.last_seq = doc.last_seq;
-    }
-    self._compact(opts, function (err, res) {
-      /* istanbul ignore if */
-      if (err) {
-        callback(err);
-      } else {
-        callback(null, res);
-      }
-      nextTick(function () {
-        self._compactionQueue.shift();
-        if (self._compactionQueue.length) {
-          doNextCompaction(self);
-        }
-      });
-    });
-  });
-}
-
-function attachmentNameError(name) {
-  if (name.charAt(0) === '_') {
-    return name + ' is not a valid attachment name, attachment ' +
-      'names cannot start with \'_\'';
-  }
-  return false;
-}
-
-inherits(AbstractPouchDB, events.EventEmitter);
-
-function AbstractPouchDB() {
-  events.EventEmitter.call(this);
-}
-
-AbstractPouchDB.prototype.post =
-  adapterFun('post', function (doc, opts, callback) {
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-  if (typeof doc !== 'object' || Array.isArray(doc)) {
-    return callback(createError(NOT_AN_OBJECT));
-  }
-  this.bulkDocs({docs: [doc]}, opts, yankError(callback));
-});
-
-AbstractPouchDB.prototype.put = adapterFun('put', function (doc, opts, cb) {
-  if (typeof opts === 'function') {
-    cb = opts;
-    opts = {};
-  }
-  if (typeof doc !== 'object' || Array.isArray(doc)) {
-    return cb(createError(NOT_AN_OBJECT));
-  }
-  invalidIdError(doc._id);
-  if (isLocalId(doc._id) && typeof this._putLocal === 'function') {
-    if (doc._deleted) {
-      return this._removeLocal(doc, cb);
-    } else {
-      return this._putLocal(doc, cb);
-    }
-  }
-  if (typeof this._put === 'function' && opts.new_edits !== false) {
-    this._put(doc, opts, cb);
-  } else {
-    this.bulkDocs({docs: [doc]}, opts, yankError(cb));
-  }
-});
-
-AbstractPouchDB.prototype.putAttachment =
-  adapterFun('putAttachment', function (docId, attachmentId, rev,
-                                              blob, type) {
-  var api = this;
-  if (typeof type === 'function') {
-    type = blob;
-    blob = rev;
-    rev = null;
-  }
-  // Lets fix in https://github.com/pouchdb/pouchdb/issues/3267
-  /* istanbul ignore if */
-  if (typeof type === 'undefined') {
-    type = blob;
-    blob = rev;
-    rev = null;
-  }
-  if (!type) {
-    guardedConsole('warn', 'Attachment', attachmentId, 'on document', docId, 'is missing content_type');
-  }
-
-  function createAttachment(doc) {
-    var prevrevpos = '_rev' in doc ? parseInt(doc._rev, 10) : 0;
-    doc._attachments = doc._attachments || {};
-    doc._attachments[attachmentId] = {
-      content_type: type,
-      data: blob,
-      revpos: ++prevrevpos
-    };
-    return api.put(doc);
-  }
-
-  return api.get(docId).then(function (doc) {
-    if (doc._rev !== rev) {
-      throw createError(REV_CONFLICT);
-    }
-
-    return createAttachment(doc);
-  }, function (err) {
-     // create new doc
-    /* istanbul ignore else */
-    if (err.reason === MISSING_DOC.message) {
-      return createAttachment({_id: docId});
-    } else {
-      throw err;
-    }
-  });
-});
-
-AbstractPouchDB.prototype.removeAttachment =
-  adapterFun('removeAttachment', function (docId, attachmentId, rev,
-                                                 callback) {
-  var self = this;
-  self.get(docId, function (err, obj) {
-    /* istanbul ignore if */
-    if (err) {
-      callback(err);
-      return;
-    }
-    if (obj._rev !== rev) {
-      callback(createError(REV_CONFLICT));
-      return;
-    }
-    /* istanbul ignore if */
-    if (!obj._attachments) {
-      return callback();
-    }
-    delete obj._attachments[attachmentId];
-    if (Object.keys(obj._attachments).length === 0) {
-      delete obj._attachments;
-    }
-    self.put(obj, callback);
-  });
-});
-
-AbstractPouchDB.prototype.remove =
-  adapterFun('remove', function (docOrId, optsOrRev, opts, callback) {
-  var doc;
-  if (typeof optsOrRev === 'string') {
-    // id, rev, opts, callback style
-    doc = {
-      _id: docOrId,
-      _rev: optsOrRev
-    };
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-  } else {
-    // doc, opts, callback style
-    doc = docOrId;
-    if (typeof optsOrRev === 'function') {
-      callback = optsOrRev;
-      opts = {};
-    } else {
-      callback = opts;
-      opts = optsOrRev;
-    }
-  }
-  opts = opts || {};
-  opts.was_delete = true;
-  var newDoc = {_id: doc._id, _rev: (doc._rev || opts.rev)};
-  newDoc._deleted = true;
-  if (isLocalId(newDoc._id) && typeof this._removeLocal === 'function') {
-    return this._removeLocal(doc, callback);
-  }
-  this.bulkDocs({docs: [newDoc]}, opts, yankError(callback));
-});
-
-AbstractPouchDB.prototype.revsDiff =
-  adapterFun('revsDiff', function (req, opts, callback) {
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-  var ids = Object.keys(req);
-
-  if (!ids.length) {
-    return callback(null, {});
-  }
-
-  var count = 0;
-  var missing = new ExportedMap();
-
-  function addToMissing(id, revId) {
-    if (!missing.has(id)) {
-      missing.set(id, {missing: []});
-    }
-    missing.get(id).missing.push(revId);
-  }
-
-  function processDoc(id, rev_tree) {
-    // Is this fast enough? Maybe we should switch to a set simulated by a map
-    var missingForId = req[id].slice(0);
-    traverseRevTree(rev_tree, function (isLeaf, pos, revHash, ctx,
-      opts) {
-        var rev = pos + '-' + revHash;
-        var idx = missingForId.indexOf(rev);
-        if (idx === -1) {
-          return;
-        }
-
-        missingForId.splice(idx, 1);
-        /* istanbul ignore if */
-        if (opts.status !== 'available') {
-          addToMissing(id, rev);
-        }
-      });
-
-    // Traversing the tree is synchronous, so now `missingForId` contains
-    // revisions that were not found in the tree
-    missingForId.forEach(function (rev) {
-      addToMissing(id, rev);
-    });
-  }
-
-  ids.map(function (id) {
-    this._getRevisionTree(id, function (err, rev_tree) {
-      if (err && err.status === 404 && err.message === 'missing') {
-        missing.set(id, {missing: req[id]});
-      } else if (err) {
-        /* istanbul ignore next */
-        return callback(err);
-      } else {
-        processDoc(id, rev_tree);
-      }
-
-      if (++count === ids.length) {
-        // convert LazyMap to object
-        var missingObj = {};
-        missing.forEach(function (value, key) {
-          missingObj[key] = value;
-        });
-        return callback(null, missingObj);
-      }
-    });
-  }, this);
-});
-
-// _bulk_get API for faster replication, as described in
-// https://github.com/apache/couchdb-chttpd/pull/33
-// At the "abstract" level, it will just run multiple get()s in
-// parallel, because this isn't much of a performance cost
-// for local databases (except the cost of multiple transactions, which is
-// small). The http adapter overrides this in order
-// to do a more efficient single HTTP request.
-AbstractPouchDB.prototype.bulkGet =
-  adapterFun('bulkGet', function (opts, callback) {
-  bulkGet(this, opts, callback);
-});
-
-// compact one document and fire callback
-// by compacting we mean removing all revisions which
-// are further from the leaf in revision tree than max_height
-AbstractPouchDB.prototype.compactDocument =
-  adapterFun('compactDocument', function (docId, maxHeight, callback) {
-  var self = this;
-  this._getRevisionTree(docId, function (err, revTree) {
-    /* istanbul ignore if */
-    if (err) {
-      return callback(err);
-    }
-    var height = computeHeight(revTree);
-    var candidates = [];
-    var revs = [];
-    Object.keys(height).forEach(function (rev) {
-      if (height[rev] > maxHeight) {
-        candidates.push(rev);
-      }
-    });
-
-    traverseRevTree(revTree, function (isLeaf, pos, revHash, ctx, opts) {
-      var rev = pos + '-' + revHash;
-      if (opts.status === 'available' && candidates.indexOf(rev) !== -1) {
-        revs.push(rev);
-      }
-    });
-    self._doCompaction(docId, revs, callback);
-  });
-});
-
-// compact the whole database using single document
-// compaction
-AbstractPouchDB.prototype.compact =
-  adapterFun('compact', function (opts, callback) {
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-
-  var self = this;
-  opts = opts || {};
-
-  self._compactionQueue = self._compactionQueue || [];
-  self._compactionQueue.push({opts: opts, callback: callback});
-  if (self._compactionQueue.length === 1) {
-    doNextCompaction(self);
-  }
-});
-AbstractPouchDB.prototype._compact = function (opts, callback) {
-  var self = this;
-  var changesOpts = {
-    return_docs: false,
-    last_seq: opts.last_seq || 0
-  };
-  var promises = [];
-
-  function onChange(row) {
-    promises.push(self.compactDocument(row.id, 0));
-  }
-  function onComplete(resp) {
-    var lastSeq = resp.last_seq;
-    PouchPromise$1.all(promises).then(function () {
-      return upsert(self, '_local/compaction', function deltaFunc(doc) {
-        if (!doc.last_seq || doc.last_seq < lastSeq) {
-          doc.last_seq = lastSeq;
-          return doc;
-        }
-        return false; // somebody else got here first, don't update
-      });
-    }).then(function () {
-      callback(null, {ok: true});
-    }).catch(callback);
-  }
-  self.changes(changesOpts)
-    .on('change', onChange)
-    .on('complete', onComplete)
-    .on('error', callback);
-};
-
-/* Begin api wrappers. Specific functionality to storage belongs in the
-   _[method] */
-AbstractPouchDB.prototype.get = adapterFun('get', function (id, opts, cb) {
-  if (typeof opts === 'function') {
-    cb = opts;
-    opts = {};
-  }
-  if (typeof id !== 'string') {
-    return cb(createError(INVALID_ID));
-  }
-  if (isLocalId(id) && typeof this._getLocal === 'function') {
-    return this._getLocal(id, cb);
-  }
-  var leaves = [], self = this;
-
-  function finishOpenRevs() {
-    var result = [];
-    var count = leaves.length;
-    /* istanbul ignore if */
-    if (!count) {
-      return cb(null, result);
-    }
-
-    // order with open_revs is unspecified
-    leaves.forEach(function (leaf) {
-      self.get(id, {
-        rev: leaf,
-        revs: opts.revs,
-        latest: opts.latest,
-        attachments: opts.attachments
-      }, function (err, doc) {
-        if (!err) {
-          // using latest=true can produce duplicates
-          var existing;
-          for (var i = 0, l = result.length; i < l; i++) {
-            if (result[i].ok && result[i].ok._rev === doc._rev) {
-              existing = true;
-              break;
-            }
-          }
-          if (!existing) {
-            result.push({ok: doc});
-          }
-        } else {
-          result.push({missing: leaf});
-        }
-        count--;
-        if (!count) {
-          cb(null, result);
-        }
-      });
-    });
-  }
-
-  if (opts.open_revs) {
-    if (opts.open_revs === "all") {
-      this._getRevisionTree(id, function (err, rev_tree) {
-        if (err) {
-          return cb(err);
-        }
-        leaves = collectLeaves(rev_tree).map(function (leaf) {
-          return leaf.rev;
-        });
-        finishOpenRevs();
-      });
-    } else {
-      if (Array.isArray(opts.open_revs)) {
-        leaves = opts.open_revs;
-        for (var i = 0; i < leaves.length; i++) {
-          var l = leaves[i];
-          // looks like it's the only thing couchdb checks
-          if (!(typeof (l) === "string" && /^\d+-/.test(l))) {
-            return cb(createError(INVALID_REV));
-          }
-        }
-        finishOpenRevs();
-      } else {
-        return cb(createError(UNKNOWN_ERROR, 'function_clause'));
-      }
-    }
-    return; // open_revs does not like other options
-  }
-
-  return this._get(id, opts, function (err, result) {
-    if (err) {
-      return cb(err);
-    }
-
-    var doc = result.doc;
-    var metadata = result.metadata;
-    var ctx = result.ctx;
-
-    if (opts.conflicts) {
-      var conflicts = collectConflicts(metadata);
-      if (conflicts.length) {
-        doc._conflicts = conflicts;
-      }
-    }
-
-    if (isDeleted(metadata, doc._rev)) {
-      doc._deleted = true;
-    }
-
-    if (opts.revs || opts.revs_info) {
-      var splittedRev = doc._rev.split('-');
-      var revNo       = parseInt(splittedRev[0], 10);
-      var revHash     = splittedRev[1];
-
-      var paths = rootToLeaf(metadata.rev_tree);
-      var path = null;
-
-      for (var i = 0; i < paths.length; i++) {
-        var currentPath = paths[i];
-        var hashIndex = currentPath.ids.map(function (x) { return x.id; })
-          .indexOf(revHash);
-        var hashFoundAtRevPos = hashIndex === (revNo - 1);
-
-        if (hashFoundAtRevPos || (!path && hashIndex !== -1)) {
-          path = currentPath;
-        }
-      }
-
-      var indexOfRev = path.ids.map(function (x) { return x.id; })
-        .indexOf(doc._rev.split('-')[1]) + 1;
-      var howMany = path.ids.length - indexOfRev;
-      path.ids.splice(indexOfRev, howMany);
-      path.ids.reverse();
-
-      if (opts.revs) {
-        doc._revisions = {
-          start: (path.pos + path.ids.length) - 1,
-          ids: path.ids.map(function (rev) {
-            return rev.id;
-          })
-        };
-      }
-      if (opts.revs_info) {
-        var pos =  path.pos + path.ids.length;
-        doc._revs_info = path.ids.map(function (rev) {
-          pos--;
-          return {
-            rev: pos + '-' + rev.id,
-            status: rev.opts.status
-          };
-        });
-      }
-    }
-
-    if (opts.attachments && doc._attachments) {
-      var attachments = doc._attachments;
-      var count = Object.keys(attachments).length;
-      if (count === 0) {
-        return cb(null, doc);
-      }
-      Object.keys(attachments).forEach(function (key) {
-        this._getAttachment(doc._id, key, attachments[key], {
-          // Previously the revision handling was done in adapter.js
-          // getAttachment, however since idb-next doesnt we need to
-          // pass the rev through
-          rev: doc._rev,
-          binary: opts.binary,
-          ctx: ctx
-        }, function (err, data) {
-          var att = doc._attachments[key];
-          att.data = data;
-          delete att.stub;
-          delete att.length;
-          if (!--count) {
-            cb(null, doc);
-          }
-        });
-      }, self);
-    } else {
-      if (doc._attachments) {
-        for (var key in doc._attachments) {
-          /* istanbul ignore else */
-          if (doc._attachments.hasOwnProperty(key)) {
-            doc._attachments[key].stub = true;
-          }
-        }
-      }
-      cb(null, doc);
-    }
-  });
-});
-
-// TODO: I dont like this, it forces an extra read for every
-// attachment read and enforces a confusing api between
-// adapter.js and the adapter implementation
-AbstractPouchDB.prototype.getAttachment =
-  adapterFun('getAttachment', function (docId, attachmentId, opts, callback) {
-  var self = this;
-  if (opts instanceof Function) {
-    callback = opts;
-    opts = {};
-  }
-  this._get(docId, opts, function (err, res) {
-    if (err) {
-      return callback(err);
-    }
-    if (res.doc._attachments && res.doc._attachments[attachmentId]) {
-      opts.ctx = res.ctx;
-      opts.binary = true;
-      self._getAttachment(docId, attachmentId,
-                          res.doc._attachments[attachmentId], opts, callback);
-    } else {
-      return callback(createError(MISSING_DOC));
-    }
-  });
-});
-
-AbstractPouchDB.prototype.allDocs =
-  adapterFun('allDocs', function (opts, callback) {
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-  opts.skip = typeof opts.skip !== 'undefined' ? opts.skip : 0;
-  if (opts.start_key) {
-    opts.startkey = opts.start_key;
-  }
-  if (opts.end_key) {
-    opts.endkey = opts.end_key;
-  }
-  if ('keys' in opts) {
-    if (!Array.isArray(opts.keys)) {
-      return callback(new TypeError('options.keys must be an array'));
-    }
-    var incompatibleOpt =
-      ['startkey', 'endkey', 'key'].filter(function (incompatibleOpt) {
-      return incompatibleOpt in opts;
-    })[0];
-    if (incompatibleOpt) {
-      callback(createError(QUERY_PARSE_ERROR,
-        'Query parameter `' + incompatibleOpt +
-        '` is not compatible with multi-get'
-      ));
-      return;
-    }
-    if (!isRemote(this)) {
-      return allDocsKeysQuery(this, opts, callback);
-    }
-  }
-
-  return this._allDocs(opts, callback);
-});
-
-AbstractPouchDB.prototype.changes = function (opts, callback) {
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-  return new Changes$2(this, opts, callback);
-};
-
-AbstractPouchDB.prototype.close = adapterFun('close', function (callback) {
-  this._closed = true;
-  this.emit('closed');
-  return this._close(callback);
-});
-
-AbstractPouchDB.prototype.info = adapterFun('info', function (callback) {
-  var self = this;
-  this._info(function (err, info) {
-    if (err) {
-      return callback(err);
-    }
-    // assume we know better than the adapter, unless it informs us
-    info.db_name = info.db_name || self.name;
-    info.auto_compaction = !!(self.auto_compaction && !isRemote(self));
-    info.adapter = self.adapter;
-    callback(null, info);
-  });
-});
-
-AbstractPouchDB.prototype.id = adapterFun('id', function (callback) {
-  return this._id(callback);
-});
-
-/* istanbul ignore next */
-AbstractPouchDB.prototype.type = function () {
-  return (typeof this._type === 'function') ? this._type() : this.adapter;
-};
-
-AbstractPouchDB.prototype.bulkDocs =
-  adapterFun('bulkDocs', function (req, opts, callback) {
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-
-  opts = opts || {};
-
-  if (Array.isArray(req)) {
-    req = {
-      docs: req
-    };
-  }
-
-  if (!req || !req.docs || !Array.isArray(req.docs)) {
-    return callback(createError(MISSING_BULK_DOCS));
-  }
-
-  for (var i = 0; i < req.docs.length; ++i) {
-    if (typeof req.docs[i] !== 'object' || Array.isArray(req.docs[i])) {
-      return callback(createError(NOT_AN_OBJECT));
-    }
-  }
-
-  var attachmentError;
-  req.docs.forEach(function (doc) {
-    if (doc._attachments) {
-      Object.keys(doc._attachments).forEach(function (name) {
-        attachmentError = attachmentError || attachmentNameError(name);
-        if (!doc._attachments[name].content_type) {
-          guardedConsole('warn', 'Attachment', name, 'on document', doc._id, 'is missing content_type');
-        }
-      });
-    }
-  });
-
-  if (attachmentError) {
-    return callback(createError(BAD_REQUEST, attachmentError));
-  }
-
-  if (!('new_edits' in opts)) {
-    if ('new_edits' in req) {
-      opts.new_edits = req.new_edits;
-    } else {
-      opts.new_edits = true;
-    }
-  }
-
-  var adapter = this;
-  if (!opts.new_edits && !isRemote(adapter)) {
-    // ensure revisions of the same doc are sorted, so that
-    // the local adapter processes them correctly (#2935)
-    req.docs.sort(compareByIdThenRev);
-  }
-
-  cleanDocs(req.docs);
-
-  // in the case of conflicts, we want to return the _ids to the user
-  // however, the underlying adapter may destroy the docs array, so
-  // create a copy here
-  var ids = req.docs.map(function (doc) {
-    return doc._id;
-  });
-
-  return this._bulkDocs(req, opts, function (err, res) {
-    if (err) {
-      return callback(err);
-    }
-    if (!opts.new_edits) {
-      // this is what couch does when new_edits is false
-      res = res.filter(function (x) {
-        return x.error;
-      });
-    }
-    // add ids for error/conflict responses (not required for CouchDB)
-    if (!isRemote(adapter)) {
-      for (var i = 0, l = res.length; i < l; i++) {
-        res[i].id = res[i].id || ids[i];
-      }
-    }
-
-    callback(null, res);
-  });
-});
-
-AbstractPouchDB.prototype.registerDependentDatabase =
-  adapterFun('registerDependentDatabase', function (dependentDb,
-                                                          callback) {
-  var depDB = new this.constructor(dependentDb, this.__opts);
-
-  function diffFun(doc) {
-    doc.dependentDbs = doc.dependentDbs || {};
-    if (doc.dependentDbs[dependentDb]) {
-      return false; // no update required
-    }
-    doc.dependentDbs[dependentDb] = true;
-    return doc;
-  }
-  upsert(this, '_local/_pouch_dependentDbs', diffFun)
-    .then(function () {
-      callback(null, {db: depDB});
-    }).catch(callback);
-});
-
-AbstractPouchDB.prototype.destroy =
-  adapterFun('destroy', function (opts, callback) {
-
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-
-  var self = this;
-  var usePrefix = 'use_prefix' in self ? self.use_prefix : true;
-
-  function destroyDb() {
-    // call destroy method of the particular adaptor
-    self._destroy(opts, function (err, resp) {
-      if (err) {
-        return callback(err);
-      }
-      self._destroyed = true;
-      self.emit('destroyed');
-      callback(null, resp || { 'ok': true });
-    });
-  }
-
-  if (isRemote(self)) {
-    // no need to check for dependent DBs if it's a remote DB
-    return destroyDb();
-  }
-
-  self.get('_local/_pouch_dependentDbs', function (err, localDoc) {
-    if (err) {
-      /* istanbul ignore if */
-      if (err.status !== 404) {
-        return callback(err);
-      } else { // no dependencies
-        return destroyDb();
-      }
-    }
-    var dependentDbs = localDoc.dependentDbs;
-    var PouchDB = self.constructor;
-    var deletedMap = Object.keys(dependentDbs).map(function (name) {
-      // use_prefix is only false in the browser
-      /* istanbul ignore next */
-      var trueName = usePrefix ?
-        name.replace(new RegExp('^' + PouchDB.prefix), '') : name;
-      return new PouchDB(trueName, self.__opts).destroy();
-    });
-    PouchPromise$1.all(deletedMap).then(destroyDb, callback);
-  });
-});
-
-function TaskQueue$1() {
-  this.isReady = false;
-  this.failed = false;
-  this.queue = [];
-}
-
-TaskQueue$1.prototype.execute = function () {
-  var fun;
-  if (this.failed) {
-    while ((fun = this.queue.shift())) {
-      fun(this.failed);
-    }
-  } else {
-    while ((fun = this.queue.shift())) {
-      fun();
-    }
-  }
-};
-
-TaskQueue$1.prototype.fail = function (err) {
-  this.failed = err;
-  this.execute();
-};
-
-TaskQueue$1.prototype.ready = function (db) {
-  this.isReady = true;
-  this.db = db;
-  this.execute();
-};
-
-TaskQueue$1.prototype.addTask = function (fun) {
-  this.queue.push(fun);
-  if (this.failed) {
-    this.execute();
-  }
-};
-
-function parseAdapter(name, opts) {
-  var match = name.match(/([a-z\-]*):\/\/(.*)/);
-  if (match) {
-    // the http adapter expects the fully qualified name
-    return {
-      name: /https?/.test(match[1]) ? match[1] + '://' + match[2] : match[2],
-      adapter: match[1]
-    };
-  }
-
-  var adapters = PouchDB$5.adapters;
-  var preferredAdapters = PouchDB$5.preferredAdapters;
-  var prefix = PouchDB$5.prefix;
-  var adapterName = opts.adapter;
-
-  if (!adapterName) { // automatically determine adapter
-    for (var i = 0; i < preferredAdapters.length; ++i) {
-      adapterName = preferredAdapters[i];
-      // check for browsers that have been upgraded from websql-only to websql+idb
-      /* istanbul ignore if */
-      if (adapterName === 'idb' && 'websql' in adapters &&
-          hasLocalStorage() && localStorage['_pouch__websqldb_' + prefix + name]) {
-        // log it, because this can be confusing during development
-        guardedConsole('log', 'PouchDB is downgrading "' + name + '" to WebSQL to' +
-          ' avoid data loss, because it was already opened with WebSQL.');
-        continue; // keep using websql to avoid user data loss
-      }
-      break;
-    }
-  }
-
-  var adapter = adapters[adapterName];
-
-  // if adapter is invalid, then an error will be thrown later
-  var usePrefix = (adapter && 'use_prefix' in adapter) ?
-    adapter.use_prefix : true;
-
-  return {
-    name: usePrefix ? (prefix + name) : name,
-    adapter: adapterName
-  };
-}
-
-// OK, so here's the deal. Consider this code:
-//     var db1 = new PouchDB('foo');
-//     var db2 = new PouchDB('foo');
-//     db1.destroy();
-// ^ these two both need to emit 'destroyed' events,
-// as well as the PouchDB constructor itself.
-// So we have one db object (whichever one got destroy() called on it)
-// responsible for emitting the initial event, which then gets emitted
-// by the constructor, which then broadcasts it to any other dbs
-// that may have been created with the same name.
-function prepareForDestruction(self) {
-
-  var destructionListeners = self.constructor._destructionListeners;
-
-  function onDestroyed() {
-    self.removeListener('closed', onClosed);
-    self.constructor.emit('destroyed', self.name);
-  }
-
-  function onConstructorDestroyed() {
-    self.removeListener('destroyed', onDestroyed);
-    self.removeListener('closed', onClosed);
-    self.emit('destroyed');
-  }
-
-  function onClosed() {
-    self.removeListener('destroyed', onDestroyed);
-    destructionListeners.delete(self.name);
-  }
-
-  self.once('destroyed', onDestroyed);
-  self.once('closed', onClosed);
-
-  // in setup.js, the constructor is primed to listen for destroy events
-  if (!destructionListeners.has(self.name)) {
-    destructionListeners.set(self.name, []);
-  }
-  destructionListeners.get(self.name).push(onConstructorDestroyed);
-}
-
-inherits(PouchDB$5, AbstractPouchDB);
-function PouchDB$5(name, opts) {
-  // In Node our test suite only tests this for PouchAlt unfortunately
-  /* istanbul ignore if */
-  if (!(this instanceof PouchDB$5)) {
-    return new PouchDB$5(name, opts);
-  }
-
-  var self = this;
-  opts = opts || {};
-
-  if (name && typeof name === 'object') {
-    opts = name;
-    name = opts.name;
-    delete opts.name;
-  }
-
-  this.__opts = opts = clone(opts);
-
-  self.auto_compaction = opts.auto_compaction;
-  self.prefix = PouchDB$5.prefix;
-
-  if (typeof name !== 'string') {
-    throw new Error('Missing/invalid DB name');
-  }
-
-  var prefixedName = (opts.prefix || '') + name;
-  var backend = parseAdapter(prefixedName, opts);
-
-  opts.name = backend.name;
-  opts.adapter = opts.adapter || backend.adapter;
-
-  self.name = name;
-  self._adapter = opts.adapter;
-  PouchDB$5.emit('debug', ['adapter', 'Picked adapter: ', opts.adapter]);
-
-  if (!PouchDB$5.adapters[opts.adapter] ||
-      !PouchDB$5.adapters[opts.adapter].valid()) {
-    throw new Error('Invalid Adapter: ' + opts.adapter);
-  }
-
-  AbstractPouchDB.call(self);
-  self.taskqueue = new TaskQueue$1();
-
-  self.adapter = opts.adapter;
-
-  PouchDB$5.adapters[opts.adapter].call(self, opts, function (err) {
-    if (err) {
-      return self.taskqueue.fail(err);
+        // Safari <10.1 does not meet our requirements for IDB support (#5572)
+        // since Safari 10.1 shipped with fetch, we can use that to detect it
+        return (!isSafari || hasFetch) && typeof indexedDB !== 'undefined' &&
+        // some outdated implementations of IDB that appear on Samsung
+        // and HTC Android devices <4.4 are missing IDBKeyRange
+        typeof IDBKeyRange !== 'undefined';
+    } catch (e) {
+        return false;
     }
-    prepareForDestruction(self);
-
-    self.emit('created', self);
-    PouchDB$5.emit('created', self.name);
-    self.taskqueue.ready(self);
-  });
-
-}
-
-PouchDB$5.adapters = {};
-PouchDB$5.preferredAdapters = [];
-
-PouchDB$5.prefix = '_pouch_';
-
-var eventEmitter = new events.EventEmitter();
-
-function setUpEventEmitter(Pouch) {
-  Object.keys(events.EventEmitter.prototype).forEach(function (key) {
-    if (typeof events.EventEmitter.prototype[key] === 'function') {
-      Pouch[key] = eventEmitter[key].bind(eventEmitter);
-    }
-  });
-
-  // these are created in constructor.js, and allow us to notify each DB with
-  // the same name that it was destroyed, via the constructor object
-  var destructListeners = Pouch._destructionListeners = new ExportedMap();
-  Pouch.on('destroyed', function onConstructorDestroyed(name) {
-    destructListeners.get(name).forEach(function (callback) {
-      callback();
-    });
-    destructListeners.delete(name);
-  });
-}
-
-setUpEventEmitter(PouchDB$5);
-
-PouchDB$5.adapter = function (id, obj, addToPreferredAdapters) {
-  /* istanbul ignore else */
-  if (obj.valid()) {
-    PouchDB$5.adapters[id] = obj;
-    if (addToPreferredAdapters) {
-      PouchDB$5.preferredAdapters.push(id);
-    }
-  }
-};
-
-PouchDB$5.plugin = function (obj) {
-  if (typeof obj === 'function') { // function style for plugins
-    obj(PouchDB$5);
-  } else if (typeof obj !== 'object' || Object.keys(obj).length === 0) {
-    throw new Error('Invalid plugin: got \"' + obj + '\", expected an object or a function');
-  } else {
-    Object.keys(obj).forEach(function (id) { // object style for plugins
-      PouchDB$5.prototype[id] = obj[id];
-    });
-  }
-  if (this.__defaults) {
-    PouchDB$5.__defaults = $inject_Object_assign({}, this.__defaults);
-  }
-  return PouchDB$5;
-};
-
-PouchDB$5.defaults = function (defaultOpts) {
-  function PouchAlt(name, opts) {
-    if (!(this instanceof PouchAlt)) {
-      return new PouchAlt(name, opts);
-    }
-
-    opts = opts || {};
-
-    if (name && typeof name === 'object') {
-      opts = name;
-      name = opts.name;
-      delete opts.name;
-    }
-
-    opts = $inject_Object_assign({}, PouchAlt.__defaults, opts);
-    PouchDB$5.call(this, name, opts);
-  }
-
-  inherits(PouchAlt, PouchDB$5);
-
-  PouchAlt.preferredAdapters = PouchDB$5.preferredAdapters.slice();
-  Object.keys(PouchDB$5).forEach(function (key) {
-    if (!(key in PouchAlt)) {
-      PouchAlt[key] = PouchDB$5[key];
-    }
-  });
-
-  // make default options transitive
-  // https://github.com/pouchdb/pouchdb/issues/5922
-  PouchAlt.__defaults = $inject_Object_assign({}, this.__defaults, defaultOpts);
-
-  return PouchAlt;
-};
-
-// managed automatically by set-version.js
-var version = "6.2.0";
-
-function debugPouch(PouchDB) {
-  PouchDB.debug = debug;
-  var logs = {};
-  /* istanbul ignore next */
-  PouchDB.on('debug', function (args) {
-    // first argument is log identifier
-    var logId = args[0];
-    // rest should be passed verbatim to debug module
-    var logArgs = args.slice(1);
-    if (!logs[logId]) {
-      logs[logId] = debug('pouchdb:' + logId);
-    }
-    logs[logId].apply(null, logArgs);
-  });
-}
-
-// this would just be "return doc[field]", but fields
-// can be "deep" due to dot notation
-function getFieldFromDoc(doc, parsedField) {
-  var value = doc;
-  for (var i = 0, len = parsedField.length; i < len; i++) {
-    var key = parsedField[i];
-    value = value[key];
-    if (!value) {
-      break;
-    }
-  }
-  return value;
-}
-
-function compare$1(left, right) {
-  return left < right ? -1 : left > right ? 1 : 0;
-}
-
-// Converts a string in dot notation to an array of its components, with backslash escaping
-function parseField(fieldName) {
-  // fields may be deep (e.g. "foo.bar.baz"), so parse
-  var fields = [];
-  var current = '';
-  for (var i = 0, len = fieldName.length; i < len; i++) {
-    var ch = fieldName[i];
-    if (ch === '.') {
-      if (i > 0 && fieldName[i - 1] === '\\') { // escaped delimiter
-        current = current.substring(0, current.length - 1) + '.';
-      } else { // not escaped, so delimiter
-        fields.push(current);
-        current = '';
-      }
-    } else { // normal character
-      current += ch;
-    }
-  }
-  fields.push(current);
-  return fields;
-}
-
-var combinationFields = ['$or', '$nor', '$not'];
-function isCombinationalField(field) {
-  return combinationFields.indexOf(field) > -1;
-}
-
-function getKey(obj) {
-  return Object.keys(obj)[0];
-}
-
-function getValue$1(obj) {
-  return obj[getKey(obj)];
-}
-
-
-// flatten an array of selectors joined by an $and operator
-function mergeAndedSelectors(selectors) {
-
-  // sort to ensure that e.g. if the user specified
-  // $and: [{$gt: 'a'}, {$gt: 'b'}], then it's collapsed into
-  // just {$gt: 'b'}
-  var res = {};
-
-  selectors.forEach(function (selector) {
-    Object.keys(selector).forEach(function (field) {
-      var matcher = selector[field];
-      if (typeof matcher !== 'object') {
-        matcher = {$eq: matcher};
-      }
-
-      if (isCombinationalField(field)) {
-        if (matcher instanceof Array) {
-          res[field] = matcher.map(function (m) {
-            return mergeAndedSelectors([m]);
-          });
-        } else {
-          res[field] = mergeAndedSelectors([matcher]);
-        }
-      } else {
-        var fieldMatchers = res[field] = res[field] || {};
-        Object.keys(matcher).forEach(function (operator) {
-          var value = matcher[operator];
-
-          if (operator === '$gt' || operator === '$gte') {
-            return mergeGtGte(operator, value, fieldMatchers);
-          } else if (operator === '$lt' || operator === '$lte') {
-            return mergeLtLte(operator, value, fieldMatchers);
-          } else if (operator === '$ne') {
-            return mergeNe(value, fieldMatchers);
-          } else if (operator === '$eq') {
-            return mergeEq(value, fieldMatchers);
-          }
-          fieldMatchers[operator] = value;
-        });
-      }
-    });
-  });
-
-  return res;
-}
-
-
-
-// collapse logically equivalent gt/gte values
-function mergeGtGte(operator, value, fieldMatchers) {
-  if (typeof fieldMatchers.$eq !== 'undefined') {
-    return; // do nothing
-  }
-  if (typeof fieldMatchers.$gte !== 'undefined') {
-    if (operator === '$gte') {
-      if (value > fieldMatchers.$gte) { // more specificity
-        fieldMatchers.$gte = value;
-      }
-    } else { // operator === '$gt'
-      if (value >= fieldMatchers.$gte) { // more specificity
-        delete fieldMatchers.$gte;
-        fieldMatchers.$gt = value;
-      }
-    }
-  } else if (typeof fieldMatchers.$gt !== 'undefined') {
-    if (operator === '$gte') {
-      if (value > fieldMatchers.$gt) { // more specificity
-        delete fieldMatchers.$gt;
-        fieldMatchers.$gte = value;
-      }
-    } else { // operator === '$gt'
-      if (value > fieldMatchers.$gt) { // more specificity
-        fieldMatchers.$gt = value;
-      }
-    }
-  } else {
-    fieldMatchers[operator] = value;
-  }
-}
-
-// collapse logically equivalent lt/lte values
-function mergeLtLte(operator, value, fieldMatchers) {
-  if (typeof fieldMatchers.$eq !== 'undefined') {
-    return; // do nothing
-  }
-  if (typeof fieldMatchers.$lte !== 'undefined') {
-    if (operator === '$lte') {
-      if (value < fieldMatchers.$lte) { // more specificity
-        fieldMatchers.$lte = value;
-      }
-    } else { // operator === '$gt'
-      if (value <= fieldMatchers.$lte) { // more specificity
-        delete fieldMatchers.$lte;
-        fieldMatchers.$lt = value;
-      }
-    }
-  } else if (typeof fieldMatchers.$lt !== 'undefined') {
-    if (operator === '$lte') {
-      if (value < fieldMatchers.$lt) { // more specificity
-        delete fieldMatchers.$lt;
-        fieldMatchers.$lte = value;
-      }
-    } else { // operator === '$gt'
-      if (value < fieldMatchers.$lt) { // more specificity
-        fieldMatchers.$lt = value;
-      }
-    }
-  } else {
-    fieldMatchers[operator] = value;
-  }
-}
-
-// combine $ne values into one array
-function mergeNe(value, fieldMatchers) {
-  if ('$ne' in fieldMatchers) {
-    // there are many things this could "not" be
-    fieldMatchers.$ne.push(value);
-  } else { // doesn't exist yet
-    fieldMatchers.$ne = [value];
-  }
-}
-
-// add $eq into the mix
-function mergeEq(value, fieldMatchers) {
-  // these all have less specificity than the $eq
-  // TODO: check for user errors here
-  delete fieldMatchers.$gt;
-  delete fieldMatchers.$gte;
-  delete fieldMatchers.$lt;
-  delete fieldMatchers.$lte;
-  delete fieldMatchers.$ne;
-  fieldMatchers.$eq = value;
-}
-
-
-//
-// normalize the selector
-//
-function massageSelector(input) {
-  var result = clone(input);
-  var wasAnded = false;
-  if ('$and' in result) {
-    result = mergeAndedSelectors(result['$and']);
-    wasAnded = true;
-  }
-
-  ['$or', '$nor'].forEach(function (orOrNor) {
-    if (orOrNor in result) {
-      // message each individual selector
-      // e.g. {foo: 'bar'} becomes {foo: {$eq: 'bar'}}
-      result[orOrNor].forEach(function (subSelector) {
-        var fields = Object.keys(subSelector);
-        for (var i = 0; i < fields.length; i++) {
-          var field = fields[i];
-          var matcher = subSelector[field];
-          if (typeof matcher !== 'object' || matcher === null) {
-            subSelector[field] = {$eq: matcher};
-          }
-        }
-      });
-    }
-  });
-
-  if ('$not' in result) {
-    //This feels a little like forcing, but it will work for now,
-    //I would like to come back to this and make the merging of selectors a little more generic
-    result['$not'] = mergeAndedSelectors([result['$not']]);
-  }
-
-  var fields = Object.keys(result);
-
-  for (var i = 0; i < fields.length; i++) {
-    var field = fields[i];
-    var matcher = result[field];
-
-    if (typeof matcher !== 'object' || matcher === null) {
-      matcher = {$eq: matcher};
-    } else if ('$ne' in matcher && !wasAnded) {
-      // I put these in an array, since there may be more than one
-      // but in the "mergeAnded" operation, I already take care of that
-      matcher.$ne = [matcher.$ne];
-    }
-    result[field] = matcher;
-  }
-
-  return result;
-}
-
-function pad(str, padWith, upToLength) {
-  var padding = '';
-  var targetLength = upToLength - str.length;
-  /* istanbul ignore next */
-  while (padding.length < targetLength) {
-    padding += padWith;
-  }
-  return padding;
-}
-
-function padLeft(str, padWith, upToLength) {
-  var padding = pad(str, padWith, upToLength);
-  return padding + str;
-}
-
-var MIN_MAGNITUDE = -324; // verified by -Number.MIN_VALUE
-var MAGNITUDE_DIGITS = 3; // ditto
-var SEP = ''; // set to '_' for easier debugging 
-
-function collate(a, b) {
-
-  if (a === b) {
-    return 0;
-  }
-
-  a = normalizeKey(a);
-  b = normalizeKey(b);
-
-  var ai = collationIndex(a);
-  var bi = collationIndex(b);
-  if ((ai - bi) !== 0) {
-    return ai - bi;
-  }
-  switch (typeof a) {
-    case 'number':
-      return a - b;
-    case 'boolean':
-      return a < b ? -1 : 1;
-    case 'string':
-      return stringCollate(a, b);
-  }
-  return Array.isArray(a) ? arrayCollate(a, b) : objectCollate(a, b);
-}
-
-// couch considers null/NaN/Infinity/-Infinity === undefined,
-// for the purposes of mapreduce indexes. also, dates get stringified.
-function normalizeKey(key) {
-  switch (typeof key) {
-    case 'undefined':
-      return null;
-    case 'number':
-      if (key === Infinity || key === -Infinity || isNaN(key)) {
-        return null;
-      }
-      return key;
-    case 'object':
-      var origKey = key;
-      if (Array.isArray(key)) {
-        var len = key.length;
-        key = new Array(len);
-        for (var i = 0; i < len; i++) {
-          key[i] = normalizeKey(origKey[i]);
-        }
-      /* istanbul ignore next */
-      } else if (key instanceof Date) {
-        return key.toJSON();
-      } else if (key !== null) { // generic object
-        key = {};
-        for (var k in origKey) {
-          if (origKey.hasOwnProperty(k)) {
-            var val = origKey[k];
-            if (typeof val !== 'undefined') {
-              key[k] = normalizeKey(val);
-            }
-          }
-        }
-      }
-  }
-  return key;
-}
-
-function indexify(key) {
-  if (key !== null) {
-    switch (typeof key) {
-      case 'boolean':
-        return key ? 1 : 0;
-      case 'number':
-        return numToIndexableString(key);
-      case 'string':
-        // We've to be sure that key does not contain \u0000
-        // Do order-preserving replacements:
-        // 0 -> 1, 1
-        // 1 -> 1, 2
-        // 2 -> 2, 2
-        return key
-          .replace(/\u0002/g, '\u0002\u0002')
-          .replace(/\u0001/g, '\u0001\u0002')
-          .replace(/\u0000/g, '\u0001\u0001');
-      case 'object':
-        var isArray = Array.isArray(key);
-        var arr = isArray ? key : Object.keys(key);
-        var i = -1;
-        var len = arr.length;
-        var result = '';
-        if (isArray) {
-          while (++i < len) {
-            result += toIndexableString(arr[i]);
-          }
-        } else {
-          while (++i < len) {
-            var objKey = arr[i];
-            result += toIndexableString(objKey) +
-                toIndexableString(key[objKey]);
-          }
-        }
-        return result;
-    }
-  }
-  return '';
-}
-
-// convert the given key to a string that would be appropriate
-// for lexical sorting, e.g. within a database, where the
-// sorting is the same given by the collate() function.
-function toIndexableString(key) {
-  var zero = '\u0000';
-  key = normalizeKey(key);
-  return collationIndex(key) + SEP + indexify(key) + zero;
-}
-
-function parseNumber(str, i) {
-  var originalIdx = i;
-  var num;
-  var zero = str[i] === '1';
-  if (zero) {
-    num = 0;
-    i++;
-  } else {
-    var neg = str[i] === '0';
-    i++;
-    var numAsString = '';
-    var magAsString = str.substring(i, i + MAGNITUDE_DIGITS);
-    var magnitude = parseInt(magAsString, 10) + MIN_MAGNITUDE;
-    /* istanbul ignore next */
-    if (neg) {
-      magnitude = -magnitude;
-    }
-    i += MAGNITUDE_DIGITS;
-    while (true) {
-      var ch = str[i];
-      if (ch === '\u0000') {
-        break;
-      } else {
-        numAsString += ch;
-      }
-      i++;
-    }
-    numAsString = numAsString.split('.');
-    if (numAsString.length === 1) {
-      num = parseInt(numAsString, 10);
-    } else {
-      /* istanbul ignore next */
-      num = parseFloat(numAsString[0] + '.' + numAsString[1]);
-    }
-    /* istanbul ignore next */
-    if (neg) {
-      num = num - 10;
-    }
-    /* istanbul ignore next */
-    if (magnitude !== 0) {
-      // parseFloat is more reliable than pow due to rounding errors
-      // e.g. Number.MAX_VALUE would return Infinity if we did
-      // num * Math.pow(10, magnitude);
-      num = parseFloat(num + 'e' + magnitude);
-    }
-  }
-  return {num: num, length : i - originalIdx};
-}
-
-// move up the stack while parsing
-// this function moved outside of parseIndexableString for performance
-function pop(stack, metaStack) {
-  var obj = stack.pop();
-
-  if (metaStack.length) {
-    var lastMetaElement = metaStack[metaStack.length - 1];
-    if (obj === lastMetaElement.element) {
-      // popping a meta-element, e.g. an object whose value is another object
-      metaStack.pop();
-      lastMetaElement = metaStack[metaStack.length - 1];
-    }
-    var element = lastMetaElement.element;
-    var lastElementIndex = lastMetaElement.index;
-    if (Array.isArray(element)) {
-      element.push(obj);
-    } else if (lastElementIndex === stack.length - 2) { // obj with key+value
-      var key = stack.pop();
-      element[key] = obj;
-    } else {
-      stack.push(obj); // obj with key only
-    }
-  }
-}
-
-function parseIndexableString(str) {
-  var stack = [];
-  var metaStack = []; // stack for arrays and objects
-  var i = 0;
-
-  /*eslint no-constant-condition: ["error", { "checkLoops": false }]*/
-  while (true) {
-    var collationIndex = str[i++];
-    if (collationIndex === '\u0000') {
-      if (stack.length === 1) {
-        return stack.pop();
-      } else {
-        pop(stack, metaStack);
-        continue;
-      }
-    }
-    switch (collationIndex) {
-      case '1':
-        stack.push(null);
-        break;
-      case '2':
-        stack.push(str[i] === '1');
-        i++;
-        break;
-      case '3':
-        var parsedNum = parseNumber(str, i);
-        stack.push(parsedNum.num);
-        i += parsedNum.length;
-        break;
-      case '4':
-        var parsedStr = '';
-        /*eslint no-constant-condition: ["error", { "checkLoops": false }]*/
-        while (true) {
-          var ch = str[i];
-          if (ch === '\u0000') {
-            break;
-          }
-          parsedStr += ch;
-          i++;
-        }
-        // perform the reverse of the order-preserving replacement
-        // algorithm (see above)
-        parsedStr = parsedStr.replace(/\u0001\u0001/g, '\u0000')
-          .replace(/\u0001\u0002/g, '\u0001')
-          .replace(/\u0002\u0002/g, '\u0002');
-        stack.push(parsedStr);
-        break;
-      case '5':
-        var arrayElement = { element: [], index: stack.length };
-        stack.push(arrayElement.element);
-        metaStack.push(arrayElement);
-        break;
-      case '6':
-        var objElement = { element: {}, index: stack.length };
-        stack.push(objElement.element);
-        metaStack.push(objElement);
-        break;
-      /* istanbul ignore next */
-      default:
-        throw new Error(
-          'bad collationIndex or unexpectedly reached end of input: ' +
-            collationIndex);
-    }
-  }
-}
-
-function arrayCollate(a, b) {
-  var len = Math.min(a.length, b.length);
-  for (var i = 0; i < len; i++) {
-    var sort = collate(a[i], b[i]);
-    if (sort !== 0) {
-      return sort;
-    }
-  }
-  return (a.length === b.length) ? 0 :
-    (a.length > b.length) ? 1 : -1;
-}
-function stringCollate(a, b) {
-  // See: https://github.com/daleharvey/pouchdb/issues/40
-  // This is incompatible with the CouchDB implementation, but its the
-  // best we can do for now
-  return (a === b) ? 0 : ((a > b) ? 1 : -1);
-}
-function objectCollate(a, b) {
-  var ak = Object.keys(a), bk = Object.keys(b);
-  var len = Math.min(ak.length, bk.length);
-  for (var i = 0; i < len; i++) {
-    // First sort the keys
-    var sort = collate(ak[i], bk[i]);
-    if (sort !== 0) {
-      return sort;
-    }
-    // if the keys are equal sort the values
-    sort = collate(a[ak[i]], b[bk[i]]);
-    if (sort !== 0) {
-      return sort;
-    }
-
-  }
-  return (ak.length === bk.length) ? 0 :
-    (ak.length > bk.length) ? 1 : -1;
-}
-// The collation is defined by erlangs ordered terms
-// the atoms null, true, false come first, then numbers, strings,
-// arrays, then objects
-// null/undefined/NaN/Infinity/-Infinity are all considered null
-function collationIndex(x) {
-  var id = ['boolean', 'number', 'string', 'object'];
-  var idx = id.indexOf(typeof x);
-  //false if -1 otherwise true, but fast!!!!1
-  if (~idx) {
-    if (x === null) {
-      return 1;
-    }
-    if (Array.isArray(x)) {
-      return 5;
-    }
-    return idx < 3 ? (idx + 2) : (idx + 3);
-  }
-  /* istanbul ignore next */
-  if (Array.isArray(x)) {
-    return 5;
-  }
-}
-
-// conversion:
-// x yyy zz...zz
-// x = 0 for negative, 1 for 0, 2 for positive
-// y = exponent (for negative numbers negated) moved so that it's >= 0
-// z = mantisse
-function numToIndexableString(num) {
-
-  if (num === 0) {
-    return '1';
-  }
-
-  // convert number to exponential format for easier and
-  // more succinct string sorting
-  var expFormat = num.toExponential().split(/e\+?/);
-  var magnitude = parseInt(expFormat[1], 10);
-
-  var neg = num < 0;
-
-  var result = neg ? '0' : '2';
-
-  // first sort by magnitude
-  // it's easier if all magnitudes are positive
-  var magForComparison = ((neg ? -magnitude : magnitude) - MIN_MAGNITUDE);
-  var magString = padLeft((magForComparison).toString(), '0', MAGNITUDE_DIGITS);
-
-  result += SEP + magString;
-
-  // then sort by the factor
-  var factor = Math.abs(parseFloat(expFormat[0])); // [1..10)
-  /* istanbul ignore next */
-  if (neg) { // for negative reverse ordering
-    factor = 10 - factor;
-  }
-
-  var factorStr = factor.toFixed(20);
-
-  // strip zeros from the end
-  factorStr = factorStr.replace(/\.?0+$/, '');
-
-  result += SEP + factorStr;
-
-  return result;
-}
-
-// create a comparator based on the sort object
-function createFieldSorter(sort) {
-
-  function getFieldValuesAsArray(doc) {
-    return sort.map(function (sorting) {
-      var fieldName = getKey(sorting);
-      var parsedField = parseField(fieldName);
-      var docFieldValue = getFieldFromDoc(doc, parsedField);
-      return docFieldValue;
-    });
-  }
-
-  return function (aRow, bRow) {
-    var aFieldValues = getFieldValuesAsArray(aRow.doc);
-    var bFieldValues = getFieldValuesAsArray(bRow.doc);
-    var collation = collate(aFieldValues, bFieldValues);
-    if (collation !== 0) {
-      return collation;
-    }
-    // this is what mango seems to do
-    return compare$1(aRow.doc._id, bRow.doc._id);
-  };
-}
-
-function filterInMemoryFields(rows, requestDef, inMemoryFields) {
-  rows = rows.filter(function (row) {
-    return rowFilter(row.doc, requestDef.selector, inMemoryFields);
-  });
-
-  if (requestDef.sort) {
-    // in-memory sort
-    var fieldSorter = createFieldSorter(requestDef.sort);
-    rows = rows.sort(fieldSorter);
-    if (typeof requestDef.sort[0] !== 'string' &&
-        getValue$1(requestDef.sort[0]) === 'desc') {
-      rows = rows.reverse();
-    }
-  }
-
-  if ('limit' in requestDef || 'skip' in requestDef) {
-    // have to do the limit in-memory
-    var skip = requestDef.skip || 0;
-    var limit = ('limit' in requestDef ? requestDef.limit : rows.length) + skip;
-    rows = rows.slice(skip, limit);
-  }
-  return rows;
-}
-
-function rowFilter(doc, selector, inMemoryFields) {
-  return inMemoryFields.every(function (field) {
-    if (isDesignDoc(doc)) {
-      return false;
-    }
-
-    var matcher = selector[field];
-    var parsedField = parseField(field);
-    var docFieldValue = getFieldFromDoc(doc, parsedField);
-    if (isCombinationalField(field)) {
-      return matchCominationalSelector(field, matcher, doc);
-    }
-
-    return matchSelector(matcher, doc, parsedField, docFieldValue);
-  });
-}
-
-function isDesignDoc(doc) {
-  return /^_design\//.test(doc._id);
-}
-
-function matchSelector(matcher, doc, parsedField, docFieldValue) {
-  if (!matcher) {
-    // no filtering necessary; this field is just needed for sorting
-    return true;
-  }
-
-  return Object.keys(matcher).every(function (userOperator) {
-    var userValue = matcher[userOperator];
-    return match(userOperator, doc, userValue, parsedField, docFieldValue);
-  });
-}
-
-function matchCominationalSelector(field, matcher, doc) {
-
-  if (field === '$or') {
-    return matcher.some(function (orMatchers) {
-      return rowFilter(doc, orMatchers, Object.keys(orMatchers));
-    });
-  }
-
-  if (field === '$not') {
-    return !rowFilter(doc, matcher, Object.keys(matcher));
-  }
-
-  //`$nor`
-  return !matcher.find(function (orMatchers) {
-    return rowFilter(doc, orMatchers, Object.keys(orMatchers));
-  });
-
-}
-
-function match(userOperator, doc, userValue, parsedField, docFieldValue) {
-  if (!matchers[userOperator]) {
-    throw new Error('unknown operator "' + userOperator +
-      '" - should be one of $eq, $lte, $lt, $gt, $gte, $exists, $ne, $in, ' +
-      '$nin, $size, $mod, $regex, $elemMatch, $type or $all');
-  }
-  return matchers[userOperator](doc, userValue, parsedField, docFieldValue);
-}
-
-function fieldExists(docFieldValue) {
-  return typeof docFieldValue !== 'undefined' && docFieldValue !== null;
-}
-
-function fieldIsNotUndefined(docFieldValue) {
-  return typeof docFieldValue !== 'undefined';
-}
-
-function modField(docFieldValue, userValue) {
-  var divisor = userValue[0];
-  var mod = userValue[1];
-  if (divisor === 0) {
-    throw new Error('Bad divisor, cannot divide by zero');
-  }
-
-  if (parseInt(divisor, 10) !== divisor ) {
-    throw new Error('Divisor is not an integer');
-  }
-
-  if (parseInt(mod, 10) !== mod ) {
-    throw new Error('Modulus is not an integer');
-  }
-
-  if (parseInt(docFieldValue, 10) !== docFieldValue) {
-    return false;
-  }
-
-  return docFieldValue % divisor === mod;
-}
-
-function arrayContainsValue(docFieldValue, userValue) {
-  return userValue.some(function (val) {
-    if (docFieldValue instanceof Array) {
-      return docFieldValue.indexOf(val) > -1;
-    }
-
-    return docFieldValue === val;
-  });
-}
-
-function arrayContainsAllValues(docFieldValue, userValue) {
-  return userValue.every(function (val) {
-    return docFieldValue.indexOf(val) > -1;
-  });
-}
-
-function arraySize(docFieldValue, userValue) {
-  return docFieldValue.length === userValue;
-}
-
-function regexMatch(docFieldValue, userValue) {
-  var re = new RegExp(userValue);
-
-  return re.test(docFieldValue);
-}
-
-function typeMatch(docFieldValue, userValue) {
-
-  switch (userValue) {
-    case 'null':
-      return docFieldValue === null;
-    case 'boolean':
-      return typeof (docFieldValue) === 'boolean';
-    case 'number':
-      return typeof (docFieldValue) === 'number';
-    case 'string':
-      return typeof (docFieldValue) === 'string';
-    case 'array':
-      return docFieldValue instanceof Array;
-    case 'object':
-      return ({}).toString.call(docFieldValue) === '[object Object]';
-  }
-
-  throw new Error(userValue + ' not supported as a type.' +
-                  'Please use one of object, string, array, number, boolean or null.');
-
-}
-
-var matchers = {
-
-  '$elemMatch': function (doc, userValue, parsedField, docFieldValue) {
-    if (!Array.isArray(docFieldValue)) {
-      return false;
-    }
-
-    if (docFieldValue.length === 0) {
-      return false;
-    }
-
-    if (typeof docFieldValue[0] === 'object') {
-      return docFieldValue.some(function (val) {
-        return rowFilter(val, userValue, Object.keys(userValue));
-      });
-    }
-
-    return docFieldValue.some(function (val) {
-      return matchSelector(userValue, doc, parsedField, val);
-    });
-  },
-
-  '$eq': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldIsNotUndefined(docFieldValue) && collate(docFieldValue, userValue) === 0;
-  },
-
-  '$gte': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldIsNotUndefined(docFieldValue) && collate(docFieldValue, userValue) >= 0;
-  },
-
-  '$gt': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldIsNotUndefined(docFieldValue) && collate(docFieldValue, userValue) > 0;
-  },
-
-  '$lte': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldIsNotUndefined(docFieldValue) && collate(docFieldValue, userValue) <= 0;
-  },
-
-  '$lt': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldIsNotUndefined(docFieldValue) && collate(docFieldValue, userValue) < 0;
-  },
-
-  '$exists': function (doc, userValue, parsedField, docFieldValue) {
-    //a field that is null is still considered to exist
-    if (userValue) {
-      return fieldIsNotUndefined(docFieldValue);
-    }
-
-    return !fieldIsNotUndefined(docFieldValue);
-  },
-
-  '$mod': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldExists(docFieldValue) && modField(docFieldValue, userValue);
-  },
-
-  '$ne': function (doc, userValue, parsedField, docFieldValue) {
-    return userValue.every(function (neValue) {
-      return collate(docFieldValue, neValue) !== 0;
-    });
-  },
-  '$in': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldExists(docFieldValue) && arrayContainsValue(docFieldValue, userValue);
-  },
-
-  '$nin': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldExists(docFieldValue) && !arrayContainsValue(docFieldValue, userValue);
-  },
-
-  '$size': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldExists(docFieldValue) && arraySize(docFieldValue, userValue);
-  },
-
-  '$all': function (doc, userValue, parsedField, docFieldValue) {
-    return Array.isArray(docFieldValue) && arrayContainsAllValues(docFieldValue, userValue);
-  },
-
-  '$regex': function (doc, userValue, parsedField, docFieldValue) {
-    return fieldExists(docFieldValue) && regexMatch(docFieldValue, userValue);
-  },
-
-  '$type': function (doc, userValue, parsedField, docFieldValue) {
-    return typeMatch(docFieldValue, userValue);
-  }
-};
-
-// return true if the given doc matches the supplied selector
-function matchesSelector(doc, selector) {
-  /* istanbul ignore if */
-  if (typeof selector !== 'object') {
-    // match the CouchDB error message
-    throw 'Selector error: expected a JSON object';
-  }
-
-  selector = massageSelector(selector);
-  var row = {
-    'doc': doc
-  };
-
-  var rowsMatched = filterInMemoryFields([row], { 'selector': selector }, Object.keys(selector));
-  return rowsMatched && rowsMatched.length === 1;
-}
-
-function evalFilter(input) {
-  return scopeEval('"use strict";\nreturn ' + input + ';', {});
-}
-
-function evalView(input) {
-  var code = [
-    'return function(doc) {',
-    '  "use strict";',
-    '  var emitted = false;',
-    '  var emit = function (a, b) {',
-    '    emitted = true;',
-    '  };',
-    '  var view = ' + input + ';',
-    '  view(doc);',
-    '  if (emitted) {',
-    '    return true;',
-    '  }',
-    '};'
-  ].join('\n');
-
-  return scopeEval(code, {});
-}
-
-function validate(opts, callback) {
-  if (opts.selector) {
-    if (opts.filter && opts.filter !== '_selector') {
-      var filterName = typeof opts.filter === 'string' ?
-        opts.filter : 'function';
-      return callback(new Error('selector invalid for filter "' + filterName + '"'));
-    }
-  }
-  callback();
-}
-
-function normalize(opts) {
-  if (opts.view && !opts.filter) {
-    opts.filter = '_view';
-  }
-
-  if (opts.selector && !opts.filter) {
-    opts.filter = '_selector';
-  }
-
-  if (opts.filter && typeof opts.filter === 'string') {
-    if (opts.filter === '_view') {
-      opts.view = normalizeDesignDocFunctionName(opts.view);
-    } else {
-      opts.filter = normalizeDesignDocFunctionName(opts.filter);
-    }
-  }
-}
-
-function shouldFilter(changesHandler$$1, opts) {
-  return opts.filter && typeof opts.filter === 'string' &&
-    !opts.doc_ids && !isRemote(changesHandler$$1.db);
-}
-
-function filter(changesHandler$$1, opts) {
-  var callback = opts.complete;
-  if (opts.filter === '_view') {
-    if (!opts.view || typeof opts.view !== 'string') {
-      var err = createError(BAD_REQUEST,
-        '`view` filter parameter not found or invalid.');
-      return callback(err);
-    }
-    // fetch a view from a design doc, make it behave like a filter
-    var viewName = parseDesignDocFunctionName(opts.view);
-    changesHandler$$1.db.get('_design/' + viewName[0], function (err, ddoc) {
-      /* istanbul ignore if */
-      if (changesHandler$$1.isCancelled) {
-        return callback(null, {status: 'cancelled'});
-      }
-      /* istanbul ignore next */
-      if (err) {
-        return callback(generateErrorFromResponse(err));
-      }
-      var mapFun = ddoc && ddoc.views && ddoc.views[viewName[1]] &&
-        ddoc.views[viewName[1]].map;
-      if (!mapFun) {
-        return callback(createError(MISSING_DOC,
-          (ddoc.views ? 'missing json key: ' + viewName[1] :
-            'missing json key: views')));
-      }
-      opts.filter = evalView(mapFun);
-      changesHandler$$1.doChanges(opts);
-    });
-  } else if (opts.selector) {
-    opts.filter = function (doc) {
-      return matchesSelector(doc, opts.selector);
-    };
-    changesHandler$$1.doChanges(opts);
-  } else {
-    // fetch a filter from a design doc
-    var filterName = parseDesignDocFunctionName(opts.filter);
-    changesHandler$$1.db.get('_design/' + filterName[0], function (err, ddoc) {
-      /* istanbul ignore if */
-      if (changesHandler$$1.isCancelled) {
-        return callback(null, {status: 'cancelled'});
-      }
-      /* istanbul ignore next */
-      if (err) {
-        return callback(generateErrorFromResponse(err));
-      }
-      var filterFun = ddoc && ddoc.filters && ddoc.filters[filterName[1]];
-      if (!filterFun) {
-        return callback(createError(MISSING_DOC,
-          ((ddoc && ddoc.filters) ? 'missing json key: ' + filterName[1]
-            : 'missing json key: filters')));
-      }
-      opts.filter = evalFilter(filterFun);
-      changesHandler$$1.doChanges(opts);
-    });
-  }
-}
-
-function applyChangesFilterPlugin(PouchDB) {
-  PouchDB._changesFilterPlugin = {
-    validate: validate,
-    normalize: normalize,
-    shouldFilter: shouldFilter,
-    filter: filter
-  };
-}
-
-// TODO: remove from pouchdb-core (breaking)
-PouchDB$5.plugin(debugPouch);
-
-// TODO: remove from pouchdb-core (breaking)
-PouchDB$5.plugin(applyChangesFilterPlugin);
-
-PouchDB$5.version = version;
-
-function toObject(array) {
-  return array.reduce(function (obj, item) {
-    obj[item] = true;
-    return obj;
-  }, {});
 }
-// List of top level reserved words for doc
-var reservedWords = toObject([
-  '_id',
-  '_rev',
-  '_attachments',
-  '_deleted',
-  '_revisions',
-  '_revs_info',
-  '_conflicts',
-  '_deleted_conflicts',
-  '_local_seq',
-  '_rev_tree',
-  //replication documents
-  '_replication_id',
-  '_replication_state',
-  '_replication_state_time',
-  '_replication_state_reason',
-  '_replication_stats',
-  // Specific to Couchbase Sync Gateway
-  '_removed'
-]);
 
-// List of reserved words that should end up the document
-var dataWords = toObject([
-  '_attachments',
-  //replication documents
-  '_replication_id',
-  '_replication_state',
-  '_replication_state_time',
-  '_replication_state_reason',
-  '_replication_stats'
-]);
-
-function parseRevisionInfo(rev) {
-  if (!/^\d+\-./.test(rev)) {
-    return createError(INVALID_REV);
-  }
-  var idx = rev.indexOf('-');
-  var left = rev.substring(0, idx);
-  var right = rev.substring(idx + 1);
-  return {
-    prefix: parseInt(left, 10),
-    id: right
-  };
-}
-
-function makeRevTreeFromRevisions(revisions, opts) {
-  var pos = revisions.start - revisions.ids.length + 1;
-
-  var revisionIds = revisions.ids;
-  var ids = [revisionIds[0], opts, []];
-
-  for (var i = 1, len = revisionIds.length; i < len; i++) {
-    ids = [revisionIds[i], {status: 'missing'}, [ids]];
-  }
-
-  return [{
-    pos: pos,
-    ids: ids
-  }];
+function isWebSQLValid() {
+    return typeof openDatabase === 'function';
 }
-
-// Preprocess documents, parse their revisions, assign an id and a
-// revision for new writes that are missing them, etc
-function parseDoc(doc, newEdits) {
-
-  var nRevNum;
-  var newRevId;
-  var revInfo;
-  var opts = {status: 'available'};
-  if (doc._deleted) {
-    opts.deleted = true;
-  }
 
-  if (newEdits) {
-    if (!doc._id) {
-      doc._id = uuid();
+function isLocalStorageValid() {
+    try {
+        return typeof localStorage !== 'undefined' && 'setItem' in localStorage && localStorage.setItem;
+    } catch (e) {
+        return false;
     }
-    newRevId = uuid(32, 16).toLowerCase();
-    if (doc._rev) {
-      revInfo = parseRevisionInfo(doc._rev);
-      if (revInfo.error) {
-        return revInfo;
-      }
-      doc._rev_tree = [{
-        pos: revInfo.prefix,
-        ids: [revInfo.id, {status: 'missing'}, [[newRevId, opts, []]]]
-      }];
-      nRevNum = revInfo.prefix + 1;
-    } else {
-      doc._rev_tree = [{
-        pos: 1,
-        ids : [newRevId, opts, []]
-      }];
-      nRevNum = 1;
-    }
-  } else {
-    if (doc._revisions) {
-      doc._rev_tree = makeRevTreeFromRevisions(doc._revisions, opts);
-      nRevNum = doc._revisions.start;
-      newRevId = doc._revisions.ids[0];
-    }
-    if (!doc._rev_tree) {
-      revInfo = parseRevisionInfo(doc._rev);
-      if (revInfo.error) {
-        return revInfo;
-      }
-      nRevNum = revInfo.prefix;
-      newRevId = revInfo.id;
-      doc._rev_tree = [{
-        pos: nRevNum,
-        ids: [newRevId, opts, []]
-      }];
-    }
-  }
-
-  invalidIdError(doc._id);
-
-  doc._rev = nRevNum + '-' + newRevId;
-
-  var result = {metadata : {}, data : {}};
-  for (var key in doc) {
-    /* istanbul ignore else */
-    if (Object.prototype.hasOwnProperty.call(doc, key)) {
-      var specialKey = key[0] === '_';
-      if (specialKey && !reservedWords[key]) {
-        var error = createError(DOC_VALIDATION, key);
-        error.message = DOC_VALIDATION.message + ': ' + key;
-        throw error;
-      } else if (specialKey && !dataWords[key]) {
-        result.metadata[key.slice(1)] = doc[key];
-      } else {
-        result.data[key] = doc[key];
-      }
-    }
-  }
-  return result;
 }
-
-var thisAtob = function (str) {
-  return atob(str);
-};
-
-var thisBtoa = function (str) {
-  return btoa(str);
-};
 
 // Abstracts constructing a Blob object, so it also works in older
-// browsers that don't support the native Blob constructor (e.g.
-// old QtWebKit versions, Android < 4.4).
+// browsers that don't support the native Blob constructor. (i.e.
+// old QtWebKit versions, at least).
+// Abstracts constructing a Blob object, so it also works in older
+// browsers that don't support the native Blob constructor. (i.e.
+// old QtWebKit versions, at least).
 function createBlob(parts, properties) {
-  /* global BlobBuilder,MSBlobBuilder,MozBlobBuilder,WebKitBlobBuilder */
-  parts = parts || [];
-  properties = properties || {};
-  try {
-    return new Blob(parts, properties);
-  } catch (e) {
-    if (e.name !== "TypeError") {
-      throw e;
+    /* global BlobBuilder,MSBlobBuilder,MozBlobBuilder,WebKitBlobBuilder */
+    parts = parts || [];
+    properties = properties || {};
+    try {
+        return new Blob(parts, properties);
+    } catch (e) {
+        if (e.name !== 'TypeError') {
+            throw e;
+        }
+        var Builder = typeof BlobBuilder !== 'undefined' ? BlobBuilder : typeof MSBlobBuilder !== 'undefined' ? MSBlobBuilder : typeof MozBlobBuilder !== 'undefined' ? MozBlobBuilder : WebKitBlobBuilder;
+        var builder = new Builder();
+        for (var i = 0; i < parts.length; i += 1) {
+            builder.append(parts[i]);
+        }
+        return builder.getBlob(properties.type);
     }
-    var Builder = typeof BlobBuilder !== 'undefined' ? BlobBuilder :
-                  typeof MSBlobBuilder !== 'undefined' ? MSBlobBuilder :
-                  typeof MozBlobBuilder !== 'undefined' ? MozBlobBuilder :
-                  WebKitBlobBuilder;
-    var builder = new Builder();
-    for (var i = 0; i < parts.length; i += 1) {
-      builder.append(parts[i]);
-    }
-    return builder.getBlob(properties.type);
-  }
 }
 
+// This is CommonJS because lie is an external dependency, so Rollup
+// can just ignore it.
+if (typeof Promise === 'undefined') {
+    // In the "nopromises" build this will just throw if you don't have
+    // a global promise object, but it would throw anyway later.
+    _dereq_(3);
+}
+var Promise$1 = Promise;
+
+function executeCallback(promise, callback) {
+    if (callback) {
+        promise.then(function (result) {
+            callback(null, result);
+        }, function (error) {
+            callback(error);
+        });
+    }
+}
+
+function executeTwoCallbacks(promise, callback, errorCallback) {
+    if (typeof callback === 'function') {
+        promise.then(callback);
+    }
+
+    if (typeof errorCallback === 'function') {
+        promise["catch"](errorCallback);
+    }
+}
+
+// Some code originally from async_storage.js in
+// [Gaia](https://github.com/mozilla-b2g/gaia).
+
+var DETECT_BLOB_SUPPORT_STORE = 'local-forage-detect-blob-support';
+var supportsBlobs;
+var dbContexts;
+var toString = Object.prototype.toString;
+
+// Transform a binary string to an array buffer, because otherwise
+// weird stuff happens when you try to work with the binary string directly.
+// It is known.
 // From http://stackoverflow.com/questions/14967647/ (continues on next line)
 // encode-decode-image-with-base64-breaks-image (2013-04-21)
-function binaryStringToArrayBuffer(bin) {
-  var length = bin.length;
-  var buf = new ArrayBuffer(length);
-  var arr = new Uint8Array(buf);
-  for (var i = 0; i < length; i++) {
-    arr[i] = bin.charCodeAt(i);
-  }
-  return buf;
-}
-
-function binStringToBluffer(binString, type) {
-  return createBlob([binaryStringToArrayBuffer(binString)], {type: type});
-}
-
-function b64ToBluffer(b64, type) {
-  return binStringToBluffer(thisAtob(b64), type);
-}
-
-//Can't find original post, but this is close
-//http://stackoverflow.com/questions/6965107/ (continues on next line)
-//converting-between-strings-and-arraybuffers
-function arrayBufferToBinaryString(buffer) {
-  var binary = '';
-  var bytes = new Uint8Array(buffer);
-  var length = bytes.byteLength;
-  for (var i = 0; i < length; i++) {
-    binary += String.fromCharCode(bytes[i]);
-  }
-  return binary;
-}
-
-// shim for browsers that don't support it
-function readAsBinaryString(blob, callback) {
-  if (typeof FileReader === 'undefined') {
-    // fix for Firefox in a web worker
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=901097
-    return callback(arrayBufferToBinaryString(
-      new FileReaderSync().readAsArrayBuffer(blob)));
-  }
-
-  var reader = new FileReader();
-  var hasBinaryString = typeof reader.readAsBinaryString === 'function';
-  reader.onloadend = function (e) {
-    var result = e.target.result || '';
-    if (hasBinaryString) {
-      return callback(result);
+function _binStringToArrayBuffer(bin) {
+    var length = bin.length;
+    var buf = new ArrayBuffer(length);
+    var arr = new Uint8Array(buf);
+    for (var i = 0; i < length; i++) {
+        arr[i] = bin.charCodeAt(i);
     }
-    callback(arrayBufferToBinaryString(result));
-  };
-  if (hasBinaryString) {
-    reader.readAsBinaryString(blob);
-  } else {
-    reader.readAsArrayBuffer(blob);
-  }
-}
-
-function blobToBinaryString(blobOrBuffer, callback) {
-  readAsBinaryString(blobOrBuffer, function (bin) {
-    callback(bin);
-  });
-}
-
-function blobToBase64(blobOrBuffer, callback) {
-  blobToBinaryString(blobOrBuffer, function (base64) {
-    callback(thisBtoa(base64));
-  });
-}
-
-// simplified API. universal browser support is assumed
-function readAsArrayBuffer(blob, callback) {
-  if (typeof FileReader === 'undefined') {
-    // fix for Firefox in a web worker:
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=901097
-    return callback(new FileReaderSync().readAsArrayBuffer(blob));
-  }
-
-  var reader = new FileReader();
-  reader.onloadend = function (e) {
-    var result = e.target.result || new ArrayBuffer(0);
-    callback(result);
-  };
-  reader.readAsArrayBuffer(blob);
-}
-
-// this is not used in the browser
-
-var setImmediateShim = global.setImmediate || global.setTimeout;
-var MD5_CHUNK_SIZE = 32768;
-
-function rawToBase64(raw) {
-  return thisBtoa(raw);
-}
-
-function sliceBlob(blob$$1, start, end) {
-  if (blob$$1.webkitSlice) {
-    return blob$$1.webkitSlice(start, end);
-  }
-  return blob$$1.slice(start, end);
-}
-
-function appendBlob(buffer, blob$$1, start, end, callback) {
-  if (start > 0 || end < blob$$1.size) {
-    // only slice blob if we really need to
-    blob$$1 = sliceBlob(blob$$1, start, end);
-  }
-  readAsArrayBuffer(blob$$1, function (arrayBuffer) {
-    buffer.append(arrayBuffer);
-    callback();
-  });
-}
-
-function appendString(buffer, string, start, end, callback) {
-  if (start > 0 || end < string.length) {
-    // only create a substring if we really need to
-    string = string.substring(start, end);
-  }
-  buffer.appendBinary(string);
-  callback();
-}
-
-function binaryMd5(data, callback) {
-  var inputIsString = typeof data === 'string';
-  var len = inputIsString ? data.length : data.size;
-  var chunkSize = Math.min(MD5_CHUNK_SIZE, len);
-  var chunks = Math.ceil(len / chunkSize);
-  var currentChunk = 0;
-  var buffer = inputIsString ? new Md5() : new Md5.ArrayBuffer();
-
-  var append = inputIsString ? appendString : appendBlob;
-
-  function next() {
-    setImmediateShim(loadNextChunk);
-  }
-
-  function done() {
-    var raw = buffer.end(true);
-    var base64 = rawToBase64(raw);
-    callback(base64);
-    buffer.destroy();
-  }
-
-  function loadNextChunk() {
-    var start = currentChunk * chunkSize;
-    var end = start + chunkSize;
-    currentChunk++;
-    if (currentChunk < chunks) {
-      append(buffer, data, start, end, next);
-    } else {
-      append(buffer, data, start, end, done);
-    }
-  }
-  loadNextChunk();
-}
-
-function stringMd5(string) {
-  return Md5.hash(string);
-}
-
-function parseBase64(data) {
-  try {
-    return thisAtob(data);
-  } catch (e) {
-    var err = createError(BAD_ARG,
-      'Attachment is not a valid base64 string');
-    return {error: err};
-  }
-}
-
-function preprocessString(att, blobType, callback) {
-  var asBinary = parseBase64(att.data);
-  if (asBinary.error) {
-    return callback(asBinary.error);
-  }
-
-  att.length = asBinary.length;
-  if (blobType === 'blob') {
-    att.data = binStringToBluffer(asBinary, att.content_type);
-  } else if (blobType === 'base64') {
-    att.data = thisBtoa(asBinary);
-  } else { // binary
-    att.data = asBinary;
-  }
-  binaryMd5(asBinary, function (result) {
-    att.digest = 'md5-' + result;
-    callback();
-  });
-}
-
-function preprocessBlob(att, blobType, callback) {
-  binaryMd5(att.data, function (md5) {
-    att.digest = 'md5-' + md5;
-    // size is for blobs (browser), length is for buffers (node)
-    att.length = att.data.size || att.data.length || 0;
-    if (blobType === 'binary') {
-      blobToBinaryString(att.data, function (binString) {
-        att.data = binString;
-        callback();
-      });
-    } else if (blobType === 'base64') {
-      blobToBase64(att.data, function (b64) {
-        att.data = b64;
-        callback();
-      });
-    } else {
-      callback();
-    }
-  });
-}
-
-function preprocessAttachment(att, blobType, callback) {
-  if (att.stub) {
-    return callback();
-  }
-  if (typeof att.data === 'string') { // input is a base64 string
-    preprocessString(att, blobType, callback);
-  } else { // input is a blob
-    preprocessBlob(att, blobType, callback);
-  }
-}
-
-function preprocessAttachments(docInfos, blobType, callback) {
-
-  if (!docInfos.length) {
-    return callback();
-  }
-
-  var docv = 0;
-  var overallErr;
-
-  docInfos.forEach(function (docInfo) {
-    var attachments = docInfo.data && docInfo.data._attachments ?
-      Object.keys(docInfo.data._attachments) : [];
-    var recv = 0;
-
-    if (!attachments.length) {
-      return done();
-    }
-
-    function processedAttachment(err) {
-      overallErr = err;
-      recv++;
-      if (recv === attachments.length) {
-        done();
-      }
-    }
-
-    for (var key in docInfo.data._attachments) {
-      if (docInfo.data._attachments.hasOwnProperty(key)) {
-        preprocessAttachment(docInfo.data._attachments[key],
-          blobType, processedAttachment);
-      }
-    }
-  });
-
-  function done() {
-    docv++;
-    if (docInfos.length === docv) {
-      if (overallErr) {
-        callback(overallErr);
-      } else {
-        callback();
-      }
-    }
-  }
-}
-
-function updateDoc(revLimit, prev, docInfo, results,
-                   i, cb, writeDoc, newEdits) {
-
-  if (revExists(prev.rev_tree, docInfo.metadata.rev)) {
-    results[i] = docInfo;
-    return cb();
-  }
-
-  // sometimes this is pre-calculated. historically not always
-  var previousWinningRev = prev.winningRev || winningRev(prev);
-  var previouslyDeleted = 'deleted' in prev ? prev.deleted :
-    isDeleted(prev, previousWinningRev);
-  var deleted = 'deleted' in docInfo.metadata ? docInfo.metadata.deleted :
-    isDeleted(docInfo.metadata);
-  var isRoot = /^1-/.test(docInfo.metadata.rev);
-
-  if (previouslyDeleted && !deleted && newEdits && isRoot) {
-    var newDoc = docInfo.data;
-    newDoc._rev = previousWinningRev;
-    newDoc._id = docInfo.metadata.id;
-    docInfo = parseDoc(newDoc, newEdits);
-  }
-
-  var merged = merge(prev.rev_tree, docInfo.metadata.rev_tree[0], revLimit);
-
-  var inConflict = newEdits && ((
-    (previouslyDeleted && deleted && merged.conflicts !== 'new_leaf') ||
-    (!previouslyDeleted && merged.conflicts !== 'new_leaf') ||
-    (previouslyDeleted && !deleted && merged.conflicts === 'new_branch')));
-
-  if (inConflict) {
-    var err = createError(REV_CONFLICT);
-    results[i] = err;
-    return cb();
-  }
-
-  var newRev = docInfo.metadata.rev;
-  docInfo.metadata.rev_tree = merged.tree;
-  docInfo.stemmedRevs = merged.stemmedRevs || [];
-  /* istanbul ignore else */
-  if (prev.rev_map) {
-    docInfo.metadata.rev_map = prev.rev_map; // used only by leveldb
-  }
-
-  // recalculate
-  var winningRev$$1 = winningRev(docInfo.metadata);
-  var winningRevIsDeleted = isDeleted(docInfo.metadata, winningRev$$1);
-
-  // calculate the total number of documents that were added/removed,
-  // from the perspective of total_rows/doc_count
-  var delta = (previouslyDeleted === winningRevIsDeleted) ? 0 :
-    previouslyDeleted < winningRevIsDeleted ? -1 : 1;
-
-  var newRevIsDeleted;
-  if (newRev === winningRev$$1) {
-    // if the new rev is the same as the winning rev, we can reuse that value
-    newRevIsDeleted = winningRevIsDeleted;
-  } else {
-    // if they're not the same, then we need to recalculate
-    newRevIsDeleted = isDeleted(docInfo.metadata, newRev);
-  }
-
-  writeDoc(docInfo, winningRev$$1, winningRevIsDeleted, newRevIsDeleted,
-    true, delta, i, cb);
-}
-
-function rootIsMissing(docInfo) {
-  return docInfo.metadata.rev_tree[0].ids[1].status === 'missing';
-}
-
-function processDocs(revLimit, docInfos, api, fetchedDocs, tx, results,
-                     writeDoc, opts, overallCallback) {
-
-  // Default to 1000 locally
-  revLimit = revLimit || 1000;
-
-  function insertDoc(docInfo, resultsIdx, callback) {
-    // Cant insert new deleted documents
-    var winningRev$$1 = winningRev(docInfo.metadata);
-    var deleted = isDeleted(docInfo.metadata, winningRev$$1);
-    if ('was_delete' in opts && deleted) {
-      results[resultsIdx] = createError(MISSING_DOC, 'deleted');
-      return callback();
-    }
-
-    // 4712 - detect whether a new document was inserted with a _rev
-    var inConflict = newEdits && rootIsMissing(docInfo);
-
-    if (inConflict) {
-      var err = createError(REV_CONFLICT);
-      results[resultsIdx] = err;
-      return callback();
-    }
-
-    var delta = deleted ? 0 : 1;
-
-    writeDoc(docInfo, winningRev$$1, deleted, deleted, false,
-      delta, resultsIdx, callback);
-  }
-
-  var newEdits = opts.new_edits;
-  var idsToDocs = new ExportedMap();
-
-  var docsDone = 0;
-  var docsToDo = docInfos.length;
-
-  function checkAllDocsDone() {
-    if (++docsDone === docsToDo && overallCallback) {
-      overallCallback();
-    }
-  }
-
-  docInfos.forEach(function (currentDoc, resultsIdx) {
-
-    if (currentDoc._id && isLocalId(currentDoc._id)) {
-      var fun = currentDoc._deleted ? '_removeLocal' : '_putLocal';
-      api[fun](currentDoc, {ctx: tx}, function (err, res) {
-        results[resultsIdx] = err || res;
-        checkAllDocsDone();
-      });
-      return;
-    }
-
-    var id = currentDoc.metadata.id;
-    if (idsToDocs.has(id)) {
-      docsToDo--; // duplicate
-      idsToDocs.get(id).push([currentDoc, resultsIdx]);
-    } else {
-      idsToDocs.set(id, [[currentDoc, resultsIdx]]);
-    }
-  });
-
-  // in the case of new_edits, the user can provide multiple docs
-  // with the same id. these need to be processed sequentially
-  idsToDocs.forEach(function (docs, id) {
-    var numDone = 0;
-
-    function docWritten() {
-      if (++numDone < docs.length) {
-        nextDoc();
-      } else {
-        checkAllDocsDone();
-      }
-    }
-    function nextDoc() {
-      var value = docs[numDone];
-      var currentDoc = value[0];
-      var resultsIdx = value[1];
-
-      if (fetchedDocs.has(id)) {
-        updateDoc(revLimit, fetchedDocs.get(id), currentDoc, results,
-          resultsIdx, docWritten, writeDoc, newEdits);
-      } else {
-        // Ensure stemming applies to new writes as well
-        var merged = merge([], currentDoc.metadata.rev_tree[0], revLimit);
-        currentDoc.metadata.rev_tree = merged.tree;
-        currentDoc.stemmedRevs = merged.stemmedRevs || [];
-        insertDoc(currentDoc, resultsIdx, docWritten);
-      }
-    }
-    nextDoc();
-  });
-}
-
-// IndexedDB requires a versioned database structure, so we use the
-// version here to manage migrations.
-var ADAPTER_VERSION = 5;
-
-// The object stores created for each database
-// DOC_STORE stores the document meta data, its revision history and state
-// Keyed by document id
-var DOC_STORE = 'document-store';
-// BY_SEQ_STORE stores a particular version of a document, keyed by its
-// sequence id
-var BY_SEQ_STORE = 'by-sequence';
-// Where we store attachments
-var ATTACH_STORE = 'attach-store';
-// Where we store many-to-many relations
-// between attachment digests and seqs
-var ATTACH_AND_SEQ_STORE = 'attach-seq-store';
-
-// Where we store database-wide meta data in a single record
-// keyed by id: META_STORE
-var META_STORE = 'meta-store';
-// Where we store local documents
-var LOCAL_STORE = 'local-store';
-// Where we detect blob support
-var DETECT_BLOB_SUPPORT_STORE = 'detect-blob-support';
-
-function safeJsonParse(str) {
-  // This try/catch guards against stack overflow errors.
-  // JSON.parse() is faster than vuvuzela.parse() but vuvuzela
-  // cannot overflow.
-  try {
-    return JSON.parse(str);
-  } catch (e) {
-    /* istanbul ignore next */
-    return vuvuzela.parse(str);
-  }
-}
-
-function safeJsonStringify(json) {
-  try {
-    return JSON.stringify(json);
-  } catch (e) {
-    /* istanbul ignore next */
-    return vuvuzela.stringify(json);
-  }
-}
-
-function idbError(callback) {
-  return function (evt) {
-    var message = 'unknown_error';
-    if (evt.target && evt.target.error) {
-      message = evt.target.error.name || evt.target.error.message;
-    }
-    callback(createError(IDB_ERROR, message, evt.type));
-  };
-}
-
-// Unfortunately, the metadata has to be stringified
-// when it is put into the database, because otherwise
-// IndexedDB can throw errors for deeply-nested objects.
-// Originally we just used JSON.parse/JSON.stringify; now
-// we use this custom vuvuzela library that avoids recursion.
-// If we could do it all over again, we'd probably use a
-// format for the revision trees other than JSON.
-function encodeMetadata(metadata, winningRev, deleted) {
-  return {
-    data: safeJsonStringify(metadata),
-    winningRev: winningRev,
-    deletedOrLocal: deleted ? '1' : '0',
-    seq: metadata.seq, // highest seq for this doc
-    id: metadata.id
-  };
-}
-
-function decodeMetadata(storedObject) {
-  if (!storedObject) {
-    return null;
-  }
-  var metadata = safeJsonParse(storedObject.data);
-  metadata.winningRev = storedObject.winningRev;
-  metadata.deleted = storedObject.deletedOrLocal === '1';
-  metadata.seq = storedObject.seq;
-  return metadata;
-}
-
-// read the doc back out from the database. we don't store the
-// _id or _rev because we already have _doc_id_rev.
-function decodeDoc(doc) {
-  if (!doc) {
-    return doc;
-  }
-  var idx = doc._doc_id_rev.lastIndexOf(':');
-  doc._id = doc._doc_id_rev.substring(0, idx - 1);
-  doc._rev = doc._doc_id_rev.substring(idx + 1);
-  delete doc._doc_id_rev;
-  return doc;
-}
-
-// Read a blob from the database, encoding as necessary
-// and translating from base64 if the IDB doesn't support
-// native Blobs
-function readBlobData(body, type, asBlob, callback) {
-  if (asBlob) {
-    if (!body) {
-      callback(createBlob([''], {type: type}));
-    } else if (typeof body !== 'string') { // we have blob support
-      callback(body);
-    } else { // no blob support
-      callback(b64ToBluffer(body, type));
-    }
-  } else { // as base64 string
-    if (!body) {
-      callback('');
-    } else if (typeof body !== 'string') { // we have blob support
-      readAsBinaryString(body, function (binary) {
-        callback(thisBtoa(binary));
-      });
-    } else { // no blob support
-      callback(body);
-    }
-  }
-}
-
-function fetchAttachmentsIfNecessary(doc, opts, txn, cb) {
-  var attachments = Object.keys(doc._attachments || {});
-  if (!attachments.length) {
-    return cb && cb();
-  }
-  var numDone = 0;
-
-  function checkDone() {
-    if (++numDone === attachments.length && cb) {
-      cb();
-    }
-  }
-
-  function fetchAttachment(doc, att) {
-    var attObj = doc._attachments[att];
-    var digest = attObj.digest;
-    var req = txn.objectStore(ATTACH_STORE).get(digest);
-    req.onsuccess = function (e) {
-      attObj.body = e.target.result.body;
-      checkDone();
-    };
-  }
-
-  attachments.forEach(function (att) {
-    if (opts.attachments && opts.include_docs) {
-      fetchAttachment(doc, att);
-    } else {
-      doc._attachments[att].stub = true;
-      checkDone();
-    }
-  });
-}
-
-// IDB-specific postprocessing necessary because
-// we don't know whether we stored a true Blob or
-// a base64-encoded string, and if it's a Blob it
-// needs to be read outside of the transaction context
-function postProcessAttachments(results, asBlob) {
-  return PouchPromise$1.all(results.map(function (row) {
-    if (row.doc && row.doc._attachments) {
-      var attNames = Object.keys(row.doc._attachments);
-      return PouchPromise$1.all(attNames.map(function (att) {
-        var attObj = row.doc._attachments[att];
-        if (!('body' in attObj)) { // already processed
-          return;
-        }
-        var body = attObj.body;
-        var type = attObj.content_type;
-        return new PouchPromise$1(function (resolve) {
-          readBlobData(body, type, asBlob, function (data) {
-            row.doc._attachments[att] = $inject_Object_assign(
-              pick(attObj, ['digest', 'content_type']),
-              {data: data}
-            );
-            resolve();
-          });
-        });
-      }));
-    }
-  }));
-}
-
-function compactRevs(revs, docId, txn) {
-
-  var possiblyOrphanedDigests = [];
-  var seqStore = txn.objectStore(BY_SEQ_STORE);
-  var attStore = txn.objectStore(ATTACH_STORE);
-  var attAndSeqStore = txn.objectStore(ATTACH_AND_SEQ_STORE);
-  var count = revs.length;
-
-  function checkDone() {
-    count--;
-    if (!count) { // done processing all revs
-      deleteOrphanedAttachments();
-    }
-  }
-
-  function deleteOrphanedAttachments() {
-    if (!possiblyOrphanedDigests.length) {
-      return;
-    }
-    possiblyOrphanedDigests.forEach(function (digest) {
-      var countReq = attAndSeqStore.index('digestSeq').count(
-        IDBKeyRange.bound(
-          digest + '::', digest + '::\uffff', false, false));
-      countReq.onsuccess = function (e) {
-        var count = e.target.result;
-        if (!count) {
-          // orphaned
-          attStore.delete(digest);
-        }
-      };
-    });
-  }
-
-  revs.forEach(function (rev) {
-    var index = seqStore.index('_doc_id_rev');
-    var key = docId + "::" + rev;
-    index.getKey(key).onsuccess = function (e) {
-      var seq = e.target.result;
-      if (typeof seq !== 'number') {
-        return checkDone();
-      }
-      seqStore.delete(seq);
-
-      var cursor = attAndSeqStore.index('seq')
-        .openCursor(IDBKeyRange.only(seq));
-
-      cursor.onsuccess = function (event) {
-        var cursor = event.target.result;
-        if (cursor) {
-          var digest = cursor.value.digestSeq.split('::')[0];
-          possiblyOrphanedDigests.push(digest);
-          attAndSeqStore.delete(cursor.primaryKey);
-          cursor.continue();
-        } else { // done
-          checkDone();
-        }
-      };
-    };
-  });
-}
-
-function openTransactionSafely(idb, stores, mode) {
-  try {
-    return {
-      txn: idb.transaction(stores, mode)
-    };
-  } catch (err) {
-    return {
-      error: err
-    };
-  }
-}
-
-var changesHandler$$1 = new Changes();
-
-function idbBulkDocs(dbOpts, req, opts, api, idb, callback) {
-  var docInfos = req.docs;
-  var txn;
-  var docStore;
-  var bySeqStore;
-  var attachStore;
-  var attachAndSeqStore;
-  var metaStore;
-  var docInfoError;
-  var metaDoc;
-
-  for (var i = 0, len = docInfos.length; i < len; i++) {
-    var doc = docInfos[i];
-    if (doc._id && isLocalId(doc._id)) {
-      continue;
-    }
-    doc = docInfos[i] = parseDoc(doc, opts.new_edits);
-    if (doc.error && !docInfoError) {
-      docInfoError = doc;
-    }
-  }
-
-  if (docInfoError) {
-    return callback(docInfoError);
-  }
-
-  var allDocsProcessed = false;
-  var docCountDelta = 0;
-  var results = new Array(docInfos.length);
-  var fetchedDocs = new ExportedMap();
-  var preconditionErrored = false;
-  var blobType = api._meta.blobSupport ? 'blob' : 'base64';
-
-  preprocessAttachments(docInfos, blobType, function (err) {
-    if (err) {
-      return callback(err);
-    }
-    startTransaction();
-  });
-
-  function startTransaction() {
-
-    var stores = [
-      DOC_STORE, BY_SEQ_STORE,
-      ATTACH_STORE,
-      LOCAL_STORE, ATTACH_AND_SEQ_STORE,
-      META_STORE
-    ];
-    var txnResult = openTransactionSafely(idb, stores, 'readwrite');
-    if (txnResult.error) {
-      return callback(txnResult.error);
-    }
-    txn = txnResult.txn;
-    txn.onabort = idbError(callback);
-    txn.ontimeout = idbError(callback);
-    txn.oncomplete = complete;
-    docStore = txn.objectStore(DOC_STORE);
-    bySeqStore = txn.objectStore(BY_SEQ_STORE);
-    attachStore = txn.objectStore(ATTACH_STORE);
-    attachAndSeqStore = txn.objectStore(ATTACH_AND_SEQ_STORE);
-    metaStore = txn.objectStore(META_STORE);
-
-    metaStore.get(META_STORE).onsuccess = function (e) {
-      metaDoc = e.target.result;
-      updateDocCountIfReady();
-    };
-
-    verifyAttachments(function (err) {
-      if (err) {
-        preconditionErrored = true;
-        return callback(err);
-      }
-      fetchExistingDocs();
-    });
-  }
-
-  function onAllDocsProcessed() {
-    allDocsProcessed = true;
-    updateDocCountIfReady();
-  }
-
-  function idbProcessDocs() {
-    processDocs(dbOpts.revs_limit, docInfos, api, fetchedDocs,
-                txn, results, writeDoc, opts, onAllDocsProcessed);
-  }
-
-  function updateDocCountIfReady() {
-    if (!metaDoc || !allDocsProcessed) {
-      return;
-    }
-    // caching the docCount saves a lot of time in allDocs() and
-    // info(), which is why we go to all the trouble of doing this
-    metaDoc.docCount += docCountDelta;
-    metaStore.put(metaDoc);
-  }
-
-  function fetchExistingDocs() {
-
-    if (!docInfos.length) {
-      return;
-    }
-
-    var numFetched = 0;
-
-    function checkDone() {
-      if (++numFetched === docInfos.length) {
-        idbProcessDocs();
-      }
-    }
-
-    function readMetadata(event) {
-      var metadata = decodeMetadata(event.target.result);
-
-      if (metadata) {
-        fetchedDocs.set(metadata.id, metadata);
-      }
-      checkDone();
-    }
-
-    for (var i = 0, len = docInfos.length; i < len; i++) {
-      var docInfo = docInfos[i];
-      if (docInfo._id && isLocalId(docInfo._id)) {
-        checkDone(); // skip local docs
-        continue;
-      }
-      var req = docStore.get(docInfo.metadata.id);
-      req.onsuccess = readMetadata;
-    }
-  }
-
-  function complete() {
-    if (preconditionErrored) {
-      return;
-    }
-
-    changesHandler$$1.notify(api._meta.name);
-    callback(null, results);
-  }
-
-  function verifyAttachment(digest, callback) {
-
-    var req = attachStore.get(digest);
-    req.onsuccess = function (e) {
-      if (!e.target.result) {
-        var err = createError(MISSING_STUB,
-          'unknown stub attachment with digest ' +
-          digest);
-        err.status = 412;
-        callback(err);
-      } else {
-        callback();
-      }
-    };
-  }
-
-  function verifyAttachments(finish) {
-
-
-    var digests = [];
-    docInfos.forEach(function (docInfo) {
-      if (docInfo.data && docInfo.data._attachments) {
-        Object.keys(docInfo.data._attachments).forEach(function (filename) {
-          var att = docInfo.data._attachments[filename];
-          if (att.stub) {
-            digests.push(att.digest);
-          }
-        });
-      }
-    });
-    if (!digests.length) {
-      return finish();
-    }
-    var numDone = 0;
-    var err;
-
-    function checkDone() {
-      if (++numDone === digests.length) {
-        finish(err);
-      }
-    }
-    digests.forEach(function (digest) {
-      verifyAttachment(digest, function (attErr) {
-        if (attErr && !err) {
-          err = attErr;
-        }
-        checkDone();
-      });
-    });
-  }
-
-  function writeDoc(docInfo, winningRev$$1, winningRevIsDeleted, newRevIsDeleted,
-                    isUpdate, delta, resultsIdx, callback) {
-
-    docInfo.metadata.winningRev = winningRev$$1;
-    docInfo.metadata.deleted = winningRevIsDeleted;
-
-    var doc = docInfo.data;
-    doc._id = docInfo.metadata.id;
-    doc._rev = docInfo.metadata.rev;
-
-    if (newRevIsDeleted) {
-      doc._deleted = true;
-    }
-
-    var hasAttachments = doc._attachments &&
-      Object.keys(doc._attachments).length;
-    if (hasAttachments) {
-      return writeAttachments(docInfo, winningRev$$1, winningRevIsDeleted,
-        isUpdate, resultsIdx, callback);
-    }
-
-    docCountDelta += delta;
-    updateDocCountIfReady();
-
-    finishDoc(docInfo, winningRev$$1, winningRevIsDeleted,
-      isUpdate, resultsIdx, callback);
-  }
-
-  function finishDoc(docInfo, winningRev$$1, winningRevIsDeleted,
-                     isUpdate, resultsIdx, callback) {
-
-    var doc = docInfo.data;
-    var metadata = docInfo.metadata;
-
-    doc._doc_id_rev = metadata.id + '::' + metadata.rev;
-    delete doc._id;
-    delete doc._rev;
-
-    function afterPutDoc(e) {
-      var revsToDelete = docInfo.stemmedRevs || [];
-
-      if (isUpdate && api.auto_compaction) {
-        revsToDelete = revsToDelete.concat(compactTree(docInfo.metadata));
-      }
-
-      if (revsToDelete && revsToDelete.length) {
-        compactRevs(revsToDelete, docInfo.metadata.id, txn);
-      }
-
-      metadata.seq = e.target.result;
-      // Current _rev is calculated from _rev_tree on read
-      // delete metadata.rev;
-      var metadataToStore = encodeMetadata(metadata, winningRev$$1,
-        winningRevIsDeleted);
-      var metaDataReq = docStore.put(metadataToStore);
-      metaDataReq.onsuccess = afterPutMetadata;
-    }
-
-    function afterPutDocError(e) {
-      // ConstraintError, need to update, not put (see #1638 for details)
-      e.preventDefault(); // avoid transaction abort
-      e.stopPropagation(); // avoid transaction onerror
-      var index = bySeqStore.index('_doc_id_rev');
-      var getKeyReq = index.getKey(doc._doc_id_rev);
-      getKeyReq.onsuccess = function (e) {
-        var putReq = bySeqStore.put(doc, e.target.result);
-        putReq.onsuccess = afterPutDoc;
-      };
-    }
-
-    function afterPutMetadata() {
-      results[resultsIdx] = {
-        ok: true,
-        id: metadata.id,
-        rev: metadata.rev
-      };
-      fetchedDocs.set(docInfo.metadata.id, docInfo.metadata);
-      insertAttachmentMappings(docInfo, metadata.seq, callback);
-    }
-
-    var putReq = bySeqStore.put(doc);
-
-    putReq.onsuccess = afterPutDoc;
-    putReq.onerror = afterPutDocError;
-  }
-
-  function writeAttachments(docInfo, winningRev$$1, winningRevIsDeleted,
-                            isUpdate, resultsIdx, callback) {
-
-
-    var doc = docInfo.data;
-
-    var numDone = 0;
-    var attachments = Object.keys(doc._attachments);
-
-    function collectResults() {
-      if (numDone === attachments.length) {
-        finishDoc(docInfo, winningRev$$1, winningRevIsDeleted,
-          isUpdate, resultsIdx, callback);
-      }
-    }
-
-    function attachmentSaved() {
-      numDone++;
-      collectResults();
-    }
-
-    attachments.forEach(function (key) {
-      var att = docInfo.data._attachments[key];
-      if (!att.stub) {
-        var data = att.data;
-        delete att.data;
-        att.revpos = parseInt(winningRev$$1, 10);
-        var digest = att.digest;
-        saveAttachment(digest, data, attachmentSaved);
-      } else {
-        numDone++;
-        collectResults();
-      }
-    });
-  }
-
-  // map seqs to attachment digests, which
-  // we will need later during compaction
-  function insertAttachmentMappings(docInfo, seq, callback) {
-
-    var attsAdded = 0;
-    var attsToAdd = Object.keys(docInfo.data._attachments || {});
-
-    if (!attsToAdd.length) {
-      return callback();
-    }
-
-    function checkDone() {
-      if (++attsAdded === attsToAdd.length) {
-        callback();
-      }
-    }
-
-    function add(att) {
-      var digest = docInfo.data._attachments[att].digest;
-      var req = attachAndSeqStore.put({
-        seq: seq,
-        digestSeq: digest + '::' + seq
-      });
-
-      req.onsuccess = checkDone;
-      req.onerror = function (e) {
-        // this callback is for a constaint error, which we ignore
-        // because this docid/rev has already been associated with
-        // the digest (e.g. when new_edits == false)
-        e.preventDefault(); // avoid transaction abort
-        e.stopPropagation(); // avoid transaction onerror
-        checkDone();
-      };
-    }
-    for (var i = 0; i < attsToAdd.length; i++) {
-      add(attsToAdd[i]); // do in parallel
-    }
-  }
-
-  function saveAttachment(digest, data, callback) {
-
-
-    var getKeyReq = attachStore.count(digest);
-    getKeyReq.onsuccess = function (e) {
-      var count = e.target.result;
-      if (count) {
-        return callback(); // already exists
-      }
-      var newAtt = {
-        digest: digest,
-        body: data
-      };
-      var putReq = attachStore.put(newAtt);
-      putReq.onsuccess = callback;
-    };
-  }
-}
-
-// Abstraction over IDBCursor and getAll()/getAllKeys() that allows us to batch our operations
-// while falling back to a normal IDBCursor operation on browsers that don't support getAll() or
-// getAllKeys(). This allows for a much faster implementation than just straight-up cursors, because
-// we're not processing each document one-at-a-time.
-function runBatchedCursor(objectStore, keyRange, descending, batchSize, onBatch) {
-
-  // Bail out of getAll()/getAllKeys() in the following cases:
-  // 1) either method is unsupported - we need both
-  // 2) batchSize is 1 (might as well use IDBCursor), or batchSize is -1 (i.e. batchSize unlimited,
-  //    not really clear the user wants a batched approach where the entire DB is read into memory,
-  //    perhaps they are filtering on a per-doc basis)
-  // 3) descending – no real way to do this via getAll()/getAllKeys()
-
-  var useGetAll = typeof objectStore.getAll === 'function' &&
-    typeof objectStore.getAllKeys === 'function' &&
-    batchSize > 1 && !descending;
-
-  var keysBatch;
-  var valuesBatch;
-  var pseudoCursor;
-
-  function onGetAll(e) {
-    valuesBatch = e.target.result;
-    if (keysBatch) {
-      onBatch(keysBatch, valuesBatch, pseudoCursor);
-    }
-  }
-
-  function onGetAllKeys(e) {
-    keysBatch = e.target.result;
-    if (valuesBatch) {
-      onBatch(keysBatch, valuesBatch, pseudoCursor);
-    }
-  }
-
-  function continuePseudoCursor() {
-    if (!keysBatch.length) { // no more results
-      return onBatch();
-    }
-    // fetch next batch, exclusive start
-    var lastKey = keysBatch[keysBatch.length - 1];
-    var newKeyRange;
-    if (keyRange && keyRange.upper) {
-      try {
-        newKeyRange = IDBKeyRange.bound(lastKey, keyRange.upper,
-          true, keyRange.upperOpen);
-      } catch (e) {
-        if (e.name === "DataError" && e.code === 0) {
-          return onBatch(); // we're done, startkey and endkey are equal
-        }
-      }
-    } else {
-      newKeyRange = IDBKeyRange.lowerBound(lastKey, true);
-    }
-    keyRange = newKeyRange;
-    keysBatch = null;
-    valuesBatch = null;
-    objectStore.getAll(keyRange, batchSize).onsuccess = onGetAll;
-    objectStore.getAllKeys(keyRange, batchSize).onsuccess = onGetAllKeys;
-  }
-
-  function onCursor(e) {
-    var cursor = e.target.result;
-    if (!cursor) { // done
-      return onBatch();
-    }
-    // regular IDBCursor acts like a batch where batch size is always 1
-    onBatch([cursor.key], [cursor.value], cursor);
-  }
-
-  if (useGetAll) {
-    pseudoCursor = {"continue": continuePseudoCursor};
-    objectStore.getAll(keyRange, batchSize).onsuccess = onGetAll;
-    objectStore.getAllKeys(keyRange, batchSize).onsuccess = onGetAllKeys;
-  } else if (descending) {
-    objectStore.openCursor(keyRange, 'prev').onsuccess = onCursor;
-  } else {
-    objectStore.openCursor(keyRange).onsuccess = onCursor;
-  }
-}
-
-// simple shim for objectStore.getAll(), falling back to IDBCursor
-function getAll(objectStore, keyRange, onSuccess) {
-  if (typeof objectStore.getAll === 'function') {
-    // use native getAll
-    objectStore.getAll(keyRange).onsuccess = onSuccess;
-    return;
-  }
-  // fall back to cursors
-  var values = [];
-
-  function onCursor(e) {
-    var cursor = e.target.result;
-    if (cursor) {
-      values.push(cursor.value);
-      cursor.continue();
-    } else {
-      onSuccess({
-        target: {
-          result: values
-        }
-      });
-    }
-  }
-
-  objectStore.openCursor(keyRange).onsuccess = onCursor;
-}
-
-function createKeyRange(start, end, inclusiveEnd, key, descending) {
-  try {
-    if (start && end) {
-      if (descending) {
-        return IDBKeyRange.bound(end, start, !inclusiveEnd, false);
-      } else {
-        return IDBKeyRange.bound(start, end, false, !inclusiveEnd);
-      }
-    } else if (start) {
-      if (descending) {
-        return IDBKeyRange.upperBound(start);
-      } else {
-        return IDBKeyRange.lowerBound(start);
-      }
-    } else if (end) {
-      if (descending) {
-        return IDBKeyRange.lowerBound(end, !inclusiveEnd);
-      } else {
-        return IDBKeyRange.upperBound(end, !inclusiveEnd);
-      }
-    } else if (key) {
-      return IDBKeyRange.only(key);
-    }
-  } catch (e) {
-    return {error: e};
-  }
-  return null;
-}
-
-function idbAllDocs(opts, idb, callback) {
-  var start = 'startkey' in opts ? opts.startkey : false;
-  var end = 'endkey' in opts ? opts.endkey : false;
-  var key = 'key' in opts ? opts.key : false;
-  var skip = opts.skip || 0;
-  var limit = typeof opts.limit === 'number' ? opts.limit : -1;
-  var inclusiveEnd = opts.inclusive_end !== false;
-
-  var keyRange = createKeyRange(start, end, inclusiveEnd, key, opts.descending);
-  var keyRangeError = keyRange && keyRange.error;
-  if (keyRangeError && !(keyRangeError.name === "DataError" &&
-      keyRangeError.code === 0)) {
-    // DataError with error code 0 indicates start is less than end, so
-    // can just do an empty query. Else need to throw
-    return callback(createError(IDB_ERROR,
-      keyRangeError.name, keyRangeError.message));
-  }
-
-  var stores = [DOC_STORE, BY_SEQ_STORE, META_STORE];
-
-  if (opts.attachments) {
-    stores.push(ATTACH_STORE);
-  }
-  var txnResult = openTransactionSafely(idb, stores, 'readonly');
-  if (txnResult.error) {
-    return callback(txnResult.error);
-  }
-  var txn = txnResult.txn;
-  txn.oncomplete = onTxnComplete;
-  txn.onabort = idbError(callback);
-  var docStore = txn.objectStore(DOC_STORE);
-  var seqStore = txn.objectStore(BY_SEQ_STORE);
-  var metaStore = txn.objectStore(META_STORE);
-  var docIdRevIndex = seqStore.index('_doc_id_rev');
-  var results = [];
-  var docCount;
-
-  metaStore.get(META_STORE).onsuccess = function (e) {
-    docCount = e.target.result.docCount;
-  };
-
-  // if the user specifies include_docs=true, then we don't
-  // want to block the main cursor while we're fetching the doc
-  function fetchDocAsynchronously(metadata, row, winningRev$$1) {
-    var key = metadata.id + "::" + winningRev$$1;
-    docIdRevIndex.get(key).onsuccess =  function onGetDoc(e) {
-      row.doc = decodeDoc(e.target.result);
-      if (opts.conflicts) {
-        var conflicts = collectConflicts(metadata);
-        if (conflicts.length) {
-          row.doc._conflicts = conflicts;
-        }
-      }
-      fetchAttachmentsIfNecessary(row.doc, opts, txn);
-    };
-  }
-
-  function allDocsInner(winningRev$$1, metadata) {
-    var row = {
-      id: metadata.id,
-      key: metadata.id,
-      value: {
-        rev: winningRev$$1
-      }
-    };
-    var deleted = metadata.deleted;
-    if (opts.deleted === 'ok') {
-      results.push(row);
-      // deleted docs are okay with "keys" requests
-      if (deleted) {
-        row.value.deleted = true;
-        row.doc = null;
-      } else if (opts.include_docs) {
-        fetchDocAsynchronously(metadata, row, winningRev$$1);
-      }
-    } else if (!deleted && skip-- <= 0) {
-      results.push(row);
-      if (opts.include_docs) {
-        fetchDocAsynchronously(metadata, row, winningRev$$1);
-      }
-    }
-  }
-
-  function processBatch(batchValues) {
-    for (var i = 0, len = batchValues.length; i < len; i++) {
-      if (results.length === limit) {
-        break;
-      }
-      var batchValue = batchValues[i];
-      var metadata = decodeMetadata(batchValue);
-      var winningRev$$1 = metadata.winningRev;
-      allDocsInner(winningRev$$1, metadata);
-    }
-  }
-
-  function onBatch(batchKeys, batchValues, cursor) {
-    if (!cursor) {
-      return;
-    }
-    processBatch(batchValues);
-    if (results.length < limit) {
-      cursor.continue();
-    }
-  }
-
-  function onGetAll(e) {
-    var values = e.target.result;
-    if (opts.descending) {
-      values = values.reverse();
-    }
-    processBatch(values);
-  }
-
-  function onResultsReady() {
-    callback(null, {
-      total_rows: docCount,
-      offset: opts.skip,
-      rows: results
-    });
-  }
-
-  function onTxnComplete() {
-    if (opts.attachments) {
-      postProcessAttachments(results, opts.binary).then(onResultsReady);
-    } else {
-      onResultsReady();
-    }
-  }
-
-  // don't bother doing any requests if start > end or limit === 0
-  if (keyRangeError || limit === 0) {
-    return;
-  }
-  if (limit === -1) { // just fetch everything
-    return getAll(docStore, keyRange, onGetAll);
-  }
-  // else do a cursor
-  // choose a batch size based on the skip, since we'll need to skip that many
-  runBatchedCursor(docStore, keyRange, opts.descending, limit + skip, onBatch);
+    return buf;
 }
 
 //
@@ -18469,6671 +17743,3491 @@ function idbAllDocs(opts, idb, callback) {
 // 404 bug: https://code.google.com/p/chromium/issues/detail?id=447916
 // FileReader bug: https://code.google.com/p/chromium/issues/detail?id=447836
 //
-function checkBlobSupport(txn) {
-  return new PouchPromise$1(function (resolve) {
-    var blob$$1 = createBlob(['']);
-    var req = txn.objectStore(DETECT_BLOB_SUPPORT_STORE).put(blob$$1, 'key');
+// Code borrowed from PouchDB. See:
+// https://github.com/pouchdb/pouchdb/blob/master/packages/node_modules/pouchdb-adapter-idb/src/blobSupport.js
+//
+function _checkBlobSupportWithoutCaching(idb) {
+    return new Promise$1(function (resolve) {
+        var txn = idb.transaction(DETECT_BLOB_SUPPORT_STORE, 'readwrite');
+        var blob = createBlob(['']);
+        txn.objectStore(DETECT_BLOB_SUPPORT_STORE).put(blob, 'key');
 
-    req.onsuccess = function () {
-      var matchedChrome = navigator.userAgent.match(/Chrome\/(\d+)/);
-      var matchedEdge = navigator.userAgent.match(/Edge\//);
-      // MS Edge pretends to be Chrome 42:
-      // https://msdn.microsoft.com/en-us/library/hh869301%28v=vs.85%29.aspx
-      resolve(matchedEdge || !matchedChrome ||
-        parseInt(matchedChrome[1], 10) >= 43);
-    };
+        txn.onabort = function (e) {
+            // If the transaction aborts now its due to not being able to
+            // write to the database, likely due to the disk being full
+            e.preventDefault();
+            e.stopPropagation();
+            resolve(false);
+        };
 
-    txn.onabort = function (e) {
-      // If the transaction aborts now its due to not being able to
-      // write to the database, likely due to the disk being full
-      e.preventDefault();
-      e.stopPropagation();
-      resolve(false);
-    };
-  }).catch(function () {
-    return false; // error, so assume unsupported
-  });
-}
-
-function countDocs(txn, cb) {
-  var index = txn.objectStore(DOC_STORE).index('deletedOrLocal');
-  index.count(IDBKeyRange.only('0')).onsuccess = function (e) {
-    cb(e.target.result);
-  };
-}
-
-// This task queue ensures that IDB open calls are done in their own tick
-// and sequentially - i.e. we wait for the async IDB open to *fully* complete
-// before calling the next one. This works around IE/Edge race conditions in IDB.
-
-var running = false;
-var queue = [];
-
-function tryCode(fun, err, res, PouchDB) {
-  try {
-    fun(err, res);
-  } catch (err) {
-    // Shouldn't happen, but in some odd cases
-    // IndexedDB implementations might throw a sync
-    // error, in which case this will at least log it.
-    PouchDB.emit('error', err);
-  }
-}
-
-function applyNext() {
-  if (running || !queue.length) {
-    return;
-  }
-  running = true;
-  queue.shift()();
-}
-
-function enqueueTask(action, callback, PouchDB) {
-  queue.push(function runAction() {
-    action(function runCallback(err, res) {
-      tryCode(callback, err, res, PouchDB);
-      running = false;
-      nextTick(function runNext() {
-        applyNext(PouchDB);
-      });
+        txn.oncomplete = function () {
+            var matchedChrome = navigator.userAgent.match(/Chrome\/(\d+)/);
+            var matchedEdge = navigator.userAgent.match(/Edge\//);
+            // MS Edge pretends to be Chrome 42:
+            // https://msdn.microsoft.com/en-us/library/hh869301%28v=vs.85%29.aspx
+            resolve(matchedEdge || !matchedChrome || parseInt(matchedChrome[1], 10) >= 43);
+        };
+    })["catch"](function () {
+        return false; // error, so assume unsupported
     });
-  });
-  applyNext();
 }
 
-function changes(opts, api, dbName, idb) {
-  opts = clone(opts);
-
-  if (opts.continuous) {
-    var id = dbName + ':' + uuid();
-    changesHandler$$1.addListener(dbName, id, api, opts);
-    changesHandler$$1.notify(dbName);
-    return {
-      cancel: function () {
-        changesHandler$$1.removeListener(dbName, id);
-      }
-    };
-  }
-
-  var docIds = opts.doc_ids && new ExportedSet(opts.doc_ids);
-
-  opts.since = opts.since || 0;
-  var lastSeq = opts.since;
-
-  var limit = 'limit' in opts ? opts.limit : -1;
-  if (limit === 0) {
-    limit = 1; // per CouchDB _changes spec
-  }
-  var returnDocs;
-  if ('return_docs' in opts) {
-    returnDocs = opts.return_docs;
-  } else if ('returnDocs' in opts) {
-    // TODO: Remove 'returnDocs' in favor of 'return_docs' in a future release
-    returnDocs = opts.returnDocs;
-  } else {
-    returnDocs = true;
-  }
-
-  var results = [];
-  var numResults = 0;
-  var filter = filterChange(opts);
-  var docIdsToMetadata = new ExportedMap();
-
-  var txn;
-  var bySeqStore;
-  var docStore;
-  var docIdRevIndex;
-
-  function onBatch(batchKeys, batchValues, cursor) {
-    if (!cursor || !batchKeys.length) { // done
-      return;
+function _checkBlobSupport(idb) {
+    if (typeof supportsBlobs === 'boolean') {
+        return Promise$1.resolve(supportsBlobs);
     }
-
-    var winningDocs = new Array(batchKeys.length);
-    var metadatas = new Array(batchKeys.length);
-
-    function processMetadataAndWinningDoc(metadata, winningDoc) {
-      var change = opts.processChange(winningDoc, metadata, opts);
-      lastSeq = change.seq = metadata.seq;
-
-      var filtered = filter(change);
-      if (typeof filtered === 'object') { // anything but true/false indicates error
-        return opts.complete(filtered);
-      }
-
-      if (filtered) {
-        numResults++;
-        if (returnDocs) {
-          results.push(change);
-        }
-        // process the attachment immediately
-        // for the benefit of live listeners
-        if (opts.attachments && opts.include_docs) {
-          fetchAttachmentsIfNecessary(winningDoc, opts, txn, function () {
-            postProcessAttachments([change], opts.binary).then(function () {
-              opts.onChange(change);
-            });
-          });
-        } else {
-          opts.onChange(change);
-        }
-      }
-    }
-
-    function onBatchDone() {
-      for (var i = 0, len = winningDocs.length; i < len; i++) {
-        if (numResults === limit) {
-          break;
-        }
-        var winningDoc = winningDocs[i];
-        if (!winningDoc) {
-          continue;
-        }
-        var metadata = metadatas[i];
-        processMetadataAndWinningDoc(metadata, winningDoc);
-      }
-
-      if (numResults !== limit) {
-        cursor.continue();
-      }
-    }
-
-    // Fetch all metadatas/winningdocs from this batch in parallel, then process
-    // them all only once all data has been collected. This is done in parallel
-    // because it's faster than doing it one-at-a-time.
-    var numDone = 0;
-    batchValues.forEach(function (value, i) {
-      var doc = decodeDoc(value);
-      var seq = batchKeys[i];
-      fetchWinningDocAndMetadata(doc, seq, function (metadata, winningDoc) {
-        metadatas[i] = metadata;
-        winningDocs[i] = winningDoc;
-        if (++numDone === batchKeys.length) {
-          onBatchDone();
-        }
-      });
+    return _checkBlobSupportWithoutCaching(idb).then(function (value) {
+        supportsBlobs = value;
+        return supportsBlobs;
     });
-  }
+}
 
-  function onGetMetadata(doc, seq, metadata, cb) {
-    if (metadata.seq !== seq) {
-      // some other seq is later
-      return cb();
-    }
+function _deferReadiness(dbInfo) {
+    var dbContext = dbContexts[dbInfo.name];
 
-    if (metadata.winningRev === doc._rev) {
-      // this is the winning doc
-      return cb(metadata, doc);
-    }
+    // Create a deferred object representing the current database operation.
+    var deferredOperation = {};
 
-    // fetch winning doc in separate request
-    var docIdRev = doc._id + '::' + metadata.winningRev;
-    var req = docIdRevIndex.get(docIdRev);
-    req.onsuccess = function (e) {
-      cb(metadata, decodeDoc(e.target.result));
-    };
-  }
-
-  function fetchWinningDocAndMetadata(doc, seq, cb) {
-    if (docIds && !docIds.has(doc._id)) {
-      return cb();
-    }
-
-    var metadata = docIdsToMetadata.get(doc._id);
-    if (metadata) { // cached
-      return onGetMetadata(doc, seq, metadata, cb);
-    }
-    // metadata not cached, have to go fetch it
-    docStore.get(doc._id).onsuccess = function (e) {
-      metadata = decodeMetadata(e.target.result);
-      docIdsToMetadata.set(doc._id, metadata);
-      onGetMetadata(doc, seq, metadata, cb);
-    };
-  }
-
-  function finish() {
-    opts.complete(null, {
-      results: results,
-      last_seq: lastSeq
+    deferredOperation.promise = new Promise$1(function (resolve) {
+        deferredOperation.resolve = resolve;
     });
-  }
 
-  function onTxnComplete() {
-    if (!opts.continuous && opts.attachments) {
-      // cannot guarantee that postProcessing was already done,
-      // so do it again
-      postProcessAttachments(results).then(finish);
+    // Enqueue the deferred operation.
+    dbContext.deferredOperations.push(deferredOperation);
+
+    // Chain its promise to the database readiness.
+    if (!dbContext.dbReady) {
+        dbContext.dbReady = deferredOperation.promise;
     } else {
-      finish();
+        dbContext.dbReady = dbContext.dbReady.then(function () {
+            return deferredOperation.promise;
+        });
     }
-  }
-
-  var objectStores = [DOC_STORE, BY_SEQ_STORE];
-  if (opts.attachments) {
-    objectStores.push(ATTACH_STORE);
-  }
-  var txnResult = openTransactionSafely(idb, objectStores, 'readonly');
-  if (txnResult.error) {
-    return opts.complete(txnResult.error);
-  }
-  txn = txnResult.txn;
-  txn.onabort = idbError(opts.complete);
-  txn.oncomplete = onTxnComplete;
-
-  bySeqStore = txn.objectStore(BY_SEQ_STORE);
-  docStore = txn.objectStore(DOC_STORE);
-  docIdRevIndex = bySeqStore.index('_doc_id_rev');
-
-  var keyRange = (opts.since && !opts.descending) ?
-    IDBKeyRange.lowerBound(opts.since, true) : null;
-
-  runBatchedCursor(bySeqStore, keyRange, opts.descending, limit, onBatch);
 }
 
-var cachedDBs = new ExportedMap();
-var blobSupportPromise;
-var openReqList = new ExportedMap();
+function _advanceReadiness(dbInfo) {
+    var dbContext = dbContexts[dbInfo.name];
 
-function IdbPouch(opts, callback) {
-  var api = this;
+    // Dequeue a deferred operation.
+    var deferredOperation = dbContext.deferredOperations.pop();
 
-  enqueueTask(function (thisCallback) {
-    init(api, opts, thisCallback);
-  }, callback, api.constructor);
+    // Resolve its promise (which is part of the database readiness
+    // chain of promises).
+    if (deferredOperation) {
+        deferredOperation.resolve();
+    }
 }
 
-function init(api, opts, callback) {
+function _getConnection(dbInfo, upgradeNeeded) {
+    return new Promise$1(function (resolve, reject) {
 
-  var dbName = opts.name;
-
-  var idb = null;
-  api._meta = null;
-
-  // called when creating a fresh new database
-  function createSchema(db) {
-    var docStore = db.createObjectStore(DOC_STORE, {keyPath : 'id'});
-    db.createObjectStore(BY_SEQ_STORE, {autoIncrement: true})
-      .createIndex('_doc_id_rev', '_doc_id_rev', {unique: true});
-    db.createObjectStore(ATTACH_STORE, {keyPath: 'digest'});
-    db.createObjectStore(META_STORE, {keyPath: 'id', autoIncrement: false});
-    db.createObjectStore(DETECT_BLOB_SUPPORT_STORE);
-
-    // added in v2
-    docStore.createIndex('deletedOrLocal', 'deletedOrLocal', {unique : false});
-
-    // added in v3
-    db.createObjectStore(LOCAL_STORE, {keyPath: '_id'});
-
-    // added in v4
-    var attAndSeqStore = db.createObjectStore(ATTACH_AND_SEQ_STORE,
-      {autoIncrement: true});
-    attAndSeqStore.createIndex('seq', 'seq');
-    attAndSeqStore.createIndex('digestSeq', 'digestSeq', {unique: true});
-  }
-
-  // migration to version 2
-  // unfortunately "deletedOrLocal" is a misnomer now that we no longer
-  // store local docs in the main doc-store, but whaddyagonnado
-  function addDeletedOrLocalIndex(txn, callback) {
-    var docStore = txn.objectStore(DOC_STORE);
-    docStore.createIndex('deletedOrLocal', 'deletedOrLocal', {unique : false});
-
-    docStore.openCursor().onsuccess = function (event) {
-      var cursor = event.target.result;
-      if (cursor) {
-        var metadata = cursor.value;
-        var deleted = isDeleted(metadata);
-        metadata.deletedOrLocal = deleted ? "1" : "0";
-        docStore.put(metadata);
-        cursor.continue();
-      } else {
-        callback();
-      }
-    };
-  }
-
-  // migration to version 3 (part 1)
-  function createLocalStoreSchema(db) {
-    db.createObjectStore(LOCAL_STORE, {keyPath: '_id'})
-      .createIndex('_doc_id_rev', '_doc_id_rev', {unique: true});
-  }
-
-  // migration to version 3 (part 2)
-  function migrateLocalStore(txn, cb) {
-    var localStore = txn.objectStore(LOCAL_STORE);
-    var docStore = txn.objectStore(DOC_STORE);
-    var seqStore = txn.objectStore(BY_SEQ_STORE);
-
-    var cursor = docStore.openCursor();
-    cursor.onsuccess = function (event) {
-      var cursor = event.target.result;
-      if (cursor) {
-        var metadata = cursor.value;
-        var docId = metadata.id;
-        var local = isLocalId(docId);
-        var rev = winningRev(metadata);
-        if (local) {
-          var docIdRev = docId + "::" + rev;
-          // remove all seq entries
-          // associated with this docId
-          var start = docId + "::";
-          var end = docId + "::~";
-          var index = seqStore.index('_doc_id_rev');
-          var range = IDBKeyRange.bound(start, end, false, false);
-          var seqCursor = index.openCursor(range);
-          seqCursor.onsuccess = function (e) {
-            seqCursor = e.target.result;
-            if (!seqCursor) {
-              // done
-              docStore.delete(cursor.primaryKey);
-              cursor.continue();
+        if (dbInfo.db) {
+            if (upgradeNeeded) {
+                _deferReadiness(dbInfo);
+                dbInfo.db.close();
             } else {
-              var data = seqCursor.value;
-              if (data._doc_id_rev === docIdRev) {
-                localStore.put(data);
-              }
-              seqStore.delete(seqCursor.primaryKey);
-              seqCursor.continue();
+                return resolve(dbInfo.db);
             }
-          };
-        } else {
-          cursor.continue();
-        }
-      } else if (cb) {
-        cb();
-      }
-    };
-  }
-
-  // migration to version 4 (part 1)
-  function addAttachAndSeqStore(db) {
-    var attAndSeqStore = db.createObjectStore(ATTACH_AND_SEQ_STORE,
-      {autoIncrement: true});
-    attAndSeqStore.createIndex('seq', 'seq');
-    attAndSeqStore.createIndex('digestSeq', 'digestSeq', {unique: true});
-  }
-
-  // migration to version 4 (part 2)
-  function migrateAttsAndSeqs(txn, callback) {
-    var seqStore = txn.objectStore(BY_SEQ_STORE);
-    var attStore = txn.objectStore(ATTACH_STORE);
-    var attAndSeqStore = txn.objectStore(ATTACH_AND_SEQ_STORE);
-
-    // need to actually populate the table. this is the expensive part,
-    // so as an optimization, check first that this database even
-    // contains attachments
-    var req = attStore.count();
-    req.onsuccess = function (e) {
-      var count = e.target.result;
-      if (!count) {
-        return callback(); // done
-      }
-
-      seqStore.openCursor().onsuccess = function (e) {
-        var cursor = e.target.result;
-        if (!cursor) {
-          return callback(); // done
-        }
-        var doc = cursor.value;
-        var seq = cursor.primaryKey;
-        var atts = Object.keys(doc._attachments || {});
-        var digestMap = {};
-        for (var j = 0; j < atts.length; j++) {
-          var att = doc._attachments[atts[j]];
-          digestMap[att.digest] = true; // uniq digests, just in case
-        }
-        var digests = Object.keys(digestMap);
-        for (j = 0; j < digests.length; j++) {
-          var digest = digests[j];
-          attAndSeqStore.put({
-            seq: seq,
-            digestSeq: digest + '::' + seq
-          });
-        }
-        cursor.continue();
-      };
-    };
-  }
-
-  // migration to version 5
-  // Instead of relying on on-the-fly migration of metadata,
-  // this brings the doc-store to its modern form:
-  // - metadata.winningrev
-  // - metadata.seq
-  // - stringify the metadata when storing it
-  function migrateMetadata(txn) {
-
-    function decodeMetadataCompat(storedObject) {
-      if (!storedObject.data) {
-        // old format, when we didn't store it stringified
-        storedObject.deleted = storedObject.deletedOrLocal === '1';
-        return storedObject;
-      }
-      return decodeMetadata(storedObject);
-    }
-
-    // ensure that every metadata has a winningRev and seq,
-    // which was previously created on-the-fly but better to migrate
-    var bySeqStore = txn.objectStore(BY_SEQ_STORE);
-    var docStore = txn.objectStore(DOC_STORE);
-    var cursor = docStore.openCursor();
-    cursor.onsuccess = function (e) {
-      var cursor = e.target.result;
-      if (!cursor) {
-        return; // done
-      }
-      var metadata = decodeMetadataCompat(cursor.value);
-
-      metadata.winningRev = metadata.winningRev ||
-        winningRev(metadata);
-
-      function fetchMetadataSeq() {
-        // metadata.seq was added post-3.2.0, so if it's missing,
-        // we need to fetch it manually
-        var start = metadata.id + '::';
-        var end = metadata.id + '::\uffff';
-        var req = bySeqStore.index('_doc_id_rev').openCursor(
-          IDBKeyRange.bound(start, end));
-
-        var metadataSeq = 0;
-        req.onsuccess = function (e) {
-          var cursor = e.target.result;
-          if (!cursor) {
-            metadata.seq = metadataSeq;
-            return onGetMetadataSeq();
-          }
-          var seq = cursor.primaryKey;
-          if (seq > metadataSeq) {
-            metadataSeq = seq;
-          }
-          cursor.continue();
-        };
-      }
-
-      function onGetMetadataSeq() {
-        var metadataToStore = encodeMetadata(metadata,
-          metadata.winningRev, metadata.deleted);
-
-        var req = docStore.put(metadataToStore);
-        req.onsuccess = function () {
-          cursor.continue();
-        };
-      }
-
-      if (metadata.seq) {
-        return onGetMetadataSeq();
-      }
-
-      fetchMetadataSeq();
-    };
-
-  }
-
-  api._remote = false;
-  api.type = function () {
-    return 'idb';
-  };
-
-  api._id = toPromise(function (callback) {
-    callback(null, api._meta.instanceId);
-  });
-
-  api._bulkDocs = function idb_bulkDocs(req, reqOpts, callback) {
-    idbBulkDocs(opts, req, reqOpts, api, idb, callback);
-  };
-
-  // First we look up the metadata in the ids database, then we fetch the
-  // current revision(s) from the by sequence store
-  api._get = function idb_get(id, opts, callback) {
-    var doc;
-    var metadata;
-    var err;
-    var txn = opts.ctx;
-    if (!txn) {
-      var txnResult = openTransactionSafely(idb,
-        [DOC_STORE, BY_SEQ_STORE, ATTACH_STORE], 'readonly');
-      if (txnResult.error) {
-        return callback(txnResult.error);
-      }
-      txn = txnResult.txn;
-    }
-
-    function finish() {
-      callback(err, {doc: doc, metadata: metadata, ctx: txn});
-    }
-
-    txn.objectStore(DOC_STORE).get(id).onsuccess = function (e) {
-      metadata = decodeMetadata(e.target.result);
-      // we can determine the result here if:
-      // 1. there is no such document
-      // 2. the document is deleted and we don't ask about specific rev
-      // When we ask with opts.rev we expect the answer to be either
-      // doc (possibly with _deleted=true) or missing error
-      if (!metadata) {
-        err = createError(MISSING_DOC, 'missing');
-        return finish();
-      }
-
-      var rev;
-      if (!opts.rev) {
-        rev = metadata.winningRev;
-        var deleted = isDeleted(metadata);
-        if (deleted) {
-          err = createError(MISSING_DOC, "deleted");
-          return finish();
-        }
-      } else {
-        rev = opts.latest ? latest(opts.rev, metadata) : opts.rev;
-      }
-
-      var objectStore = txn.objectStore(BY_SEQ_STORE);
-      var key = metadata.id + '::' + rev;
-
-      objectStore.index('_doc_id_rev').get(key).onsuccess = function (e) {
-        doc = e.target.result;
-        if (doc) {
-          doc = decodeDoc(doc);
-        }
-        if (!doc) {
-          err = createError(MISSING_DOC, 'missing');
-          return finish();
-        }
-        finish();
-      };
-    };
-  };
-
-  api._getAttachment = function (docId, attachId, attachment, opts, callback) {
-    var txn;
-    if (opts.ctx) {
-      txn = opts.ctx;
-    } else {
-      var txnResult = openTransactionSafely(idb,
-        [DOC_STORE, BY_SEQ_STORE, ATTACH_STORE], 'readonly');
-      if (txnResult.error) {
-        return callback(txnResult.error);
-      }
-      txn = txnResult.txn;
-    }
-    var digest = attachment.digest;
-    var type = attachment.content_type;
-
-    txn.objectStore(ATTACH_STORE).get(digest).onsuccess = function (e) {
-      var body = e.target.result.body;
-      readBlobData(body, type, opts.binary, function (blobData) {
-        callback(null, blobData);
-      });
-    };
-  };
-
-  api._info = function idb_info(callback) {
-    var updateSeq;
-    var docCount;
-
-    var txnResult = openTransactionSafely(idb, [META_STORE, BY_SEQ_STORE], 'readonly');
-    if (txnResult.error) {
-      return callback(txnResult.error);
-    }
-    var txn = txnResult.txn;
-    txn.objectStore(META_STORE).get(META_STORE).onsuccess = function (e) {
-      docCount = e.target.result.docCount;
-    };
-    txn.objectStore(BY_SEQ_STORE).openCursor(null, 'prev').onsuccess = function (e) {
-      var cursor = e.target.result;
-      updateSeq = cursor ? cursor.key : 0;
-    };
-
-    txn.oncomplete = function () {
-      callback(null, {
-        doc_count: docCount,
-        update_seq: updateSeq,
-        // for debugging
-        idb_attachment_format: (api._meta.blobSupport ? 'binary' : 'base64')
-      });
-    };
-  };
-
-  api._allDocs = function idb_allDocs(opts, callback) {
-    idbAllDocs(opts, idb, callback);
-  };
-
-  api._changes = function idbChanges(opts) {
-    changes(opts, api, dbName, idb);
-  };
-
-  api._close = function (callback) {
-    // https://developer.mozilla.org/en-US/docs/IndexedDB/IDBDatabase#close
-    // "Returns immediately and closes the connection in a separate thread..."
-    idb.close();
-    cachedDBs.delete(dbName);
-    callback();
-  };
-
-  api._getRevisionTree = function (docId, callback) {
-    var txnResult = openTransactionSafely(idb, [DOC_STORE], 'readonly');
-    if (txnResult.error) {
-      return callback(txnResult.error);
-    }
-    var txn = txnResult.txn;
-    var req = txn.objectStore(DOC_STORE).get(docId);
-    req.onsuccess = function (event) {
-      var doc = decodeMetadata(event.target.result);
-      if (!doc) {
-        callback(createError(MISSING_DOC));
-      } else {
-        callback(null, doc.rev_tree);
-      }
-    };
-  };
-
-  // This function removes revisions of document docId
-  // which are listed in revs and sets this document
-  // revision to to rev_tree
-  api._doCompaction = function (docId, revs, callback) {
-    var stores = [
-      DOC_STORE,
-      BY_SEQ_STORE,
-      ATTACH_STORE,
-      ATTACH_AND_SEQ_STORE
-    ];
-    var txnResult = openTransactionSafely(idb, stores, 'readwrite');
-    if (txnResult.error) {
-      return callback(txnResult.error);
-    }
-    var txn = txnResult.txn;
-
-    var docStore = txn.objectStore(DOC_STORE);
-
-    docStore.get(docId).onsuccess = function (event) {
-      var metadata = decodeMetadata(event.target.result);
-      traverseRevTree(metadata.rev_tree, function (isLeaf, pos,
-                                                         revHash, ctx, opts) {
-        var rev = pos + '-' + revHash;
-        if (revs.indexOf(rev) !== -1) {
-          opts.status = 'missing';
-        }
-      });
-      compactRevs(revs, docId, txn);
-      var winningRev$$1 = metadata.winningRev;
-      var deleted = metadata.deleted;
-      txn.objectStore(DOC_STORE).put(
-        encodeMetadata(metadata, winningRev$$1, deleted));
-    };
-    txn.onabort = idbError(callback);
-    txn.oncomplete = function () {
-      callback();
-    };
-  };
-
-
-  api._getLocal = function (id, callback) {
-    var txnResult = openTransactionSafely(idb, [LOCAL_STORE], 'readonly');
-    if (txnResult.error) {
-      return callback(txnResult.error);
-    }
-    var tx = txnResult.txn;
-    var req = tx.objectStore(LOCAL_STORE).get(id);
-
-    req.onerror = idbError(callback);
-    req.onsuccess = function (e) {
-      var doc = e.target.result;
-      if (!doc) {
-        callback(createError(MISSING_DOC));
-      } else {
-        delete doc['_doc_id_rev']; // for backwards compat
-        callback(null, doc);
-      }
-    };
-  };
-
-  api._putLocal = function (doc, opts, callback) {
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    delete doc._revisions; // ignore this, trust the rev
-    var oldRev = doc._rev;
-    var id = doc._id;
-    if (!oldRev) {
-      doc._rev = '0-1';
-    } else {
-      doc._rev = '0-' + (parseInt(oldRev.split('-')[1], 10) + 1);
-    }
-
-    var tx = opts.ctx;
-    var ret;
-    if (!tx) {
-      var txnResult = openTransactionSafely(idb, [LOCAL_STORE], 'readwrite');
-      if (txnResult.error) {
-        return callback(txnResult.error);
-      }
-      tx = txnResult.txn;
-      tx.onerror = idbError(callback);
-      tx.oncomplete = function () {
-        if (ret) {
-          callback(null, ret);
-        }
-      };
-    }
-
-    var oStore = tx.objectStore(LOCAL_STORE);
-    var req;
-    if (oldRev) {
-      req = oStore.get(id);
-      req.onsuccess = function (e) {
-        var oldDoc = e.target.result;
-        if (!oldDoc || oldDoc._rev !== oldRev) {
-          callback(createError(REV_CONFLICT));
-        } else { // update
-          var req = oStore.put(doc);
-          req.onsuccess = function () {
-            ret = {ok: true, id: doc._id, rev: doc._rev};
-            if (opts.ctx) { // return immediately
-              callback(null, ret);
-            }
-          };
-        }
-      };
-    } else { // new doc
-      req = oStore.add(doc);
-      req.onerror = function (e) {
-        // constraint error, already exists
-        callback(createError(REV_CONFLICT));
-        e.preventDefault(); // avoid transaction abort
-        e.stopPropagation(); // avoid transaction onerror
-      };
-      req.onsuccess = function () {
-        ret = {ok: true, id: doc._id, rev: doc._rev};
-        if (opts.ctx) { // return immediately
-          callback(null, ret);
-        }
-      };
-    }
-  };
-
-  api._removeLocal = function (doc, opts, callback) {
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    var tx = opts.ctx;
-    if (!tx) {
-      var txnResult = openTransactionSafely(idb, [LOCAL_STORE], 'readwrite');
-      if (txnResult.error) {
-        return callback(txnResult.error);
-      }
-      tx = txnResult.txn;
-      tx.oncomplete = function () {
-        if (ret) {
-          callback(null, ret);
-        }
-      };
-    }
-    var ret;
-    var id = doc._id;
-    var oStore = tx.objectStore(LOCAL_STORE);
-    var req = oStore.get(id);
-
-    req.onerror = idbError(callback);
-    req.onsuccess = function (e) {
-      var oldDoc = e.target.result;
-      if (!oldDoc || oldDoc._rev !== doc._rev) {
-        callback(createError(MISSING_DOC));
-      } else {
-        oStore.delete(id);
-        ret = {ok: true, id: id, rev: '0-0'};
-        if (opts.ctx) { // return immediately
-          callback(null, ret);
-        }
-      }
-    };
-  };
-
-  api._destroy = function (opts, callback) {
-    changesHandler$$1.removeAllListeners(dbName);
-
-    //Close open request for "dbName" database to fix ie delay.
-    var openReq = openReqList.get(dbName);
-    if (openReq && openReq.result) {
-      openReq.result.close();
-      cachedDBs.delete(dbName);
-    }
-    var req = indexedDB.deleteDatabase(dbName);
-
-    req.onsuccess = function () {
-      //Remove open request from the list.
-      openReqList.delete(dbName);
-      if (hasLocalStorage() && (dbName in localStorage)) {
-        delete localStorage[dbName];
-      }
-      callback(null, { 'ok': true });
-    };
-
-    req.onerror = idbError(callback);
-  };
-
-  var cached = cachedDBs.get(dbName);
-
-  if (cached) {
-    idb = cached.idb;
-    api._meta = cached.global;
-    return nextTick(function () {
-      callback(null, api);
-    });
-  }
-
-  var req;
-  if (opts.storage) {
-    req = tryStorageOption(dbName, opts.storage);
-  } else {
-    req = indexedDB.open(dbName, ADAPTER_VERSION);
-  }
-
-  openReqList.set(dbName, req);
-
-  req.onupgradeneeded = function (e) {
-    var db = e.target.result;
-    if (e.oldVersion < 1) {
-      return createSchema(db); // new db, initial schema
-    }
-    // do migrations
-
-    var txn = e.currentTarget.transaction;
-    // these migrations have to be done in this function, before
-    // control is returned to the event loop, because IndexedDB
-
-    if (e.oldVersion < 3) {
-      createLocalStoreSchema(db); // v2 -> v3
-    }
-    if (e.oldVersion < 4) {
-      addAttachAndSeqStore(db); // v3 -> v4
-    }
-
-    var migrations = [
-      addDeletedOrLocalIndex, // v1 -> v2
-      migrateLocalStore,      // v2 -> v3
-      migrateAttsAndSeqs,     // v3 -> v4
-      migrateMetadata         // v4 -> v5
-    ];
-
-    var i = e.oldVersion;
-
-    function next() {
-      var migration = migrations[i - 1];
-      i++;
-      if (migration) {
-        migration(txn, next);
-      }
-    }
-
-    next();
-  };
-
-  req.onsuccess = function (e) {
-
-    idb = e.target.result;
-
-    idb.onversionchange = function () {
-      idb.close();
-      cachedDBs.delete(dbName);
-    };
-
-    idb.onabort = function (e) {
-      guardedConsole('error', 'Database has a global failure', e.target.error);
-      idb.close();
-      cachedDBs.delete(dbName);
-    };
-
-    // Do a few setup operations (in parallel as much as possible):
-    // 1. Fetch meta doc
-    // 2. Check blob support
-    // 3. Calculate docCount
-    // 4. Generate an instanceId if necessary
-    // 5. Store docCount and instanceId on meta doc
-
-    var txn = idb.transaction([
-      META_STORE,
-      DETECT_BLOB_SUPPORT_STORE,
-      DOC_STORE
-    ], 'readwrite');
-
-    var storedMetaDoc = false;
-    var metaDoc;
-    var docCount;
-    var blobSupport;
-    var instanceId;
-
-    function completeSetup() {
-      if (typeof blobSupport === 'undefined' || !storedMetaDoc) {
-        return;
-      }
-      api._meta = {
-        name: dbName,
-        instanceId: instanceId,
-        blobSupport: blobSupport
-      };
-
-      cachedDBs.set(dbName, {
-        idb: idb,
-        global: api._meta
-      });
-      callback(null, api);
-    }
-
-    function storeMetaDocIfReady() {
-      if (typeof docCount === 'undefined' || typeof metaDoc === 'undefined') {
-        return;
-      }
-      var instanceKey = dbName + '_id';
-      if (instanceKey in metaDoc) {
-        instanceId = metaDoc[instanceKey];
-      } else {
-        metaDoc[instanceKey] = instanceId = uuid();
-      }
-      metaDoc.docCount = docCount;
-      txn.objectStore(META_STORE).put(metaDoc);
-    }
-
-    //
-    // fetch or generate the instanceId
-    //
-    txn.objectStore(META_STORE).get(META_STORE).onsuccess = function (e) {
-      metaDoc = e.target.result || { id: META_STORE };
-      storeMetaDocIfReady();
-    };
-
-    //
-    // countDocs
-    //
-    countDocs(txn, function (count) {
-      docCount = count;
-      storeMetaDocIfReady();
-    });
-
-    //
-    // check blob support
-    //
-    if (!blobSupportPromise) {
-      // make sure blob support is only checked once
-      blobSupportPromise = checkBlobSupport(txn);
-    }
-
-    blobSupportPromise.then(function (val) {
-      blobSupport = val;
-      completeSetup();
-    });
-
-    // only when the metadata put transaction has completed,
-    // consider the setup done
-    txn.oncomplete = function () {
-      storedMetaDoc = true;
-      completeSetup();
-    };
-  };
-
-  req.onerror = function () {
-    var msg = 'Failed to open indexedDB, are you in private browsing mode?';
-    guardedConsole('error', msg);
-    callback(createError(IDB_ERROR, msg));
-  };
-}
-
-IdbPouch.valid = function () {
-  // Issue #2533, we finally gave up on doing bug
-  // detection instead of browser sniffing. Safari brought us
-  // to our knees.
-  var isSafari = typeof openDatabase !== 'undefined' &&
-    /(Safari|iPhone|iPad|iPod)/.test(navigator.userAgent) &&
-    !/Chrome/.test(navigator.userAgent) &&
-    !/BlackBerry/.test(navigator.platform);
-
-  // some outdated implementations of IDB that appear on Samsung
-  // and HTC Android devices <4.4 are missing IDBKeyRange
-  return !isSafari && typeof indexedDB !== 'undefined' &&
-    typeof IDBKeyRange !== 'undefined';
-};
-
-function tryStorageOption(dbName, storage) {
-  try { // option only available in Firefox 26+
-    return indexedDB.open(dbName, {
-      version: ADAPTER_VERSION,
-      storage: storage
-    });
-  } catch (err) {
-      return indexedDB.open(dbName, ADAPTER_VERSION);
-  }
-}
-
-var IDBPouch = function (PouchDB) {
-  PouchDB.adapter('idb', IdbPouch, true);
-};
-
-//
-// Parsing hex strings. Yeah.
-//
-// So basically we need this because of a bug in WebSQL:
-// https://code.google.com/p/chromium/issues/detail?id=422690
-// https://bugs.webkit.org/show_bug.cgi?id=137637
-//
-// UTF-8 and UTF-16 are provided as separate functions
-// for meager performance improvements
-//
-
-function decodeUtf8(str) {
-  return decodeURIComponent(escape(str));
-}
-
-function hexToInt(charCode) {
-  // '0'-'9' is 48-57
-  // 'A'-'F' is 65-70
-  // SQLite will only give us uppercase hex
-  return charCode < 65 ? (charCode - 48) : (charCode - 55);
-}
-
-
-// Example:
-// pragma encoding=utf8;
-// select hex('A');
-// returns '41'
-function parseHexUtf8(str, start, end) {
-  var result = '';
-  while (start < end) {
-    result += String.fromCharCode(
-      (hexToInt(str.charCodeAt(start++)) << 4) |
-        hexToInt(str.charCodeAt(start++)));
-  }
-  return result;
-}
-
-// Example:
-// pragma encoding=utf16;
-// select hex('A');
-// returns '4100'
-// notice that the 00 comes after the 41 (i.e. it's swizzled)
-function parseHexUtf16(str, start, end) {
-  var result = '';
-  while (start < end) {
-    // UTF-16, so swizzle the bytes
-    result += String.fromCharCode(
-      (hexToInt(str.charCodeAt(start + 2)) << 12) |
-        (hexToInt(str.charCodeAt(start + 3)) << 8) |
-        (hexToInt(str.charCodeAt(start)) << 4) |
-        hexToInt(str.charCodeAt(start + 1)));
-    start += 4;
-  }
-  return result;
-}
-
-function parseHexString(str, encoding) {
-  if (encoding === 'UTF-8') {
-    return decodeUtf8(parseHexUtf8(str, 0, str.length));
-  } else {
-    return parseHexUtf16(str, 0, str.length);
-  }
-}
-
-function quote(str) {
-  return "'" + str + "'";
-}
-
-var ADAPTER_VERSION$1 = 7; // used to manage migrations
-
-// The object stores created for each database
-// DOC_STORE stores the document meta data, its revision history and state
-var DOC_STORE$1 = quote('document-store');
-// BY_SEQ_STORE stores a particular version of a document, keyed by its
-// sequence id
-var BY_SEQ_STORE$1 = quote('by-sequence');
-// Where we store attachments
-var ATTACH_STORE$1 = quote('attach-store');
-var LOCAL_STORE$1 = quote('local-store');
-var META_STORE$1 = quote('metadata-store');
-// where we store many-to-many relations between attachment
-// digests and seqs
-var ATTACH_AND_SEQ_STORE$1 = quote('attach-seq-store');
-
-// escapeBlob and unescapeBlob are workarounds for a websql bug:
-// https://code.google.com/p/chromium/issues/detail?id=422690
-// https://bugs.webkit.org/show_bug.cgi?id=137637
-// The goal is to never actually insert the \u0000 character
-// in the database.
-function escapeBlob(str) {
-  return str
-    .replace(/\u0002/g, '\u0002\u0002')
-    .replace(/\u0001/g, '\u0001\u0002')
-    .replace(/\u0000/g, '\u0001\u0001');
-}
-
-function unescapeBlob(str) {
-  return str
-    .replace(/\u0001\u0001/g, '\u0000')
-    .replace(/\u0001\u0002/g, '\u0001')
-    .replace(/\u0002\u0002/g, '\u0002');
-}
-
-function stringifyDoc(doc) {
-  // don't bother storing the id/rev. it uses lots of space,
-  // in persistent map/reduce especially
-  delete doc._id;
-  delete doc._rev;
-  return JSON.stringify(doc);
-}
-
-function unstringifyDoc(doc, id, rev) {
-  doc = JSON.parse(doc);
-  doc._id = id;
-  doc._rev = rev;
-  return doc;
-}
-
-// question mark groups IN queries, e.g. 3 -> '(?,?,?)'
-function qMarks(num) {
-  var s = '(';
-  while (num--) {
-    s += '?';
-    if (num) {
-      s += ',';
-    }
-  }
-  return s + ')';
-}
-
-function select(selector, table, joiner, where, orderBy) {
-  return 'SELECT ' + selector + ' FROM ' +
-    (typeof table === 'string' ? table : table.join(' JOIN ')) +
-    (joiner ? (' ON ' + joiner) : '') +
-    (where ? (' WHERE ' +
-    (typeof where === 'string' ? where : where.join(' AND '))) : '') +
-    (orderBy ? (' ORDER BY ' + orderBy) : '');
-}
-
-function compactRevs$1(revs, docId, tx) {
-
-  if (!revs.length) {
-    return;
-  }
-
-  var numDone = 0;
-  var seqs = [];
-
-  function checkDone() {
-    if (++numDone === revs.length) { // done
-      deleteOrphans();
-    }
-  }
-
-  function deleteOrphans() {
-    // find orphaned attachment digests
-
-    if (!seqs.length) {
-      return;
-    }
-
-    var sql = 'SELECT DISTINCT digest AS digest FROM ' +
-      ATTACH_AND_SEQ_STORE$1 + ' WHERE seq IN ' + qMarks(seqs.length);
-
-    tx.executeSql(sql, seqs, function (tx, res) {
-
-      var digestsToCheck = [];
-      for (var i = 0; i < res.rows.length; i++) {
-        digestsToCheck.push(res.rows.item(i).digest);
-      }
-      if (!digestsToCheck.length) {
-        return;
-      }
-
-      var sql = 'DELETE FROM ' + ATTACH_AND_SEQ_STORE$1 +
-        ' WHERE seq IN (' +
-        seqs.map(function () { return '?'; }).join(',') +
-        ')';
-      tx.executeSql(sql, seqs, function (tx) {
-
-        var sql = 'SELECT digest FROM ' + ATTACH_AND_SEQ_STORE$1 +
-          ' WHERE digest IN (' +
-          digestsToCheck.map(function () { return '?'; }).join(',') +
-          ')';
-        tx.executeSql(sql, digestsToCheck, function (tx, res) {
-          var nonOrphanedDigests = new ExportedSet();
-          for (var i = 0; i < res.rows.length; i++) {
-            nonOrphanedDigests.add(res.rows.item(i).digest);
-          }
-          digestsToCheck.forEach(function (digest) {
-            if (nonOrphanedDigests.has(digest)) {
-              return;
-            }
-            tx.executeSql(
-              'DELETE FROM ' + ATTACH_AND_SEQ_STORE$1 + ' WHERE digest=?',
-              [digest]);
-            tx.executeSql(
-              'DELETE FROM ' + ATTACH_STORE$1 + ' WHERE digest=?', [digest]);
-          });
-        });
-      });
-    });
-  }
-
-  // update by-seq and attach stores in parallel
-  revs.forEach(function (rev) {
-    var sql = 'SELECT seq FROM ' + BY_SEQ_STORE$1 +
-      ' WHERE doc_id=? AND rev=?';
-
-    tx.executeSql(sql, [docId, rev], function (tx, res) {
-      if (!res.rows.length) { // already deleted
-        return checkDone();
-      }
-      var seq = res.rows.item(0).seq;
-      seqs.push(seq);
-
-      tx.executeSql(
-        'DELETE FROM ' + BY_SEQ_STORE$1 + ' WHERE seq=?', [seq], checkDone);
-    });
-  });
-}
-
-function websqlError(callback) {
-  return function (event) {
-    guardedConsole('error', 'WebSQL threw an error', event);
-    // event may actually be a SQLError object, so report is as such
-    var errorNameMatch = event && event.constructor.toString()
-        .match(/function ([^\(]+)/);
-    var errorName = (errorNameMatch && errorNameMatch[1]) || event.type;
-    var errorReason = event.target || event.message;
-    callback(createError(WSQ_ERROR, errorReason, errorName));
-  };
-}
-
-function getSize(opts) {
-  if ('size' in opts) {
-    // triggers immediate popup in iOS, fixes #2347
-    // e.g. 5000001 asks for 5 MB, 10000001 asks for 10 MB,
-    return opts.size * 1000000;
-  }
-  // In iOS, doesn't matter as long as it's <= 5000000.
-  // Except that if you request too much, our tests fail
-  // because of the native "do you accept?" popup.
-  // In Android <=4.3, this value is actually used as an
-  // honest-to-god ceiling for data, so we need to
-  // set it to a decently high number.
-  var isAndroid = typeof navigator !== 'undefined' &&
-    /Android/.test(navigator.userAgent);
-  return isAndroid ? 5000000 : 1; // in PhantomJS, if you use 0 it will crash
-}
-
-function websqlBulkDocs(dbOpts, req, opts, api, db, websqlChanges, callback) {
-  var newEdits = opts.new_edits;
-  var userDocs = req.docs;
-
-  // Parse the docs, give them a sequence number for the result
-  var docInfos = userDocs.map(function (doc) {
-    if (doc._id && isLocalId(doc._id)) {
-      return doc;
-    }
-    var newDoc = parseDoc(doc, newEdits);
-    return newDoc;
-  });
-
-  var docInfoErrors = docInfos.filter(function (docInfo) {
-    return docInfo.error;
-  });
-  if (docInfoErrors.length) {
-    return callback(docInfoErrors[0]);
-  }
-
-  var tx;
-  var results = new Array(docInfos.length);
-  var fetchedDocs = new ExportedMap();
-
-  var preconditionErrored;
-  function complete() {
-    if (preconditionErrored) {
-      return callback(preconditionErrored);
-    }
-    websqlChanges.notify(api._name);
-    callback(null, results);
-  }
-
-  function verifyAttachment(digest, callback) {
-    var sql = 'SELECT count(*) as cnt FROM ' + ATTACH_STORE$1 +
-      ' WHERE digest=?';
-    tx.executeSql(sql, [digest], function (tx, result) {
-      if (result.rows.item(0).cnt === 0) {
-        var err = createError(MISSING_STUB,
-          'unknown stub attachment with digest ' +
-          digest);
-        callback(err);
-      } else {
-        callback();
-      }
-    });
-  }
-
-  function verifyAttachments(finish) {
-    var digests = [];
-    docInfos.forEach(function (docInfo) {
-      if (docInfo.data && docInfo.data._attachments) {
-        Object.keys(docInfo.data._attachments).forEach(function (filename) {
-          var att = docInfo.data._attachments[filename];
-          if (att.stub) {
-            digests.push(att.digest);
-          }
-        });
-      }
-    });
-    if (!digests.length) {
-      return finish();
-    }
-    var numDone = 0;
-    var err;
-
-    function checkDone() {
-      if (++numDone === digests.length) {
-        finish(err);
-      }
-    }
-    digests.forEach(function (digest) {
-      verifyAttachment(digest, function (attErr) {
-        if (attErr && !err) {
-          err = attErr;
-        }
-        checkDone();
-      });
-    });
-  }
-
-  function writeDoc(docInfo, winningRev$$1, winningRevIsDeleted, newRevIsDeleted,
-                    isUpdate, delta, resultsIdx, callback) {
-
-    function finish() {
-      var data = docInfo.data;
-      var deletedInt = newRevIsDeleted ? 1 : 0;
-
-      var id = data._id;
-      var rev = data._rev;
-      var json = stringifyDoc(data);
-      var sql = 'INSERT INTO ' + BY_SEQ_STORE$1 +
-        ' (doc_id, rev, json, deleted) VALUES (?, ?, ?, ?);';
-      var sqlArgs = [id, rev, json, deletedInt];
-
-      // map seqs to attachment digests, which
-      // we will need later during compaction
-      function insertAttachmentMappings(seq, callback) {
-        var attsAdded = 0;
-        var attsToAdd = Object.keys(data._attachments || {});
-
-        if (!attsToAdd.length) {
-          return callback();
-        }
-        function checkDone() {
-          if (++attsAdded === attsToAdd.length) {
-            callback();
-          }
-          return false; // ack handling a constraint error
-        }
-        function add(att) {
-          var sql = 'INSERT INTO ' + ATTACH_AND_SEQ_STORE$1 +
-            ' (digest, seq) VALUES (?,?)';
-          var sqlArgs = [data._attachments[att].digest, seq];
-          tx.executeSql(sql, sqlArgs, checkDone, checkDone);
-          // second callback is for a constaint error, which we ignore
-          // because this docid/rev has already been associated with
-          // the digest (e.g. when new_edits == false)
-        }
-        for (var i = 0; i < attsToAdd.length; i++) {
-          add(attsToAdd[i]); // do in parallel
-        }
-      }
-
-      tx.executeSql(sql, sqlArgs, function (tx, result) {
-        var seq = result.insertId;
-        insertAttachmentMappings(seq, function () {
-          dataWritten(tx, seq);
-        });
-      }, function () {
-        // constraint error, recover by updating instead (see #1638)
-        var fetchSql = select('seq', BY_SEQ_STORE$1, null,
-          'doc_id=? AND rev=?');
-        tx.executeSql(fetchSql, [id, rev], function (tx, res) {
-          var seq = res.rows.item(0).seq;
-          var sql = 'UPDATE ' + BY_SEQ_STORE$1 +
-            ' SET json=?, deleted=? WHERE doc_id=? AND rev=?;';
-          var sqlArgs = [json, deletedInt, id, rev];
-          tx.executeSql(sql, sqlArgs, function (tx) {
-            insertAttachmentMappings(seq, function () {
-              dataWritten(tx, seq);
-            });
-          });
-        });
-        return false; // ack that we've handled the error
-      });
-    }
-
-    function collectResults(attachmentErr) {
-      if (!err) {
-        if (attachmentErr) {
-          err = attachmentErr;
-          callback(err);
-        } else if (recv === attachments.length) {
-          finish();
-        }
-      }
-    }
-
-    var err = null;
-    var recv = 0;
-
-    docInfo.data._id = docInfo.metadata.id;
-    docInfo.data._rev = docInfo.metadata.rev;
-    var attachments = Object.keys(docInfo.data._attachments || {});
-
-
-    if (newRevIsDeleted) {
-      docInfo.data._deleted = true;
-    }
-
-    function attachmentSaved(err) {
-      recv++;
-      collectResults(err);
-    }
-
-    attachments.forEach(function (key) {
-      var att = docInfo.data._attachments[key];
-      if (!att.stub) {
-        var data = att.data;
-        delete att.data;
-        att.revpos = parseInt(winningRev$$1, 10);
-        var digest = att.digest;
-        saveAttachment(digest, data, attachmentSaved);
-      } else {
-        recv++;
-        collectResults();
-      }
-    });
-
-    if (!attachments.length) {
-      finish();
-    }
-
-    function dataWritten(tx, seq) {
-      var id = docInfo.metadata.id;
-
-      var revsToCompact = docInfo.stemmedRevs || [];
-      if (isUpdate && api.auto_compaction) {
-        revsToCompact = compactTree(docInfo.metadata).concat(revsToCompact);
-      }
-      if (revsToCompact.length) {
-        compactRevs$1(revsToCompact, id, tx);
-      }
-
-      docInfo.metadata.seq = seq;
-      var rev = docInfo.metadata.rev;
-      delete docInfo.metadata.rev;
-
-      var sql = isUpdate ?
-      'UPDATE ' + DOC_STORE$1 +
-      ' SET json=?, max_seq=?, winningseq=' +
-      '(SELECT seq FROM ' + BY_SEQ_STORE$1 +
-      ' WHERE doc_id=' + DOC_STORE$1 + '.id AND rev=?) WHERE id=?'
-        : 'INSERT INTO ' + DOC_STORE$1 +
-      ' (id, winningseq, max_seq, json) VALUES (?,?,?,?);';
-      var metadataStr = safeJsonStringify(docInfo.metadata);
-      var params = isUpdate ?
-        [metadataStr, seq, winningRev$$1, id] :
-        [id, seq, seq, metadataStr];
-      tx.executeSql(sql, params, function () {
-        results[resultsIdx] = {
-          ok: true,
-          id: docInfo.metadata.id,
-          rev: rev
-        };
-        fetchedDocs.set(id, docInfo.metadata);
-        callback();
-      });
-    }
-  }
-
-  function websqlProcessDocs() {
-    processDocs(dbOpts.revs_limit, docInfos, api, fetchedDocs, tx,
-                results, writeDoc, opts);
-  }
-
-  function fetchExistingDocs(callback) {
-    if (!docInfos.length) {
-      return callback();
-    }
-
-    var numFetched = 0;
-
-    function checkDone() {
-      if (++numFetched === docInfos.length) {
-        callback();
-      }
-    }
-
-    docInfos.forEach(function (docInfo) {
-      if (docInfo._id && isLocalId(docInfo._id)) {
-        return checkDone(); // skip local docs
-      }
-      var id = docInfo.metadata.id;
-      tx.executeSql('SELECT json FROM ' + DOC_STORE$1 +
-      ' WHERE id = ?', [id], function (tx, result) {
-        if (result.rows.length) {
-          var metadata = safeJsonParse(result.rows.item(0).json);
-          fetchedDocs.set(id, metadata);
-        }
-        checkDone();
-      });
-    });
-  }
-
-  function saveAttachment(digest, data, callback) {
-    var sql = 'SELECT digest FROM ' + ATTACH_STORE$1 + ' WHERE digest=?';
-    tx.executeSql(sql, [digest], function (tx, result) {
-      if (result.rows.length) { // attachment already exists
-        return callback();
-      }
-      // we could just insert before selecting and catch the error,
-      // but my hunch is that it's cheaper not to serialize the blob
-      // from JS to C if we don't have to (TODO: confirm this)
-      sql = 'INSERT INTO ' + ATTACH_STORE$1 +
-      ' (digest, body, escaped) VALUES (?,?,1)';
-      tx.executeSql(sql, [digest, escapeBlob(data)], function () {
-        callback();
-      }, function () {
-        // ignore constaint errors, means it already exists
-        callback();
-        return false; // ack we handled the error
-      });
-    });
-  }
-
-  preprocessAttachments(docInfos, 'binary', function (err) {
-    if (err) {
-      return callback(err);
-    }
-    db.transaction(function (txn) {
-      tx = txn;
-      verifyAttachments(function (err) {
-        if (err) {
-          preconditionErrored = err;
-        } else {
-          fetchExistingDocs(websqlProcessDocs);
-        }
-      });
-    }, websqlError(callback), complete);
-  });
-}
-
-var cachedDatabases = new ExportedMap();
-
-// openDatabase passed in through opts (e.g. for node-websql)
-function openDatabaseWithOpts(opts) {
-  return opts.websql(opts.name, opts.version, opts.description, opts.size);
-}
-
-function openDBSafely(opts) {
-  try {
-    return {
-      db: openDatabaseWithOpts(opts)
-    };
-  } catch (err) {
-    return {
-      error: err
-    };
-  }
-}
-
-function openDB$1(opts) {
-  var cachedResult = cachedDatabases.get(opts.name);
-  if (!cachedResult) {
-    cachedResult = openDBSafely(opts);
-    cachedDatabases.set(opts.name, cachedResult);
-  }
-  return cachedResult;
-}
-
-var websqlChanges = new Changes();
-
-function fetchAttachmentsIfNecessary$1(doc, opts, api, txn, cb) {
-  var attachments = Object.keys(doc._attachments || {});
-  if (!attachments.length) {
-    return cb && cb();
-  }
-  var numDone = 0;
-
-  function checkDone() {
-    if (++numDone === attachments.length && cb) {
-      cb();
-    }
-  }
-
-  function fetchAttachment(doc, att) {
-    var attObj = doc._attachments[att];
-    var attOpts = {binary: opts.binary, ctx: txn};
-    api._getAttachment(doc._id, att, attObj, attOpts, function (_, data) {
-      doc._attachments[att] = $inject_Object_assign(
-        pick(attObj, ['digest', 'content_type']),
-        { data: data }
-      );
-      checkDone();
-    });
-  }
-
-  attachments.forEach(function (att) {
-    if (opts.attachments && opts.include_docs) {
-      fetchAttachment(doc, att);
-    } else {
-      doc._attachments[att].stub = true;
-      checkDone();
-    }
-  });
-}
-
-var POUCH_VERSION = 1;
-
-// these indexes cover the ground for most allDocs queries
-var BY_SEQ_STORE_DELETED_INDEX_SQL =
-  'CREATE INDEX IF NOT EXISTS \'by-seq-deleted-idx\' ON ' +
-  BY_SEQ_STORE$1 + ' (seq, deleted)';
-var BY_SEQ_STORE_DOC_ID_REV_INDEX_SQL =
-  'CREATE UNIQUE INDEX IF NOT EXISTS \'by-seq-doc-id-rev\' ON ' +
-    BY_SEQ_STORE$1 + ' (doc_id, rev)';
-var DOC_STORE_WINNINGSEQ_INDEX_SQL =
-  'CREATE INDEX IF NOT EXISTS \'doc-winningseq-idx\' ON ' +
-  DOC_STORE$1 + ' (winningseq)';
-var ATTACH_AND_SEQ_STORE_SEQ_INDEX_SQL =
-  'CREATE INDEX IF NOT EXISTS \'attach-seq-seq-idx\' ON ' +
-    ATTACH_AND_SEQ_STORE$1 + ' (seq)';
-var ATTACH_AND_SEQ_STORE_ATTACH_INDEX_SQL =
-  'CREATE UNIQUE INDEX IF NOT EXISTS \'attach-seq-digest-idx\' ON ' +
-    ATTACH_AND_SEQ_STORE$1 + ' (digest, seq)';
-
-var DOC_STORE_AND_BY_SEQ_JOINER = BY_SEQ_STORE$1 +
-  '.seq = ' + DOC_STORE$1 + '.winningseq';
-
-var SELECT_DOCS = BY_SEQ_STORE$1 + '.seq AS seq, ' +
-  BY_SEQ_STORE$1 + '.deleted AS deleted, ' +
-  BY_SEQ_STORE$1 + '.json AS data, ' +
-  BY_SEQ_STORE$1 + '.rev AS rev, ' +
-  DOC_STORE$1 + '.json AS metadata';
-
-function WebSqlPouch$1(opts, callback) {
-  var api = this;
-  var instanceId = null;
-  var size = getSize(opts);
-  var idRequests = [];
-  var encoding;
-
-  api._name = opts.name;
-
-  // extend the options here, because sqlite plugin has a ton of options
-  // and they are constantly changing, so it's more prudent to allow anything
-  var websqlOpts = $inject_Object_assign({}, opts, {
-    version: POUCH_VERSION,
-    description: opts.name,
-    size: size
-  });
-  var openDBResult = openDB$1(websqlOpts);
-  if (openDBResult.error) {
-    return websqlError(callback)(openDBResult.error);
-  }
-  var db = openDBResult.db;
-  if (typeof db.readTransaction !== 'function') {
-    // doesn't exist in sqlite plugin
-    db.readTransaction = db.transaction;
-  }
-
-  function dbCreated() {
-    // note the db name in case the browser upgrades to idb
-    if (hasLocalStorage()) {
-      window.localStorage['_pouch__websqldb_' + api._name] = true;
-    }
-    callback(null, api);
-  }
-
-  // In this migration, we added the 'deleted' and 'local' columns to the
-  // by-seq and doc store tables.
-  // To preserve existing user data, we re-process all the existing JSON
-  // and add these values.
-  // Called migration2 because it corresponds to adapter version (db_version) #2
-  function runMigration2(tx, callback) {
-    // index used for the join in the allDocs query
-    tx.executeSql(DOC_STORE_WINNINGSEQ_INDEX_SQL);
-
-    tx.executeSql('ALTER TABLE ' + BY_SEQ_STORE$1 +
-      ' ADD COLUMN deleted TINYINT(1) DEFAULT 0', [], function () {
-      tx.executeSql(BY_SEQ_STORE_DELETED_INDEX_SQL);
-      tx.executeSql('ALTER TABLE ' + DOC_STORE$1 +
-        ' ADD COLUMN local TINYINT(1) DEFAULT 0', [], function () {
-        tx.executeSql('CREATE INDEX IF NOT EXISTS \'doc-store-local-idx\' ON ' +
-          DOC_STORE$1 + ' (local, id)');
-
-        var sql = 'SELECT ' + DOC_STORE$1 + '.winningseq AS seq, ' + DOC_STORE$1 +
-          '.json AS metadata FROM ' + BY_SEQ_STORE$1 + ' JOIN ' + DOC_STORE$1 +
-          ' ON ' + BY_SEQ_STORE$1 + '.seq = ' + DOC_STORE$1 + '.winningseq';
-
-        tx.executeSql(sql, [], function (tx, result) {
-
-          var deleted = [];
-          var local = [];
-
-          for (var i = 0; i < result.rows.length; i++) {
-            var item = result.rows.item(i);
-            var seq = item.seq;
-            var metadata = JSON.parse(item.metadata);
-            if (isDeleted(metadata)) {
-              deleted.push(seq);
-            }
-            if (isLocalId(metadata.id)) {
-              local.push(metadata.id);
-            }
-          }
-          tx.executeSql('UPDATE ' + DOC_STORE$1 + 'SET local = 1 WHERE id IN ' +
-            qMarks(local.length), local, function () {
-            tx.executeSql('UPDATE ' + BY_SEQ_STORE$1 +
-              ' SET deleted = 1 WHERE seq IN ' +
-              qMarks(deleted.length), deleted, callback);
-          });
-        });
-      });
-    });
-  }
-
-  // in this migration, we make all the local docs unversioned
-  function runMigration3(tx, callback) {
-    var local = 'CREATE TABLE IF NOT EXISTS ' + LOCAL_STORE$1 +
-      ' (id UNIQUE, rev, json)';
-    tx.executeSql(local, [], function () {
-      var sql = 'SELECT ' + DOC_STORE$1 + '.id AS id, ' +
-        BY_SEQ_STORE$1 + '.json AS data ' +
-        'FROM ' + BY_SEQ_STORE$1 + ' JOIN ' +
-        DOC_STORE$1 + ' ON ' + BY_SEQ_STORE$1 + '.seq = ' +
-        DOC_STORE$1 + '.winningseq WHERE local = 1';
-      tx.executeSql(sql, [], function (tx, res) {
-        var rows = [];
-        for (var i = 0; i < res.rows.length; i++) {
-          rows.push(res.rows.item(i));
-        }
-        function doNext() {
-          if (!rows.length) {
-            return callback(tx);
-          }
-          var row = rows.shift();
-          var rev = JSON.parse(row.data)._rev;
-          tx.executeSql('INSERT INTO ' + LOCAL_STORE$1 +
-              ' (id, rev, json) VALUES (?,?,?)',
-              [row.id, rev, row.data], function (tx) {
-            tx.executeSql('DELETE FROM ' + DOC_STORE$1 + ' WHERE id=?',
-                [row.id], function (tx) {
-              tx.executeSql('DELETE FROM ' + BY_SEQ_STORE$1 + ' WHERE seq=?',
-                  [row.seq], function () {
-                doNext();
-              });
-            });
-          });
-        }
-        doNext();
-      });
-    });
-  }
-
-  // in this migration, we remove doc_id_rev and just use rev
-  function runMigration4(tx, callback) {
-
-    function updateRows(rows) {
-      function doNext() {
-        if (!rows.length) {
-          return callback(tx);
-        }
-        var row = rows.shift();
-        var doc_id_rev = parseHexString(row.hex, encoding);
-        var idx = doc_id_rev.lastIndexOf('::');
-        var doc_id = doc_id_rev.substring(0, idx);
-        var rev = doc_id_rev.substring(idx + 2);
-        var sql = 'UPDATE ' + BY_SEQ_STORE$1 +
-          ' SET doc_id=?, rev=? WHERE doc_id_rev=?';
-        tx.executeSql(sql, [doc_id, rev, doc_id_rev], function () {
-          doNext();
-        });
-      }
-      doNext();
-    }
-
-    var sql = 'ALTER TABLE ' + BY_SEQ_STORE$1 + ' ADD COLUMN doc_id';
-    tx.executeSql(sql, [], function (tx) {
-      var sql = 'ALTER TABLE ' + BY_SEQ_STORE$1 + ' ADD COLUMN rev';
-      tx.executeSql(sql, [], function (tx) {
-        tx.executeSql(BY_SEQ_STORE_DOC_ID_REV_INDEX_SQL, [], function (tx) {
-          var sql = 'SELECT hex(doc_id_rev) as hex FROM ' + BY_SEQ_STORE$1;
-          tx.executeSql(sql, [], function (tx, res) {
-            var rows = [];
-            for (var i = 0; i < res.rows.length; i++) {
-              rows.push(res.rows.item(i));
-            }
-            updateRows(rows);
-          });
-        });
-      });
-    });
-  }
-
-  // in this migration, we add the attach_and_seq table
-  // for issue #2818
-  function runMigration5(tx, callback) {
-
-    function migrateAttsAndSeqs(tx) {
-      // need to actually populate the table. this is the expensive part,
-      // so as an optimization, check first that this database even
-      // contains attachments
-      var sql = 'SELECT COUNT(*) AS cnt FROM ' + ATTACH_STORE$1;
-      tx.executeSql(sql, [], function (tx, res) {
-        var count = res.rows.item(0).cnt;
-        if (!count) {
-          return callback(tx);
         }
 
-        var offset = 0;
-        var pageSize = 10;
-        function nextPage() {
-          var sql = select(
-            SELECT_DOCS + ', ' + DOC_STORE$1 + '.id AS id',
-            [DOC_STORE$1, BY_SEQ_STORE$1],
-            DOC_STORE_AND_BY_SEQ_JOINER,
-            null,
-            DOC_STORE$1 + '.id '
-          );
-          sql += ' LIMIT ' + pageSize + ' OFFSET ' + offset;
-          offset += pageSize;
-          tx.executeSql(sql, [], function (tx, res) {
-            if (!res.rows.length) {
-              return callback(tx);
-            }
-            var digestSeqs = {};
-            function addDigestSeq(digest, seq) {
-              // uniq digest/seq pairs, just in case there are dups
-              var seqs = digestSeqs[digest] = (digestSeqs[digest] || []);
-              if (seqs.indexOf(seq) === -1) {
-                seqs.push(seq);
-              }
-            }
-            for (var i = 0; i < res.rows.length; i++) {
-              var row = res.rows.item(i);
-              var doc = unstringifyDoc(row.data, row.id, row.rev);
-              var atts = Object.keys(doc._attachments || {});
-              for (var j = 0; j < atts.length; j++) {
-                var att = doc._attachments[atts[j]];
-                addDigestSeq(att.digest, row.seq);
-              }
-            }
-            var digestSeqPairs = [];
-            Object.keys(digestSeqs).forEach(function (digest) {
-              var seqs = digestSeqs[digest];
-              seqs.forEach(function (seq) {
-                digestSeqPairs.push([digest, seq]);
-              });
-            });
-            if (!digestSeqPairs.length) {
-              return nextPage();
-            }
-            var numDone = 0;
-            digestSeqPairs.forEach(function (pair) {
-              var sql = 'INSERT INTO ' + ATTACH_AND_SEQ_STORE$1 +
-                ' (digest, seq) VALUES (?,?)';
-              tx.executeSql(sql, pair, function () {
-                if (++numDone === digestSeqPairs.length) {
-                  nextPage();
+        var dbArgs = [dbInfo.name];
+
+        if (upgradeNeeded) {
+            dbArgs.push(dbInfo.version);
+        }
+
+        var openreq = idb.open.apply(idb, dbArgs);
+
+        if (upgradeNeeded) {
+            openreq.onupgradeneeded = function (e) {
+                var db = openreq.result;
+                try {
+                    db.createObjectStore(dbInfo.storeName);
+                    if (e.oldVersion <= 1) {
+                        // Added when support for blob shims was added
+                        db.createObjectStore(DETECT_BLOB_SUPPORT_STORE);
+                    }
+                } catch (ex) {
+                    if (ex.name === 'ConstraintError') {
+                        console.warn('The database "' + dbInfo.name + '"' + ' has been upgraded from version ' + e.oldVersion + ' to version ' + e.newVersion + ', but the storage "' + dbInfo.storeName + '" already exists.');
+                    } else {
+                        throw ex;
+                    }
                 }
-              });
-            });
-          });
-        }
-        nextPage();
-      });
-    }
-
-    var attachAndRev = 'CREATE TABLE IF NOT EXISTS ' +
-      ATTACH_AND_SEQ_STORE$1 + ' (digest, seq INTEGER)';
-    tx.executeSql(attachAndRev, [], function (tx) {
-      tx.executeSql(
-        ATTACH_AND_SEQ_STORE_ATTACH_INDEX_SQL, [], function (tx) {
-          tx.executeSql(
-            ATTACH_AND_SEQ_STORE_SEQ_INDEX_SQL, [],
-            migrateAttsAndSeqs);
-        });
-    });
-  }
-
-  // in this migration, we use escapeBlob() and unescapeBlob()
-  // instead of reading out the binary as HEX, which is slow
-  function runMigration6(tx, callback) {
-    var sql = 'ALTER TABLE ' + ATTACH_STORE$1 +
-      ' ADD COLUMN escaped TINYINT(1) DEFAULT 0';
-    tx.executeSql(sql, [], callback);
-  }
-
-  // issue #3136, in this migration we need a "latest seq" as well
-  // as the "winning seq" in the doc store
-  function runMigration7(tx, callback) {
-    var sql = 'ALTER TABLE ' + DOC_STORE$1 +
-      ' ADD COLUMN max_seq INTEGER';
-    tx.executeSql(sql, [], function (tx) {
-      var sql = 'UPDATE ' + DOC_STORE$1 + ' SET max_seq=(SELECT MAX(seq) FROM ' +
-        BY_SEQ_STORE$1 + ' WHERE doc_id=id)';
-      tx.executeSql(sql, [], function (tx) {
-        // add unique index after filling, else we'll get a constraint
-        // error when we do the ALTER TABLE
-        var sql =
-          'CREATE UNIQUE INDEX IF NOT EXISTS \'doc-max-seq-idx\' ON ' +
-          DOC_STORE$1 + ' (max_seq)';
-        tx.executeSql(sql, [], callback);
-      });
-    });
-  }
-
-  function checkEncoding(tx, cb) {
-    // UTF-8 on chrome/android, UTF-16 on safari < 7.1
-    tx.executeSql('SELECT HEX("a") AS hex', [], function (tx, res) {
-        var hex = res.rows.item(0).hex;
-        encoding = hex.length === 2 ? 'UTF-8' : 'UTF-16';
-        cb();
-      }
-    );
-  }
-
-  function onGetInstanceId() {
-    while (idRequests.length > 0) {
-      var idCallback = idRequests.pop();
-      idCallback(null, instanceId);
-    }
-  }
-
-  function onGetVersion(tx, dbVersion) {
-    if (dbVersion === 0) {
-      // initial schema
-
-      var meta = 'CREATE TABLE IF NOT EXISTS ' + META_STORE$1 +
-        ' (dbid, db_version INTEGER)';
-      var attach = 'CREATE TABLE IF NOT EXISTS ' + ATTACH_STORE$1 +
-        ' (digest UNIQUE, escaped TINYINT(1), body BLOB)';
-      var attachAndRev = 'CREATE TABLE IF NOT EXISTS ' +
-        ATTACH_AND_SEQ_STORE$1 + ' (digest, seq INTEGER)';
-      // TODO: migrate winningseq to INTEGER
-      var doc = 'CREATE TABLE IF NOT EXISTS ' + DOC_STORE$1 +
-        ' (id unique, json, winningseq, max_seq INTEGER UNIQUE)';
-      var seq = 'CREATE TABLE IF NOT EXISTS ' + BY_SEQ_STORE$1 +
-        ' (seq INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
-        'json, deleted TINYINT(1), doc_id, rev)';
-      var local = 'CREATE TABLE IF NOT EXISTS ' + LOCAL_STORE$1 +
-        ' (id UNIQUE, rev, json)';
-
-      // creates
-      tx.executeSql(attach);
-      tx.executeSql(local);
-      tx.executeSql(attachAndRev, [], function () {
-        tx.executeSql(ATTACH_AND_SEQ_STORE_SEQ_INDEX_SQL);
-        tx.executeSql(ATTACH_AND_SEQ_STORE_ATTACH_INDEX_SQL);
-      });
-      tx.executeSql(doc, [], function () {
-        tx.executeSql(DOC_STORE_WINNINGSEQ_INDEX_SQL);
-        tx.executeSql(seq, [], function () {
-          tx.executeSql(BY_SEQ_STORE_DELETED_INDEX_SQL);
-          tx.executeSql(BY_SEQ_STORE_DOC_ID_REV_INDEX_SQL);
-          tx.executeSql(meta, [], function () {
-            // mark the db version, and new dbid
-            var initSeq = 'INSERT INTO ' + META_STORE$1 +
-              ' (db_version, dbid) VALUES (?,?)';
-            instanceId = uuid();
-            var initSeqArgs = [ADAPTER_VERSION$1, instanceId];
-            tx.executeSql(initSeq, initSeqArgs, function () {
-              onGetInstanceId();
-            });
-          });
-        });
-      });
-    } else { // version > 0
-
-      var setupDone = function () {
-        var migrated = dbVersion < ADAPTER_VERSION$1;
-        if (migrated) {
-          // update the db version within this transaction
-          tx.executeSql('UPDATE ' + META_STORE$1 + ' SET db_version = ' +
-            ADAPTER_VERSION$1);
-        }
-        // notify db.id() callers
-        var sql = 'SELECT dbid FROM ' + META_STORE$1;
-        tx.executeSql(sql, [], function (tx, result) {
-          instanceId = result.rows.item(0).dbid;
-          onGetInstanceId();
-        });
-      };
-
-      // would love to use promises here, but then websql
-      // ends the transaction early
-      var tasks = [
-        runMigration2,
-        runMigration3,
-        runMigration4,
-        runMigration5,
-        runMigration6,
-        runMigration7,
-        setupDone
-      ];
-
-      // run each migration sequentially
-      var i = dbVersion;
-      var nextMigration = function (tx) {
-        tasks[i - 1](tx, nextMigration);
-        i++;
-      };
-      nextMigration(tx);
-    }
-  }
-
-  function setup() {
-    db.transaction(function (tx) {
-      // first check the encoding
-      checkEncoding(tx, function () {
-        // then get the version
-        fetchVersion(tx);
-      });
-    }, websqlError(callback), dbCreated);
-  }
-
-  function fetchVersion(tx) {
-    var sql = 'SELECT sql FROM sqlite_master WHERE tbl_name = ' + META_STORE$1;
-    tx.executeSql(sql, [], function (tx, result) {
-      if (!result.rows.length) {
-        // database hasn't even been created yet (version 0)
-        onGetVersion(tx, 0);
-      } else if (!/db_version/.test(result.rows.item(0).sql)) {
-        // table was created, but without the new db_version column,
-        // so add it.
-        tx.executeSql('ALTER TABLE ' + META_STORE$1 +
-          ' ADD COLUMN db_version INTEGER', [], function () {
-          // before version 2, this column didn't even exist
-          onGetVersion(tx, 1);
-        });
-      } else { // column exists, we can safely get it
-        tx.executeSql('SELECT db_version FROM ' + META_STORE$1,
-          [], function (tx, result) {
-          var dbVersion = result.rows.item(0).db_version;
-          onGetVersion(tx, dbVersion);
-        });
-      }
-    });
-  }
-
-  setup();
-
-  function getMaxSeq(tx, callback) {
-    var sql = 'SELECT MAX(seq) AS seq FROM ' + BY_SEQ_STORE$1;
-    tx.executeSql(sql, [], function (tx, res) {
-      var updateSeq = res.rows.item(0).seq || 0;
-      callback(updateSeq);
-    });
-  }
-
-  function countDocs(tx, callback) {
-    // count the total rows
-    var sql = select(
-      'COUNT(' + DOC_STORE$1 + '.id) AS \'num\'',
-      [DOC_STORE$1, BY_SEQ_STORE$1],
-      DOC_STORE_AND_BY_SEQ_JOINER,
-      BY_SEQ_STORE$1 + '.deleted=0');
-
-    tx.executeSql(sql, [], function (tx, result) {
-      callback(result.rows.item(0).num);
-    });
-  }
-
-  api._remote = false;
-  api.type = function () {
-    return 'websql';
-  };
-
-  api._id = toPromise(function (callback) {
-    callback(null, instanceId);
-  });
-
-  api._info = function (callback) {
-    var seq;
-    var docCount;
-    db.readTransaction(function (tx) {
-      getMaxSeq(tx, function (theSeq) {
-        seq = theSeq;
-      });
-      countDocs(tx, function (theDocCount) {
-        docCount = theDocCount;
-      });
-    }, websqlError(callback), function () {
-      callback(null, {
-        doc_count: docCount,
-        update_seq: seq,
-        websql_encoding: encoding
-      });
-    });
-  };
-
-  api._bulkDocs = function (req, reqOpts, callback) {
-    websqlBulkDocs(opts, req, reqOpts, api, db, websqlChanges, callback);
-  };
-
-  function latest$$1(tx, id, rev, callback, finish) {
-    var sql = select(
-        SELECT_DOCS,
-        [DOC_STORE$1, BY_SEQ_STORE$1],
-        DOC_STORE_AND_BY_SEQ_JOINER,
-        DOC_STORE$1 + '.id=?');
-    var sqlArgs = [id];
-
-    tx.executeSql(sql, sqlArgs, function (a, results) {
-      if (!results.rows.length) {
-        var err = createError(MISSING_DOC, 'missing');
-        return finish(err);
-      }
-      var item = results.rows.item(0);
-      var metadata = safeJsonParse(item.metadata);
-      callback(latest(rev, metadata));
-    });
-  }
-
-  api._get = function (id, opts, callback) {
-    var doc;
-    var metadata;
-    var tx = opts.ctx;
-    if (!tx) {
-      return db.readTransaction(function (txn) {
-        api._get(id, $inject_Object_assign({ctx: txn}, opts), callback);
-      });
-    }
-
-    function finish(err) {
-      callback(err, {doc: doc, metadata: metadata, ctx: tx});
-    }
-
-    var sql;
-    var sqlArgs;
-
-    if (!opts.rev) {
-      sql = select(
-        SELECT_DOCS,
-        [DOC_STORE$1, BY_SEQ_STORE$1],
-        DOC_STORE_AND_BY_SEQ_JOINER,
-        DOC_STORE$1 + '.id=?');
-      sqlArgs = [id];
-    } else if (opts.latest) {
-      latest$$1(tx, id, opts.rev, function (latestRev) {
-        opts.latest = false;
-        opts.rev = latestRev;
-        api._get(id, opts, callback);
-      }, finish);
-      return;
-    } else {
-      sql = select(
-        SELECT_DOCS,
-        [DOC_STORE$1, BY_SEQ_STORE$1],
-        DOC_STORE$1 + '.id=' + BY_SEQ_STORE$1 + '.doc_id',
-        [BY_SEQ_STORE$1 + '.doc_id=?', BY_SEQ_STORE$1 + '.rev=?']);
-      sqlArgs = [id, opts.rev];
-    }
-
-    tx.executeSql(sql, sqlArgs, function (a, results) {
-      if (!results.rows.length) {
-        var missingErr = createError(MISSING_DOC, 'missing');
-        return finish(missingErr);
-      }
-      var item = results.rows.item(0);
-      metadata = safeJsonParse(item.metadata);
-      if (item.deleted && !opts.rev) {
-        var deletedErr = createError(MISSING_DOC, 'deleted');
-        return finish(deletedErr);
-      }
-      doc = unstringifyDoc(item.data, metadata.id, item.rev);
-      finish();
-    });
-  };
-
-  api._allDocs = function (opts, callback) {
-    var results = [];
-    var totalRows;
-
-    var start = 'startkey' in opts ? opts.startkey : false;
-    var end = 'endkey' in opts ? opts.endkey : false;
-    var key = 'key' in opts ? opts.key : false;
-    var descending = 'descending' in opts ? opts.descending : false;
-    var limit = 'limit' in opts ? opts.limit : -1;
-    var offset = 'skip' in opts ? opts.skip : 0;
-    var inclusiveEnd = opts.inclusive_end !== false;
-
-    var sqlArgs = [];
-    var criteria = [];
-
-    if (key !== false) {
-      criteria.push(DOC_STORE$1 + '.id = ?');
-      sqlArgs.push(key);
-    } else if (start !== false || end !== false) {
-      if (start !== false) {
-        criteria.push(DOC_STORE$1 + '.id ' + (descending ? '<=' : '>=') + ' ?');
-        sqlArgs.push(start);
-      }
-      if (end !== false) {
-        var comparator = descending ? '>' : '<';
-        if (inclusiveEnd) {
-          comparator += '=';
-        }
-        criteria.push(DOC_STORE$1 + '.id ' + comparator + ' ?');
-        sqlArgs.push(end);
-      }
-      if (key !== false) {
-        criteria.push(DOC_STORE$1 + '.id = ?');
-        sqlArgs.push(key);
-      }
-    }
-
-    if (opts.deleted !== 'ok') {
-      // report deleted if keys are specified
-      criteria.push(BY_SEQ_STORE$1 + '.deleted = 0');
-    }
-
-    db.readTransaction(function (tx) {
-      // count the docs in parallel to other operations
-      countDocs(tx, function (docCount) {
-        totalRows = docCount;
-      });
-
-      if (limit === 0) {
-        return;
-      }
-
-      // do a single query to fetch the documents
-      var sql = select(
-        SELECT_DOCS,
-        [DOC_STORE$1, BY_SEQ_STORE$1],
-        DOC_STORE_AND_BY_SEQ_JOINER,
-        criteria,
-        DOC_STORE$1 + '.id ' + (descending ? 'DESC' : 'ASC')
-        );
-      sql += ' LIMIT ' + limit + ' OFFSET ' + offset;
-
-      tx.executeSql(sql, sqlArgs, function (tx, result) {
-        for (var i = 0, l = result.rows.length; i < l; i++) {
-          var item = result.rows.item(i);
-          var metadata = safeJsonParse(item.metadata);
-          var id = metadata.id;
-          var data = unstringifyDoc(item.data, id, item.rev);
-          var winningRev$$1 = data._rev;
-          var doc = {
-            id: id,
-            key: id,
-            value: {rev: winningRev$$1}
-          };
-          if (opts.include_docs) {
-            doc.doc = data;
-            doc.doc._rev = winningRev$$1;
-            if (opts.conflicts) {
-              var conflicts = collectConflicts(metadata);
-              if (conflicts.length) {
-                doc.doc._conflicts = conflicts;
-              }
-            }
-            fetchAttachmentsIfNecessary$1(doc.doc, opts, api, tx);
-          }
-          if (item.deleted) {
-            if (opts.deleted === 'ok') {
-              doc.value.deleted = true;
-              doc.doc = null;
-            } else {
-              continue;
-            }
-          }
-          results.push(doc);
-        }
-      });
-    }, websqlError(callback), function () {
-      callback(null, {
-        total_rows: totalRows,
-        offset: opts.skip,
-        rows: results
-      });
-    });
-  };
-
-  api._changes = function (opts) {
-    opts = clone(opts);
-
-    if (opts.continuous) {
-      var id = api._name + ':' + uuid();
-      websqlChanges.addListener(api._name, id, api, opts);
-      websqlChanges.notify(api._name);
-      return {
-        cancel: function () {
-          websqlChanges.removeListener(api._name, id);
-        }
-      };
-    }
-
-    var descending = opts.descending;
-
-    // Ignore the `since` parameter when `descending` is true
-    opts.since = opts.since && !descending ? opts.since : 0;
-
-    var limit = 'limit' in opts ? opts.limit : -1;
-    if (limit === 0) {
-      limit = 1; // per CouchDB _changes spec
-    }
-
-    var returnDocs;
-    if ('return_docs' in opts) {
-      returnDocs = opts.return_docs;
-    } else if ('returnDocs' in opts) {
-      // TODO: Remove 'returnDocs' in favor of 'return_docs' in a future release
-      returnDocs = opts.returnDocs;
-    } else {
-      returnDocs = true;
-    }
-    var results = [];
-    var numResults = 0;
-
-    function fetchChanges() {
-
-      var selectStmt =
-        DOC_STORE$1 + '.json AS metadata, ' +
-        DOC_STORE$1 + '.max_seq AS maxSeq, ' +
-        BY_SEQ_STORE$1 + '.json AS winningDoc, ' +
-        BY_SEQ_STORE$1 + '.rev AS winningRev ';
-
-      var from = DOC_STORE$1 + ' JOIN ' + BY_SEQ_STORE$1;
-
-      var joiner = DOC_STORE$1 + '.id=' + BY_SEQ_STORE$1 + '.doc_id' +
-        ' AND ' + DOC_STORE$1 + '.winningseq=' + BY_SEQ_STORE$1 + '.seq';
-
-      var criteria = ['maxSeq > ?'];
-      var sqlArgs = [opts.since];
-
-      if (opts.doc_ids) {
-        criteria.push(DOC_STORE$1 + '.id IN ' + qMarks(opts.doc_ids.length));
-        sqlArgs = sqlArgs.concat(opts.doc_ids);
-      }
-
-      var orderBy = 'maxSeq ' + (descending ? 'DESC' : 'ASC');
-
-      var sql = select(selectStmt, from, joiner, criteria, orderBy);
-
-      var filter = filterChange(opts);
-      if (!opts.view && !opts.filter) {
-        // we can just limit in the query
-        sql += ' LIMIT ' + limit;
-      }
-
-      var lastSeq = opts.since || 0;
-      db.readTransaction(function (tx) {
-        tx.executeSql(sql, sqlArgs, function (tx, result) {
-          function reportChange(change) {
-            return function () {
-              opts.onChange(change);
             };
-          }
-          for (var i = 0, l = result.rows.length; i < l; i++) {
-            var item = result.rows.item(i);
-            var metadata = safeJsonParse(item.metadata);
-            lastSeq = item.maxSeq;
-
-            var doc = unstringifyDoc(item.winningDoc, metadata.id,
-              item.winningRev);
-            var change = opts.processChange(doc, metadata, opts);
-            change.seq = item.maxSeq;
-
-            var filtered = filter(change);
-            if (typeof filtered === 'object') {
-              return opts.complete(filtered);
-            }
-
-            if (filtered) {
-              numResults++;
-              if (returnDocs) {
-                results.push(change);
-              }
-              // process the attachment immediately
-              // for the benefit of live listeners
-              if (opts.attachments && opts.include_docs) {
-                fetchAttachmentsIfNecessary$1(doc, opts, api, tx,
-                  reportChange(change));
-              } else {
-                reportChange(change)();
-              }
-            }
-            if (numResults === limit) {
-              break;
-            }
-          }
-        });
-      }, websqlError(opts.complete), function () {
-        if (!opts.continuous) {
-          opts.complete(null, {
-            results: results,
-            last_seq: lastSeq
-          });
         }
-      });
-    }
 
-    fetchChanges();
-  };
+        openreq.onerror = function (e) {
+            e.preventDefault();
+            reject(openreq.error);
+        };
 
-  api._close = function (callback) {
-    //WebSQL databases do not need to be closed
-    callback();
-  };
-
-  api._getAttachment = function (docId, attachId, attachment, opts, callback) {
-    var res;
-    var tx = opts.ctx;
-    var digest = attachment.digest;
-    var type = attachment.content_type;
-    var sql = 'SELECT escaped, ' +
-      'CASE WHEN escaped = 1 THEN body ELSE HEX(body) END AS body FROM ' +
-      ATTACH_STORE$1 + ' WHERE digest=?';
-    tx.executeSql(sql, [digest], function (tx, result) {
-      // websql has a bug where \u0000 causes early truncation in strings
-      // and blobs. to work around this, we used to use the hex() function,
-      // but that's not performant. after migration 6, we remove \u0000
-      // and add it back in afterwards
-      var item = result.rows.item(0);
-      var data = item.escaped ? unescapeBlob(item.body) :
-        parseHexString(item.body, encoding);
-      if (opts.binary) {
-        res = binStringToBluffer(data, type);
-      } else {
-        res = thisBtoa(data);
-      }
-      callback(null, res);
+        openreq.onsuccess = function () {
+            resolve(openreq.result);
+            _advanceReadiness(dbInfo);
+        };
     });
-  };
-
-  api._getRevisionTree = function (docId, callback) {
-    db.readTransaction(function (tx) {
-      var sql = 'SELECT json AS metadata FROM ' + DOC_STORE$1 + ' WHERE id = ?';
-      tx.executeSql(sql, [docId], function (tx, result) {
-        if (!result.rows.length) {
-          callback(createError(MISSING_DOC));
-        } else {
-          var data = safeJsonParse(result.rows.item(0).metadata);
-          callback(null, data.rev_tree);
-        }
-      });
-    });
-  };
-
-  api._doCompaction = function (docId, revs, callback) {
-    if (!revs.length) {
-      return callback();
-    }
-    db.transaction(function (tx) {
-
-      // update doc store
-      var sql = 'SELECT json AS metadata FROM ' + DOC_STORE$1 + ' WHERE id = ?';
-      tx.executeSql(sql, [docId], function (tx, result) {
-        var metadata = safeJsonParse(result.rows.item(0).metadata);
-        traverseRevTree(metadata.rev_tree, function (isLeaf, pos,
-                                                           revHash, ctx, opts) {
-          var rev = pos + '-' + revHash;
-          if (revs.indexOf(rev) !== -1) {
-            opts.status = 'missing';
-          }
-        });
-
-        var sql = 'UPDATE ' + DOC_STORE$1 + ' SET json = ? WHERE id = ?';
-        tx.executeSql(sql, [safeJsonStringify(metadata), docId]);
-      });
-
-      compactRevs$1(revs, docId, tx);
-    }, websqlError(callback), function () {
-      callback();
-    });
-  };
-
-  api._getLocal = function (id, callback) {
-    db.readTransaction(function (tx) {
-      var sql = 'SELECT json, rev FROM ' + LOCAL_STORE$1 + ' WHERE id=?';
-      tx.executeSql(sql, [id], function (tx, res) {
-        if (res.rows.length) {
-          var item = res.rows.item(0);
-          var doc = unstringifyDoc(item.json, id, item.rev);
-          callback(null, doc);
-        } else {
-          callback(createError(MISSING_DOC));
-        }
-      });
-    });
-  };
-
-  api._putLocal = function (doc, opts, callback) {
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    delete doc._revisions; // ignore this, trust the rev
-    var oldRev = doc._rev;
-    var id = doc._id;
-    var newRev;
-    if (!oldRev) {
-      newRev = doc._rev = '0-1';
-    } else {
-      newRev = doc._rev = '0-' + (parseInt(oldRev.split('-')[1], 10) + 1);
-    }
-    var json = stringifyDoc(doc);
-
-    var ret;
-    function putLocal(tx) {
-      var sql;
-      var values;
-      if (oldRev) {
-        sql = 'UPDATE ' + LOCAL_STORE$1 + ' SET rev=?, json=? ' +
-          'WHERE id=? AND rev=?';
-        values = [newRev, json, id, oldRev];
-      } else {
-        sql = 'INSERT INTO ' + LOCAL_STORE$1 + ' (id, rev, json) VALUES (?,?,?)';
-        values = [id, newRev, json];
-      }
-      tx.executeSql(sql, values, function (tx, res) {
-        if (res.rowsAffected) {
-          ret = {ok: true, id: id, rev: newRev};
-          if (opts.ctx) { // return immediately
-            callback(null, ret);
-          }
-        } else {
-          callback(createError(REV_CONFLICT));
-        }
-      }, function () {
-        callback(createError(REV_CONFLICT));
-        return false; // ack that we handled the error
-      });
-    }
-
-    if (opts.ctx) {
-      putLocal(opts.ctx);
-    } else {
-      db.transaction(putLocal, websqlError(callback), function () {
-        if (ret) {
-          callback(null, ret);
-        }
-      });
-    }
-  };
-
-  api._removeLocal = function (doc, opts, callback) {
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    var ret;
-
-    function removeLocal(tx) {
-      var sql = 'DELETE FROM ' + LOCAL_STORE$1 + ' WHERE id=? AND rev=?';
-      var params = [doc._id, doc._rev];
-      tx.executeSql(sql, params, function (tx, res) {
-        if (!res.rowsAffected) {
-          return callback(createError(MISSING_DOC));
-        }
-        ret = {ok: true, id: doc._id, rev: '0-0'};
-        if (opts.ctx) { // return immediately
-          callback(null, ret);
-        }
-      });
-    }
-
-    if (opts.ctx) {
-      removeLocal(opts.ctx);
-    } else {
-      db.transaction(removeLocal, websqlError(callback), function () {
-        if (ret) {
-          callback(null, ret);
-        }
-      });
-    }
-  };
-
-  api._destroy = function (opts, callback) {
-    websqlChanges.removeAllListeners(api._name);
-    db.transaction(function (tx) {
-      var stores = [DOC_STORE$1, BY_SEQ_STORE$1, ATTACH_STORE$1, META_STORE$1,
-        LOCAL_STORE$1, ATTACH_AND_SEQ_STORE$1];
-      stores.forEach(function (store) {
-        tx.executeSql('DROP TABLE IF EXISTS ' + store, []);
-      });
-    }, websqlError(callback), function () {
-      if (hasLocalStorage()) {
-        delete window.localStorage['_pouch__websqldb_' + api._name];
-        delete window.localStorage[api._name];
-      }
-      callback(null, {'ok': true});
-    });
-  };
 }
 
-function canOpenTestDB() {
-  try {
-    openDatabase('_pouch_validate_websql', 1, '', 1);
-    return true;
-  } catch (err) {
-    return false;
-  }
+function _getOriginalConnection(dbInfo) {
+    return _getConnection(dbInfo, false);
 }
 
-// WKWebView had a bug where WebSQL would throw a DOM Exception 18
-// (see https://bugs.webkit.org/show_bug.cgi?id=137760 and
-// https://github.com/pouchdb/pouchdb/issues/5079)
-// This has been fixed in latest WebKit, so we try to detect it here.
-function isValidWebSQL() {
-  // WKWebView UA:
-  //   Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X)
-  //   AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13C75
-  // Chrome for iOS UA:
-  //   Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en)
-  //   AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60
-  //   Mobile/9B206 Safari/7534.48.3
-  // Firefox for iOS UA:
-  //   Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4
-  //   (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4
-
-  // indexedDB is null on some UIWebViews and undefined in others
-  // see: https://bugs.webkit.org/show_bug.cgi?id=137034
-  if (typeof indexedDB === 'undefined' || indexedDB === null ||
-      !/iP(hone|od|ad)/.test(navigator.userAgent)) {
-    // definitely not WKWebView, avoid creating an unnecessary database
-    return true;
-  }
-  // Cache the result in LocalStorage. Reason we do this is because if we
-  // call openDatabase() too many times, Safari craps out in SauceLabs and
-  // starts throwing DOM Exception 14s.
-  var hasLS = hasLocalStorage();
-  // Include user agent in the hash, so that if Safari is upgraded, we don't
-  // continually think it's broken.
-  var localStorageKey = '_pouch__websqldb_valid_' + navigator.userAgent;
-  if (hasLS && localStorage[localStorageKey]) {
-    return localStorage[localStorageKey] === '1';
-  }
-  var openedTestDB = canOpenTestDB();
-  if (hasLS) {
-    localStorage[localStorageKey] = openedTestDB ? '1' : '0';
-  }
-  return openedTestDB;
+function _getUpgradedConnection(dbInfo) {
+    return _getConnection(dbInfo, true);
 }
 
-function valid() {
-  if (typeof openDatabase !== 'function') {
-    return false;
-  }
-  return isValidWebSQL();
-}
-
-function openDB(name, version, description, size) {
-  // Traditional WebSQL API
-  return openDatabase(name, version, description, size);
-}
-
-function WebSQLPouch(opts, callback) {
-  var _opts = $inject_Object_assign({
-    websql: openDB
-  }, opts);
-
-  WebSqlPouch$1.call(this, _opts, callback);
-}
-
-WebSQLPouch.valid = valid;
-
-WebSQLPouch.use_prefix = true;
-
-var WebSqlPouch = function (PouchDB) {
-  PouchDB.adapter('websql', WebSQLPouch, true);
-};
-
-/* global fetch */
-/* global Headers */
-function wrappedFetch() {
-  var wrappedPromise = {};
-
-  var promise = new PouchPromise$1(function (resolve, reject) {
-    wrappedPromise.resolve = resolve;
-    wrappedPromise.reject = reject;
-  });
-
-  var args = new Array(arguments.length);
-
-  for (var i = 0; i < args.length; i++) {
-    args[i] = arguments[i];
-  }
-
-  wrappedPromise.promise = promise;
-
-  PouchPromise$1.resolve().then(function () {
-    return fetch.apply(null, args);
-  }).then(function (response) {
-    wrappedPromise.resolve(response);
-  }).catch(function (error) {
-    wrappedPromise.reject(error);
-  });
-
-  return wrappedPromise;
-}
-
-function fetchRequest(options, callback) {
-  var wrappedPromise, timer, response;
-
-  var headers = new Headers();
-
-  var fetchOptions = {
-    method: options.method,
-    credentials: 'include',
-    headers: headers
-  };
-
-  if (options.json) {
-    headers.set('Accept', 'application/json');
-    headers.set('Content-Type', options.headers['Content-Type'] ||
-      'application/json');
-  }
-
-  if (options.body &&
-      options.processData &&
-      typeof options.body !== 'string') {
-    fetchOptions.body = JSON.stringify(options.body);
-  } else if ('body' in options) {
-    fetchOptions.body = options.body;
-  } else {
-    fetchOptions.body = null;
-  }
-
-  Object.keys(options.headers).forEach(function (key) {
-    if (options.headers.hasOwnProperty(key)) {
-      headers.set(key, options.headers[key]);
-    }
-  });
-
-  wrappedPromise = wrappedFetch(options.url, fetchOptions);
-
-  if (options.timeout > 0) {
-    timer = setTimeout(function () {
-      wrappedPromise.reject(new Error('Load timeout for resource: ' +
-        options.url));
-    }, options.timeout);
-  }
-
-  wrappedPromise.promise.then(function (fetchResponse) {
-    response = {
-      statusCode: fetchResponse.status
-    };
-
-    if (options.timeout > 0) {
-      clearTimeout(timer);
-    }
-
-    if (response.statusCode >= 200 && response.statusCode < 300) {
-      return options.binary ? fetchResponse.blob() : fetchResponse.text();
-    }
-
-    return fetchResponse.json();
-  }).then(function (result) {
-    if (response.statusCode >= 200 && response.statusCode < 300) {
-      callback(null, response, result);
-    } else {
-      result.status = response.statusCode;
-      callback(result);
-    }
-  }).catch(function (error) {
-    if (!error) {
-      // this happens when the listener is canceled
-      error = new Error('canceled');
-    }
-    callback(error);
-  });
-
-  return {abort: wrappedPromise.reject};
-}
-
-function xhRequest(options, callback) {
-
-  var xhr, timer;
-  var timedout = false;
-
-  var abortReq = function () {
-    xhr.abort();
-    cleanUp();
-  };
-
-  var timeoutReq = function () {
-    timedout = true;
-    xhr.abort();
-    cleanUp();
-  };
-
-  var ret = {abort: abortReq};
-
-  var cleanUp = function () {
-    clearTimeout(timer);
-    ret.abort = function () {};
-    if (xhr) {
-      xhr.onprogress = undefined;
-      if (xhr.upload) {
-        xhr.upload.onprogress = undefined;
-      }
-      xhr.onreadystatechange = undefined;
-      xhr = undefined;
-    }
-  };
-
-  if (options.xhr) {
-    xhr = new options.xhr();
-  } else {
-    xhr = new XMLHttpRequest();
-  }
-
-  try {
-    xhr.open(options.method, options.url);
-  } catch (exception) {
-    return callback(new Error(exception.name || 'Url is invalid'));
-  }
-
-  xhr.withCredentials = ('withCredentials' in options) ?
-    options.withCredentials : true;
-
-  if (options.method === 'GET') {
-    delete options.headers['Content-Type'];
-  } else if (options.json) {
-    options.headers.Accept = 'application/json';
-    options.headers['Content-Type'] = options.headers['Content-Type'] ||
-      'application/json';
-    if (options.body &&
-        options.processData &&
-        typeof options.body !== "string") {
-      options.body = JSON.stringify(options.body);
-    }
-  }
-
-  if (options.binary) {
-    xhr.responseType = 'arraybuffer';
-  }
-
-  if (!('body' in options)) {
-    options.body = null;
-  }
-
-  for (var key in options.headers) {
-    if (options.headers.hasOwnProperty(key)) {
-      xhr.setRequestHeader(key, options.headers[key]);
-    }
-  }
-
-  if (options.timeout > 0) {
-    timer = setTimeout(timeoutReq, options.timeout);
-    xhr.onprogress = function () {
-      clearTimeout(timer);
-      if (xhr.readyState !== 4) {
-        timer = setTimeout(timeoutReq, options.timeout);
-      }
-    };
-    if (typeof xhr.upload !== 'undefined') { // does not exist in ie9
-      xhr.upload.onprogress = xhr.onprogress;
-    }
-  }
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState !== 4) {
-      return;
-    }
-
-    var response = {
-      statusCode: xhr.status
-    };
-
-    if (xhr.status >= 200 && xhr.status < 300) {
-      var data;
-      if (options.binary) {
-        data = createBlob([xhr.response || ''], {
-          type: xhr.getResponseHeader('Content-Type')
-        });
-      } else {
-        data = xhr.responseText;
-      }
-      callback(null, response, data);
-    } else {
-      var err = {};
-      if (timedout) {
-        err = new Error('ETIMEDOUT');
-        err.code = 'ETIMEDOUT';
-      } else if (typeof xhr.response === 'string') {
-        try {
-          err = JSON.parse(xhr.response);
-        } catch (e) {}
-      }
-      err.status = xhr.status;
-      callback(err);
-    }
-    cleanUp();
-  };
-
-  if (options.body && (options.body instanceof Blob)) {
-    readAsArrayBuffer(options.body, function (arrayBuffer) {
-      xhr.send(arrayBuffer);
-    });
-  } else {
-    xhr.send(options.body);
-  }
-
-  return ret;
-}
-
-function testXhr() {
-  try {
-    new XMLHttpRequest();
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
-
-var hasXhr = testXhr();
-
-function ajax$1(options, callback) {
-  if (!false && (hasXhr || options.xhr)) {
-    return xhRequest(options, callback);
-  } else {
-    return fetchRequest(options, callback);
-  }
-}
-
-// the blob already has a type; do nothing
-var res$2 = function () {};
-
-function defaultBody() {
-  return '';
-}
-
-function ajaxCore$1(options, callback) {
-
-  options = clone(options);
-
-  var defaultOptions = {
-    method : "GET",
-    headers: {},
-    json: true,
-    processData: true,
-    timeout: 10000,
-    cache: false
-  };
-
-  options = $inject_Object_assign(defaultOptions, options);
-
-  function onSuccess(obj, resp, cb) {
-    if (!options.binary && options.json && typeof obj === 'string') {
-      /* istanbul ignore next */
-      try {
-        obj = JSON.parse(obj);
-      } catch (e) {
-        // Probably a malformed JSON from server
-        return cb(e);
-      }
-    }
-    if (Array.isArray(obj)) {
-      obj = obj.map(function (v) {
-        if (v.error || v.missing) {
-          return generateErrorFromResponse(v);
-        } else {
-          return v;
-        }
-      });
-    }
-    if (options.binary) {
-      res$2(obj, resp);
-    }
-    cb(null, obj, resp);
-  }
-
-  if (options.json) {
-    if (!options.binary) {
-      options.headers.Accept = 'application/json';
-    }
-    options.headers['Content-Type'] = options.headers['Content-Type'] ||
-      'application/json';
-  }
-
-  if (options.binary) {
-    options.encoding = null;
-    options.json = false;
-  }
-
-  if (!options.processData) {
-    options.json = false;
-  }
-
-  return ajax$1(options, function (err, response, body) {
-
-    if (err) {
-      return callback(generateErrorFromResponse(err));
-    }
-
-    var error;
-    var content_type = response.headers && response.headers['content-type'];
-    var data = body || defaultBody();
-
-    // CouchDB doesn't always return the right content-type for JSON data, so
-    // we check for ^{ and }$ (ignoring leading/trailing whitespace)
-    if (!options.binary && (options.json || !options.processData) &&
-        typeof data !== 'object' &&
-        (/json/.test(content_type) ||
-         (/^[\s]*\{/.test(data) && /\}[\s]*$/.test(data)))) {
-      try {
-        data = JSON.parse(data.toString());
-      } catch (e) {}
-    }
-
-    if (response.statusCode >= 200 && response.statusCode < 300) {
-      onSuccess(data, response, callback);
-    } else {
-      error = generateErrorFromResponse(data);
-      error.status = response.statusCode;
-      callback(error);
-    }
-  });
-}
-
-function ajax(opts, callback) {
-
-  // cache-buster, specifically designed to work around IE's aggressive caching
-  // see http://www.dashbay.com/2011/05/internet-explorer-caches-ajax/
-  // Also Safari caches POSTs, so we need to cache-bust those too.
-  var ua = (navigator && navigator.userAgent) ?
-    navigator.userAgent.toLowerCase() : '';
-
-  var isSafari = ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1;
-  var isIE = ua.indexOf('msie') !== -1;
-  var isEdge = ua.indexOf('edge') !== -1;
-
-  // it appears the new version of safari also caches GETs,
-  // see https://github.com/pouchdb/pouchdb/issues/5010
-  var shouldCacheBust = (isSafari ||
-    ((isIE || isEdge) && opts.method === 'GET'));
-
-  var cache = 'cache' in opts ? opts.cache : true;
-
-  var isBlobUrl = /^blob:/.test(opts.url); // don't append nonces for blob URLs
-
-  if (!isBlobUrl && (shouldCacheBust || !cache)) {
-    var hasArgs = opts.url.indexOf('?') !== -1;
-    opts.url += (hasArgs ? '&' : '?') + '_nonce=' + Date.now();
-  }
-
-  return ajaxCore$1(opts, callback);
-}
-
-// dead simple promise pool, inspired by https://github.com/timdp/es6-promise-pool
-// but much smaller in code size. limits the number of concurrent promises that are executed
-
-
-function pool(promiseFactories, limit) {
-  return new PouchPromise$1(function (resolve, reject) {
-    var running = 0;
-    var current = 0;
-    var done = 0;
-    var len = promiseFactories.length;
-    var err;
-
-    function runNext() {
-      running++;
-      promiseFactories[current++]().then(onSuccess, onError);
-    }
-
-    function doNext() {
-      if (++done === len) {
-        /* istanbul ignore if */
-        if (err) {
-          reject(err);
-        } else {
-          resolve();
-        }
-      } else {
-        runNextBatch();
-      }
-    }
-
-    function onSuccess() {
-      running--;
-      doNext();
-    }
-
-    /* istanbul ignore next */
-    function onError(thisErr) {
-      running--;
-      err = err || thisErr;
-      doNext();
-    }
-
-    function runNextBatch() {
-      while (running < limit && current < len) {
-        runNext();
-      }
-    }
-
-    runNextBatch();
-  });
-}
-
-var CHANGES_BATCH_SIZE = 25;
-var MAX_SIMULTANEOUS_REVS = 50;
-
-var supportsBulkGetMap = {};
-
-function readAttachmentsAsBlobOrBuffer(row) {
-  var atts = row.doc && row.doc._attachments;
-  if (!atts) {
-    return;
-  }
-  Object.keys(atts).forEach(function (filename) {
-    var att = atts[filename];
-    att.data = b64ToBluffer(att.data, att.content_type);
-  });
-}
-
-function encodeDocId(id) {
-  if (/^_design/.test(id)) {
-    return '_design/' + encodeURIComponent(id.slice(8));
-  }
-  if (/^_local/.test(id)) {
-    return '_local/' + encodeURIComponent(id.slice(7));
-  }
-  return encodeURIComponent(id);
-}
-
-function preprocessAttachments$2(doc) {
-  if (!doc._attachments || !Object.keys(doc._attachments)) {
-    return PouchPromise$1.resolve();
-  }
-
-  return PouchPromise$1.all(Object.keys(doc._attachments).map(function (key) {
-    var attachment = doc._attachments[key];
-    if (attachment.data && typeof attachment.data !== 'string') {
-      return new PouchPromise$1(function (resolve) {
-        blobToBase64(attachment.data, resolve);
-      }).then(function (b64) {
-        attachment.data = b64;
-      });
-    }
-  }));
-}
-
-function hasUrlPrefix(opts) {
-  if (!opts.prefix) {
-    return false;
-  }
-
-  var protocol = parseUri(opts.prefix).protocol;
-
-  return protocol === 'http' || protocol === 'https';
-}
-
-// Get all the information you possibly can about the URI given by name and
-// return it as a suitable object.
-function getHost(name, opts) {
-
-  // encode db name if opts.prefix is a url (#5574)
-  if (hasUrlPrefix(opts)) {
-    var dbName = opts.name.substr(opts.prefix.length);
-    name = opts.prefix + encodeURIComponent(dbName);
-  }
-
-  // Prase the URI into all its little bits
-  var uri = parseUri(name);
-
-  // Store the user and password as a separate auth object
-  if (uri.user || uri.password) {
-    uri.auth = {username: uri.user, password: uri.password};
-  }
-
-  // Split the path part of the URI into parts using '/' as the delimiter
-  // after removing any leading '/' and any trailing '/'
-  var parts = uri.path.replace(/(^\/|\/$)/g, '').split('/');
-
-  // Store the first part as the database name and remove it from the parts
-  // array
-  uri.db = parts.pop();
-  // Prevent double encoding of URI component
-  if (uri.db.indexOf('%') === -1) {
-    uri.db = encodeURIComponent(uri.db);
-  }
-
-  // Restore the path by joining all the remaining parts (all the parts
-  // except for the database name) with '/'s
-  uri.path = parts.join('/');
-
-  return uri;
-}
-
-// Generate a URL with the host data given by opts and the given path
-function genDBUrl(opts, path) {
-  return genUrl(opts, opts.db + '/' + path);
-}
-
-// Generate a URL with the host data given by opts and the given path
-function genUrl(opts, path) {
-  // If the host already has a path, then we need to have a path delimiter
-  // Otherwise, the path delimiter is the empty string
-  var pathDel = !opts.path ? '' : '/';
-
-  // If the host already has a path, then we need to have a path delimiter
-  // Otherwise, the path delimiter is the empty string
-  return opts.protocol + '://' + opts.host +
-         (opts.port ? (':' + opts.port) : '') +
-         '/' + opts.path + pathDel + path;
-}
-
-function paramsToStr(params) {
-  return '?' + Object.keys(params).map(function (k) {
-    return k + '=' + encodeURIComponent(params[k]);
-  }).join('&');
-}
-
-// Implements the PouchDB API for dealing with CouchDB instances over HTTP
-function HttpPouch(opts, callback) {
-
-  // The functions that will be publicly available for HttpPouch
-  var api = this;
-
-  var host = getHost(opts.name, opts);
-  var dbUrl = genDBUrl(host, '');
-
-  opts = clone(opts);
-  var ajaxOpts = opts.ajax || {};
-
-  if (opts.auth || host.auth) {
-    var nAuth = opts.auth || host.auth;
-    var str = nAuth.username + ':' + nAuth.password;
-    var token = thisBtoa(unescape(encodeURIComponent(str)));
-    ajaxOpts.headers = ajaxOpts.headers || {};
-    ajaxOpts.headers.Authorization = 'Basic ' + token;
-  }
-
-  // Not strictly necessary, but we do this because numerous tests
-  // rely on swapping ajax in and out.
-  api._ajax = ajax;
-
-  function ajax$$1(userOpts, options, callback) {
-    var reqAjax = userOpts.ajax || {};
-    var reqOpts = $inject_Object_assign(clone(ajaxOpts), reqAjax, options);
-    var defaultHeaders = clone(ajaxOpts.headers || {});
-    reqOpts.headers = $inject_Object_assign(defaultHeaders, reqAjax.headers,
-      options.headers || {});
-    /* istanbul ignore if */
-    if (api.constructor.listeners('debug').length) {
-      api.constructor.emit('debug', ['http', reqOpts.method, reqOpts.url]);
-    }
-    return api._ajax(reqOpts, callback);
-  }
-
-  function ajaxPromise(userOpts, opts) {
-    return new PouchPromise$1(function (resolve, reject) {
-      ajax$$1(userOpts, opts, function (err, res) {
-        /* istanbul ignore if */
-        if (err) {
-          return reject(err);
-        }
-        resolve(res);
-      });
-    });
-  }
-
-  function adapterFun$$1(name, fun) {
-    return adapterFun(name, getArguments(function (args) {
-      setup().then(function () {
-        return fun.apply(this, args);
-      }).catch(function (e) {
-        var callback = args.pop();
-        callback(e);
-      });
-    }));
-  }
-
-  var setupPromise;
-
-  function setup() {
-    // TODO: Remove `skipSetup` in favor of `skip_setup` in a future release
-    if (opts.skipSetup || opts.skip_setup) {
-      return PouchPromise$1.resolve();
-    }
-
-    // If there is a setup in process or previous successful setup
-    // done then we will use that
-    // If previous setups have been rejected we will try again
-    if (setupPromise) {
-      return setupPromise;
-    }
-
-    var checkExists = {method: 'GET', url: dbUrl};
-    setupPromise = ajaxPromise({}, checkExists).catch(function (err) {
-      if (err && err.status && err.status === 404) {
-        // Doesnt exist, create it
-        explainError(404, 'PouchDB is just detecting if the remote exists.');
-        return ajaxPromise({}, {method: 'PUT', url: dbUrl});
-      } else {
-        return PouchPromise$1.reject(err);
-      }
-    }).catch(function (err) {
-      // If we try to create a database that already exists, skipped in
-      // istanbul since its catching a race condition.
-      /* istanbul ignore if */
-      if (err && err.status && err.status === 412) {
+function _isUpgradeNeeded(dbInfo, defaultVersion) {
+    if (!dbInfo.db) {
         return true;
-      }
-      return PouchPromise$1.reject(err);
-    });
-
-    setupPromise.catch(function () {
-      setupPromise = null;
-    });
-
-    return setupPromise;
-  }
-
-  nextTick(function () {
-    callback(null, api);
-  });
-
-  api._remote = true;
-  /* istanbul ignore next */
-  api.type = function () {
-    return 'http';
-  };
-
-  api.id = adapterFun$$1('id', function (callback) {
-    ajax$$1({}, {method: 'GET', url: genUrl(host, '')}, function (err, result) {
-      var uuid$$1 = (result && result.uuid) ?
-        (result.uuid + host.db) : genDBUrl(host, '');
-      callback(null, uuid$$1);
-    });
-  });
-
-  api.request = adapterFun$$1('request', function (options, callback) {
-    options.url = genDBUrl(host, options.url);
-    ajax$$1({}, options, callback);
-  });
-
-  // Sends a POST request to the host calling the couchdb _compact function
-  //    version: The version of CouchDB it is running
-  api.compact = adapterFun$$1('compact', function (opts, callback) {
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
     }
-    opts = clone(opts);
-    ajax$$1(opts, {
-      url: genDBUrl(host, '_compact'),
-      method: 'POST'
-    }, function () {
-      function ping() {
-        api.info(function (err, res) {
-          // CouchDB may send a "compact_running:true" if it's
-          // already compacting. PouchDB Server doesn't.
-          /* istanbul ignore else */
-          if (res && !res.compact_running) {
-            callback(null, {ok: true});
-          } else {
-            setTimeout(ping, opts.interval || 200);
-          }
-        });
-      }
-      // Ping the http if it's finished compaction
-      ping();
-    });
-  });
 
-  api.bulkGet = adapterFun('bulkGet', function (opts, callback) {
+    var isNewStore = !dbInfo.db.objectStoreNames.contains(dbInfo.storeName);
+    var isDowngrade = dbInfo.version < dbInfo.db.version;
+    var isUpgrade = dbInfo.version > dbInfo.db.version;
+
+    if (isDowngrade) {
+        // If the version is not the default one
+        // then warn for impossible downgrade.
+        if (dbInfo.version !== defaultVersion) {
+            console.warn('The database "' + dbInfo.name + '"' + ' can\'t be downgraded from version ' + dbInfo.db.version + ' to version ' + dbInfo.version + '.');
+        }
+        // Align the versions to prevent errors.
+        dbInfo.version = dbInfo.db.version;
+    }
+
+    if (isUpgrade || isNewStore) {
+        // If the store is new then increment the version (if needed).
+        // This will trigger an "upgradeneeded" event which is required
+        // for creating a store.
+        if (isNewStore) {
+            var incVersion = dbInfo.db.version + 1;
+            if (incVersion > dbInfo.version) {
+                dbInfo.version = incVersion;
+            }
+        }
+
+        return true;
+    }
+
+    return false;
+}
+
+// encode a blob for indexeddb engines that don't support blobs
+function _encodeBlob(blob) {
+    return new Promise$1(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.onerror = reject;
+        reader.onloadend = function (e) {
+            var base64 = btoa(e.target.result || '');
+            resolve({
+                __local_forage_encoded_blob: true,
+                data: base64,
+                type: blob.type
+            });
+        };
+        reader.readAsBinaryString(blob);
+    });
+}
+
+// decode an encoded blob
+function _decodeBlob(encodedBlob) {
+    var arrayBuff = _binStringToArrayBuffer(atob(encodedBlob.data));
+    return createBlob([arrayBuff], { type: encodedBlob.type });
+}
+
+// is this one of our fancy encoded blobs?
+function _isEncodedBlob(value) {
+    return value && value.__local_forage_encoded_blob;
+}
+
+// Specialize the default `ready()` function by making it dependent
+// on the current database operations. Thus, the driver will be actually
+// ready when it's been initialized (default) *and* there are no pending
+// operations on the database (initiated by some other instances).
+function _fullyReady(callback) {
     var self = this;
 
-    function doBulkGet(cb) {
-      var params = {};
-      if (opts.revs) {
-        params.revs = true;
-      }
-      if (opts.attachments) {
-        /* istanbul ignore next */
-        params.attachments = true;
-      }
-      if (opts.latest) {
-        params.latest = true;
-      }
-      ajax$$1(opts, {
-        url: genDBUrl(host, '_bulk_get' + paramsToStr(params)),
-        method: 'POST',
-        body: { docs: opts.docs}
-      }, cb);
-    }
+    var promise = self._initReady().then(function () {
+        var dbContext = dbContexts[self._dbInfo.name];
 
-    /* istanbul ignore next */
-    function doBulkGetShim() {
-      // avoid "url too long error" by splitting up into multiple requests
-      var batchSize = MAX_SIMULTANEOUS_REVS;
-      var numBatches = Math.ceil(opts.docs.length / batchSize);
-      var numDone = 0;
-      var results = new Array(numBatches);
-
-      function onResult(batchNum) {
-        return function (err, res) {
-          // err is impossible because shim returns a list of errs in that case
-          results[batchNum] = res.results;
-          if (++numDone === numBatches) {
-            callback(null, {results: flatten(results)});
-          }
-        };
-      }
-
-      for (var i = 0; i < numBatches; i++) {
-        var subOpts = pick(opts, ['revs', 'attachments', 'latest']);
-        subOpts.ajax = ajaxOpts;
-        subOpts.docs = opts.docs.slice(i * batchSize,
-          Math.min(opts.docs.length, (i + 1) * batchSize));
-        bulkGet(self, subOpts, onResult(i));
-      }
-    }
-
-    // mark the whole database as either supporting or not supporting _bulk_get
-    var dbUrl = genUrl(host, '');
-    var supportsBulkGet = supportsBulkGetMap[dbUrl];
-
-    /* istanbul ignore next */
-    if (typeof supportsBulkGet !== 'boolean') {
-      // check if this database supports _bulk_get
-      doBulkGet(function (err, res) {
-        if (err) {
-          supportsBulkGetMap[dbUrl] = false;
-          explainError(
-            err.status,
-            'PouchDB is just detecting if the remote ' +
-            'supports the _bulk_get API.'
-          );
-          doBulkGetShim();
-        } else {
-          supportsBulkGetMap[dbUrl] = true;
-          callback(null, res);
+        if (dbContext && dbContext.dbReady) {
+            return dbContext.dbReady;
         }
-      });
-    } else if (supportsBulkGet) {
-      doBulkGet(callback);
-    } else {
-      doBulkGetShim();
-    }
-  });
-
-  // Calls GET on the host, which gets back a JSON string containing
-  //    couchdb: A welcome string
-  //    version: The version of CouchDB it is running
-  api._info = function (callback) {
-    setup().then(function () {
-      ajax$$1({}, {
-        method: 'GET',
-        url: genDBUrl(host, '')
-      }, function (err, res) {
-        /* istanbul ignore next */
-        if (err) {
-        return callback(err);
-        }
-        res.host = genDBUrl(host, '');
-        callback(null, res);
-      });
-    }).catch(callback);
-  };
-
-  // Get the document with the given id from the database given by host.
-  // The id could be solely the _id in the database, or it may be a
-  // _design/ID or _local/ID path
-  api.get = adapterFun$$1('get', function (id, opts, callback) {
-    // If no options were given, set the callback to the second parameter
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    opts = clone(opts);
-
-    // List of parameters to add to the GET request
-    var params = {};
-
-    if (opts.revs) {
-      params.revs = true;
-    }
-
-    if (opts.revs_info) {
-      params.revs_info = true;
-    }
-
-    if (opts.latest) {
-      params.latest = true;
-    }
-
-    if (opts.open_revs) {
-      if (opts.open_revs !== "all") {
-        opts.open_revs = JSON.stringify(opts.open_revs);
-      }
-      params.open_revs = opts.open_revs;
-    }
-
-    if (opts.rev) {
-      params.rev = opts.rev;
-    }
-
-    if (opts.conflicts) {
-      params.conflicts = opts.conflicts;
-    }
-
-    id = encodeDocId(id);
-
-    // Set the options for the ajax call
-    var options = {
-      method: 'GET',
-      url: genDBUrl(host, id + paramsToStr(params))
-    };
-
-    function fetchAttachments(doc) {
-      var atts = doc._attachments;
-      var filenames = atts && Object.keys(atts);
-      if (!atts || !filenames.length) {
-        return;
-      }
-      // we fetch these manually in separate XHRs, because
-      // Sync Gateway would normally send it back as multipart/mixed,
-      // which we cannot parse. Also, this is more efficient than
-      // receiving attachments as base64-encoded strings.
-      function fetch(filename) {
-        var att = atts[filename];
-        var path = encodeDocId(doc._id) + '/' + encodeAttachmentId(filename) +
-          '?rev=' + doc._rev;
-        return ajaxPromise(opts, {
-          method: 'GET',
-          url: genDBUrl(host, path),
-          binary: true
-        }).then(function (blob$$1) {
-          if (opts.binary) {
-            return blob$$1;
-          }
-          return new PouchPromise$1(function (resolve) {
-            blobToBase64(blob$$1, resolve);
-          });
-        }).then(function (data) {
-          delete att.stub;
-          delete att.length;
-          att.data = data;
-        });
-      }
-
-      var promiseFactories = filenames.map(function (filename) {
-        return function () {
-          return fetch(filename);
-        };
-      });
-
-      // This limits the number of parallel xhr requests to 5 any time
-      // to avoid issues with maximum browser request limits
-      return pool(promiseFactories, 5);
-    }
-
-    function fetchAllAttachments(docOrDocs) {
-      if (Array.isArray(docOrDocs)) {
-        return PouchPromise$1.all(docOrDocs.map(function (doc) {
-          if (doc.ok) {
-            return fetchAttachments(doc.ok);
-          }
-        }));
-      }
-      return fetchAttachments(docOrDocs);
-    }
-
-    ajaxPromise(opts, options).then(function (res) {
-      return PouchPromise$1.resolve().then(function () {
-        if (opts.attachments) {
-          return fetchAllAttachments(res);
-        }
-      }).then(function () {
-        callback(null, res);
-      });
-    }).catch(callback);
-  });
-
-  // Delete the document given by doc from the database given by host.
-  api.remove = adapterFun$$1('remove',
-      function (docOrId, optsOrRev, opts, callback) {
-    var doc;
-    if (typeof optsOrRev === 'string') {
-      // id, rev, opts, callback style
-      doc = {
-        _id: docOrId,
-        _rev: optsOrRev
-      };
-      if (typeof opts === 'function') {
-        callback = opts;
-        opts = {};
-      }
-    } else {
-      // doc, opts, callback style
-      doc = docOrId;
-      if (typeof optsOrRev === 'function') {
-        callback = optsOrRev;
-        opts = {};
-      } else {
-        callback = opts;
-        opts = optsOrRev;
-      }
-    }
-
-    var rev = (doc._rev || opts.rev);
-
-    // Delete the document
-    ajax$$1(opts, {
-      method: 'DELETE',
-      url: genDBUrl(host, encodeDocId(doc._id)) + '?rev=' + rev
-    }, callback);
-  });
-
-  function encodeAttachmentId(attachmentId) {
-    return attachmentId.split("/").map(encodeURIComponent).join("/");
-  }
-
-  // Get the attachment
-  api.getAttachment =
-    adapterFun$$1('getAttachment', function (docId, attachmentId, opts,
-                                                callback) {
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    var params = opts.rev ? ('?rev=' + opts.rev) : '';
-    var url = genDBUrl(host, encodeDocId(docId)) + '/' +
-      encodeAttachmentId(attachmentId) + params;
-    ajax$$1(opts, {
-      method: 'GET',
-      url: url,
-      binary: true
-    }, callback);
-  });
-
-  // Remove the attachment given by the id and rev
-  api.removeAttachment =
-    adapterFun$$1('removeAttachment', function (docId, attachmentId, rev,
-                                                   callback) {
-
-    var url = genDBUrl(host, encodeDocId(docId) + '/' +
-      encodeAttachmentId(attachmentId)) + '?rev=' + rev;
-
-    ajax$$1({}, {
-      method: 'DELETE',
-      url: url
-    }, callback);
-  });
-
-  // Add the attachment given by blob and its contentType property
-  // to the document with the given id, the revision given by rev, and
-  // add it to the database given by host.
-  api.putAttachment =
-    adapterFun$$1('putAttachment', function (docId, attachmentId, rev, blob$$1,
-                                                type, callback) {
-    if (typeof type === 'function') {
-      callback = type;
-      type = blob$$1;
-      blob$$1 = rev;
-      rev = null;
-    }
-    var id = encodeDocId(docId) + '/' + encodeAttachmentId(attachmentId);
-    var url = genDBUrl(host, id);
-    if (rev) {
-      url += '?rev=' + rev;
-    }
-
-    if (typeof blob$$1 === 'string') {
-      // input is assumed to be a base64 string
-      var binary;
-      try {
-        binary = thisAtob(blob$$1);
-      } catch (err) {
-        return callback(createError(BAD_ARG,
-                        'Attachment is not a valid base64 string'));
-      }
-      blob$$1 = binary ? binStringToBluffer(binary, type) : '';
-    }
-
-    var opts = {
-      headers: {'Content-Type': type},
-      method: 'PUT',
-      url: url,
-      processData: false,
-      body: blob$$1,
-      timeout: ajaxOpts.timeout || 60000
-    };
-    // Add the attachment
-    ajax$$1({}, opts, callback);
-  });
-
-  // Update/create multiple documents given by req in the database
-  // given by host.
-  api._bulkDocs = function (req, opts, callback) {
-    // If new_edits=false then it prevents the database from creating
-    // new revision numbers for the documents. Instead it just uses
-    // the old ones. This is used in database replication.
-    req.new_edits = opts.new_edits;
-
-    setup().then(function () {
-      return PouchPromise$1.all(req.docs.map(preprocessAttachments$2));
-    }).then(function () {
-      // Update/create the documents
-      ajax$$1(opts, {
-        method: 'POST',
-        url: genDBUrl(host, '_bulk_docs'),
-        timeout: opts.timeout,
-        body: req
-      }, function (err, results) {
-        if (err) {
-          return callback(err);
-        }
-        results.forEach(function (result) {
-          result.ok = true; // smooths out cloudant not adding this
-        });
-        callback(null, results);
-      });
-    }).catch(callback);
-  };
-
-
-  // Update/create document
-  api._put = function (doc, opts, callback) {
-    setup().then(function () {
-      return preprocessAttachments$2(doc);
-    }).then(function () {
-      // Update/create the document
-      ajax$$1(opts, {
-        method: 'PUT',
-        url: genDBUrl(host, encodeDocId(doc._id)),
-        body: doc
-      }, function (err, result) {
-        if (err) {
-          return callback(err);
-        }
-        callback(null, result);
-      });
-    }).catch(callback);
-  };
-
-
-  // Get a listing of the documents in the database given
-  // by host and ordered by increasing id.
-  api.allDocs = adapterFun$$1('allDocs', function (opts, callback) {
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    opts = clone(opts);
-
-    // List of parameters to add to the GET request
-    var params = {};
-    var body;
-    var method = 'GET';
-
-    if (opts.conflicts) {
-      params.conflicts = true;
-    }
-
-    if (opts.descending) {
-      params.descending = true;
-    }
-
-    if (opts.include_docs) {
-      params.include_docs = true;
-    }
-
-    // added in CouchDB 1.6.0
-    if (opts.attachments) {
-      params.attachments = true;
-    }
-
-    if (opts.key) {
-      params.key = JSON.stringify(opts.key);
-    }
-
-    if (opts.start_key) {
-      opts.startkey = opts.start_key;
-    }
-
-    if (opts.startkey) {
-      params.startkey = JSON.stringify(opts.startkey);
-    }
-
-    if (opts.end_key) {
-      opts.endkey = opts.end_key;
-    }
-
-    if (opts.endkey) {
-      params.endkey = JSON.stringify(opts.endkey);
-    }
-
-    if (typeof opts.inclusive_end !== 'undefined') {
-      params.inclusive_end = !!opts.inclusive_end;
-    }
-
-    if (typeof opts.limit !== 'undefined') {
-      params.limit = opts.limit;
-    }
-
-    if (typeof opts.skip !== 'undefined') {
-      params.skip = opts.skip;
-    }
-
-    var paramStr = paramsToStr(params);
-
-    if (typeof opts.keys !== 'undefined') {
-      method = 'POST';
-      body = {keys: opts.keys};
-    }
-
-    // Get the document listing
-    ajaxPromise(opts, {
-      method: method,
-      url: genDBUrl(host, '_all_docs' + paramStr),
-      body: body
-    }).then(function (res) {
-      if (opts.include_docs && opts.attachments && opts.binary) {
-        res.rows.forEach(readAttachmentsAsBlobOrBuffer);
-      }
-      callback(null, res);
-    }).catch(callback);
-  });
-
-  // Get a list of changes made to documents in the database given by host.
-  // TODO According to the README, there should be two other methods here,
-  // api.changes.addListener and api.changes.removeListener.
-  api._changes = function (opts) {
-
-    // We internally page the results of a changes request, this means
-    // if there is a large set of changes to be returned we can start
-    // processing them quicker instead of waiting on the entire
-    // set of changes to return and attempting to process them at once
-    var batchSize = 'batch_size' in opts ? opts.batch_size : CHANGES_BATCH_SIZE;
-
-    opts = clone(opts);
-    opts.timeout = ('timeout' in opts) ? opts.timeout :
-      ('timeout' in ajaxOpts) ? ajaxOpts.timeout :
-      30 * 1000;
-
-    // We give a 5 second buffer for CouchDB changes to respond with
-    // an ok timeout (if a timeout it set)
-    var params = opts.timeout ? {timeout: opts.timeout - (5 * 1000)} : {};
-    var limit = (typeof opts.limit !== 'undefined') ? opts.limit : false;
-    var returnDocs;
-    if ('return_docs' in opts) {
-      returnDocs = opts.return_docs;
-    } else if ('returnDocs' in opts) {
-      // TODO: Remove 'returnDocs' in favor of 'return_docs' in a future release
-      returnDocs = opts.returnDocs;
-    } else {
-      returnDocs = true;
-    }
-    //
-    var leftToFetch = limit;
-
-    if (opts.style) {
-      params.style = opts.style;
-    }
-
-    if (opts.include_docs || opts.filter && typeof opts.filter === 'function') {
-      params.include_docs = true;
-    }
-
-    if (opts.attachments) {
-      params.attachments = true;
-    }
-
-    if (opts.continuous) {
-      params.feed = 'longpoll';
-    }
-
-    if (opts.conflicts) {
-      params.conflicts = true;
-    }
-
-    if (opts.descending) {
-      params.descending = true;
-    }
-
-    if ('heartbeat' in opts) {
-      // If the heartbeat value is false, it disables the default heartbeat
-      if (opts.heartbeat) {
-        params.heartbeat = opts.heartbeat;
-      }
-    } else if (opts.continuous) {
-      // Default heartbeat to 10 seconds
-      params.heartbeat = 10000;
-    }
-
-    if (opts.filter && typeof opts.filter === 'string') {
-      params.filter = opts.filter;
-    }
-
-    if (opts.view && typeof opts.view === 'string') {
-      params.filter = '_view';
-      params.view = opts.view;
-    }
-
-    // If opts.query_params exists, pass it through to the changes request.
-    // These parameters may be used by the filter on the source database.
-    if (opts.query_params && typeof opts.query_params === 'object') {
-      for (var param_name in opts.query_params) {
-        /* istanbul ignore else */
-        if (opts.query_params.hasOwnProperty(param_name)) {
-          params[param_name] = opts.query_params[param_name];
-        }
-      }
-    }
-
-    var method = 'GET';
-    var body;
-
-    if (opts.doc_ids) {
-      // set this automagically for the user; it's annoying that couchdb
-      // requires both a "filter" and a "doc_ids" param.
-      params.filter = '_doc_ids';
-      method = 'POST';
-      body = {doc_ids: opts.doc_ids };
-    }
-    /* istanbul ignore next */
-    else if (opts.selector) {
-      // set this automagically for the user, similar to above
-      params.filter = '_selector';
-      method = 'POST';
-      body = {selector: opts.selector };
-    }
-
-    var xhr;
-    var lastFetchedSeq;
-
-    // Get all the changes starting wtih the one immediately after the
-    // sequence number given by since.
-    var fetch = function (since, callback) {
-      if (opts.aborted) {
-        return;
-      }
-      params.since = since;
-      // "since" can be any kind of json object in Coudant/CouchDB 2.x
-      /* istanbul ignore next */
-      if (typeof params.since === "object") {
-        params.since = JSON.stringify(params.since);
-      }
-
-      if (opts.descending) {
-        if (limit) {
-          params.limit = leftToFetch;
-        }
-      } else {
-        params.limit = (!limit || leftToFetch > batchSize) ?
-          batchSize : leftToFetch;
-      }
-
-      // Set the options for the ajax call
-      var xhrOpts = {
-        method: method,
-        url: genDBUrl(host, '_changes' + paramsToStr(params)),
-        timeout: opts.timeout,
-        body: body
-      };
-      lastFetchedSeq = since;
-
-      /* istanbul ignore if */
-      if (opts.aborted) {
-        return;
-      }
-
-      // Get the changes
-      setup().then(function () {
-        xhr = ajax$$1(opts, xhrOpts, callback);
-      }).catch(callback);
-    };
-
-    // If opts.since exists, get all the changes from the sequence
-    // number given by opts.since. Otherwise, get all the changes
-    // from the sequence number 0.
-    var results = {results: []};
-
-    var fetched = function (err, res) {
-      if (opts.aborted) {
-        return;
-      }
-      var raw_results_length = 0;
-      // If the result of the ajax call (res) contains changes (res.results)
-      if (res && res.results) {
-        raw_results_length = res.results.length;
-        results.last_seq = res.last_seq;
-        // For each change
-        var req = {};
-        req.query = opts.query_params;
-        res.results = res.results.filter(function (c) {
-          leftToFetch--;
-          var ret = filterChange(opts)(c);
-          if (ret) {
-            if (opts.include_docs && opts.attachments && opts.binary) {
-              readAttachmentsAsBlobOrBuffer(c);
-            }
-            if (returnDocs) {
-              results.results.push(c);
-            }
-            opts.onChange(c);
-          }
-          return ret;
-        });
-      } else if (err) {
-        // In case of an error, stop listening for changes and call
-        // opts.complete
-        opts.aborted = true;
-        opts.complete(err);
-        return;
-      }
-
-      // The changes feed may have timed out with no results
-      // if so reuse last update sequence
-      if (res && res.last_seq) {
-        lastFetchedSeq = res.last_seq;
-      }
-
-      var finished = (limit && leftToFetch <= 0) ||
-        (res && raw_results_length < batchSize) ||
-        (opts.descending);
-
-      if ((opts.continuous && !(limit && leftToFetch <= 0)) || !finished) {
-        // Queue a call to fetch again with the newest sequence number
-        nextTick(function () { fetch(lastFetchedSeq, fetched); });
-      } else {
-        // We're done, call the callback
-        opts.complete(null, results);
-      }
-    };
-
-    fetch(opts.since || 0, fetched);
-
-    // Return a method to cancel this method from processing any more
-    return {
-      cancel: function () {
-        opts.aborted = true;
-        if (xhr) {
-          xhr.abort();
-        }
-      }
-    };
-  };
-
-  // Given a set of document/revision IDs (given by req), tets the subset of
-  // those that do NOT correspond to revisions stored in the database.
-  // See http://wiki.apache.org/couchdb/HttpPostRevsDiff
-  api.revsDiff = adapterFun$$1('revsDiff', function (req, opts, callback) {
-    // If no options were given, set the callback to be the second parameter
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-
-    // Get the missing document/revision IDs
-    ajax$$1(opts, {
-      method: 'POST',
-      url: genDBUrl(host, '_revs_diff'),
-      body: req
-    }, callback);
-  });
-
-  api._close = function (callback) {
-    callback();
-  };
-
-  api._destroy = function (options, callback) {
-    ajax$$1(options, {
-      url: genDBUrl(host, ''),
-      method: 'DELETE'
-    }, function (err, resp) {
-      if (err && err.status && err.status !== 404) {
-        return callback(err);
-      }
-      callback(null, resp);
     });
-  };
-}
 
-// HttpPouch is a valid adapter.
-HttpPouch.valid = function () {
-  return true;
-};
-
-var HttpPouch$1 = function (PouchDB) {
-  PouchDB.adapter('http', HttpPouch, false);
-  PouchDB.adapter('https', HttpPouch, false);
-};
-
-function QueryParseError(message) {
-  this.status = 400;
-  this.name = 'query_parse_error';
-  this.message = message;
-  this.error = true;
-  try {
-    Error.captureStackTrace(this, QueryParseError);
-  } catch (e) {}
-}
-
-inherits(QueryParseError, Error);
-
-function NotFoundError(message) {
-  this.status = 404;
-  this.name = 'not_found';
-  this.message = message;
-  this.error = true;
-  try {
-    Error.captureStackTrace(this, NotFoundError);
-  } catch (e) {}
-}
-
-inherits(NotFoundError, Error);
-
-function BuiltInError(message) {
-  this.status = 500;
-  this.name = 'invalid_value';
-  this.message = message;
-  this.error = true;
-  try {
-    Error.captureStackTrace(this, BuiltInError);
-  } catch (e) {}
-}
-
-inherits(BuiltInError, Error);
-
-function promisedCallback(promise, callback) {
-  if (callback) {
-    promise.then(function (res) {
-      nextTick(function () {
-        callback(null, res);
-      });
-    }, function (reason) {
-      nextTick(function () {
-        callback(reason);
-      });
-    });
-  }
-  return promise;
-}
-
-function callbackify(fun) {
-  return getArguments(function (args) {
-    var cb = args.pop();
-    var promise = fun.apply(this, args);
-    if (typeof cb === 'function') {
-      promisedCallback(promise, cb);
-    }
+    executeTwoCallbacks(promise, callback, callback);
     return promise;
-  });
 }
 
-// Promise finally util similar to Q.finally
-function fin(promise, finalPromiseFactory) {
-  return promise.then(function (res) {
-    return finalPromiseFactory().then(function () {
-      return res;
-    });
-  }, function (reason) {
-    return finalPromiseFactory().then(function () {
-      throw reason;
-    });
-  });
-}
+// Open the IndexedDB database (automatically creates one if one didn't
+// previously exist), using any options set in the config.
+function _initStorage(options) {
+    var self = this;
+    var dbInfo = {
+        db: null
+    };
 
-function sequentialize(queue, promiseFactory) {
-  return function () {
-    var args = arguments;
-    var that = this;
-    return queue.add(function () {
-      return promiseFactory.apply(that, args);
-    });
-  };
-}
-
-// uniq an array of strings, order not guaranteed
-// similar to underscore/lodash _.uniq
-function uniq(arr) {
-  var theSet = new ExportedSet(arr);
-  var result = new Array(theSet.size);
-  var index = -1;
-  theSet.forEach(function (value) {
-    result[++index] = value;
-  });
-  return result;
-}
-
-function mapToKeysArray(map) {
-  var result = new Array(map.size);
-  var index = -1;
-  map.forEach(function (value, key) {
-    result[++index] = key;
-  });
-  return result;
-}
-
-function createBuiltInError(name) {
-  var message = 'builtin ' + name +
-    ' function requires map values to be numbers' +
-    ' or number arrays';
-  return new BuiltInError(message);
-}
-
-function sum(values) {
-  var result = 0;
-  for (var i = 0, len = values.length; i < len; i++) {
-    var num = values[i];
-    if (typeof num !== 'number') {
-      if (Array.isArray(num)) {
-        // lists of numbers are also allowed, sum them separately
-        result = typeof result === 'number' ? [result] : result;
-        for (var j = 0, jLen = num.length; j < jLen; j++) {
-          var jNum = num[j];
-          if (typeof jNum !== 'number') {
-            throw createBuiltInError('_sum');
-          } else if (typeof result[j] === 'undefined') {
-            result.push(jNum);
-          } else {
-            result[j] += jNum;
-          }
+    if (options) {
+        for (var i in options) {
+            dbInfo[i] = options[i];
         }
-      } else { // not array/number
-        throw createBuiltInError('_sum');
-      }
-    } else if (typeof result === 'number') {
-      result += num;
-    } else { // add number to array
-      result[0] += num;
     }
-  }
-  return result;
+
+    // Initialize a singleton container for all running localForages.
+    if (!dbContexts) {
+        dbContexts = {};
+    }
+
+    // Get the current context of the database;
+    var dbContext = dbContexts[dbInfo.name];
+
+    // ...or create a new context.
+    if (!dbContext) {
+        dbContext = {
+            // Running localForages sharing a database.
+            forages: [],
+            // Shared database.
+            db: null,
+            // Database readiness (promise).
+            dbReady: null,
+            // Deferred operations on the database.
+            deferredOperations: []
+        };
+        // Register the new context in the global container.
+        dbContexts[dbInfo.name] = dbContext;
+    }
+
+    // Register itself as a running localForage in the current context.
+    dbContext.forages.push(self);
+
+    // Replace the default `ready()` function with the specialized one.
+    if (!self._initReady) {
+        self._initReady = self.ready;
+        self.ready = _fullyReady;
+    }
+
+    // Create an array of initialization states of the related localForages.
+    var initPromises = [];
+
+    function ignoreErrors() {
+        // Don't handle errors here,
+        // just makes sure related localForages aren't pending.
+        return Promise$1.resolve();
+    }
+
+    for (var j = 0; j < dbContext.forages.length; j++) {
+        var forage = dbContext.forages[j];
+        if (forage !== self) {
+            // Don't wait for itself...
+            initPromises.push(forage._initReady()["catch"](ignoreErrors));
+        }
+    }
+
+    // Take a snapshot of the related localForages.
+    var forages = dbContext.forages.slice(0);
+
+    // Initialize the connection process only when
+    // all the related localForages aren't pending.
+    return Promise$1.all(initPromises).then(function () {
+        dbInfo.db = dbContext.db;
+        // Get the connection or open a new one without upgrade.
+        return _getOriginalConnection(dbInfo);
+    }).then(function (db) {
+        dbInfo.db = db;
+        if (_isUpgradeNeeded(dbInfo, self._defaultConfig.version)) {
+            // Reopen the database for upgrading.
+            return _getUpgradedConnection(dbInfo);
+        }
+        return db;
+    }).then(function (db) {
+        dbInfo.db = dbContext.db = db;
+        self._dbInfo = dbInfo;
+        // Share the final connection amongst related localForages.
+        for (var k = 0; k < forages.length; k++) {
+            var forage = forages[k];
+            if (forage !== self) {
+                // Self is already up-to-date.
+                forage._dbInfo.db = dbInfo.db;
+                forage._dbInfo.version = dbInfo.version;
+            }
+        }
+    });
 }
 
-var log = guardedConsole.bind(null, 'log');
-var isArray = Array.isArray;
-var toJSON = JSON.parse;
+function getItem(key, callback) {
+    var self = this;
 
-function evalFunctionWithEval(func, emit) {
-  return scopeEval(
-    "return (" + func.replace(/;\s*$/, "") + ");",
-    {
-      emit: emit,
-      sum: sum,
-      log: log,
-      isArray: isArray,
-      toJSON: toJSON
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
     }
-  );
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            var store = dbInfo.db.transaction(dbInfo.storeName, 'readonly').objectStore(dbInfo.storeName);
+            var req = store.get(key);
+
+            req.onsuccess = function () {
+                var value = req.result;
+                if (value === undefined) {
+                    value = null;
+                }
+                if (_isEncodedBlob(value)) {
+                    value = _decodeBlob(value);
+                }
+                resolve(value);
+            };
+
+            req.onerror = function () {
+                reject(req.error);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
 }
+
+// Iterate over all items stored in database.
+function iterate(iterator, callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            var store = dbInfo.db.transaction(dbInfo.storeName, 'readonly').objectStore(dbInfo.storeName);
+
+            var req = store.openCursor();
+            var iterationNumber = 1;
+
+            req.onsuccess = function () {
+                var cursor = req.result;
+
+                if (cursor) {
+                    var value = cursor.value;
+                    if (_isEncodedBlob(value)) {
+                        value = _decodeBlob(value);
+                    }
+                    var result = iterator(value, cursor.key, iterationNumber++);
+
+                    if (result !== void 0) {
+                        resolve(result);
+                    } else {
+                        cursor["continue"]();
+                    }
+                } else {
+                    resolve();
+                }
+            };
+
+            req.onerror = function () {
+                reject(req.error);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+
+    return promise;
+}
+
+function setItem(key, value, callback) {
+    var self = this;
+
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
+    }
+
+    var promise = new Promise$1(function (resolve, reject) {
+        var dbInfo;
+        self.ready().then(function () {
+            dbInfo = self._dbInfo;
+            if (toString.call(value) === '[object Blob]') {
+                return _checkBlobSupport(dbInfo.db).then(function (blobSupport) {
+                    if (blobSupport) {
+                        return value;
+                    }
+                    return _encodeBlob(value);
+                });
+            }
+            return value;
+        }).then(function (value) {
+            var transaction = dbInfo.db.transaction(dbInfo.storeName, 'readwrite');
+            var store = transaction.objectStore(dbInfo.storeName);
+            var req = store.put(value, key);
+
+            // The reason we don't _save_ null is because IE 10 does
+            // not support saving the `null` type in IndexedDB. How
+            // ironic, given the bug below!
+            // See: https://github.com/mozilla/localForage/issues/161
+            if (value === null) {
+                value = undefined;
+            }
+
+            transaction.oncomplete = function () {
+                // Cast to undefined so the value passed to
+                // callback/promise is the same as what one would get out
+                // of `getItem()` later. This leads to some weirdness
+                // (setItem('foo', undefined) will return `null`), but
+                // it's not my fault localStorage is our baseline and that
+                // it's weird.
+                if (value === undefined) {
+                    value = null;
+                }
+
+                resolve(value);
+            };
+            transaction.onabort = transaction.onerror = function () {
+                var err = req.error ? req.error : req.transaction.error;
+                reject(err);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function removeItem(key, callback) {
+    var self = this;
+
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
+    }
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            var transaction = dbInfo.db.transaction(dbInfo.storeName, 'readwrite');
+            var store = transaction.objectStore(dbInfo.storeName);
+
+            // We use a Grunt task to make this safe for IE and some
+            // versions of Android (including those used by Cordova).
+            // Normally IE won't like `.delete()` and will insist on
+            // using `['delete']()`, but we have a build step that
+            // fixes this for us now.
+            var req = store["delete"](key);
+            transaction.oncomplete = function () {
+                resolve();
+            };
+
+            transaction.onerror = function () {
+                reject(req.error);
+            };
+
+            // The request will be also be aborted if we've exceeded our storage
+            // space.
+            transaction.onabort = function () {
+                var err = req.error ? req.error : req.transaction.error;
+                reject(err);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function clear(callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            var transaction = dbInfo.db.transaction(dbInfo.storeName, 'readwrite');
+            var store = transaction.objectStore(dbInfo.storeName);
+            var req = store.clear();
+
+            transaction.oncomplete = function () {
+                resolve();
+            };
+
+            transaction.onabort = transaction.onerror = function () {
+                var err = req.error ? req.error : req.transaction.error;
+                reject(err);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function length(callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            var store = dbInfo.db.transaction(dbInfo.storeName, 'readonly').objectStore(dbInfo.storeName);
+            var req = store.count();
+
+            req.onsuccess = function () {
+                resolve(req.result);
+            };
+
+            req.onerror = function () {
+                reject(req.error);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function key(n, callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        if (n < 0) {
+            resolve(null);
+
+            return;
+        }
+
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            var store = dbInfo.db.transaction(dbInfo.storeName, 'readonly').objectStore(dbInfo.storeName);
+
+            var advanced = false;
+            var req = store.openCursor();
+            req.onsuccess = function () {
+                var cursor = req.result;
+                if (!cursor) {
+                    // this means there weren't enough keys
+                    resolve(null);
+
+                    return;
+                }
+
+                if (n === 0) {
+                    // We have the first key, return it if that's what they
+                    // wanted.
+                    resolve(cursor.key);
+                } else {
+                    if (!advanced) {
+                        // Otherwise, ask the cursor to skip ahead n
+                        // records.
+                        advanced = true;
+                        cursor.advance(n);
+                    } else {
+                        // When we get here, we've got the nth key.
+                        resolve(cursor.key);
+                    }
+                }
+            };
+
+            req.onerror = function () {
+                reject(req.error);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function keys(callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            var store = dbInfo.db.transaction(dbInfo.storeName, 'readonly').objectStore(dbInfo.storeName);
+
+            var req = store.openCursor();
+            var keys = [];
+
+            req.onsuccess = function () {
+                var cursor = req.result;
+
+                if (!cursor) {
+                    resolve(keys);
+                    return;
+                }
+
+                keys.push(cursor.key);
+                cursor["continue"]();
+            };
+
+            req.onerror = function () {
+                reject(req.error);
+            };
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+var asyncStorage = {
+    _driver: 'asyncStorage',
+    _initStorage: _initStorage,
+    iterate: iterate,
+    getItem: getItem,
+    setItem: setItem,
+    removeItem: removeItem,
+    clear: clear,
+    length: length,
+    key: key,
+    keys: keys
+};
+
+// Sadly, the best way to save binary data in WebSQL/localStorage is serializing
+// it to Base64, so this is how we store it to prevent very strange errors with less
+// verbose ways of binary <-> string data storage.
+var BASE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+
+var BLOB_TYPE_PREFIX = '~~local_forage_type~';
+var BLOB_TYPE_PREFIX_REGEX = /^~~local_forage_type~([^~]+)~/;
+
+var SERIALIZED_MARKER = '__lfsc__:';
+var SERIALIZED_MARKER_LENGTH = SERIALIZED_MARKER.length;
+
+// OMG the serializations!
+var TYPE_ARRAYBUFFER = 'arbf';
+var TYPE_BLOB = 'blob';
+var TYPE_INT8ARRAY = 'si08';
+var TYPE_UINT8ARRAY = 'ui08';
+var TYPE_UINT8CLAMPEDARRAY = 'uic8';
+var TYPE_INT16ARRAY = 'si16';
+var TYPE_INT32ARRAY = 'si32';
+var TYPE_UINT16ARRAY = 'ur16';
+var TYPE_UINT32ARRAY = 'ui32';
+var TYPE_FLOAT32ARRAY = 'fl32';
+var TYPE_FLOAT64ARRAY = 'fl64';
+var TYPE_SERIALIZED_MARKER_LENGTH = SERIALIZED_MARKER_LENGTH + TYPE_ARRAYBUFFER.length;
+
+var toString$1 = Object.prototype.toString;
+
+function stringToBuffer(serializedString) {
+    // Fill the string into a ArrayBuffer.
+    var bufferLength = serializedString.length * 0.75;
+    var len = serializedString.length;
+    var i;
+    var p = 0;
+    var encoded1, encoded2, encoded3, encoded4;
+
+    if (serializedString[serializedString.length - 1] === '=') {
+        bufferLength--;
+        if (serializedString[serializedString.length - 2] === '=') {
+            bufferLength--;
+        }
+    }
+
+    var buffer = new ArrayBuffer(bufferLength);
+    var bytes = new Uint8Array(buffer);
+
+    for (i = 0; i < len; i += 4) {
+        encoded1 = BASE_CHARS.indexOf(serializedString[i]);
+        encoded2 = BASE_CHARS.indexOf(serializedString[i + 1]);
+        encoded3 = BASE_CHARS.indexOf(serializedString[i + 2]);
+        encoded4 = BASE_CHARS.indexOf(serializedString[i + 3]);
+
+        /*jslint bitwise: true */
+        bytes[p++] = encoded1 << 2 | encoded2 >> 4;
+        bytes[p++] = (encoded2 & 15) << 4 | encoded3 >> 2;
+        bytes[p++] = (encoded3 & 3) << 6 | encoded4 & 63;
+    }
+    return buffer;
+}
+
+// Converts a buffer to a string to store, serialized, in the backend
+// storage library.
+function bufferToString(buffer) {
+    // base64-arraybuffer
+    var bytes = new Uint8Array(buffer);
+    var base64String = '';
+    var i;
+
+    for (i = 0; i < bytes.length; i += 3) {
+        /*jslint bitwise: true */
+        base64String += BASE_CHARS[bytes[i] >> 2];
+        base64String += BASE_CHARS[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];
+        base64String += BASE_CHARS[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];
+        base64String += BASE_CHARS[bytes[i + 2] & 63];
+    }
+
+    if (bytes.length % 3 === 2) {
+        base64String = base64String.substring(0, base64String.length - 1) + '=';
+    } else if (bytes.length % 3 === 1) {
+        base64String = base64String.substring(0, base64String.length - 2) + '==';
+    }
+
+    return base64String;
+}
+
+// Serialize a value, afterwards executing a callback (which usually
+// instructs the `setItem()` callback/promise to be executed). This is how
+// we store binary data with localStorage.
+function serialize(value, callback) {
+    var valueType = '';
+    if (value) {
+        valueType = toString$1.call(value);
+    }
+
+    // Cannot use `value instanceof ArrayBuffer` or such here, as these
+    // checks fail when running the tests using casper.js...
+    //
+    // TODO: See why those tests fail and use a better solution.
+    if (value && (valueType === '[object ArrayBuffer]' || value.buffer && toString$1.call(value.buffer) === '[object ArrayBuffer]')) {
+        // Convert binary arrays to a string and prefix the string with
+        // a special marker.
+        var buffer;
+        var marker = SERIALIZED_MARKER;
+
+        if (value instanceof ArrayBuffer) {
+            buffer = value;
+            marker += TYPE_ARRAYBUFFER;
+        } else {
+            buffer = value.buffer;
+
+            if (valueType === '[object Int8Array]') {
+                marker += TYPE_INT8ARRAY;
+            } else if (valueType === '[object Uint8Array]') {
+                marker += TYPE_UINT8ARRAY;
+            } else if (valueType === '[object Uint8ClampedArray]') {
+                marker += TYPE_UINT8CLAMPEDARRAY;
+            } else if (valueType === '[object Int16Array]') {
+                marker += TYPE_INT16ARRAY;
+            } else if (valueType === '[object Uint16Array]') {
+                marker += TYPE_UINT16ARRAY;
+            } else if (valueType === '[object Int32Array]') {
+                marker += TYPE_INT32ARRAY;
+            } else if (valueType === '[object Uint32Array]') {
+                marker += TYPE_UINT32ARRAY;
+            } else if (valueType === '[object Float32Array]') {
+                marker += TYPE_FLOAT32ARRAY;
+            } else if (valueType === '[object Float64Array]') {
+                marker += TYPE_FLOAT64ARRAY;
+            } else {
+                callback(new Error('Failed to get type for BinaryArray'));
+            }
+        }
+
+        callback(marker + bufferToString(buffer));
+    } else if (valueType === '[object Blob]') {
+        // Conver the blob to a binaryArray and then to a string.
+        var fileReader = new FileReader();
+
+        fileReader.onload = function () {
+            // Backwards-compatible prefix for the blob type.
+            var str = BLOB_TYPE_PREFIX + value.type + '~' + bufferToString(this.result);
+
+            callback(SERIALIZED_MARKER + TYPE_BLOB + str);
+        };
+
+        fileReader.readAsArrayBuffer(value);
+    } else {
+        try {
+            callback(JSON.stringify(value));
+        } catch (e) {
+            console.error("Couldn't convert value into a JSON string: ", value);
+
+            callback(null, e);
+        }
+    }
+}
+
+// Deserialize data we've inserted into a value column/field. We place
+// special markers into our strings to mark them as encoded; this isn't
+// as nice as a meta field, but it's the only sane thing we can do whilst
+// keeping localStorage support intact.
+//
+// Oftentimes this will just deserialize JSON content, but if we have a
+// special marker (SERIALIZED_MARKER, defined above), we will extract
+// some kind of arraybuffer/binary data/typed array out of the string.
+function deserialize(value) {
+    // If we haven't marked this string as being specially serialized (i.e.
+    // something other than serialized JSON), we can just return it and be
+    // done with it.
+    if (value.substring(0, SERIALIZED_MARKER_LENGTH) !== SERIALIZED_MARKER) {
+        return JSON.parse(value);
+    }
+
+    // The following code deals with deserializing some kind of Blob or
+    // TypedArray. First we separate out the type of data we're dealing
+    // with from the data itself.
+    var serializedString = value.substring(TYPE_SERIALIZED_MARKER_LENGTH);
+    var type = value.substring(SERIALIZED_MARKER_LENGTH, TYPE_SERIALIZED_MARKER_LENGTH);
+
+    var blobType;
+    // Backwards-compatible blob type serialization strategy.
+    // DBs created with older versions of localForage will simply not have the blob type.
+    if (type === TYPE_BLOB && BLOB_TYPE_PREFIX_REGEX.test(serializedString)) {
+        var matcher = serializedString.match(BLOB_TYPE_PREFIX_REGEX);
+        blobType = matcher[1];
+        serializedString = serializedString.substring(matcher[0].length);
+    }
+    var buffer = stringToBuffer(serializedString);
+
+    // Return the right type based on the code/type set during
+    // serialization.
+    switch (type) {
+        case TYPE_ARRAYBUFFER:
+            return buffer;
+        case TYPE_BLOB:
+            return createBlob([buffer], { type: blobType });
+        case TYPE_INT8ARRAY:
+            return new Int8Array(buffer);
+        case TYPE_UINT8ARRAY:
+            return new Uint8Array(buffer);
+        case TYPE_UINT8CLAMPEDARRAY:
+            return new Uint8ClampedArray(buffer);
+        case TYPE_INT16ARRAY:
+            return new Int16Array(buffer);
+        case TYPE_UINT16ARRAY:
+            return new Uint16Array(buffer);
+        case TYPE_INT32ARRAY:
+            return new Int32Array(buffer);
+        case TYPE_UINT32ARRAY:
+            return new Uint32Array(buffer);
+        case TYPE_FLOAT32ARRAY:
+            return new Float32Array(buffer);
+        case TYPE_FLOAT64ARRAY:
+            return new Float64Array(buffer);
+        default:
+            throw new Error('Unkown type: ' + type);
+    }
+}
+
+var localforageSerializer = {
+    serialize: serialize,
+    deserialize: deserialize,
+    stringToBuffer: stringToBuffer,
+    bufferToString: bufferToString
+};
 
 /*
- * Simple task queue to sequentialize actions. Assumes
- * callbacks will eventually fire (once).
+ * Includes code from:
+ *
+ * base64-arraybuffer
+ * https://github.com/niklasvh/base64-arraybuffer
+ *
+ * Copyright (c) 2012 Niklas von Hertzen
+ * Licensed under the MIT license.
  */
-
-
-function TaskQueue$2() {
-  this.promise = new PouchPromise$1(function (fulfill) {fulfill(); });
-}
-TaskQueue$2.prototype.add = function (promiseFactory) {
-  this.promise = this.promise.catch(function () {
-    // just recover
-  }).then(function () {
-    return promiseFactory();
-  });
-  return this.promise;
-};
-TaskQueue$2.prototype.finish = function () {
-  return this.promise;
-};
-
-function stringify(input) {
-  if (!input) {
-    return 'undefined'; // backwards compat for empty reduce
-  }
-  // for backwards compat with mapreduce, functions/strings are stringified
-  // as-is. everything else is JSON-stringified.
-  switch (typeof input) {
-    case 'function':
-      // e.g. a mapreduce map
-      return input.toString();
-    case 'string':
-      // e.g. a mapreduce built-in _reduce function
-      return input.toString();
-    default:
-      // e.g. a JSON object in the case of mango queries
-      return JSON.stringify(input);
-  }
-}
-
-/* create a string signature for a view so we can cache it and uniq it */
-function createViewSignature(mapFun, reduceFun) {
-  // the "undefined" part is for backwards compatibility
-  return stringify(mapFun) + stringify(reduceFun) + 'undefined';
-}
-
-function createView(sourceDB, viewName, mapFun, reduceFun, temporary, localDocName) {
-  var viewSignature = createViewSignature(mapFun, reduceFun);
-
-  var cachedViews;
-  if (!temporary) {
-    // cache this to ensure we don't try to update the same view twice
-    cachedViews = sourceDB._cachedViews = sourceDB._cachedViews || {};
-    if (cachedViews[viewSignature]) {
-      return cachedViews[viewSignature];
-    }
-  }
-
-  var promiseForView = sourceDB.info().then(function (info) {
-
-    var depDbName = info.db_name + '-mrview-' +
-      (temporary ? 'temp' : stringMd5(viewSignature));
-
-    // save the view name in the source db so it can be cleaned up if necessary
-    // (e.g. when the _design doc is deleted, remove all associated view data)
-    function diffFunction(doc) {
-      doc.views = doc.views || {};
-      var fullViewName = viewName;
-      if (fullViewName.indexOf('/') === -1) {
-        fullViewName = viewName + '/' + viewName;
-      }
-      var depDbs = doc.views[fullViewName] = doc.views[fullViewName] || {};
-      /* istanbul ignore if */
-      if (depDbs[depDbName]) {
-        return; // no update necessary
-      }
-      depDbs[depDbName] = true;
-      return doc;
-    }
-    return upsert(sourceDB, '_local/' + localDocName, diffFunction).then(function () {
-      return sourceDB.registerDependentDatabase(depDbName).then(function (res) {
-        var db = res.db;
-        db.auto_compaction = true;
-        var view = {
-          name: depDbName,
-          db: db,
-          sourceDB: sourceDB,
-          adapter: sourceDB.adapter,
-          mapFun: mapFun,
-          reduceFun: reduceFun
-        };
-        return view.db.get('_local/lastSeq').catch(function (err) {
-          /* istanbul ignore if */
-          if (err.status !== 404) {
-            throw err;
-          }
-        }).then(function (lastSeqDoc) {
-          view.seq = lastSeqDoc ? lastSeqDoc.seq : 0;
-          if (cachedViews) {
-            view.db.once('destroyed', function () {
-              delete cachedViews[viewSignature];
-            });
-          }
-          return view;
-        });
-      });
-    });
-  });
-
-  if (cachedViews) {
-    cachedViews[viewSignature] = promiseForView;
-  }
-  return promiseForView;
-}
-
-var persistentQueues = {};
-var tempViewQueue = new TaskQueue$2();
-var CHANGES_BATCH_SIZE$1 = 50;
-
-function parseViewName(name) {
-  // can be either 'ddocname/viewname' or just 'viewname'
-  // (where the ddoc name is the same)
-  return name.indexOf('/') === -1 ? [name, name] : name.split('/');
-}
-
-function isGenOne(changes) {
-  // only return true if the current change is 1-
-  // and there are no other leafs
-  return changes.length === 1 && /^1-/.test(changes[0].rev);
-}
-
-function emitError(db, e) {
-  try {
-    db.emit('error', e);
-  } catch (err) {
-    guardedConsole('error',
-      'The user\'s map/reduce function threw an uncaught error.\n' +
-      'You can debug this error by doing:\n' +
-      'myDatabase.on(\'error\', function (err) { debugger; });\n' +
-      'Please double-check your map/reduce function.');
-    guardedConsole('error', e);
-  }
-}
-
-/**
- * Returns an "abstract" mapreduce object of the form:
- *
- *   {
- *     query: queryFun,
- *     viewCleanup: viewCleanupFun
- *   }
- *
- * Arguments are:
- *
- * localDoc: string
- *   This is for the local doc that gets saved in order to track the
- *   "dependent" DBs and clean them up for viewCleanup. It should be
- *   unique, so that indexer plugins don't collide with each other.
- * mapper: function (mapFunDef, emit)
- *   Returns a map function based on the mapFunDef, which in the case of
- *   normal map/reduce is just the de-stringified function, but may be
- *   something else, such as an object in the case of pouchdb-find.
- * reducer: function (reduceFunDef)
- *   Ditto, but for reducing. Modules don't have to support reducing
- *   (e.g. pouchdb-find).
- * ddocValidator: function (ddoc, viewName)
- *   Throws an error if the ddoc or viewName is not valid.
- *   This could be a way to communicate to the user that the configuration for the
- *   indexer is invalid.
- */
-function createAbstractMapReduce(localDocName, mapper, reducer, ddocValidator) {
-
-  function tryMap(db, fun, doc) {
-    // emit an event if there was an error thrown by a map function.
-    // putting try/catches in a single function also avoids deoptimizations.
-    try {
-      fun(doc);
-    } catch (e) {
-      emitError(db, e);
-    }
-  }
-
-  function tryReduce(db, fun, keys, values, rereduce) {
-    // same as above, but returning the result or an error. there are two separate
-    // functions to avoid extra memory allocations since the tryCode() case is used
-    // for custom map functions (common) vs this function, which is only used for
-    // custom reduce functions (rare)
-    try {
-      return {output : fun(keys, values, rereduce)};
-    } catch (e) {
-      emitError(db, e);
-      return {error: e};
-    }
-  }
-
-  function sortByKeyThenValue(x, y) {
-    var keyCompare = collate(x.key, y.key);
-    return keyCompare !== 0 ? keyCompare : collate(x.value, y.value);
-  }
-
-  function sliceResults(results, limit, skip) {
-    skip = skip || 0;
-    if (typeof limit === 'number') {
-      return results.slice(skip, limit + skip);
-    } else if (skip > 0) {
-      return results.slice(skip);
-    }
-    return results;
-  }
-
-  function rowToDocId(row) {
-    var val = row.value;
-    // Users can explicitly specify a joined doc _id, or it
-    // defaults to the doc _id that emitted the key/value.
-    var docId = (val && typeof val === 'object' && val._id) || row.id;
-    return docId;
-  }
-
-  function readAttachmentsAsBlobOrBuffer(res) {
-    res.rows.forEach(function (row) {
-      var atts = row.doc && row.doc._attachments;
-      if (!atts) {
-        return;
-      }
-      Object.keys(atts).forEach(function (filename) {
-        var att = atts[filename];
-        atts[filename].data = b64ToBluffer(att.data, att.content_type);
-      });
-    });
-  }
-
-  function postprocessAttachments(opts) {
-    return function (res) {
-      if (opts.include_docs && opts.attachments && opts.binary) {
-        readAttachmentsAsBlobOrBuffer(res);
-      }
-      return res;
+// Open the WebSQL database (automatically creates one if one didn't
+// previously exist), using any options set in the config.
+function _initStorage$1(options) {
+    var self = this;
+    var dbInfo = {
+        db: null
     };
-  }
 
-  function addHttpParam(paramName, opts, params, asJson) {
-    // add an http param from opts to params, optionally json-encoded
-    var val = opts[paramName];
-    if (typeof val !== 'undefined') {
-      if (asJson) {
-        val = encodeURIComponent(JSON.stringify(val));
-      }
-      params.push(paramName + '=' + val);
-    }
-  }
-
-  function coerceInteger(integerCandidate) {
-    if (typeof integerCandidate !== 'undefined') {
-      var asNumber = Number(integerCandidate);
-      // prevents e.g. '1foo' or '1.1' being coerced to 1
-      if (!isNaN(asNumber) && asNumber === parseInt(integerCandidate, 10)) {
-        return asNumber;
-      } else {
-        return integerCandidate;
-      }
-    }
-  }
-
-  function coerceOptions(opts) {
-    opts.group_level = coerceInteger(opts.group_level);
-    opts.limit = coerceInteger(opts.limit);
-    opts.skip = coerceInteger(opts.skip);
-    return opts;
-  }
-
-  function checkPositiveInteger(number) {
-    if (number) {
-      if (typeof number !== 'number') {
-        return  new QueryParseError('Invalid value for integer: "' +
-          number + '"');
-      }
-      if (number < 0) {
-        return new QueryParseError('Invalid value for positive integer: ' +
-          '"' + number + '"');
-      }
-    }
-  }
-
-  function checkQueryParseError(options, fun) {
-    var startkeyName = options.descending ? 'endkey' : 'startkey';
-    var endkeyName = options.descending ? 'startkey' : 'endkey';
-
-    if (typeof options[startkeyName] !== 'undefined' &&
-      typeof options[endkeyName] !== 'undefined' &&
-      collate(options[startkeyName], options[endkeyName]) > 0) {
-      throw new QueryParseError('No rows can match your key range, ' +
-        'reverse your start_key and end_key or set {descending : true}');
-    } else if (fun.reduce && options.reduce !== false) {
-      if (options.include_docs) {
-        throw new QueryParseError('{include_docs:true} is invalid for reduce');
-      } else if (options.keys && options.keys.length > 1 &&
-        !options.group && !options.group_level) {
-        throw new QueryParseError('Multi-key fetches for reduce views must use ' +
-          '{group: true}');
-      }
-    }
-    ['group_level', 'limit', 'skip'].forEach(function (optionName) {
-      var error = checkPositiveInteger(options[optionName]);
-      if (error) {
-        throw error;
-      }
-    });
-  }
-
-  function httpQuery(db, fun, opts) {
-    // List of parameters to add to the PUT request
-    var params = [];
-    var body;
-    var method = 'GET';
-
-    // If opts.reduce exists and is defined, then add it to the list
-    // of parameters.
-    // If reduce=false then the results are that of only the map function
-    // not the final result of map and reduce.
-    addHttpParam('reduce', opts, params);
-    addHttpParam('include_docs', opts, params);
-    addHttpParam('attachments', opts, params);
-    addHttpParam('limit', opts, params);
-    addHttpParam('descending', opts, params);
-    addHttpParam('group', opts, params);
-    addHttpParam('group_level', opts, params);
-    addHttpParam('skip', opts, params);
-    addHttpParam('stale', opts, params);
-    addHttpParam('conflicts', opts, params);
-    addHttpParam('startkey', opts, params, true);
-    addHttpParam('start_key', opts, params, true);
-    addHttpParam('endkey', opts, params, true);
-    addHttpParam('end_key', opts, params, true);
-    addHttpParam('inclusive_end', opts, params);
-    addHttpParam('key', opts, params, true);
-
-    // Format the list of parameters into a valid URI query string
-    params = params.join('&');
-    params = params === '' ? '' : '?' + params;
-
-    // If keys are supplied, issue a POST to circumvent GET query string limits
-    // see http://wiki.apache.org/couchdb/HTTP_view_API#Querying_Options
-    if (typeof opts.keys !== 'undefined') {
-      var MAX_URL_LENGTH = 2000;
-      // according to http://stackoverflow.com/a/417184/680742,
-      // the de facto URL length limit is 2000 characters
-
-      var keysAsString =
-        'keys=' + encodeURIComponent(JSON.stringify(opts.keys));
-      if (keysAsString.length + params.length + 1 <= MAX_URL_LENGTH) {
-        // If the keys are short enough, do a GET. we do this to work around
-        // Safari not understanding 304s on POSTs (see pouchdb/pouchdb#1239)
-        params += (params[0] === '?' ? '&' : '?') + keysAsString;
-      } else {
-        method = 'POST';
-        if (typeof fun === 'string') {
-          body = {keys: opts.keys};
-        } else { // fun is {map : mapfun}, so append to this
-          fun.keys = opts.keys;
+    if (options) {
+        for (var i in options) {
+            dbInfo[i] = typeof options[i] !== 'string' ? options[i].toString() : options[i];
         }
-      }
     }
 
-    // We are referencing a query defined in the design doc
-    if (typeof fun === 'string') {
-      var parts = parseViewName(fun);
-      return db.request({
-        method: method,
-        url: '_design/' + parts[0] + '/_view/' + parts[1] + params,
-        body: body
-      }).then(postprocessAttachments(opts));
-    }
-
-    // We are using a temporary view, terrible for performance, good for testing
-    body = body || {};
-    Object.keys(fun).forEach(function (key) {
-      if (Array.isArray(fun[key])) {
-        body[key] = fun[key];
-      } else {
-        body[key] = fun[key].toString();
-      }
-    });
-    return db.request({
-      method: 'POST',
-      url: '_temp_view' + params,
-      body: body
-    }).then(postprocessAttachments(opts));
-  }
-
-  // custom adapters can define their own api._query
-  // and override the default behavior
-  /* istanbul ignore next */
-  function customQuery(db, fun, opts) {
-    return new PouchPromise$1(function (resolve, reject) {
-      db._query(fun, opts, function (err, res) {
-        if (err) {
-          return reject(err);
-        }
-        resolve(res);
-      });
-    });
-  }
-
-  // custom adapters can define their own api._viewCleanup
-  // and override the default behavior
-  /* istanbul ignore next */
-  function customViewCleanup(db) {
-    return new PouchPromise$1(function (resolve, reject) {
-      db._viewCleanup(function (err, res) {
-        if (err) {
-          return reject(err);
-        }
-        resolve(res);
-      });
-    });
-  }
-
-  function defaultsTo(value) {
-    return function (reason) {
-      /* istanbul ignore else */
-      if (reason.status === 404) {
-        return value;
-      } else {
-        throw reason;
-      }
-    };
-  }
-
-  // returns a promise for a list of docs to update, based on the input docId.
-  // the order doesn't matter, because post-3.2.0, bulkDocs
-  // is an atomic operation in all three adapters.
-  function getDocsToPersist(docId, view, docIdsToChangesAndEmits) {
-    var metaDocId = '_local/doc_' + docId;
-    var defaultMetaDoc = {_id: metaDocId, keys: []};
-    var docData = docIdsToChangesAndEmits.get(docId);
-    var indexableKeysToKeyValues = docData[0];
-    var changes = docData[1];
-
-    function getMetaDoc() {
-      if (isGenOne(changes)) {
-        // generation 1, so we can safely assume initial state
-        // for performance reasons (avoids unnecessary GETs)
-        return PouchPromise$1.resolve(defaultMetaDoc);
-      }
-      return view.db.get(metaDocId).catch(defaultsTo(defaultMetaDoc));
-    }
-
-    function getKeyValueDocs(metaDoc) {
-      if (!metaDoc.keys.length) {
-        // no keys, no need for a lookup
-        return PouchPromise$1.resolve({rows: []});
-      }
-      return view.db.allDocs({
-        keys: metaDoc.keys,
-        include_docs: true
-      });
-    }
-
-    function processKeyValueDocs(metaDoc, kvDocsRes) {
-      var kvDocs = [];
-      var oldKeys = new ExportedSet();
-
-      for (var i = 0, len = kvDocsRes.rows.length; i < len; i++) {
-        var row = kvDocsRes.rows[i];
-        var doc = row.doc;
-        if (!doc) { // deleted
-          continue;
-        }
-        kvDocs.push(doc);
-        oldKeys.add(doc._id);
-        doc._deleted = !indexableKeysToKeyValues.has(doc._id);
-        if (!doc._deleted) {
-          var keyValue = indexableKeysToKeyValues.get(doc._id);
-          if ('value' in keyValue) {
-            doc.value = keyValue.value;
-          }
-        }
-      }
-      var newKeys = mapToKeysArray(indexableKeysToKeyValues);
-      newKeys.forEach(function (key) {
-        if (!oldKeys.has(key)) {
-          // new doc
-          var kvDoc = {
-            _id: key
-          };
-          var keyValue = indexableKeysToKeyValues.get(key);
-          if ('value' in keyValue) {
-            kvDoc.value = keyValue.value;
-          }
-          kvDocs.push(kvDoc);
-        }
-      });
-      metaDoc.keys = uniq(newKeys.concat(metaDoc.keys));
-      kvDocs.push(metaDoc);
-
-      return kvDocs;
-    }
-
-    return getMetaDoc().then(function (metaDoc) {
-      return getKeyValueDocs(metaDoc).then(function (kvDocsRes) {
-        return processKeyValueDocs(metaDoc, kvDocsRes);
-      });
-    });
-  }
-
-  // updates all emitted key/value docs and metaDocs in the mrview database
-  // for the given batch of documents from the source database
-  function saveKeyValues(view, docIdsToChangesAndEmits, seq) {
-    var seqDocId = '_local/lastSeq';
-    return view.db.get(seqDocId)
-      .catch(defaultsTo({_id: seqDocId, seq: 0}))
-      .then(function (lastSeqDoc) {
-        var docIds = mapToKeysArray(docIdsToChangesAndEmits);
-        return PouchPromise$1.all(docIds.map(function (docId) {
-          return getDocsToPersist(docId, view, docIdsToChangesAndEmits);
-        })).then(function (listOfDocsToPersist) {
-          var docsToPersist = flatten(listOfDocsToPersist);
-          lastSeqDoc.seq = seq;
-          docsToPersist.push(lastSeqDoc);
-          // write all docs in a single operation, update the seq once
-          return view.db.bulkDocs({docs : docsToPersist});
-        });
-      });
-  }
-
-  function getQueue(view) {
-    var viewName = typeof view === 'string' ? view : view.name;
-    var queue = persistentQueues[viewName];
-    if (!queue) {
-      queue = persistentQueues[viewName] = new TaskQueue$2();
-    }
-    return queue;
-  }
-
-  function updateView(view) {
-    return sequentialize(getQueue(view), function () {
-      return updateViewInQueue(view);
-    })();
-  }
-
-  function updateViewInQueue(view) {
-    // bind the emit function once
-    var mapResults;
-    var doc;
-
-    function emit(key, value) {
-      var output = {id: doc._id, key: normalizeKey(key)};
-      // Don't explicitly store the value unless it's defined and non-null.
-      // This saves on storage space, because often people don't use it.
-      if (typeof value !== 'undefined' && value !== null) {
-        output.value = normalizeKey(value);
-      }
-      mapResults.push(output);
-    }
-
-    var mapFun = mapper(view.mapFun, emit);
-
-    var currentSeq = view.seq || 0;
-
-    function processChange(docIdsToChangesAndEmits, seq) {
-      return function () {
-        return saveKeyValues(view, docIdsToChangesAndEmits, seq);
-      };
-    }
-
-    var queue = new TaskQueue$2();
-
-    function processNextBatch() {
-      return view.sourceDB.changes({
-        conflicts: true,
-        include_docs: true,
-        style: 'all_docs',
-        since: currentSeq,
-        limit: CHANGES_BATCH_SIZE$1
-      }).then(processBatch);
-    }
-
-    function processBatch(response) {
-      var results = response.results;
-      if (!results.length) {
-        return;
-      }
-      var docIdsToChangesAndEmits = createDocIdsToChangesAndEmits(results);
-      queue.add(processChange(docIdsToChangesAndEmits, currentSeq));
-      if (results.length < CHANGES_BATCH_SIZE$1) {
-        return;
-      }
-      return processNextBatch();
-    }
-
-    function createDocIdsToChangesAndEmits(results) {
-      var docIdsToChangesAndEmits = new ExportedMap();
-      for (var i = 0, len = results.length; i < len; i++) {
-        var change = results[i];
-        if (change.doc._id[0] !== '_') {
-          mapResults = [];
-          doc = change.doc;
-
-          if (!doc._deleted) {
-            tryMap(view.sourceDB, mapFun, doc);
-          }
-          mapResults.sort(sortByKeyThenValue);
-
-          var indexableKeysToKeyValues = createIndexableKeysToKeyValues(mapResults);
-          docIdsToChangesAndEmits.set(change.doc._id, [
-            indexableKeysToKeyValues,
-            change.changes
-          ]);
-        }
-        currentSeq = change.seq;
-      }
-      return docIdsToChangesAndEmits;
-    }
-
-    function createIndexableKeysToKeyValues(mapResults) {
-      var indexableKeysToKeyValues = new ExportedMap();
-      var lastKey;
-      for (var i = 0, len = mapResults.length; i < len; i++) {
-        var emittedKeyValue = mapResults[i];
-        var complexKey = [emittedKeyValue.key, emittedKeyValue.id];
-        if (i > 0 && collate(emittedKeyValue.key, lastKey) === 0) {
-          complexKey.push(i); // dup key+id, so make it unique
-        }
-        indexableKeysToKeyValues.set(toIndexableString(complexKey), emittedKeyValue);
-        lastKey = emittedKeyValue.key;
-      }
-      return indexableKeysToKeyValues;
-    }
-
-    return processNextBatch().then(function () {
-      return queue.finish();
-    }).then(function () {
-      view.seq = currentSeq;
-    });
-  }
-
-  function reduceView(view, results, options) {
-    if (options.group_level === 0) {
-      delete options.group_level;
-    }
-
-    var shouldGroup = options.group || options.group_level;
-
-    var reduceFun = reducer(view.reduceFun);
-
-    var groups = [];
-    var lvl = isNaN(options.group_level) ? Number.POSITIVE_INFINITY :
-      options.group_level;
-    results.forEach(function (e) {
-      var last = groups[groups.length - 1];
-      var groupKey = shouldGroup ? e.key : null;
-
-      // only set group_level for array keys
-      if (shouldGroup && Array.isArray(groupKey)) {
-        groupKey = groupKey.slice(0, lvl);
-      }
-
-      if (last && collate(last.groupKey, groupKey) === 0) {
-        last.keys.push([e.key, e.id]);
-        last.values.push(e.value);
-        return;
-      }
-      groups.push({
-        keys: [[e.key, e.id]],
-        values: [e.value],
-        groupKey: groupKey
-      });
-    });
-    results = [];
-    for (var i = 0, len = groups.length; i < len; i++) {
-      var e = groups[i];
-      var reduceTry = tryReduce(view.sourceDB, reduceFun, e.keys, e.values, false);
-      if (reduceTry.error && reduceTry.error instanceof BuiltInError) {
-        // CouchDB returns an error if a built-in errors out
-        throw reduceTry.error;
-      }
-      results.push({
-        // CouchDB just sets the value to null if a non-built-in errors out
-        value: reduceTry.error ? null : reduceTry.output,
-        key: e.groupKey
-      });
-    }
-    // no total_rows/offset when reducing
-    return {rows: sliceResults(results, options.limit, options.skip)};
-  }
-
-  function queryView(view, opts) {
-    return sequentialize(getQueue(view), function () {
-      return queryViewInQueue(view, opts);
-    })();
-  }
-
-  function queryViewInQueue(view, opts) {
-    var totalRows;
-    var shouldReduce = view.reduceFun && opts.reduce !== false;
-    var skip = opts.skip || 0;
-    if (typeof opts.keys !== 'undefined' && !opts.keys.length) {
-      // equivalent query
-      opts.limit = 0;
-      delete opts.keys;
-    }
-
-    function fetchFromView(viewOpts) {
-      viewOpts.include_docs = true;
-      return view.db.allDocs(viewOpts).then(function (res) {
-        totalRows = res.total_rows;
-        return res.rows.map(function (result) {
-
-          // implicit migration - in older versions of PouchDB,
-          // we explicitly stored the doc as {id: ..., key: ..., value: ...}
-          // this is tested in a migration test
-          /* istanbul ignore next */
-          if ('value' in result.doc && typeof result.doc.value === 'object' &&
-            result.doc.value !== null) {
-            var keys = Object.keys(result.doc.value).sort();
-            // this detection method is not perfect, but it's unlikely the user
-            // emitted a value which was an object with these 3 exact keys
-            var expectedKeys = ['id', 'key', 'value'];
-            if (!(keys < expectedKeys || keys > expectedKeys)) {
-              return result.doc.value;
-            }
-          }
-
-          var parsedKeyAndDocId = parseIndexableString(result.doc._id);
-          return {
-            key: parsedKeyAndDocId[0],
-            id: parsedKeyAndDocId[1],
-            value: ('value' in result.doc ? result.doc.value : null)
-          };
-        });
-      });
-    }
-
-    function onMapResultsReady(rows) {
-      var finalResults;
-      if (shouldReduce) {
-        finalResults = reduceView(view, rows, opts);
-      } else {
-        finalResults = {
-          total_rows: totalRows,
-          offset: skip,
-          rows: rows
-        };
-      }
-      if (opts.include_docs) {
-        var docIds = uniq(rows.map(rowToDocId));
-
-        return view.sourceDB.allDocs({
-          keys: docIds,
-          include_docs: true,
-          conflicts: opts.conflicts,
-          attachments: opts.attachments,
-          binary: opts.binary
-        }).then(function (allDocsRes) {
-          var docIdsToDocs = new ExportedMap();
-          allDocsRes.rows.forEach(function (row) {
-            docIdsToDocs.set(row.id, row.doc);
-          });
-          rows.forEach(function (row) {
-            var docId = rowToDocId(row);
-            var doc = docIdsToDocs.get(docId);
-            if (doc) {
-              row.doc = doc;
-            }
-          });
-          return finalResults;
-        });
-      } else {
-        return finalResults;
-      }
-    }
-
-    if (typeof opts.keys !== 'undefined') {
-      var keys = opts.keys;
-      var fetchPromises = keys.map(function (key) {
-        var viewOpts = {
-          startkey : toIndexableString([key]),
-          endkey   : toIndexableString([key, {}])
-        };
-        return fetchFromView(viewOpts);
-      });
-      return PouchPromise$1.all(fetchPromises).then(flatten).then(onMapResultsReady);
-    } else { // normal query, no 'keys'
-      var viewOpts = {
-        descending : opts.descending
-      };
-      var startkey;
-      var endkey;
-      if ('start_key' in opts) {
-        startkey = opts.start_key;
-      }
-      if ('startkey' in opts) {
-        startkey = opts.startkey;
-      }
-      if ('end_key' in opts) {
-        endkey = opts.end_key;
-      }
-      if ('endkey' in opts) {
-        endkey = opts.endkey;
-      }
-      if (typeof startkey !== 'undefined') {
-        viewOpts.startkey = opts.descending ?
-          toIndexableString([startkey, {}]) :
-          toIndexableString([startkey]);
-      }
-      if (typeof endkey !== 'undefined') {
-        var inclusiveEnd = opts.inclusive_end !== false;
-        if (opts.descending) {
-          inclusiveEnd = !inclusiveEnd;
+    var dbInfoPromise = new Promise$1(function (resolve, reject) {
+        // Open the database; the openDatabase API will automatically
+        // create it for us if it doesn't exist.
+        try {
+            dbInfo.db = openDatabase(dbInfo.name, String(dbInfo.version), dbInfo.description, dbInfo.size);
+        } catch (e) {
+            return reject(e);
         }
 
-        viewOpts.endkey = toIndexableString(
-          inclusiveEnd ? [endkey, {}] : [endkey]);
-      }
-      if (typeof opts.key !== 'undefined') {
-        var keyStart = toIndexableString([opts.key]);
-        var keyEnd = toIndexableString([opts.key, {}]);
-        if (viewOpts.descending) {
-          viewOpts.endkey = keyStart;
-          viewOpts.startkey = keyEnd;
-        } else {
-          viewOpts.startkey = keyStart;
-          viewOpts.endkey = keyEnd;
-        }
-      }
-      if (!shouldReduce) {
-        if (typeof opts.limit === 'number') {
-          viewOpts.limit = opts.limit;
-        }
-        viewOpts.skip = skip;
-      }
-      return fetchFromView(viewOpts).then(onMapResultsReady);
-    }
-  }
-
-  function httpViewCleanup(db) {
-    return db.request({
-      method: 'POST',
-      url: '_view_cleanup'
-    });
-  }
-
-  function localViewCleanup(db) {
-    return db.get('_local/' + localDocName).then(function (metaDoc) {
-      var docsToViews = new ExportedMap();
-      Object.keys(metaDoc.views).forEach(function (fullViewName) {
-        var parts = parseViewName(fullViewName);
-        var designDocName = '_design/' + parts[0];
-        var viewName = parts[1];
-        var views = docsToViews.get(designDocName);
-        if (!views) {
-          views = new ExportedSet();
-          docsToViews.set(designDocName, views);
-        }
-        views.add(viewName);
-      });
-      var opts = {
-        keys : mapToKeysArray(docsToViews),
-        include_docs : true
-      };
-      return db.allDocs(opts).then(function (res) {
-        var viewsToStatus = {};
-        res.rows.forEach(function (row) {
-          var ddocName = row.key.substring(8); // cuts off '_design/'
-          docsToViews.get(row.key).forEach(function (viewName) {
-            var fullViewName = ddocName + '/' + viewName;
-            /* istanbul ignore if */
-            if (!metaDoc.views[fullViewName]) {
-              // new format, without slashes, to support PouchDB 2.2.0
-              // migration test in pouchdb's browser.migration.js verifies this
-              fullViewName = viewName;
-            }
-            var viewDBNames = Object.keys(metaDoc.views[fullViewName]);
-            // design doc deleted, or view function nonexistent
-            var statusIsGood = row.doc && row.doc.views &&
-              row.doc.views[viewName];
-            viewDBNames.forEach(function (viewDBName) {
-              viewsToStatus[viewDBName] =
-                viewsToStatus[viewDBName] || statusIsGood;
+        // Create our key/value table if it doesn't exist.
+        dbInfo.db.transaction(function (t) {
+            t.executeSql('CREATE TABLE IF NOT EXISTS ' + dbInfo.storeName + ' (id INTEGER PRIMARY KEY, key unique, value)', [], function () {
+                self._dbInfo = dbInfo;
+                resolve();
+            }, function (t, error) {
+                reject(error);
             });
-          });
         });
-        var dbsToDelete = Object.keys(viewsToStatus).filter(
-          function (viewDBName) { return !viewsToStatus[viewDBName]; });
-        var destroyPromises = dbsToDelete.map(function (viewDBName) {
-          return sequentialize(getQueue(viewDBName), function () {
-            return new db.constructor(viewDBName, db.__opts).destroy();
-          })();
-        });
-        return PouchPromise$1.all(destroyPromises).then(function () {
-          return {ok: true};
-        });
-      });
-    }, defaultsTo({ok: true}));
-  }
-
-  function queryPromised(db, fun, opts) {
-    /* istanbul ignore next */
-    if (typeof db._query === 'function') {
-      return customQuery(db, fun, opts);
-    }
-    if (isRemote(db)) {
-      return httpQuery(db, fun, opts);
-    }
-
-    if (typeof fun !== 'string') {
-      // temp_view
-      checkQueryParseError(opts, fun);
-
-      tempViewQueue.add(function () {
-        var createViewPromise = createView(
-          /* sourceDB */ db,
-          /* viewName */ 'temp_view/temp_view',
-          /* mapFun */ fun.map,
-          /* reduceFun */ fun.reduce,
-          /* temporary */ true,
-          /* localDocName */ localDocName);
-        return createViewPromise.then(function (view) {
-          return fin(updateView(view).then(function () {
-            return queryView(view, opts);
-          }), function () {
-            return view.db.destroy();
-          });
-        });
-      });
-      return tempViewQueue.finish();
-    } else {
-      // persistent view
-      var fullViewName = fun;
-      var parts = parseViewName(fullViewName);
-      var designDocName = parts[0];
-      var viewName = parts[1];
-      return db.get('_design/' + designDocName).then(function (doc) {
-        var fun = doc.views && doc.views[viewName];
-
-        if (!fun) {
-          // basic validator; it's assumed that every subclass would want this
-          throw new NotFoundError('ddoc ' + doc._id + ' has no view named ' +
-            viewName);
-        }
-
-        ddocValidator(doc, viewName);
-        checkQueryParseError(opts, fun);
-
-        var createViewPromise = createView(
-          /* sourceDB */ db,
-          /* viewName */ fullViewName,
-          /* mapFun */ fun.map,
-          /* reduceFun */ fun.reduce,
-          /* temporary */ false,
-          /* localDocName */ localDocName);
-        return createViewPromise.then(function (view) {
-          if (opts.stale === 'ok' || opts.stale === 'update_after') {
-            if (opts.stale === 'update_after') {
-              nextTick(function () {
-                updateView(view);
-              });
-            }
-            return queryView(view, opts);
-          } else { // stale not ok
-            return updateView(view).then(function () {
-              return queryView(view, opts);
-            });
-          }
-        });
-      });
-    }
-  }
-
-  function abstractQuery(fun, opts, callback) {
-    var db = this;
-    if (typeof opts === 'function') {
-      callback = opts;
-      opts = {};
-    }
-    opts = opts ? coerceOptions(opts) : {};
-
-    if (typeof fun === 'function') {
-      fun = {map : fun};
-    }
-
-    var promise = PouchPromise$1.resolve().then(function () {
-      return queryPromised(db, fun, opts);
     });
-    promisedCallback(promise, callback);
+
+    dbInfo.serializer = localforageSerializer;
+    return dbInfoPromise;
+}
+
+function getItem$1(key, callback) {
+    var self = this;
+
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
+    }
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            dbInfo.db.transaction(function (t) {
+                t.executeSql('SELECT * FROM ' + dbInfo.storeName + ' WHERE key = ? LIMIT 1', [key], function (t, results) {
+                    var result = results.rows.length ? results.rows.item(0).value : null;
+
+                    // Check to see if this is serialized content we need to
+                    // unpack.
+                    if (result) {
+                        result = dbInfo.serializer.deserialize(result);
+                    }
+
+                    resolve(result);
+                }, function (t, error) {
+
+                    reject(error);
+                });
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
     return promise;
-  }
-
-  var abstractViewCleanup = callbackify(function () {
-    var db = this;
-    /* istanbul ignore next */
-    if (typeof db._viewCleanup === 'function') {
-      return customViewCleanup(db);
-    }
-    if (isRemote(db)) {
-      return httpViewCleanup(db);
-    }
-    return localViewCleanup(db);
-  });
-
-  return {
-    query: abstractQuery,
-    viewCleanup: abstractViewCleanup
-  };
 }
 
-var builtInReduce = {
-  _sum: function (keys, values) {
-    return sum(values);
-  },
+function iterate$1(iterator, callback) {
+    var self = this;
 
-  _count: function (keys, values) {
-    return values.length;
-  },
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
 
-  _stats: function (keys, values) {
-    // no need to implement rereduce=true, because Pouch
-    // will never call it
-    function sumsqr(values) {
-      var _sumsqr = 0;
-      for (var i = 0, len = values.length; i < len; i++) {
-        var num = values[i];
-        _sumsqr += (num * num);
-      }
-      return _sumsqr;
+            dbInfo.db.transaction(function (t) {
+                t.executeSql('SELECT * FROM ' + dbInfo.storeName, [], function (t, results) {
+                    var rows = results.rows;
+                    var length = rows.length;
+
+                    for (var i = 0; i < length; i++) {
+                        var item = rows.item(i);
+                        var result = item.value;
+
+                        // Check to see if this is serialized content
+                        // we need to unpack.
+                        if (result) {
+                            result = dbInfo.serializer.deserialize(result);
+                        }
+
+                        result = iterator(result, item.key, i + 1);
+
+                        // void(0) prevents problems with redefinition
+                        // of `undefined`.
+                        if (result !== void 0) {
+                            resolve(result);
+                            return;
+                        }
+                    }
+
+                    resolve();
+                }, function (t, error) {
+                    reject(error);
+                });
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function _setItem(key, value, callback, retriesLeft) {
+    var self = this;
+
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
     }
-    return {
-      sum     : sum(values),
-      min     : Math.min.apply(null, values),
-      max     : Math.max.apply(null, values),
-      count   : values.length,
-      sumsqr : sumsqr(values)
-    };
-  }
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            // The localStorage API doesn't return undefined values in an
+            // "expected" way, so undefined is always cast to null in all
+            // drivers. See: https://github.com/mozilla/localForage/pull/42
+            if (value === undefined) {
+                value = null;
+            }
+
+            // Save the original value to pass to the callback.
+            var originalValue = value;
+
+            var dbInfo = self._dbInfo;
+            dbInfo.serializer.serialize(value, function (value, error) {
+                if (error) {
+                    reject(error);
+                } else {
+                    dbInfo.db.transaction(function (t) {
+                        t.executeSql('INSERT OR REPLACE INTO ' + dbInfo.storeName + ' (key, value) VALUES (?, ?)', [key, value], function () {
+                            resolve(originalValue);
+                        }, function (t, error) {
+                            reject(error);
+                        });
+                    }, function (sqlError) {
+                        // The transaction failed; check
+                        // to see if it's a quota error.
+                        if (sqlError.code === sqlError.QUOTA_ERR) {
+                            // We reject the callback outright for now, but
+                            // it's worth trying to re-run the transaction.
+                            // Even if the user accepts the prompt to use
+                            // more storage on Safari, this error will
+                            // be called.
+                            //
+                            // Try to re-run the transaction.
+                            if (retriesLeft > 0) {
+                                resolve(_setItem.apply(self, [key, originalValue, callback, retriesLeft - 1]));
+                                return;
+                            }
+                            reject(sqlError);
+                        }
+                    });
+                }
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function setItem$1(key, value, callback) {
+    return _setItem.apply(this, [key, value, callback, 1]);
+}
+
+function removeItem$1(key, callback) {
+    var self = this;
+
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
+    }
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            dbInfo.db.transaction(function (t) {
+                t.executeSql('DELETE FROM ' + dbInfo.storeName + ' WHERE key = ?', [key], function () {
+                    resolve();
+                }, function (t, error) {
+
+                    reject(error);
+                });
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+// Deletes every item in the table.
+// TODO: Find out if this resets the AUTO_INCREMENT number.
+function clear$1(callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            dbInfo.db.transaction(function (t) {
+                t.executeSql('DELETE FROM ' + dbInfo.storeName, [], function () {
+                    resolve();
+                }, function (t, error) {
+                    reject(error);
+                });
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+// Does a simple `COUNT(key)` to get the number of items stored in
+// localForage.
+function length$1(callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            dbInfo.db.transaction(function (t) {
+                // Ahhh, SQL makes this one soooooo easy.
+                t.executeSql('SELECT COUNT(key) as c FROM ' + dbInfo.storeName, [], function (t, results) {
+                    var result = results.rows.item(0).c;
+
+                    resolve(result);
+                }, function (t, error) {
+
+                    reject(error);
+                });
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+// Return the key located at key index X; essentially gets the key from a
+// `WHERE id = ?`. This is the most efficient way I can think to implement
+// this rarely-used (in my experience) part of the API, but it can seem
+// inconsistent, because we do `INSERT OR REPLACE INTO` on `setItem()`, so
+// the ID of each key will change every time it's updated. Perhaps a stored
+// procedure for the `setItem()` SQL would solve this problem?
+// TODO: Don't change ID on `setItem()`.
+function key$1(n, callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            dbInfo.db.transaction(function (t) {
+                t.executeSql('SELECT key FROM ' + dbInfo.storeName + ' WHERE id = ? LIMIT 1', [n + 1], function (t, results) {
+                    var result = results.rows.length ? results.rows.item(0).key : null;
+                    resolve(result);
+                }, function (t, error) {
+                    reject(error);
+                });
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+function keys$1(callback) {
+    var self = this;
+
+    var promise = new Promise$1(function (resolve, reject) {
+        self.ready().then(function () {
+            var dbInfo = self._dbInfo;
+            dbInfo.db.transaction(function (t) {
+                t.executeSql('SELECT key FROM ' + dbInfo.storeName, [], function (t, results) {
+                    var keys = [];
+
+                    for (var i = 0; i < results.rows.length; i++) {
+                        keys.push(results.rows.item(i).key);
+                    }
+
+                    resolve(keys);
+                }, function (t, error) {
+
+                    reject(error);
+                });
+            });
+        })["catch"](reject);
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+var webSQLStorage = {
+    _driver: 'webSQLStorage',
+    _initStorage: _initStorage$1,
+    iterate: iterate$1,
+    getItem: getItem$1,
+    setItem: setItem$1,
+    removeItem: removeItem$1,
+    clear: clear$1,
+    length: length$1,
+    key: key$1,
+    keys: keys$1
 };
 
-function mapper(mapFun, emit) {
-  // for temp_views one can use emit(doc, emit), see #38
-  if (typeof mapFun === "function" && mapFun.length === 2) {
-    var origMap = mapFun;
-    return function (doc) {
-      return origMap(doc, emit);
-    };
-  } else {
-    return evalFunctionWithEval(mapFun.toString(), emit);
-  }
-}
-
-function reducer(reduceFun) {
-  if (builtInReduce[reduceFun]) {
-    return builtInReduce[reduceFun];
-  } else {
-    return evalFunctionWithEval(reduceFun.toString());
-  }
-}
-
-function ddocValidator(ddoc, viewName) {
-  var fun = ddoc.views && ddoc.views[viewName];
-  if (typeof fun.map !== 'string') {
-    throw new NotFoundError('ddoc ' + ddoc._id + ' has no string view named ' +
-      viewName + ', instead found object of type: ' + typeof fun.map);
-  }
-}
-
-var localDocName = 'mrviews';
-var abstract = createAbstractMapReduce(localDocName, mapper, reducer, ddocValidator);
-
-function query(fun, opts, callback) {
-  return abstract.query.call(this, fun, opts, callback);
-}
-
-function viewCleanup(callback) {
-  return abstract.viewCleanup.call(this, callback);
-}
-
-var mapreduce = {
-  query: query,
-  viewCleanup: viewCleanup
-};
-
-function isGenOne$1(rev) {
-  return /^1-/.test(rev);
-}
-
-function fileHasChanged(localDoc, remoteDoc, filename) {
-  return !localDoc._attachments ||
-         !localDoc._attachments[filename] ||
-         localDoc._attachments[filename].digest !== remoteDoc._attachments[filename].digest;
-}
-
-function getDocAttachments(db, doc) {
-  var filenames = Object.keys(doc._attachments);
-  return PouchPromise$1.all(filenames.map(function (filename) {
-    return db.getAttachment(doc._id, filename, {rev: doc._rev});
-  }));
-}
-
-function getDocAttachmentsFromTargetOrSource(target, src, doc) {
-  var doCheckForLocalAttachments = isRemote(src) && !isRemote(target);
-  var filenames = Object.keys(doc._attachments);
-
-  if (!doCheckForLocalAttachments) {
-    return getDocAttachments(src, doc);
-  }
-
-  return target.get(doc._id).then(function (localDoc) {
-    return PouchPromise$1.all(filenames.map(function (filename) {
-      if (fileHasChanged(localDoc, doc, filename)) {
-        return src.getAttachment(doc._id, filename);
-      }
-
-      return target.getAttachment(localDoc._id, filename);
-    }));
-  }).catch(function (error) {
-    /* istanbul ignore if */
-    if (error.status !== 404) {
-      throw error;
+// Config the localStorage backend, using options set in the config.
+function _initStorage$2(options) {
+    var self = this;
+    var dbInfo = {};
+    if (options) {
+        for (var i in options) {
+            dbInfo[i] = options[i];
+        }
     }
 
-    return getDocAttachments(src, doc);
-  });
-}
+    dbInfo.keyPrefix = dbInfo.name + '/';
 
-function createBulkGetOpts(diffs) {
-  var requests = [];
-  Object.keys(diffs).forEach(function (id) {
-    var missingRevs = diffs[id].missing;
-    missingRevs.forEach(function (missingRev) {
-      requests.push({
-        id: id,
-        rev: missingRev
-      });
-    });
-  });
-
-  return {
-    docs: requests,
-    revs: true,
-    latest: true
-  };
-}
-
-//
-// Fetch all the documents from the src as described in the "diffs",
-// which is a mapping of docs IDs to revisions. If the state ever
-// changes to "cancelled", then the returned promise will be rejected.
-// Else it will be resolved with a list of fetched documents.
-//
-function getDocs(src, target, diffs, state) {
-  diffs = clone(diffs); // we do not need to modify this
-
-  var resultDocs = [],
-      ok = true;
-
-  function getAllDocs() {
-
-    var bulkGetOpts = createBulkGetOpts(diffs);
-
-    if (!bulkGetOpts.docs.length) { // optimization: skip empty requests
-      return;
+    if (dbInfo.storeName !== self._defaultConfig.storeName) {
+        dbInfo.keyPrefix += dbInfo.storeName + '/';
     }
 
-    return src.bulkGet(bulkGetOpts).then(function (bulkGetResponse) {
-      /* istanbul ignore if */
-      if (state.cancelled) {
-        throw new Error('cancelled');
-      }
-      return PouchPromise$1.all(bulkGetResponse.results.map(function (bulkGetInfo) {
-        return PouchPromise$1.all(bulkGetInfo.docs.map(function (doc) {
-          var remoteDoc = doc.ok;
+    self._dbInfo = dbInfo;
+    dbInfo.serializer = localforageSerializer;
 
-          if (doc.error) {
-            // when AUTO_COMPACTION is set, docs can be returned which look
-            // like this: {"missing":"1-7c3ac256b693c462af8442f992b83696"}
-            ok = false;
-          }
+    return Promise$1.resolve();
+}
 
-          if (!remoteDoc || !remoteDoc._attachments) {
-            return remoteDoc;
-          }
+// Remove all keys from the datastore, effectively destroying all data in
+// the app's key/value store!
+function clear$2(callback) {
+    var self = this;
+    var promise = self.ready().then(function () {
+        var keyPrefix = self._dbInfo.keyPrefix;
 
-          return getDocAttachmentsFromTargetOrSource(target, src, remoteDoc)
-                   .then(function (attachments) {
-                           var filenames = Object.keys(remoteDoc._attachments);
-                           attachments
-                             .forEach(function (attachment, i) {
-                                        var att = remoteDoc._attachments[filenames[i]];
-                                        delete att.stub;
-                                        delete att.length;
-                                        att.data = attachment;
-                                      });
+        for (var i = localStorage.length - 1; i >= 0; i--) {
+            var key = localStorage.key(i);
 
-                                      return remoteDoc;
-                                    });
-        }));
-      }))
-
-      .then(function (results) {
-        resultDocs = resultDocs.concat(flatten(results).filter(Boolean));
-      });
+            if (key.indexOf(keyPrefix) === 0) {
+                localStorage.removeItem(key);
+            }
+        }
     });
-  }
 
-  function hasAttachments(doc) {
-    return doc._attachments && Object.keys(doc._attachments).length > 0;
-  }
+    executeCallback(promise, callback);
+    return promise;
+}
 
-  function hasConflicts(doc) {
-    return doc._conflicts && doc._conflicts.length > 0;
-  }
+// Retrieve an item from the store. Unlike the original async_storage
+// library in Gaia, we don't modify return values at all. If a key's value
+// is `undefined`, we pass that value to the callback function.
+function getItem$2(key, callback) {
+    var self = this;
 
-  function fetchRevisionOneDocs(ids) {
-    // Optimization: fetch gen-1 docs and attachments in
-    // a single request using _all_docs
-    return src.allDocs({
-      keys: ids,
-      include_docs: true,
-      conflicts: true
-    }).then(function (res) {
-      if (state.cancelled) {
-        throw new Error('cancelled');
-      }
-      res.rows.forEach(function (row) {
-        if (row.deleted || !row.doc || !isGenOne$1(row.value.rev) ||
-            hasAttachments(row.doc) || hasConflicts(row.doc)) {
-          // if any of these conditions apply, we need to fetch using get()
-          return;
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
+    }
+
+    var promise = self.ready().then(function () {
+        var dbInfo = self._dbInfo;
+        var result = localStorage.getItem(dbInfo.keyPrefix + key);
+
+        // If a result was found, parse it from the serialized
+        // string into a JS object. If result isn't truthy, the key
+        // is likely undefined and we'll pass it straight to the
+        // callback.
+        if (result) {
+            result = dbInfo.serializer.deserialize(result);
         }
 
-        // strip _conflicts array to appease CSG (#5793)
-        /* istanbul ignore if */
-        if (row.doc._conflicts) {
-          delete row.doc._conflicts;
+        return result;
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+// Iterate over all items in the store.
+function iterate$2(iterator, callback) {
+    var self = this;
+
+    var promise = self.ready().then(function () {
+        var dbInfo = self._dbInfo;
+        var keyPrefix = dbInfo.keyPrefix;
+        var keyPrefixLength = keyPrefix.length;
+        var length = localStorage.length;
+
+        // We use a dedicated iterator instead of the `i` variable below
+        // so other keys we fetch in localStorage aren't counted in
+        // the `iterationNumber` argument passed to the `iterate()`
+        // callback.
+        //
+        // See: github.com/mozilla/localForage/pull/435#discussion_r38061530
+        var iterationNumber = 1;
+
+        for (var i = 0; i < length; i++) {
+            var key = localStorage.key(i);
+            if (key.indexOf(keyPrefix) !== 0) {
+                continue;
+            }
+            var value = localStorage.getItem(key);
+
+            // If a result was found, parse it from the serialized
+            // string into a JS object. If result isn't truthy, the
+            // key is likely undefined and we'll pass it straight
+            // to the iterator.
+            if (value) {
+                value = dbInfo.serializer.deserialize(value);
+            }
+
+            value = iterator(value, key.substring(keyPrefixLength), iterationNumber++);
+
+            if (value !== void 0) {
+                return value;
+            }
+        }
+    });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+// Same as localStorage's key() method, except takes a callback.
+function key$2(n, callback) {
+    var self = this;
+    var promise = self.ready().then(function () {
+        var dbInfo = self._dbInfo;
+        var result;
+        try {
+            result = localStorage.key(n);
+        } catch (error) {
+            result = null;
         }
 
-        // the doc we got back from allDocs() is sufficient
-        resultDocs.push(row.doc);
-        delete diffs[row.id];
-      });
+        // Remove the prefix from the key, if a key is found.
+        if (result) {
+            result = result.substring(dbInfo.keyPrefix.length);
+        }
+
+        return result;
     });
-  }
 
-  function getRevisionOneDocs() {
-    // filter out the generation 1 docs and get them
-    // leaving the non-generation one docs to be got otherwise
-    var ids = Object.keys(diffs).filter(function (id) {
-      var missing = diffs[id].missing;
-      return missing.length === 1 && isGenOne$1(missing[0]);
-    });
-    if (ids.length > 0) {
-      return fetchRevisionOneDocs(ids);
-    }
-  }
-
-  function returnResult() {
-    return { ok:ok, docs:resultDocs };
-  }
-
-  return PouchPromise$1.resolve()
-    .then(getRevisionOneDocs)
-    .then(getAllDocs)
-    .then(returnResult);
+    executeCallback(promise, callback);
+    return promise;
 }
 
-var CHECKPOINT_VERSION = 1;
-var REPLICATOR = "pouchdb";
-// This is an arbitrary number to limit the
-// amount of replication history we save in the checkpoint.
-// If we save too much, the checkpoing docs will become very big,
-// if we save fewer, we'll run a greater risk of having to
-// read all the changes from 0 when checkpoint PUTs fail
-// CouchDB 2.0 has a more involved history pruning,
-// but let's go for the simple version for now.
-var CHECKPOINT_HISTORY_SIZE = 5;
-var LOWEST_SEQ = 0;
+function keys$2(callback) {
+    var self = this;
+    var promise = self.ready().then(function () {
+        var dbInfo = self._dbInfo;
+        var length = localStorage.length;
+        var keys = [];
 
-function updateCheckpoint(db, id, checkpoint, session, returnValue) {
-  return db.get(id).catch(function (err) {
-    if (err.status === 404) {
-      if (db.adapter === 'http' || db.adapter === 'https') {
-        explainError(
-          404, 'PouchDB is just checking if a remote checkpoint exists.'
-        );
-      }
-      return {
-        session_id: session,
-        _id: id,
-        history: [],
-        replicator: REPLICATOR,
-        version: CHECKPOINT_VERSION
-      };
-    }
-    throw err;
-  }).then(function (doc) {
-    if (returnValue.cancelled) {
-      return;
-    }
+        for (var i = 0; i < length; i++) {
+            if (localStorage.key(i).indexOf(dbInfo.keyPrefix) === 0) {
+                keys.push(localStorage.key(i).substring(dbInfo.keyPrefix.length));
+            }
+        }
 
-    // if the checkpoint has not changed, do not update
-    if (doc.last_seq === checkpoint) {
-      return;
-    }
-
-    // Filter out current entry for this replication
-    doc.history = (doc.history || []).filter(function (item) {
-      return item.session_id !== session;
+        return keys;
     });
 
-    // Add the latest checkpoint to history
-    doc.history.unshift({
-      last_seq: checkpoint,
-      session_id: session
-    });
-
-    // Just take the last pieces in history, to
-    // avoid really big checkpoint docs.
-    // see comment on history size above
-    doc.history = doc.history.slice(0, CHECKPOINT_HISTORY_SIZE);
-
-    doc.version = CHECKPOINT_VERSION;
-    doc.replicator = REPLICATOR;
-
-    doc.session_id = session;
-    doc.last_seq = checkpoint;
-
-    return db.put(doc).catch(function (err) {
-      if (err.status === 409) {
-        // retry; someone is trying to write a checkpoint simultaneously
-        return updateCheckpoint(db, id, checkpoint, session, returnValue);
-      }
-      throw err;
-    });
-  });
+    executeCallback(promise, callback);
+    return promise;
 }
 
-function Checkpointer(src, target, id, returnValue) {
-  this.src = src;
-  this.target = target;
-  this.id = id;
-  this.returnValue = returnValue;
+// Supply the number of keys in the datastore to the callback function.
+function length$2(callback) {
+    var self = this;
+    var promise = self.keys().then(function (keys) {
+        return keys.length;
+    });
+
+    executeCallback(promise, callback);
+    return promise;
 }
 
-Checkpointer.prototype.writeCheckpoint = function (checkpoint, session) {
-  var self = this;
-  return this.updateTarget(checkpoint, session).then(function () {
-    return self.updateSource(checkpoint, session);
-  });
-};
+// Remove an item from the store, nice and simple.
+function removeItem$2(key, callback) {
+    var self = this;
 
-Checkpointer.prototype.updateTarget = function (checkpoint, session) {
-  return updateCheckpoint(this.target, this.id, checkpoint,
-    session, this.returnValue);
-};
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
+    }
 
-Checkpointer.prototype.updateSource = function (checkpoint, session) {
-  var self = this;
-  if (this.readOnlySource) {
-    return PouchPromise$1.resolve(true);
-  }
-  return updateCheckpoint(this.src, this.id, checkpoint,
-    session, this.returnValue)
-    .catch(function (err) {
-      if (isForbiddenError(err)) {
-        self.readOnlySource = true;
-        return true;
-      }
-      throw err;
+    var promise = self.ready().then(function () {
+        var dbInfo = self._dbInfo;
+        localStorage.removeItem(dbInfo.keyPrefix + key);
     });
-};
 
-var comparisons = {
-  "undefined": function (targetDoc, sourceDoc) {
-    // This is the previous comparison function
-    if (collate(targetDoc.last_seq, sourceDoc.last_seq) === 0) {
-      return sourceDoc.last_seq;
-    }
-    /* istanbul ignore next */
-    return 0;
-  },
-  "1": function (targetDoc, sourceDoc) {
-    // This is the comparison function ported from CouchDB
-    return compareReplicationLogs(sourceDoc, targetDoc).last_seq;
-  }
-};
+    executeCallback(promise, callback);
+    return promise;
+}
 
-Checkpointer.prototype.getCheckpoint = function () {
-  var self = this;
-  return self.target.get(self.id).then(function (targetDoc) {
-    if (self.readOnlySource) {
-      return PouchPromise$1.resolve(targetDoc.last_seq);
+// Set a key's value and run an optional callback once the value is set.
+// Unlike Gaia's implementation, the callback function is passed the value,
+// in case you want to operate on that value only after you're sure it
+// saved, or something like that.
+function setItem$2(key, value, callback) {
+    var self = this;
+
+    // Cast the key to a string, as that's all we can set as a key.
+    if (typeof key !== 'string') {
+        console.warn(key + ' used as a key, but it is not a string.');
+        key = String(key);
     }
 
-    return self.src.get(self.id).then(function (sourceDoc) {
-      // Since we can't migrate an old version doc to a new one
-      // (no session id), we just go with the lowest seq in this case
-      /* istanbul ignore if */
-      if (targetDoc.version !== sourceDoc.version) {
-        return LOWEST_SEQ;
-      }
+    var promise = self.ready().then(function () {
+        // Convert undefined values to null.
+        // https://github.com/mozilla/localForage/pull/42
+        if (value === undefined) {
+            value = null;
+        }
 
-      var version;
-      if (targetDoc.version) {
-        version = targetDoc.version.toString();
-      } else {
-        version = "undefined";
-      }
+        // Save the original value to pass to the callback.
+        var originalValue = value;
 
-      if (version in comparisons) {
-        return comparisons[version](targetDoc, sourceDoc);
-      }
-      /* istanbul ignore next */
-      return LOWEST_SEQ;
-    }, function (err) {
-      if (err.status === 404 && targetDoc.last_seq) {
-        return self.src.put({
-          _id: self.id,
-          last_seq: LOWEST_SEQ
-        }).then(function () {
-          return LOWEST_SEQ;
-        }, function (err) {
-          if (isForbiddenError(err)) {
-            self.readOnlySource = true;
-            return targetDoc.last_seq;
-          }
-          /* istanbul ignore next */
-          return LOWEST_SEQ;
+        return new Promise$1(function (resolve, reject) {
+            var dbInfo = self._dbInfo;
+            dbInfo.serializer.serialize(value, function (value, error) {
+                if (error) {
+                    reject(error);
+                } else {
+                    try {
+                        localStorage.setItem(dbInfo.keyPrefix + key, value);
+                        resolve(originalValue);
+                    } catch (e) {
+                        // localStorage capacity exceeded.
+                        // TODO: Make this a specific error/event.
+                        if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
+                            reject(e);
+                        }
+                        reject(e);
+                    }
+                }
+            });
         });
-      }
-      throw err;
     });
-  }).catch(function (err) {
-    if (err.status !== 404) {
-      throw err;
-    }
-    return LOWEST_SEQ;
-  });
+
+    executeCallback(promise, callback);
+    return promise;
+}
+
+var localStorageWrapper = {
+    _driver: 'localStorageWrapper',
+    _initStorage: _initStorage$2,
+    // Default API, from Gaia/localStorage.
+    iterate: iterate$2,
+    getItem: getItem$2,
+    setItem: setItem$2,
+    removeItem: removeItem$2,
+    clear: clear$2,
+    length: length$2,
+    key: key$2,
+    keys: keys$2
 };
-// This checkpoint comparison is ported from CouchDBs source
-// they come from here:
-// https://github.com/apache/couchdb-couch-replicator/blob/master/src/couch_replicator.erl#L863-L906
 
-function compareReplicationLogs(srcDoc, tgtDoc) {
-  if (srcDoc.session_id === tgtDoc.session_id) {
-    return {
-      last_seq: srcDoc.last_seq,
-      history: srcDoc.history
+// Custom drivers are stored here when `defineDriver()` is called.
+// They are shared across all instances of localForage.
+var CustomDrivers = {};
+
+var DriverType = {
+    INDEXEDDB: 'asyncStorage',
+    LOCALSTORAGE: 'localStorageWrapper',
+    WEBSQL: 'webSQLStorage'
+};
+
+var DefaultDriverOrder = [DriverType.INDEXEDDB, DriverType.WEBSQL, DriverType.LOCALSTORAGE];
+
+var LibraryMethods = ['clear', 'getItem', 'iterate', 'key', 'keys', 'length', 'removeItem', 'setItem'];
+
+var DefaultConfig = {
+    description: '',
+    driver: DefaultDriverOrder.slice(),
+    name: 'localforage',
+    // Default DB size is _JUST UNDER_ 5MB, as it's the highest size
+    // we can use without a prompt.
+    size: 4980736,
+    storeName: 'keyvaluepairs',
+    version: 1.0
+};
+
+var driverSupport = {};
+// Check to see if IndexedDB is available and if it is the latest
+// implementation; it's our preferred backend library. We use "_spec_test"
+// as the name of the database because it's not the one we'll operate on,
+// but it's useful to make sure its using the right spec.
+// See: https://github.com/mozilla/localForage/issues/128
+driverSupport[DriverType.INDEXEDDB] = isIndexedDBValid();
+
+driverSupport[DriverType.WEBSQL] = isWebSQLValid();
+
+driverSupport[DriverType.LOCALSTORAGE] = isLocalStorageValid();
+
+var isArray = Array.isArray || function (arg) {
+    return Object.prototype.toString.call(arg) === '[object Array]';
+};
+
+function callWhenReady(localForageInstance, libraryMethod) {
+    localForageInstance[libraryMethod] = function () {
+        var _args = arguments;
+        return localForageInstance.ready().then(function () {
+            return localForageInstance[libraryMethod].apply(localForageInstance, _args);
+        });
     };
-  }
-
-  return compareReplicationHistory(srcDoc.history, tgtDoc.history);
 }
 
-function compareReplicationHistory(sourceHistory, targetHistory) {
-  // the erlang loop via function arguments is not so easy to repeat in JS
-  // therefore, doing this as recursion
-  var S = sourceHistory[0];
-  var sourceRest = sourceHistory.slice(1);
-  var T = targetHistory[0];
-  var targetRest = targetHistory.slice(1);
+function extend() {
+    for (var i = 1; i < arguments.length; i++) {
+        var arg = arguments[i];
 
-  if (!S || targetHistory.length === 0) {
-    return {
-      last_seq: LOWEST_SEQ,
-      history: []
-    };
-  }
+        if (arg) {
+            for (var key in arg) {
+                if (arg.hasOwnProperty(key)) {
+                    if (isArray(arg[key])) {
+                        arguments[0][key] = arg[key].slice();
+                    } else {
+                        arguments[0][key] = arg[key];
+                    }
+                }
+            }
+        }
+    }
 
-  var sourceId = S.session_id;
-  /* istanbul ignore if */
-  if (hasSessionId(sourceId, targetHistory)) {
-    return {
-      last_seq: S.last_seq,
-      history: sourceHistory
-    };
-  }
-
-  var targetId = T.session_id;
-  if (hasSessionId(targetId, sourceRest)) {
-    return {
-      last_seq: T.last_seq,
-      history: targetRest
-    };
-  }
-
-  return compareReplicationHistory(sourceRest, targetRest);
+    return arguments[0];
 }
 
-function hasSessionId(sessionId, history) {
-  var props = history[0];
-  var rest = history.slice(1);
+function isLibraryDriver(driverName) {
+    for (var driver in DriverType) {
+        if (DriverType.hasOwnProperty(driver) && DriverType[driver] === driverName) {
+            return true;
+        }
+    }
 
-  if (!sessionId || history.length === 0) {
     return false;
-  }
-
-  if (sessionId === props.session_id) {
-    return true;
-  }
-
-  return hasSessionId(sessionId, rest);
 }
 
-function isForbiddenError(err) {
-  return typeof err.status === 'number' && Math.floor(err.status / 100) === 4;
-}
+var LocalForage = function () {
+    function LocalForage(options) {
+        _classCallCheck(this, LocalForage);
 
-var STARTING_BACK_OFF = 0;
+        this.INDEXEDDB = DriverType.INDEXEDDB;
+        this.LOCALSTORAGE = DriverType.LOCALSTORAGE;
+        this.WEBSQL = DriverType.WEBSQL;
 
-function backOff(opts, returnValue, error, callback) {
-  if (opts.retry === false) {
-    returnValue.emit('error', error);
-    returnValue.removeAllListeners();
-    return;
-  }
-  if (typeof opts.back_off_function !== 'function') {
-    opts.back_off_function = defaultBackOff;
-  }
-  returnValue.emit('requestError', error);
-  if (returnValue.state === 'active' || returnValue.state === 'pending') {
-    returnValue.emit('paused', error);
-    returnValue.state = 'stopped';
-    var backOffSet = function backoffTimeSet() {
-      opts.current_back_off = STARTING_BACK_OFF;
-    };
-    var removeBackOffSetter = function removeBackOffTimeSet() {
-      returnValue.removeListener('active', backOffSet);
-    };
-    returnValue.once('paused', removeBackOffSetter);
-    returnValue.once('active', backOffSet);
-  }
+        this._defaultConfig = extend({}, DefaultConfig);
+        this._config = extend({}, this._defaultConfig, options);
+        this._driverSet = null;
+        this._initDriver = null;
+        this._ready = false;
+        this._dbInfo = null;
 
-  opts.current_back_off = opts.current_back_off || STARTING_BACK_OFF;
-  opts.current_back_off = opts.back_off_function(opts.current_back_off);
-  setTimeout(callback, opts.current_back_off);
-}
-
-function sortObjectPropertiesByKey(queryParams) {
-  return Object.keys(queryParams).sort(collate).reduce(function (result, key) {
-    result[key] = queryParams[key];
-    return result;
-  }, {});
-}
-
-// Generate a unique id particular to this replication.
-// Not guaranteed to align perfectly with CouchDB's rep ids.
-function generateReplicationId(src, target, opts) {
-  var docIds = opts.doc_ids ? opts.doc_ids.sort(collate) : '';
-  var filterFun = opts.filter ? opts.filter.toString() : '';
-  var queryParams = '';
-  var filterViewName =  '';
-  var selector = '';
-
-  // possibility for checkpoints to be lost here as behaviour of
-  // JSON.stringify is not stable (see #6226)
-  /* istanbul ignore if */
-  if (opts.selector) {
-    selector = JSON.stringify(opts.selector);
-  }
-
-  if (opts.filter && opts.query_params) {
-    queryParams = JSON.stringify(sortObjectPropertiesByKey(opts.query_params));
-  }
-
-  if (opts.filter && opts.filter === '_view') {
-    filterViewName = opts.view.toString();
-  }
-
-  return PouchPromise$1.all([src.id(), target.id()]).then(function (res) {
-    var queryData = res[0] + res[1] + filterFun + filterViewName +
-      queryParams + docIds + selector;
-    return new PouchPromise$1(function (resolve) {
-      binaryMd5(queryData, resolve);
-    });
-  }).then(function (md5sum) {
-    // can't use straight-up md5 alphabet, because
-    // the char '/' is interpreted as being for attachments,
-    // and + is also not url-safe
-    md5sum = md5sum.replace(/\//g, '.').replace(/\+/g, '_');
-    return '_local/' + md5sum;
-  });
-}
-
-function replicate(src, target, opts, returnValue, result) {
-  var batches = [];               // list of batches to be processed
-  var currentBatch;               // the batch currently being processed
-  var pendingBatch = {
-    seq: 0,
-    changes: [],
-    docs: []
-  }; // next batch, not yet ready to be processed
-  var writingCheckpoint = false;  // true while checkpoint is being written
-  var changesCompleted = false;   // true when all changes received
-  var replicationCompleted = false; // true when replication has completed
-  var last_seq = 0;
-  var continuous = opts.continuous || opts.live || false;
-  var batch_size = opts.batch_size || 100;
-  var batches_limit = opts.batches_limit || 10;
-  var changesPending = false;     // true while src.changes is running
-  var doc_ids = opts.doc_ids;
-  var selector = opts.selector;
-  var repId;
-  var checkpointer;
-  var changedDocs = [];
-  // Like couchdb, every replication gets a unique session id
-  var session = uuid();
-
-  result = result || {
-    ok: true,
-    start_time: new Date(),
-    docs_read: 0,
-    docs_written: 0,
-    doc_write_failures: 0,
-    errors: []
-  };
-
-  var changesOpts = {};
-  returnValue.ready(src, target);
-
-  function initCheckpointer() {
-    if (checkpointer) {
-      return PouchPromise$1.resolve();
+        this._wrapLibraryMethodsWithReady();
+        this.setDriver(this._config.driver)["catch"](function () {});
     }
-    return generateReplicationId(src, target, opts).then(function (res) {
-      repId = res;
-      checkpointer = new Checkpointer(src, target, repId, returnValue);
-    });
-  }
 
-  function writeDocs() {
-    changedDocs = [];
+    // Set any config values for localForage; can be called anytime before
+    // the first API call (e.g. `getItem`, `setItem`).
+    // We loop through options so we don't overwrite existing config
+    // values.
 
-    if (currentBatch.docs.length === 0) {
-      return;
-    }
-    var docs = currentBatch.docs;
-    var bulkOpts = {timeout: opts.timeout};
-    return target.bulkDocs({docs: docs, new_edits: false}, bulkOpts).then(function (res) {
-      /* istanbul ignore if */
-      if (returnValue.cancelled) {
-        completeReplication();
-        throw new Error('cancelled');
-      }
 
-      // `res` doesn't include full documents (which live in `docs`), so we create a map of 
-      // (id -> error), and check for errors while iterating over `docs`
-      var errorsById = Object.create(null);
-      res.forEach(function (res) {
-        if (res.error) {
-          errorsById[res.id] = res;
-        }
-      });
+    LocalForage.prototype.config = function config(options) {
+        // If the options argument is an object, we use it to set values.
+        // Otherwise, we return either a specified config value or all
+        // config values.
+        if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object') {
+            // If localforage is ready and fully initialized, we can't set
+            // any new configuration values. Instead, we return an error.
+            if (this._ready) {
+                return new Error("Can't call config() after localforage " + 'has been used.');
+            }
 
-      var errorsNo = Object.keys(errorsById).length;
-      result.doc_write_failures += errorsNo;
-      result.docs_written += docs.length - errorsNo;
+            for (var i in options) {
+                if (i === 'storeName') {
+                    options[i] = options[i].replace(/\W/g, '_');
+                }
 
-      docs.forEach(function (doc) {
-        var error = errorsById[doc._id];
-        if (error) {
-          result.errors.push(error);
-          if (error.name === 'unauthorized' || error.name === 'forbidden') {
-            returnValue.emit('denied', clone(error));
-          } else {
-            throw error;
-          }
+                if (i === 'version' && typeof options[i] !== 'number') {
+                    return new Error('Database version must be a number.');
+                }
+
+                this._config[i] = options[i];
+            }
+
+            // after all config options are set and
+            // the driver option is used, try setting it
+            if ('driver' in options && options.driver) {
+                return this.setDriver(this._config.driver);
+            }
+
+            return true;
+        } else if (typeof options === 'string') {
+            return this._config[options];
         } else {
-          changedDocs.push(doc);
+            return this._config;
         }
-      });
-
-    }, function (err) {
-      result.doc_write_failures += docs.length;
-      throw err;
-    });
-  }
-
-  function finishBatch() {
-    if (currentBatch.error) {
-      throw new Error('There was a problem getting docs.');
-    }
-    result.last_seq = last_seq = currentBatch.seq;
-    var outResult = clone(result);
-    if (changedDocs.length) {
-      outResult.docs = changedDocs;
-      returnValue.emit('change', outResult);
-    }
-    writingCheckpoint = true;
-    return checkpointer.writeCheckpoint(currentBatch.seq,
-        session).then(function () {
-      writingCheckpoint = false;
-      /* istanbul ignore if */
-      if (returnValue.cancelled) {
-        completeReplication();
-        throw new Error('cancelled');
-      }
-      currentBatch = undefined;
-      getChanges();
-    }).catch(function (err) {
-      onCheckpointError(err);
-      throw err;
-    });
-  }
-
-  function getDiffs() {
-    var diff = {};
-    currentBatch.changes.forEach(function (change) {
-      // Couchbase Sync Gateway emits these, but we can ignore them
-      /* istanbul ignore if */
-      if (change.id === "_user/") {
-        return;
-      }
-      diff[change.id] = change.changes.map(function (x) {
-        return x.rev;
-      });
-    });
-    return target.revsDiff(diff).then(function (diffs) {
-      /* istanbul ignore if */
-      if (returnValue.cancelled) {
-        completeReplication();
-        throw new Error('cancelled');
-      }
-      // currentBatch.diffs elements are deleted as the documents are written
-      currentBatch.diffs = diffs;
-    });
-  }
-
-  function getBatchDocs() {
-    return getDocs(src, target, currentBatch.diffs, returnValue).then(function (got) {
-      currentBatch.error = !got.ok;
-      got.docs.forEach(function (doc) {
-        delete currentBatch.diffs[doc._id];
-        result.docs_read++;
-        currentBatch.docs.push(doc);
-      });
-    });
-  }
-
-  function startNextBatch() {
-    if (returnValue.cancelled || currentBatch) {
-      return;
-    }
-    if (batches.length === 0) {
-      processPendingBatch(true);
-      return;
-    }
-    currentBatch = batches.shift();
-    getDiffs()
-      .then(getBatchDocs)
-      .then(writeDocs)
-      .then(finishBatch)
-      .then(startNextBatch)
-      .catch(function (err) {
-        abortReplication('batch processing terminated with error', err);
-      });
-  }
-
-
-  function processPendingBatch(immediate) {
-    if (pendingBatch.changes.length === 0) {
-      if (batches.length === 0 && !currentBatch) {
-        if ((continuous && changesOpts.live) || changesCompleted) {
-          returnValue.state = 'pending';
-          returnValue.emit('paused');
-        }
-        if (changesCompleted) {
-          completeReplication();
-        }
-      }
-      return;
-    }
-    if (
-      immediate ||
-      changesCompleted ||
-      pendingBatch.changes.length >= batch_size
-    ) {
-      batches.push(pendingBatch);
-      pendingBatch = {
-        seq: 0,
-        changes: [],
-        docs: []
-      };
-      if (returnValue.state === 'pending' || returnValue.state === 'stopped') {
-        returnValue.state = 'active';
-        returnValue.emit('active');
-      }
-      startNextBatch();
-    }
-  }
-
-
-  function abortReplication(reason, err) {
-    if (replicationCompleted) {
-      return;
-    }
-    if (!err.message) {
-      err.message = reason;
-    }
-    result.ok = false;
-    result.status = 'aborting';
-    batches = [];
-    pendingBatch = {
-      seq: 0,
-      changes: [],
-      docs: []
     };
-    completeReplication(err);
-  }
+
+    // Used to define a custom driver, shared across all instances of
+    // localForage.
 
 
-  function completeReplication(fatalError) {
-    if (replicationCompleted) {
-      return;
-    }
-    /* istanbul ignore if */
-    if (returnValue.cancelled) {
-      result.status = 'cancelled';
-      if (writingCheckpoint) {
-        return;
-      }
-    }
-    result.status = result.status || 'complete';
-    result.end_time = new Date();
-    result.last_seq = last_seq;
-    replicationCompleted = true;
+    LocalForage.prototype.defineDriver = function defineDriver(driverObject, callback, errorCallback) {
+        var promise = new Promise$1(function (resolve, reject) {
+            try {
+                var driverName = driverObject._driver;
+                var complianceError = new Error('Custom driver not compliant; see ' + 'https://mozilla.github.io/localForage/#definedriver');
+                var namingError = new Error('Custom driver name already in use: ' + driverObject._driver);
 
-    if (fatalError) {
-      // need to extend the error because Firefox considers ".result" read-only
-      fatalError = createError(fatalError);
-      fatalError.result = result;
+                // A driver name should be defined and not overlap with the
+                // library-defined, default drivers.
+                if (!driverObject._driver) {
+                    reject(complianceError);
+                    return;
+                }
+                if (isLibraryDriver(driverObject._driver)) {
+                    reject(namingError);
+                    return;
+                }
 
-      if (fatalError.name === 'unauthorized' || fatalError.name === 'forbidden') {
-        returnValue.emit('error', fatalError);
-        returnValue.removeAllListeners();
-      } else {
-        backOff(opts, returnValue, fatalError, function () {
-          replicate(src, target, opts, returnValue);
+                var customDriverMethods = LibraryMethods.concat('_initStorage');
+                for (var i = 0; i < customDriverMethods.length; i++) {
+                    var customDriverMethod = customDriverMethods[i];
+                    if (!customDriverMethod || !driverObject[customDriverMethod] || typeof driverObject[customDriverMethod] !== 'function') {
+                        reject(complianceError);
+                        return;
+                    }
+                }
+
+                var supportPromise = Promise$1.resolve(true);
+                if ('_support' in driverObject) {
+                    if (driverObject._support && typeof driverObject._support === 'function') {
+                        supportPromise = driverObject._support();
+                    } else {
+                        supportPromise = Promise$1.resolve(!!driverObject._support);
+                    }
+                }
+
+                supportPromise.then(function (supportResult) {
+                    driverSupport[driverName] = supportResult;
+                    CustomDrivers[driverName] = driverObject;
+                    resolve();
+                }, reject);
+            } catch (e) {
+                reject(e);
+            }
         });
-      }
-    } else {
-      returnValue.emit('complete', result);
-      returnValue.removeAllListeners();
-    }
-  }
 
-
-  function onChange(change) {
-    /* istanbul ignore if */
-    if (returnValue.cancelled) {
-      return completeReplication();
-    }
-    var filter = filterChange(opts)(change);
-    if (!filter) {
-      return;
-    }
-    pendingBatch.seq = change.seq;
-    pendingBatch.changes.push(change);
-    processPendingBatch(batches.length === 0 && changesOpts.live);
-  }
-
-
-  function onChangesComplete(changes) {
-    changesPending = false;
-    /* istanbul ignore if */
-    if (returnValue.cancelled) {
-      return completeReplication();
-    }
-
-    // if no results were returned then we're done,
-    // else fetch more
-    if (changes.results.length > 0) {
-      changesOpts.since = changes.last_seq;
-      getChanges();
-      processPendingBatch(true);
-    } else {
-
-      var complete = function () {
-        if (continuous) {
-          changesOpts.live = true;
-          getChanges();
-        } else {
-          changesCompleted = true;
-        }
-        processPendingBatch(true);
-      };
-
-      // update the checkpoint so we start from the right seq next time
-      if (!currentBatch && changes.results.length === 0) {
-        writingCheckpoint = true;
-        checkpointer.writeCheckpoint(changes.last_seq,
-            session).then(function () {
-          writingCheckpoint = false;
-          result.last_seq = last_seq = changes.last_seq;
-          complete();
-        })
-        .catch(onCheckpointError);
-      } else {
-        complete();
-      }
-    }
-  }
-
-
-  function onChangesError(err) {
-    changesPending = false;
-    /* istanbul ignore if */
-    if (returnValue.cancelled) {
-      return completeReplication();
-    }
-    abortReplication('changes rejected', err);
-  }
-
-
-  function getChanges() {
-    if (!(
-      !changesPending &&
-      !changesCompleted &&
-      batches.length < batches_limit
-      )) {
-      return;
-    }
-    changesPending = true;
-    function abortChanges() {
-      changes.cancel();
-    }
-    function removeListener() {
-      returnValue.removeListener('cancel', abortChanges);
-    }
-
-    if (returnValue._changes) { // remove old changes() and listeners
-      returnValue.removeListener('cancel', returnValue._abortChanges);
-      returnValue._changes.cancel();
-    }
-    returnValue.once('cancel', abortChanges);
-
-    var changes = src.changes(changesOpts)
-      .on('change', onChange);
-    changes.then(removeListener, removeListener);
-    changes.then(onChangesComplete)
-      .catch(onChangesError);
-
-    if (opts.retry) {
-      // save for later so we can cancel if necessary
-      returnValue._changes = changes;
-      returnValue._abortChanges = abortChanges;
-    }
-  }
-
-
-  function startChanges() {
-    initCheckpointer().then(function () {
-      /* istanbul ignore if */
-      if (returnValue.cancelled) {
-        completeReplication();
-        return;
-      }
-      return checkpointer.getCheckpoint().then(function (checkpoint) {
-        last_seq = checkpoint;
-        changesOpts = {
-          since: last_seq,
-          limit: batch_size,
-          batch_size: batch_size,
-          style: 'all_docs',
-          doc_ids: doc_ids,
-          selector: selector,
-          return_docs: true // required so we know when we're done
-        };
-        if (opts.filter) {
-          if (typeof opts.filter !== 'string') {
-            // required for the client-side filter in onChange
-            changesOpts.include_docs = true;
-          } else { // ddoc filter
-            changesOpts.filter = opts.filter;
-          }
-        }
-        if ('heartbeat' in opts) {
-          changesOpts.heartbeat = opts.heartbeat;
-        }
-        if ('timeout' in opts) {
-          changesOpts.timeout = opts.timeout;
-        }
-        if (opts.query_params) {
-          changesOpts.query_params = opts.query_params;
-        }
-        if (opts.view) {
-          changesOpts.view = opts.view;
-        }
-        getChanges();
-      });
-    }).catch(function (err) {
-      abortReplication('getCheckpoint rejected with ', err);
-    });
-  }
-
-  /* istanbul ignore next */
-  function onCheckpointError(err) {
-    writingCheckpoint = false;
-    abortReplication('writeCheckpoint completed with error', err);
-  }
-
-  /* istanbul ignore if */
-  if (returnValue.cancelled) { // cancelled immediately
-    completeReplication();
-    return;
-  }
-
-  if (!returnValue._addedListeners) {
-    returnValue.once('cancel', completeReplication);
-
-    if (typeof opts.complete === 'function') {
-      returnValue.once('error', opts.complete);
-      returnValue.once('complete', function (result) {
-        opts.complete(null, result);
-      });
-    }
-    returnValue._addedListeners = true;
-  }
-
-  if (typeof opts.since === 'undefined') {
-    startChanges();
-  } else {
-    initCheckpointer().then(function () {
-      writingCheckpoint = true;
-      return checkpointer.writeCheckpoint(opts.since, session);
-    }).then(function () {
-      writingCheckpoint = false;
-      /* istanbul ignore if */
-      if (returnValue.cancelled) {
-        completeReplication();
-        return;
-      }
-      last_seq = opts.since;
-      startChanges();
-    }).catch(onCheckpointError);
-  }
-}
-
-// We create a basic promise so the caller can cancel the replication possibly
-// before we have actually started listening to changes etc
-inherits(Replication, events.EventEmitter);
-function Replication() {
-  events.EventEmitter.call(this);
-  this.cancelled = false;
-  this.state = 'pending';
-  var self = this;
-  var promise = new PouchPromise$1(function (fulfill, reject) {
-    self.once('complete', fulfill);
-    self.once('error', reject);
-  });
-  self.then = function (resolve, reject) {
-    return promise.then(resolve, reject);
-  };
-  self.catch = function (reject) {
-    return promise.catch(reject);
-  };
-  // As we allow error handling via "error" event as well,
-  // put a stub in here so that rejecting never throws UnhandledError.
-  self.catch(function () {});
-}
-
-Replication.prototype.cancel = function () {
-  this.cancelled = true;
-  this.state = 'cancelled';
-  this.emit('cancel');
-};
-
-Replication.prototype.ready = function (src, target) {
-  var self = this;
-  if (self._readyCalled) {
-    return;
-  }
-  self._readyCalled = true;
-
-  function onDestroy() {
-    self.cancel();
-  }
-  src.once('destroyed', onDestroy);
-  target.once('destroyed', onDestroy);
-  function cleanup() {
-    src.removeListener('destroyed', onDestroy);
-    target.removeListener('destroyed', onDestroy);
-  }
-  self.once('complete', cleanup);
-};
-
-function toPouch(db, opts) {
-  var PouchConstructor = opts.PouchConstructor;
-  if (typeof db === 'string') {
-    return new PouchConstructor(db, opts);
-  } else {
-    return db;
-  }
-}
-
-function replicateWrapper(src, target, opts, callback) {
-
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-  if (typeof opts === 'undefined') {
-    opts = {};
-  }
-
-  if (opts.doc_ids && !Array.isArray(opts.doc_ids)) {
-    throw createError(BAD_REQUEST,
-                       "`doc_ids` filter parameter is not a list.");
-  }
-
-  opts.complete = callback;
-  opts = clone(opts);
-  opts.continuous = opts.continuous || opts.live;
-  opts.retry = ('retry' in opts) ? opts.retry : false;
-  /*jshint validthis:true */
-  opts.PouchConstructor = opts.PouchConstructor || this;
-  var replicateRet = new Replication(opts);
-  var srcPouch = toPouch(src, opts);
-  var targetPouch = toPouch(target, opts);
-  replicate(srcPouch, targetPouch, opts, replicateRet);
-  return replicateRet;
-}
-
-inherits(Sync, events.EventEmitter);
-function sync$1(src, target, opts, callback) {
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = {};
-  }
-  if (typeof opts === 'undefined') {
-    opts = {};
-  }
-  opts = clone(opts);
-  /*jshint validthis:true */
-  opts.PouchConstructor = opts.PouchConstructor || this;
-  src = toPouch(src, opts);
-  target = toPouch(target, opts);
-  return new Sync(src, target, opts, callback);
-}
-
-function Sync(src, target, opts, callback) {
-  var self = this;
-  this.canceled = false;
-
-  var optsPush = opts.push ? $inject_Object_assign({}, opts, opts.push) : opts;
-  var optsPull = opts.pull ? $inject_Object_assign({}, opts, opts.pull) : opts;
-
-  this.push = replicateWrapper(src, target, optsPush);
-  this.pull = replicateWrapper(target, src, optsPull);
-
-  this.pushPaused = true;
-  this.pullPaused = true;
-
-  function pullChange(change) {
-    self.emit('change', {
-      direction: 'pull',
-      change: change
-    });
-  }
-  function pushChange(change) {
-    self.emit('change', {
-      direction: 'push',
-      change: change
-    });
-  }
-  function pushDenied(doc) {
-    self.emit('denied', {
-      direction: 'push',
-      doc: doc
-    });
-  }
-  function pullDenied(doc) {
-    self.emit('denied', {
-      direction: 'pull',
-      doc: doc
-    });
-  }
-  function pushPaused() {
-    self.pushPaused = true;
-    /* istanbul ignore if */
-    if (self.pullPaused) {
-      self.emit('paused');
-    }
-  }
-  function pullPaused() {
-    self.pullPaused = true;
-    /* istanbul ignore if */
-    if (self.pushPaused) {
-      self.emit('paused');
-    }
-  }
-  function pushActive() {
-    self.pushPaused = false;
-    /* istanbul ignore if */
-    if (self.pullPaused) {
-      self.emit('active', {
-        direction: 'push'
-      });
-    }
-  }
-  function pullActive() {
-    self.pullPaused = false;
-    /* istanbul ignore if */
-    if (self.pushPaused) {
-      self.emit('active', {
-        direction: 'pull'
-      });
-    }
-  }
-
-  var removed = {};
-
-  function removeAll(type) { // type is 'push' or 'pull'
-    return function (event, func) {
-      var isChange = event === 'change' &&
-        (func === pullChange || func === pushChange);
-      var isDenied = event === 'denied' &&
-        (func === pullDenied || func === pushDenied);
-      var isPaused = event === 'paused' &&
-        (func === pullPaused || func === pushPaused);
-      var isActive = event === 'active' &&
-        (func === pullActive || func === pushActive);
-
-      if (isChange || isDenied || isPaused || isActive) {
-        if (!(event in removed)) {
-          removed[event] = {};
-        }
-        removed[event][type] = true;
-        if (Object.keys(removed[event]).length === 2) {
-          // both push and pull have asked to be removed
-          self.removeAllListeners(event);
-        }
-      }
+        executeTwoCallbacks(promise, callback, errorCallback);
+        return promise;
     };
-  }
 
-  if (opts.live) {
-    this.push.on('complete', self.pull.cancel.bind(self.pull));
-    this.pull.on('complete', self.push.cancel.bind(self.push));
-  }
-
-  function addOneListener(ee, event, listener) {
-    if (ee.listeners(event).indexOf(listener) == -1) {
-      ee.on(event, listener);
-    }
-  }
-
-  this.on('newListener', function (event) {
-    if (event === 'change') {
-      addOneListener(self.pull, 'change', pullChange);
-      addOneListener(self.push, 'change', pushChange);
-    } else if (event === 'denied') {
-      addOneListener(self.pull, 'denied', pullDenied);
-      addOneListener(self.push, 'denied', pushDenied);
-    } else if (event === 'active') {
-      addOneListener(self.pull, 'active', pullActive);
-      addOneListener(self.push, 'active', pushActive);
-    } else if (event === 'paused') {
-      addOneListener(self.pull, 'paused', pullPaused);
-      addOneListener(self.push, 'paused', pushPaused);
-    }
-  });
-
-  this.on('removeListener', function (event) {
-    if (event === 'change') {
-      self.pull.removeListener('change', pullChange);
-      self.push.removeListener('change', pushChange);
-    } else if (event === 'denied') {
-      self.pull.removeListener('denied', pullDenied);
-      self.push.removeListener('denied', pushDenied);
-    } else if (event === 'active') {
-      self.pull.removeListener('active', pullActive);
-      self.push.removeListener('active', pushActive);
-    } else if (event === 'paused') {
-      self.pull.removeListener('paused', pullPaused);
-      self.push.removeListener('paused', pushPaused);
-    }
-  });
-
-  this.pull.on('removeListener', removeAll('pull'));
-  this.push.on('removeListener', removeAll('push'));
-
-  var promise = PouchPromise$1.all([
-    this.push,
-    this.pull
-  ]).then(function (resp) {
-    var out = {
-      push: resp[0],
-      pull: resp[1]
+    LocalForage.prototype.driver = function driver() {
+        return this._driver || null;
     };
-    self.emit('complete', out);
-    if (callback) {
-      callback(null, out);
-    }
-    self.removeAllListeners();
-    return out;
-  }, function (err) {
-    self.cancel();
-    if (callback) {
-      // if there's a callback, then the callback can receive
-      // the error event
-      callback(err);
-    } else {
-      // if there's no callback, then we're safe to emit an error
-      // event, which would otherwise throw an unhandled error
-      // due to 'error' being a special event in EventEmitters
-      self.emit('error', err);
-    }
-    self.removeAllListeners();
-    if (callback) {
-      // no sense throwing if we're already emitting an 'error' event
-      throw err;
-    }
-  });
 
-  this.then = function (success, err) {
-    return promise.then(success, err);
-  };
+    LocalForage.prototype.getDriver = function getDriver(driverName, callback, errorCallback) {
+        var self = this;
+        var getDriverPromise = Promise$1.resolve().then(function () {
+            if (isLibraryDriver(driverName)) {
+                switch (driverName) {
+                    case self.INDEXEDDB:
+                        return asyncStorage;
+                    case self.LOCALSTORAGE:
+                        return localStorageWrapper;
+                    case self.WEBSQL:
+                        return webSQLStorage;
+                }
+            } else if (CustomDrivers[driverName]) {
+                return CustomDrivers[driverName];
+            } else {
+                throw new Error('Driver not found.');
+            }
+        });
+        executeTwoCallbacks(getDriverPromise, callback, errorCallback);
+        return getDriverPromise;
+    };
 
-  this.catch = function (err) {
-    return promise.catch(err);
-  };
-}
+    LocalForage.prototype.getSerializer = function getSerializer(callback) {
+        var serializerPromise = Promise$1.resolve(localforageSerializer);
+        executeTwoCallbacks(serializerPromise, callback);
+        return serializerPromise;
+    };
 
-Sync.prototype.cancel = function () {
-  if (!this.canceled) {
-    this.canceled = true;
-    this.push.cancel();
-    this.pull.cancel();
-  }
-};
+    LocalForage.prototype.ready = function ready(callback) {
+        var self = this;
 
-function replication(PouchDB) {
-  PouchDB.replicate = replicateWrapper;
-  PouchDB.sync = sync$1;
+        var promise = self._driverSet.then(function () {
+            if (self._ready === null) {
+                self._ready = self._initDriver();
+            }
 
-  Object.defineProperty(PouchDB.prototype, 'replicate', {
-    get: function () {
-      var self = this;
-      return {
-        from: function (other, opts, callback) {
-          return self.constructor.replicate(other, self, opts, callback);
-        },
-        to: function (other, opts, callback) {
-          return self.constructor.replicate(self, other, opts, callback);
+            return self._ready;
+        });
+
+        executeTwoCallbacks(promise, callback, callback);
+        return promise;
+    };
+
+    LocalForage.prototype.setDriver = function setDriver(drivers, callback, errorCallback) {
+        var self = this;
+
+        if (!isArray(drivers)) {
+            drivers = [drivers];
         }
-      };
-    }
-  });
 
-  PouchDB.prototype.sync = function (dbName, opts, callback) {
-    return this.constructor.sync(this, dbName, opts, callback);
-  };
-}
+        var supportedDrivers = this._getSupportedDrivers(drivers);
 
-PouchDB$5.plugin(IDBPouch)
-  .plugin(WebSqlPouch)
-  .plugin(HttpPouch$1)
-  .plugin(mapreduce)
-  .plugin(replication);
+        function setDriverToConfig() {
+            self._config.driver = self.driver();
+        }
 
-// Pull from src because pouchdb-node/pouchdb-browser themselves
-// are aggressively optimized and jsnext:main would normally give us this
-// aggressive bundle.
+        function extendSelfWithDriver(driver) {
+            self._extend(driver);
+            setDriverToConfig();
 
-module.exports = PouchDB$5;
+            self._ready = self._initStorage(self._config);
+            return self._ready;
+        }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
+        function initDriver(supportedDrivers) {
+            return function () {
+                var currentDriverIndex = 0;
+
+                function driverPromiseLoop() {
+                    while (currentDriverIndex < supportedDrivers.length) {
+                        var driverName = supportedDrivers[currentDriverIndex];
+                        currentDriverIndex++;
+
+                        self._dbInfo = null;
+                        self._ready = null;
+
+                        return self.getDriver(driverName).then(extendSelfWithDriver)["catch"](driverPromiseLoop);
+                    }
+
+                    setDriverToConfig();
+                    var error = new Error('No available storage method found.');
+                    self._driverSet = Promise$1.reject(error);
+                    return self._driverSet;
+                }
+
+                return driverPromiseLoop();
+            };
+        }
+
+        // There might be a driver initialization in progress
+        // so wait for it to finish in order to avoid a possible
+        // race condition to set _dbInfo
+        var oldDriverSetDone = this._driverSet !== null ? this._driverSet["catch"](function () {
+            return Promise$1.resolve();
+        }) : Promise$1.resolve();
+
+        this._driverSet = oldDriverSetDone.then(function () {
+            var driverName = supportedDrivers[0];
+            self._dbInfo = null;
+            self._ready = null;
+
+            return self.getDriver(driverName).then(function (driver) {
+                self._driver = driver._driver;
+                setDriverToConfig();
+                self._wrapLibraryMethodsWithReady();
+                self._initDriver = initDriver(supportedDrivers);
+            });
+        })["catch"](function () {
+            setDriverToConfig();
+            var error = new Error('No available storage method found.');
+            self._driverSet = Promise$1.reject(error);
+            return self._driverSet;
+        });
+
+        executeTwoCallbacks(this._driverSet, callback, errorCallback);
+        return this._driverSet;
+    };
+
+    LocalForage.prototype.supports = function supports(driverName) {
+        return !!driverSupport[driverName];
+    };
+
+    LocalForage.prototype._extend = function _extend(libraryMethodsAndProperties) {
+        extend(this, libraryMethodsAndProperties);
+    };
+
+    LocalForage.prototype._getSupportedDrivers = function _getSupportedDrivers(drivers) {
+        var supportedDrivers = [];
+        for (var i = 0, len = drivers.length; i < len; i++) {
+            var driverName = drivers[i];
+            if (this.supports(driverName)) {
+                supportedDrivers.push(driverName);
+            }
+        }
+        return supportedDrivers;
+    };
+
+    LocalForage.prototype._wrapLibraryMethodsWithReady = function _wrapLibraryMethodsWithReady() {
+        // Add a stub for each driver API method that delays the call to the
+        // corresponding driver method until localForage is ready. These stubs
+        // will be replaced by the driver methods as soon as the driver is
+        // loaded, so there is no performance impact.
+        for (var i = 0; i < LibraryMethods.length; i++) {
+            callWhenReady(this, LibraryMethods[i]);
+        }
+    };
+
+    LocalForage.prototype.createInstance = function createInstance(options) {
+        return new LocalForage(options);
+    };
+
+    return LocalForage;
+}();
+
+// The actual localForage object that we expose as a module or via a
+// global. It's extended by pulling in one of our other libraries.
+
+
+var localforage_js = new LocalForage();
+
+module.exports = localforage_js;
+
+},{"3":3}]},{},[4])(4)
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53)))
 
 /***/ }),
-/* 107 */
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Way data is stored for this database
+ * For a Node.js/Node Webkit database it's the file system
+ * For a browser-side database it's localforage, which uses the best backend available (IndexedDB then WebSQL then localStorage)
+ *
+ * This version is the browser version
+ */
+
+var localforage = __webpack_require__(112)
+
+// Configure localforage to display NeDB name for now. Would be a good idea to let user use his own app name
+localforage.config({
+  name: 'NeDB'
+, storeName: 'nedbdata'
+});
+
+
+function exists (filename, callback) {
+  localforage.getItem(filename, function (err, value) {
+    if (value !== null) {   // Even if value is undefined, localforage returns null
+      return callback(true);
+    } else {
+      return callback(false);
+    }
+  });
+}
+
+
+function rename (filename, newFilename, callback) {
+  localforage.getItem(filename, function (err, value) {
+    if (value === null) {
+      localforage.removeItem(newFilename, function () { return callback(); });
+    } else {
+      localforage.setItem(newFilename, value, function () {
+        localforage.removeItem(filename, function () { return callback(); });
+      });
+    }
+  });
+}
+
+
+function writeFile (filename, contents, options, callback) {
+  // Options do not matter in browser setup
+  if (typeof options === 'function') { callback = options; }
+  localforage.setItem(filename, contents, function () { return callback(); });
+}
+
+
+function appendFile (filename, toAppend, options, callback) {
+  // Options do not matter in browser setup
+  if (typeof options === 'function') { callback = options; }
+
+  localforage.getItem(filename, function (err, contents) {
+    contents = contents || '';
+    contents += toAppend;
+    localforage.setItem(filename, contents, function () { return callback(); });
+  });
+}
+
+
+function readFile (filename, options, callback) {
+  // Options do not matter in browser setup
+  if (typeof options === 'function') { callback = options; }
+  localforage.getItem(filename, function (err, contents) { return callback(null, contents || ''); });
+}
+
+
+function unlink (filename, callback) {
+  localforage.removeItem(filename, function () { return callback(); });
+}
+
+
+// Nothing to do, no directories will be used on the browser
+function mkdirp (dir, callback) {
+  return callback();
+}
+
+
+// Nothing to do, no data corruption possible in the brower
+function ensureDatafileIntegrity (filename, callback) {
+  return callback(null);
+}
+
+
+// Interface
+module.exports.exists = exists;
+module.exports.rename = rename;
+module.exports.writeFile = writeFile;
+module.exports.crashSafeWriteFile = writeFile;   // No need for a crash safe function in the browser
+module.exports.appendFile = appendFile;
+module.exports.readFile = readFile;
+module.exports.unlink = unlink;
+module.exports.mkdirp = mkdirp;
+module.exports.ensureDatafileIntegrity = ensureDatafileIntegrity;
+
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Datastore = __webpack_require__(116);
+
+module.exports = Datastore;
+
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Manage access to data, be it to find, update or remove it
+ */
+var model = __webpack_require__(26)
+  , _ = __webpack_require__(24)
+  ;
+
+
+
+/**
+ * Create a new cursor for this collection
+ * @param {Datastore} db - The datastore this cursor is bound to
+ * @param {Query} query - The query this cursor will operate on
+ * @param {Function} execFn - Handler to be executed after cursor has found the results and before the callback passed to find/findOne/update/remove
+ */
+function Cursor (db, query, execFn) {
+  this.db = db;
+  this.query = query || {};
+  if (execFn) { this.execFn = execFn; }
+}
+
+
+/**
+ * Set a limit to the number of results
+ */
+Cursor.prototype.limit = function(limit) {
+  this._limit = limit;
+  return this;
+};
+
+
+/**
+ * Skip a the number of results
+ */
+Cursor.prototype.skip = function(skip) {
+  this._skip = skip;
+  return this;
+};
+
+
+/**
+ * Sort results of the query
+ * @param {SortQuery} sortQuery - SortQuery is { field: order }, field can use the dot-notation, order is 1 for ascending and -1 for descending
+ */
+Cursor.prototype.sort = function(sortQuery) {
+  this._sort = sortQuery;
+  return this;
+};
+
+
+/**
+ * Add the use of a projection
+ * @param {Object} projection - MongoDB-style projection. {} means take all fields. Then it's { key1: 1, key2: 1 } to take only key1 and key2
+ *                              { key1: 0, key2: 0 } to omit only key1 and key2. Except _id, you can't mix takes and omits
+ */
+Cursor.prototype.projection = function(projection) {
+  this._projection = projection;
+  return this;
+};
+
+
+/**
+ * Apply the projection
+ */
+Cursor.prototype.project = function (candidates) {
+  var res = [], self = this
+    , keepId, action, keys
+    ;
+
+  if (this._projection === undefined || Object.keys(this._projection).length === 0) {
+    return candidates;
+  }
+
+  keepId = this._projection._id === 0 ? false : true;
+  this._projection = _.omit(this._projection, '_id');
+
+  // Check for consistency
+  keys = Object.keys(this._projection);
+  keys.forEach(function (k) {
+    if (action !== undefined && self._projection[k] !== action) { throw new Error("Can't both keep and omit fields except for _id"); }
+    action = self._projection[k];
+  });
+
+  // Do the actual projection
+  candidates.forEach(function (candidate) {
+    var toPush;
+    if (action === 1) {   // pick-type projection
+      toPush = { $set: {} };
+      keys.forEach(function (k) {
+        toPush.$set[k] = model.getDotValue(candidate, k);
+        if (toPush.$set[k] === undefined) { delete toPush.$set[k]; }
+      });
+      toPush = model.modify({}, toPush);
+    } else {   // omit-type projection
+      toPush = { $unset: {} };
+      keys.forEach(function (k) { toPush.$unset[k] = true });
+      toPush = model.modify(candidate, toPush);
+    }
+    if (keepId) {
+      toPush._id = candidate._id;
+    } else {
+      delete toPush._id;
+    }
+    res.push(toPush);
+  });
+
+  return res;
+};
+
+
+/**
+ * Get all matching elements
+ * Will return pointers to matched elements (shallow copies), returning full copies is the role of find or findOne
+ * This is an internal function, use exec which uses the executor
+ *
+ * @param {Function} callback - Signature: err, results
+ */
+Cursor.prototype._exec = function(_callback) {
+  var res = [], added = 0, skipped = 0, self = this
+    , error = null
+    , i, keys, key
+    ;
+
+  function callback (error, res) {
+    if (self.execFn) {
+      return self.execFn(error, res, _callback);
+    } else {
+      return _callback(error, res);
+    }
+  }
+
+  this.db.getCandidates(this.query, function (err, candidates) {
+    if (err) { return callback(err); }
+
+    try {
+      for (i = 0; i < candidates.length; i += 1) {
+        if (model.match(candidates[i], self.query)) {
+          // If a sort is defined, wait for the results to be sorted before applying limit and skip
+          if (!self._sort) {
+            if (self._skip && self._skip > skipped) {
+              skipped += 1;
+            } else {
+              res.push(candidates[i]);
+              added += 1;
+              if (self._limit && self._limit <= added) { break; }
+            }
+          } else {
+            res.push(candidates[i]);
+          }
+        }
+      }
+    } catch (err) {
+      return callback(err);
+    }
+
+    // Apply all sorts
+    if (self._sort) {
+      keys = Object.keys(self._sort);
+
+      // Sorting
+      var criteria = [];
+      for (i = 0; i < keys.length; i++) {
+        key = keys[i];
+        criteria.push({ key: key, direction: self._sort[key] });
+      }
+      res.sort(function(a, b) {
+        var criterion, compare, i;
+        for (i = 0; i < criteria.length; i++) {
+          criterion = criteria[i];
+          compare = criterion.direction * model.compareThings(model.getDotValue(a, criterion.key), model.getDotValue(b, criterion.key), self.db.compareStrings);
+          if (compare !== 0) {
+            return compare;
+          }
+        }
+        return 0;
+      });
+
+      // Applying limit and skip
+      var limit = self._limit || res.length
+        , skip = self._skip || 0;
+
+      res = res.slice(skip, skip + limit);
+    }
+
+    // Apply projection
+    try {
+      res = self.project(res);
+    } catch (e) {
+      error = e;
+      res = undefined;
+    }
+
+    return callback(error, res);
+  });
+};
+
+Cursor.prototype.exec = function () {
+  this.db.executor.push({ this: this, fn: this._exec, arguments: arguments });
+};
+
+
+
+// Interface
+module.exports = Cursor;
+
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var customUtils = __webpack_require__(59)
+  , model = __webpack_require__(26)
+  , async = __webpack_require__(36)
+  , Executor = __webpack_require__(117)
+  , Index = __webpack_require__(60)
+  , util = __webpack_require__(34)
+  , _ = __webpack_require__(24)
+  , Persistence = __webpack_require__(118)
+  , Cursor = __webpack_require__(115)
+  ;
+
+
+/**
+ * Create a new collection
+ * @param {String} options.filename Optional, datastore will be in-memory only if not provided
+ * @param {Boolean} options.timestampData Optional, defaults to false. If set to true, createdAt and updatedAt will be created and populated automatically (if not specified by user)
+ * @param {Boolean} options.inMemoryOnly Optional, defaults to false
+ * @param {String} options.nodeWebkitAppName Optional, specify the name of your NW app if you want options.filename to be relative to the directory where
+ *                                            Node Webkit stores application data such as cookies and local storage (the best place to store data in my opinion)
+ * @param {Boolean} options.autoload Optional, defaults to false
+ * @param {Function} options.onload Optional, if autoload is used this will be called after the load database with the error object as parameter. If you don't pass it the error will be thrown
+ * @param {Function} options.afterSerialization/options.beforeDeserialization Optional, serialization hooks
+ * @param {Number} options.corruptAlertThreshold Optional, threshold after which an alert is thrown if too much data is corrupt
+ * @param {Function} options.compareStrings Optional, string comparison function that overrides default for sorting
+ *
+ * Event Emitter - Events
+ * * compaction.done - Fired whenever a compaction operation was finished
+ */
+function Datastore (options) {
+  var filename;
+
+  // Retrocompatibility with v0.6 and before
+  if (typeof options === 'string') {
+    filename = options;
+    this.inMemoryOnly = false;   // Default
+  } else {
+    options = options || {};
+    filename = options.filename;
+    this.inMemoryOnly = options.inMemoryOnly || false;
+    this.autoload = options.autoload || false;
+    this.timestampData = options.timestampData || false;
+  }
+
+  // Determine whether in memory or persistent
+  if (!filename || typeof filename !== 'string' || filename.length === 0) {
+    this.filename = null;
+    this.inMemoryOnly = true;
+  } else {
+    this.filename = filename;
+  }
+
+  // String comparison function
+  this.compareStrings = options.compareStrings;
+
+  // Persistence handling
+  this.persistence = new Persistence({ db: this, nodeWebkitAppName: options.nodeWebkitAppName
+                                      , afterSerialization: options.afterSerialization
+                                      , beforeDeserialization: options.beforeDeserialization
+                                      , corruptAlertThreshold: options.corruptAlertThreshold
+                                      });
+
+  // This new executor is ready if we don't use persistence
+  // If we do, it will only be ready once loadDatabase is called
+  this.executor = new Executor();
+  if (this.inMemoryOnly) { this.executor.ready = true; }
+
+  // Indexed by field name, dot notation can be used
+  // _id is always indexed and since _ids are generated randomly the underlying
+  // binary is always well-balanced
+  this.indexes = {};
+  this.indexes._id = new Index({ fieldName: '_id', unique: true });
+  this.ttlIndexes = {};
+
+  // Queue a load of the database right away and call the onload handler
+  // By default (no onload handler), if there is an error there, no operation will be possible so warn the user by throwing an exception
+  if (this.autoload) { this.loadDatabase(options.onload || function (err) {
+    if (err) { throw err; }
+  }); }
+}
+
+util.inherits(Datastore, __webpack_require__(97).EventEmitter);
+
+
+/**
+ * Load the database from the datafile, and trigger the execution of buffered commands if any
+ */
+Datastore.prototype.loadDatabase = function () {
+  this.executor.push({ this: this.persistence, fn: this.persistence.loadDatabase, arguments: arguments }, true);
+};
+
+
+/**
+ * Get an array of all the data in the database
+ */
+Datastore.prototype.getAllData = function () {
+  return this.indexes._id.getAll();
+};
+
+
+/**
+ * Reset all currently defined indexes
+ */
+Datastore.prototype.resetIndexes = function (newData) {
+  var self = this;
+
+  Object.keys(this.indexes).forEach(function (i) {
+    self.indexes[i].reset(newData);
+  });
+};
+
+
+/**
+ * Ensure an index is kept for this field. Same parameters as lib/indexes
+ * For now this function is synchronous, we need to test how much time it takes
+ * We use an async API for consistency with the rest of the code
+ * @param {String} options.fieldName
+ * @param {Boolean} options.unique
+ * @param {Boolean} options.sparse
+ * @param {Number} options.expireAfterSeconds - Optional, if set this index becomes a TTL index (only works on Date fields, not arrays of Date)
+ * @param {Function} cb Optional callback, signature: err
+ */
+Datastore.prototype.ensureIndex = function (options, cb) {
+  var err
+    , callback = cb || function () {};
+
+  options = options || {};
+
+  if (!options.fieldName) {
+    err = new Error("Cannot create an index without a fieldName");
+    err.missingFieldName = true;
+    return callback(err);
+  }
+  if (this.indexes[options.fieldName]) { return callback(null); }
+
+  this.indexes[options.fieldName] = new Index(options);
+  if (options.expireAfterSeconds !== undefined) { this.ttlIndexes[options.fieldName] = options.expireAfterSeconds; }   // With this implementation index creation is not necessary to ensure TTL but we stick with MongoDB's API here
+
+  try {
+    this.indexes[options.fieldName].insert(this.getAllData());
+  } catch (e) {
+    delete this.indexes[options.fieldName];
+    return callback(e);
+  }
+
+  // We may want to force all options to be persisted including defaults, not just the ones passed the index creation function
+  this.persistence.persistNewState([{ $$indexCreated: options }], function (err) {
+    if (err) { return callback(err); }
+    return callback(null);
+  });
+};
+
+
+/**
+ * Remove an index
+ * @param {String} fieldName
+ * @param {Function} cb Optional callback, signature: err
+ */
+Datastore.prototype.removeIndex = function (fieldName, cb) {
+  var callback = cb || function () {};
+
+  delete this.indexes[fieldName];
+
+  this.persistence.persistNewState([{ $$indexRemoved: fieldName }], function (err) {
+    if (err) { return callback(err); }
+    return callback(null);
+  });
+};
+
+
+/**
+ * Add one or several document(s) to all indexes
+ */
+Datastore.prototype.addToIndexes = function (doc) {
+  var i, failingIndex, error
+    , keys = Object.keys(this.indexes)
+    ;
+
+  for (i = 0; i < keys.length; i += 1) {
+    try {
+      this.indexes[keys[i]].insert(doc);
+    } catch (e) {
+      failingIndex = i;
+      error = e;
+      break;
+    }
+  }
+
+  // If an error happened, we need to rollback the insert on all other indexes
+  if (error) {
+    for (i = 0; i < failingIndex; i += 1) {
+      this.indexes[keys[i]].remove(doc);
+    }
+
+    throw error;
+  }
+};
+
+
+/**
+ * Remove one or several document(s) from all indexes
+ */
+Datastore.prototype.removeFromIndexes = function (doc) {
+  var self = this;
+
+  Object.keys(this.indexes).forEach(function (i) {
+    self.indexes[i].remove(doc);
+  });
+};
+
+
+/**
+ * Update one or several documents in all indexes
+ * To update multiple documents, oldDoc must be an array of { oldDoc, newDoc } pairs
+ * If one update violates a constraint, all changes are rolled back
+ */
+Datastore.prototype.updateIndexes = function (oldDoc, newDoc) {
+  var i, failingIndex, error
+    , keys = Object.keys(this.indexes)
+    ;
+
+  for (i = 0; i < keys.length; i += 1) {
+    try {
+      this.indexes[keys[i]].update(oldDoc, newDoc);
+    } catch (e) {
+      failingIndex = i;
+      error = e;
+      break;
+    }
+  }
+
+  // If an error happened, we need to rollback the update on all other indexes
+  if (error) {
+    for (i = 0; i < failingIndex; i += 1) {
+      this.indexes[keys[i]].revertUpdate(oldDoc, newDoc);
+    }
+
+    throw error;
+  }
+};
+
+
+/**
+ * Return the list of candidates for a given query
+ * Crude implementation for now, we return the candidates given by the first usable index if any
+ * We try the following query types, in this order: basic match, $in match, comparison match
+ * One way to make it better would be to enable the use of multiple indexes if the first usable index
+ * returns too much data. I may do it in the future.
+ *
+ * Returned candidates will be scanned to find and remove all expired documents
+ *
+ * @param {Query} query
+ * @param {Boolean} dontExpireStaleDocs Optional, defaults to false, if true don't remove stale docs. Useful for the remove function which shouldn't be impacted by expirations
+ * @param {Function} callback Signature err, docs
+ */
+Datastore.prototype.getCandidates = function (query, dontExpireStaleDocs, callback) {
+  var indexNames = Object.keys(this.indexes)
+    , self = this
+    , usableQueryKeys;
+
+  if (typeof dontExpireStaleDocs === 'function') {
+    callback = dontExpireStaleDocs;
+    dontExpireStaleDocs = false;
+  }
+
+  async.waterfall([
+  // STEP 1: get candidates list by checking indexes from most to least frequent usecase
+  function (cb) {
+    // For a basic match
+    usableQueryKeys = [];
+    Object.keys(query).forEach(function (k) {
+      if (typeof query[k] === 'string' || typeof query[k] === 'number' || typeof query[k] === 'boolean' || util.isDate(query[k]) || query[k] === null) {
+        usableQueryKeys.push(k);
+      }
+    });
+    usableQueryKeys = _.intersection(usableQueryKeys, indexNames);
+    if (usableQueryKeys.length > 0) {
+      return cb(null, self.indexes[usableQueryKeys[0]].getMatching(query[usableQueryKeys[0]]));
+    }
+
+    // For a $in match
+    usableQueryKeys = [];
+    Object.keys(query).forEach(function (k) {
+      if (query[k] && query[k].hasOwnProperty('$in')) {
+        usableQueryKeys.push(k);
+      }
+    });
+    usableQueryKeys = _.intersection(usableQueryKeys, indexNames);
+    if (usableQueryKeys.length > 0) {
+      return cb(null, self.indexes[usableQueryKeys[0]].getMatching(query[usableQueryKeys[0]].$in));
+    }
+
+    // For a comparison match
+    usableQueryKeys = [];
+    Object.keys(query).forEach(function (k) {
+      if (query[k] && (query[k].hasOwnProperty('$lt') || query[k].hasOwnProperty('$lte') || query[k].hasOwnProperty('$gt') || query[k].hasOwnProperty('$gte'))) {
+        usableQueryKeys.push(k);
+      }
+    });
+    usableQueryKeys = _.intersection(usableQueryKeys, indexNames);
+    if (usableQueryKeys.length > 0) {
+      return cb(null, self.indexes[usableQueryKeys[0]].getBetweenBounds(query[usableQueryKeys[0]]));
+    }
+
+    // By default, return all the DB data
+    return cb(null, self.getAllData());
+  }
+  // STEP 2: remove all expired documents
+  , function (docs) {
+    if (dontExpireStaleDocs) { return callback(null, docs); }
+
+    var expiredDocsIds = [], validDocs = [], ttlIndexesFieldNames = Object.keys(self.ttlIndexes);
+
+    docs.forEach(function (doc) {
+      var valid = true;
+      ttlIndexesFieldNames.forEach(function (i) {
+        if (doc[i] !== undefined && util.isDate(doc[i]) && Date.now() > doc[i].getTime() + self.ttlIndexes[i] * 1000) {
+          valid = false;
+        }
+      });
+      if (valid) { validDocs.push(doc); } else { expiredDocsIds.push(doc._id); }
+    });
+
+    async.eachSeries(expiredDocsIds, function (_id, cb) {
+      self._remove({ _id: _id }, {}, function (err) {
+        if (err) { return callback(err); }
+        return cb();
+      });
+    }, function (err) {
+      return callback(null, validDocs);
+    });
+  }]);
+};
+
+
+/**
+ * Insert a new document
+ * @param {Function} cb Optional callback, signature: err, insertedDoc
+ *
+ * @api private Use Datastore.insert which has the same signature
+ */
+Datastore.prototype._insert = function (newDoc, cb) {
+  var callback = cb || function () {}
+    , preparedDoc
+    ;
+
+  try {
+    preparedDoc = this.prepareDocumentForInsertion(newDoc)
+    this._insertInCache(preparedDoc);
+  } catch (e) {
+    return callback(e);
+  }
+
+  this.persistence.persistNewState(util.isArray(preparedDoc) ? preparedDoc : [preparedDoc], function (err) {
+    if (err) { return callback(err); }
+    return callback(null, model.deepCopy(preparedDoc));
+  });
+};
+
+/**
+ * Create a new _id that's not already in use
+ */
+Datastore.prototype.createNewId = function () {
+  var tentativeId = customUtils.uid(16);
+  // Try as many times as needed to get an unused _id. As explained in customUtils, the probability of this ever happening is extremely small, so this is O(1)
+  if (this.indexes._id.getMatching(tentativeId).length > 0) {
+    tentativeId = this.createNewId();
+  }
+  return tentativeId;
+};
+
+/**
+ * Prepare a document (or array of documents) to be inserted in a database
+ * Meaning adds _id and timestamps if necessary on a copy of newDoc to avoid any side effect on user input
+ * @api private
+ */
+Datastore.prototype.prepareDocumentForInsertion = function (newDoc) {
+  var preparedDoc, self = this;
+
+  if (util.isArray(newDoc)) {
+    preparedDoc = [];
+    newDoc.forEach(function (doc) { preparedDoc.push(self.prepareDocumentForInsertion(doc)); });
+  } else {
+    preparedDoc = model.deepCopy(newDoc);
+    if (preparedDoc._id === undefined) { preparedDoc._id = this.createNewId(); }
+    var now = new Date();
+    if (this.timestampData && preparedDoc.createdAt === undefined) { preparedDoc.createdAt = now; }
+    if (this.timestampData && preparedDoc.updatedAt === undefined) { preparedDoc.updatedAt = now; }
+    model.checkObject(preparedDoc);
+  }
+
+  return preparedDoc;
+};
+
+/**
+ * If newDoc is an array of documents, this will insert all documents in the cache
+ * @api private
+ */
+Datastore.prototype._insertInCache = function (preparedDoc) {
+  if (util.isArray(preparedDoc)) {
+    this._insertMultipleDocsInCache(preparedDoc);
+  } else {
+    this.addToIndexes(preparedDoc);
+  }
+};
+
+/**
+ * If one insertion fails (e.g. because of a unique constraint), roll back all previous
+ * inserts and throws the error
+ * @api private
+ */
+Datastore.prototype._insertMultipleDocsInCache = function (preparedDocs) {
+  var i, failingI, error;
+
+  for (i = 0; i < preparedDocs.length; i += 1) {
+    try {
+      this.addToIndexes(preparedDocs[i]);
+    } catch (e) {
+      error = e;
+      failingI = i;
+      break;
+    }
+  }
+
+  if (error) {
+    for (i = 0; i < failingI; i += 1) {
+      this.removeFromIndexes(preparedDocs[i]);
+    }
+
+    throw error;
+  }
+};
+
+Datastore.prototype.insert = function () {
+  this.executor.push({ this: this, fn: this._insert, arguments: arguments });
+};
+
+
+/**
+ * Count all documents matching the query
+ * @param {Object} query MongoDB-style query
+ */
+Datastore.prototype.count = function(query, callback) {
+  var cursor = new Cursor(this, query, function(err, docs, callback) {
+    if (err) { return callback(err); }
+    return callback(null, docs.length);
+  });
+
+  if (typeof callback === 'function') {
+    cursor.exec(callback);
+  } else {
+    return cursor;
+  }
+};
+
+
+/**
+ * Find all documents matching the query
+ * If no callback is passed, we return the cursor so that user can limit, skip and finally exec
+ * @param {Object} query MongoDB-style query
+ * @param {Object} projection MongoDB-style projection
+ */
+Datastore.prototype.find = function (query, projection, callback) {
+  switch (arguments.length) {
+    case 1:
+      projection = {};
+      // callback is undefined, will return a cursor
+      break;
+    case 2:
+      if (typeof projection === 'function') {
+        callback = projection;
+        projection = {};
+      }   // If not assume projection is an object and callback undefined
+      break;
+  }
+
+  var cursor = new Cursor(this, query, function(err, docs, callback) {
+    var res = [], i;
+
+    if (err) { return callback(err); }
+
+    for (i = 0; i < docs.length; i += 1) {
+      res.push(model.deepCopy(docs[i]));
+    }
+    return callback(null, res);
+  });
+
+  cursor.projection(projection);
+  if (typeof callback === 'function') {
+    cursor.exec(callback);
+  } else {
+    return cursor;
+  }
+};
+
+
+/**
+ * Find one document matching the query
+ * @param {Object} query MongoDB-style query
+ * @param {Object} projection MongoDB-style projection
+ */
+Datastore.prototype.findOne = function (query, projection, callback) {
+  switch (arguments.length) {
+    case 1:
+      projection = {};
+      // callback is undefined, will return a cursor
+      break;
+    case 2:
+      if (typeof projection === 'function') {
+        callback = projection;
+        projection = {};
+      }   // If not assume projection is an object and callback undefined
+      break;
+  }
+
+  var cursor = new Cursor(this, query, function(err, docs, callback) {
+    if (err) { return callback(err); }
+    if (docs.length === 1) {
+      return callback(null, model.deepCopy(docs[0]));
+    } else {
+      return callback(null, null);
+    }
+  });
+
+  cursor.projection(projection).limit(1);
+  if (typeof callback === 'function') {
+    cursor.exec(callback);
+  } else {
+    return cursor;
+  }
+};
+
+
+/**
+ * Update all docs matching query
+ * @param {Object} query
+ * @param {Object} updateQuery
+ * @param {Object} options Optional options
+ *                 options.multi If true, can update multiple documents (defaults to false)
+ *                 options.upsert If true, document is inserted if the query doesn't match anything
+ *                 options.returnUpdatedDocs Defaults to false, if true return as third argument the array of updated matched documents (even if no change actually took place)
+ * @param {Function} cb Optional callback, signature: (err, numAffected, affectedDocuments, upsert)
+ *                      If update was an upsert, upsert flag is set to true
+ *                      affectedDocuments can be one of the following:
+ *                        * For an upsert, the upserted document
+ *                        * For an update with returnUpdatedDocs option false, null
+ *                        * For an update with returnUpdatedDocs true and multi false, the updated document
+ *                        * For an update with returnUpdatedDocs true and multi true, the array of updated documents
+ *
+ * WARNING: The API was changed between v1.7.4 and v1.8, for consistency and readability reasons. Prior and including to v1.7.4,
+ *          the callback signature was (err, numAffected, updated) where updated was the updated document in case of an upsert
+ *          or the array of updated documents for an update if the returnUpdatedDocs option was true. That meant that the type of
+ *          affectedDocuments in a non multi update depended on whether there was an upsert or not, leaving only two ways for the
+ *          user to check whether an upsert had occured: checking the type of affectedDocuments or running another find query on
+ *          the whole dataset to check its size. Both options being ugly, the breaking change was necessary.
+ *
+ * @api private Use Datastore.update which has the same signature
+ */
+Datastore.prototype._update = function (query, updateQuery, options, cb) {
+  var callback
+    , self = this
+    , numReplaced = 0
+    , multi, upsert
+    , i
+    ;
+
+  if (typeof options === 'function') { cb = options; options = {}; }
+  callback = cb || function () {};
+  multi = options.multi !== undefined ? options.multi : false;
+  upsert = options.upsert !== undefined ? options.upsert : false;
+
+  async.waterfall([
+  function (cb) {   // If upsert option is set, check whether we need to insert the doc
+    if (!upsert) { return cb(); }
+
+    // Need to use an internal function not tied to the executor to avoid deadlock
+    var cursor = new Cursor(self, query);
+    cursor.limit(1)._exec(function (err, docs) {
+      if (err) { return callback(err); }
+      if (docs.length === 1) {
+        return cb();
+      } else {
+        var toBeInserted;
+
+        try {
+          model.checkObject(updateQuery);
+          // updateQuery is a simple object with no modifier, use it as the document to insert
+          toBeInserted = updateQuery;
+        } catch (e) {
+          // updateQuery contains modifiers, use the find query as the base,
+          // strip it from all operators and update it according to updateQuery
+          try {
+            toBeInserted = model.modify(model.deepCopy(query, true), updateQuery);
+          } catch (err) {
+            return callback(err);
+          }
+        }
+
+        return self._insert(toBeInserted, function (err, newDoc) {
+          if (err) { return callback(err); }
+          return callback(null, 1, newDoc, true);
+        });
+      }
+    });
+  }
+  , function () {   // Perform the update
+    var modifiedDoc , modifications = [], createdAt;
+
+    self.getCandidates(query, function (err, candidates) {
+      if (err) { return callback(err); }
+
+      // Preparing update (if an error is thrown here neither the datafile nor
+      // the in-memory indexes are affected)
+      try {
+        for (i = 0; i < candidates.length; i += 1) {
+          if (model.match(candidates[i], query) && (multi || numReplaced === 0)) {
+            numReplaced += 1;
+            if (self.timestampData) { createdAt = candidates[i].createdAt; }
+            modifiedDoc = model.modify(candidates[i], updateQuery);
+            if (self.timestampData) {
+              modifiedDoc.createdAt = createdAt;
+              modifiedDoc.updatedAt = new Date();
+            }
+            modifications.push({ oldDoc: candidates[i], newDoc: modifiedDoc });
+          }
+        }
+      } catch (err) {
+        return callback(err);
+      }
+
+      // Change the docs in memory
+      try {
+        self.updateIndexes(modifications);
+      } catch (err) {
+        return callback(err);
+      }
+
+      // Update the datafile
+      var updatedDocs = _.pluck(modifications, 'newDoc');
+      self.persistence.persistNewState(updatedDocs, function (err) {
+        if (err) { return callback(err); }
+        if (!options.returnUpdatedDocs) {
+          return callback(null, numReplaced);
+        } else {
+          var updatedDocsDC = [];
+          updatedDocs.forEach(function (doc) { updatedDocsDC.push(model.deepCopy(doc)); });
+          if (! multi) { updatedDocsDC = updatedDocsDC[0]; }
+          return callback(null, numReplaced, updatedDocsDC);
+        }
+      });
+    });
+  }]);
+};
+
+Datastore.prototype.update = function () {
+  this.executor.push({ this: this, fn: this._update, arguments: arguments });
+};
+
+
+/**
+ * Remove all docs matching the query
+ * For now very naive implementation (similar to update)
+ * @param {Object} query
+ * @param {Object} options Optional options
+ *                 options.multi If true, can update multiple documents (defaults to false)
+ * @param {Function} cb Optional callback, signature: err, numRemoved
+ *
+ * @api private Use Datastore.remove which has the same signature
+ */
+Datastore.prototype._remove = function (query, options, cb) {
+  var callback
+    , self = this, numRemoved = 0, removedDocs = [], multi
+    ;
+
+  if (typeof options === 'function') { cb = options; options = {}; }
+  callback = cb || function () {};
+  multi = options.multi !== undefined ? options.multi : false;
+
+  this.getCandidates(query, true, function (err, candidates) {
+    if (err) { return callback(err); }
+
+    try {
+      candidates.forEach(function (d) {
+        if (model.match(d, query) && (multi || numRemoved === 0)) {
+          numRemoved += 1;
+          removedDocs.push({ $$deleted: true, _id: d._id });
+          self.removeFromIndexes(d);
+        }
+      });
+    } catch (err) { return callback(err); }
+
+    self.persistence.persistNewState(removedDocs, function (err) {
+      if (err) { return callback(err); }
+      return callback(null, numRemoved);
+    });
+  });
+};
+
+Datastore.prototype.remove = function () {
+  this.executor.push({ this: this, fn: this._remove, arguments: arguments });
+};
+
+
+
+module.exports = Datastore;
+
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(setImmediate, process) {/**
+ * Responsible for sequentially executing actions on the database
+ */
+
+var async = __webpack_require__(36)
+  ;
+
+function Executor () {
+  this.buffer = [];
+  this.ready = false;
+
+  // This queue will execute all commands, one-by-one in order
+  this.queue = async.queue(function (task, cb) {
+    var newArguments = [];
+
+    // task.arguments is an array-like object on which adding a new field doesn't work, so we transform it into a real array
+    for (var i = 0; i < task.arguments.length; i += 1) { newArguments.push(task.arguments[i]); }
+    var lastArg = task.arguments[task.arguments.length - 1];
+
+    // Always tell the queue task is complete. Execute callback if any was given.
+    if (typeof lastArg === 'function') {
+      // Callback was supplied
+      newArguments[newArguments.length - 1] = function () {
+        if (typeof setImmediate === 'function') {
+           setImmediate(cb);
+        } else {
+          process.nextTick(cb);
+        }
+        lastArg.apply(null, arguments);
+      };
+    } else if (!lastArg && task.arguments.length !== 0) {
+      // false/undefined/null supplied as callbback
+      newArguments[newArguments.length - 1] = function () { cb(); };
+    } else {
+      // Nothing supplied as callback
+      newArguments.push(function () { cb(); });
+    }
+
+
+    task.fn.apply(task.this, newArguments);
+  }, 1);
+}
+
+
+/**
+ * If executor is ready, queue task (and process it immediately if executor was idle)
+ * If not, buffer task for later processing
+ * @param {Object} task
+ *                 task.this - Object to use as this
+ *                 task.fn - Function to execute
+ *                 task.arguments - Array of arguments, IMPORTANT: only the last argument may be a function (the callback)
+ *                                                                 and the last argument cannot be false/undefined/null
+ * @param {Boolean} forceQueuing Optional (defaults to false) force executor to queue task even if it is not ready
+ */
+Executor.prototype.push = function (task, forceQueuing) {
+  if (this.ready || forceQueuing) {
+    this.queue.push(task);
+  } else {
+    this.buffer.push(task);
+  }
+};
+
+
+/**
+ * Queue all tasks in buffer (in the same order they came in)
+ * Automatically sets executor as ready
+ */
+Executor.prototype.processBuffer = function () {
+  var i;
+  this.ready = true;
+  for (i = 0; i < this.buffer.length; i += 1) { this.queue.push(this.buffer[i]); }
+  this.buffer = [];
+};
+
+
+
+// Interface
+module.exports = Executor;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(91).setImmediate, __webpack_require__(0)))
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Handle every persistence-related task
+ * The interface Datastore expects to be implemented is
+ * * Persistence.loadDatabase(callback) and callback has signature err
+ * * Persistence.persistNewState(newDocs, callback) where newDocs is an array of documents and callback has signature err
+ */
+
+var storage = __webpack_require__(113)
+  , path = __webpack_require__(119)
+  , model = __webpack_require__(26)
+  , async = __webpack_require__(36)
+  , customUtils = __webpack_require__(59)
+  , Index = __webpack_require__(60)
+  ;
+
+
+/**
+ * Create a new Persistence object for database options.db
+ * @param {Datastore} options.db
+ * @param {Boolean} options.nodeWebkitAppName Optional, specify the name of your NW app if you want options.filename to be relative to the directory where
+ *                                            Node Webkit stores application data such as cookies and local storage (the best place to store data in my opinion)
+ */
+function Persistence (options) {
+  var i, j, randomString;
+
+  this.db = options.db;
+  this.inMemoryOnly = this.db.inMemoryOnly;
+  this.filename = this.db.filename;
+  this.corruptAlertThreshold = options.corruptAlertThreshold !== undefined ? options.corruptAlertThreshold : 0.1;
+
+  if (!this.inMemoryOnly && this.filename && this.filename.charAt(this.filename.length - 1) === '~') {
+    throw new Error("The datafile name can't end with a ~, which is reserved for crash safe backup files");
+  }
+
+  // After serialization and before deserialization hooks with some basic sanity checks
+  if (options.afterSerialization && !options.beforeDeserialization) {
+    throw new Error("Serialization hook defined but deserialization hook undefined, cautiously refusing to start NeDB to prevent dataloss");
+  }
+  if (!options.afterSerialization && options.beforeDeserialization) {
+    throw new Error("Serialization hook undefined but deserialization hook defined, cautiously refusing to start NeDB to prevent dataloss");
+  }
+  this.afterSerialization = options.afterSerialization || function (s) { return s; };
+  this.beforeDeserialization = options.beforeDeserialization || function (s) { return s; };
+  for (i = 1; i < 30; i += 1) {
+    for (j = 0; j < 10; j += 1) {
+      randomString = customUtils.uid(i);
+      if (this.beforeDeserialization(this.afterSerialization(randomString)) !== randomString) {
+        throw new Error("beforeDeserialization is not the reverse of afterSerialization, cautiously refusing to start NeDB to prevent dataloss");
+      }
+    }
+  }
+
+  // For NW apps, store data in the same directory where NW stores application data
+  if (this.filename && options.nodeWebkitAppName) {
+    console.log("==================================================================");
+    console.log("WARNING: The nodeWebkitAppName option is deprecated");
+    console.log("To get the path to the directory where Node Webkit stores the data");
+    console.log("for your app, use the internal nw.gui module like this");
+    console.log("require('nw.gui').App.dataPath");
+    console.log("See https://github.com/rogerwang/node-webkit/issues/500");
+    console.log("==================================================================");
+    this.filename = Persistence.getNWAppFilename(options.nodeWebkitAppName, this.filename);
+  }
+};
+
+
+/**
+ * Check if a directory exists and create it on the fly if it is not the case
+ * cb is optional, signature: err
+ */
+Persistence.ensureDirectoryExists = function (dir, cb) {
+  var callback = cb || function () {}
+    ;
+
+  storage.mkdirp(dir, function (err) { return callback(err); });
+};
+
+
+
+
+/**
+ * Return the path the datafile if the given filename is relative to the directory where Node Webkit stores
+ * data for this application. Probably the best place to store data
+ */
+Persistence.getNWAppFilename = function (appName, relativeFilename) {
+  var home;
+
+  switch (process.platform) {
+    case 'win32':
+    case 'win64':
+      home = process.env.LOCALAPPDATA || process.env.APPDATA;
+      if (!home) { throw new Error("Couldn't find the base application data folder"); }
+      home = path.join(home, appName);
+      break;
+    case 'darwin':
+      home = process.env.HOME;
+      if (!home) { throw new Error("Couldn't find the base application data directory"); }
+      home = path.join(home, 'Library', 'Application Support', appName);
+      break;
+    case 'linux':
+      home = process.env.HOME;
+      if (!home) { throw new Error("Couldn't find the base application data directory"); }
+      home = path.join(home, '.config', appName);
+      break;
+    default:
+      throw new Error("Can't use the Node Webkit relative path for platform " + process.platform);
+      break;
+  }
+
+  return path.join(home, 'nedb-data', relativeFilename);
+}
+
+
+/**
+ * Persist cached database
+ * This serves as a compaction function since the cache always contains only the number of documents in the collection
+ * while the data file is append-only so it may grow larger
+ * @param {Function} cb Optional callback, signature: err
+ */
+Persistence.prototype.persistCachedDatabase = function (cb) {
+  var callback = cb || function () {}
+    , toPersist = ''
+    , self = this
+    ;
+
+  if (this.inMemoryOnly) { return callback(null); }
+
+  this.db.getAllData().forEach(function (doc) {
+    toPersist += self.afterSerialization(model.serialize(doc)) + '\n';
+  });
+  Object.keys(this.db.indexes).forEach(function (fieldName) {
+    if (fieldName != "_id") {   // The special _id index is managed by datastore.js, the others need to be persisted
+      toPersist += self.afterSerialization(model.serialize({ $$indexCreated: { fieldName: fieldName, unique: self.db.indexes[fieldName].unique, sparse: self.db.indexes[fieldName].sparse }})) + '\n';
+    }
+  });
+
+  storage.crashSafeWriteFile(this.filename, toPersist, function (err) {
+    if (err) { return callback(err); }
+    self.db.emit('compaction.done');
+    return callback(null);
+  });
+};
+
+
+/**
+ * Queue a rewrite of the datafile
+ */
+Persistence.prototype.compactDatafile = function () {
+  this.db.executor.push({ this: this, fn: this.persistCachedDatabase, arguments: [] });
+};
+
+
+/**
+ * Set automatic compaction every interval ms
+ * @param {Number} interval in milliseconds, with an enforced minimum of 5 seconds
+ */
+Persistence.prototype.setAutocompactionInterval = function (interval) {
+  var self = this
+    , minInterval = 5000
+    , realInterval = Math.max(interval || 0, minInterval)
+    ;
+
+  this.stopAutocompaction();
+
+  this.autocompactionIntervalId = setInterval(function () {
+    self.compactDatafile();
+  }, realInterval);
+};
+
+
+/**
+ * Stop autocompaction (do nothing if autocompaction was not running)
+ */
+Persistence.prototype.stopAutocompaction = function () {
+  if (this.autocompactionIntervalId) { clearInterval(this.autocompactionIntervalId); }
+};
+
+
+/**
+ * Persist new state for the given newDocs (can be insertion, update or removal)
+ * Use an append-only format
+ * @param {Array} newDocs Can be empty if no doc was updated/removed
+ * @param {Function} cb Optional, signature: err
+ */
+Persistence.prototype.persistNewState = function (newDocs, cb) {
+  var self = this
+    , toPersist = ''
+    , callback = cb || function () {}
+    ;
+
+  // In-memory only datastore
+  if (self.inMemoryOnly) { return callback(null); }
+
+  newDocs.forEach(function (doc) {
+    toPersist += self.afterSerialization(model.serialize(doc)) + '\n';
+  });
+
+  if (toPersist.length === 0) { return callback(null); }
+
+  storage.appendFile(self.filename, toPersist, 'utf8', function (err) {
+    return callback(err);
+  });
+};
+
+
+/**
+ * From a database's raw data, return the corresponding
+ * machine understandable collection
+ */
+Persistence.prototype.treatRawData = function (rawData) {
+  var data = rawData.split('\n')
+    , dataById = {}
+    , tdata = []
+    , i
+    , indexes = {}
+    , corruptItems = -1   // Last line of every data file is usually blank so not really corrupt
+    ;
+
+  for (i = 0; i < data.length; i += 1) {
+    var doc;
+
+    try {
+      doc = model.deserialize(this.beforeDeserialization(data[i]));
+      if (doc._id) {
+        if (doc.$$deleted === true) {
+          delete dataById[doc._id];
+        } else {
+          dataById[doc._id] = doc;
+        }
+      } else if (doc.$$indexCreated && doc.$$indexCreated.fieldName != undefined) {
+        indexes[doc.$$indexCreated.fieldName] = doc.$$indexCreated;
+      } else if (typeof doc.$$indexRemoved === "string") {
+        delete indexes[doc.$$indexRemoved];
+      }
+    } catch (e) {
+      corruptItems += 1;
+    }
+  }
+
+  // A bit lenient on corruption
+  if (data.length > 0 && corruptItems / data.length > this.corruptAlertThreshold) {
+    throw new Error("More than " + Math.floor(100 * this.corruptAlertThreshold) + "% of the data file is corrupt, the wrong beforeDeserialization hook may be used. Cautiously refusing to start NeDB to prevent dataloss");
+  }
+
+  Object.keys(dataById).forEach(function (k) {
+    tdata.push(dataById[k]);
+  });
+
+  return { data: tdata, indexes: indexes };
+};
+
+
+/**
+ * Load the database
+ * 1) Create all indexes
+ * 2) Insert all data
+ * 3) Compact the database
+ * This means pulling data out of the data file or creating it if it doesn't exist
+ * Also, all data is persisted right away, which has the effect of compacting the database file
+ * This operation is very quick at startup for a big collection (60ms for ~10k docs)
+ * @param {Function} cb Optional callback, signature: err
+ */
+Persistence.prototype.loadDatabase = function (cb) {
+  var callback = cb || function () {}
+    , self = this
+    ;
+
+  self.db.resetIndexes();
+
+  // In-memory only datastore
+  if (self.inMemoryOnly) { return callback(null); }
+
+  async.waterfall([
+    function (cb) {
+      Persistence.ensureDirectoryExists(path.dirname(self.filename), function (err) {
+        storage.ensureDatafileIntegrity(self.filename, function (err) {
+          storage.readFile(self.filename, 'utf8', function (err, rawData) {
+            if (err) { return cb(err); }
+
+            try {
+              var treatedData = self.treatRawData(rawData);
+            } catch (e) {
+              return cb(e);
+            }
+
+            // Recreate all indexes in the datafile
+            Object.keys(treatedData.indexes).forEach(function (key) {
+              self.db.indexes[key] = new Index(treatedData.indexes[key]);
+            });
+
+            // Fill cached database (i.e. all indexes) with data
+            try {
+              self.db.resetIndexes(treatedData.data);
+            } catch (e) {
+              self.db.resetIndexes();   // Rollback any index which didn't fail
+              return cb(e);
+            }
+
+            self.db.persistence.persistCachedDatabase(cb);
+          });
+        });
+      });
+    }
+  ], function (err) {
+       if (err) { return callback(err); }
+
+       self.db.executor.processBuffer();
+       return callback(null);
+     });
+};
+
+
+// Interface
+module.exports = Persistence;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// Split a filename into [root, dir, basename, ext], unix version
+// 'root' is just a slash, or nothing.
+var splitPathRe =
+    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+var splitPath = function(filename) {
+  return splitPathRe.exec(filename).slice(1);
+};
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function(path) {
+  var result = splitPath(path),
+      root = result[0],
+      dir = result[1];
+
+  if (!root && !dir) {
+    // No dirname whatsoever
+    return '.';
+  }
+
+  if (dir) {
+    // It has a dirname, strip trailing slash
+    dir = dir.substr(0, dir.length - 1);
+  }
+
+  return root + dir;
+};
+
+
+exports.basename = function(path, ext) {
+  var f = splitPath(path)[2];
+  // TODO: make this comparison case-insensitive on windows?
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+
+exports.extname = function(path) {
+  return splitPath(path)[3];
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25151,7 +21245,7 @@ module.exports = PouchDB$5;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(1);
   var warning = __webpack_require__(2);
-  var ReactPropTypesSecret = __webpack_require__(54);
+  var ReactPropTypesSecret = __webpack_require__(62);
   var loggedTypeFailures = {};
 }
 
@@ -25202,7 +21296,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 108 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25221,8 +21315,8 @@ var emptyFunction = __webpack_require__(9);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
-var ReactPropTypesSecret = __webpack_require__(54);
-var checkPropTypes = __webpack_require__(107);
+var ReactPropTypesSecret = __webpack_require__(62);
+var checkPropTypes = __webpack_require__(120);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -25722,17 +21816,17 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 109 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(123);
+module.exports = __webpack_require__(136);
 
 
 /***/ }),
-/* 110 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25811,7 +21905,7 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 111 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25829,7 +21923,7 @@ module.exports = ARIADOMPropertyConfig;
 
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var focusNode = __webpack_require__(50);
+var focusNode = __webpack_require__(57);
 
 var AutoFocusUtils = {
   focusDOMComponent: function () {
@@ -25840,7 +21934,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 112 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25858,9 +21952,9 @@ module.exports = AutoFocusUtils;
 
 var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
-var FallbackCompositionState = __webpack_require__(118);
-var SyntheticCompositionEvent = __webpack_require__(161);
-var SyntheticInputEvent = __webpack_require__(164);
+var FallbackCompositionState = __webpack_require__(131);
+var SyntheticCompositionEvent = __webpack_require__(174);
+var SyntheticInputEvent = __webpack_require__(177);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -26229,7 +22323,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 113 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26245,14 +22339,14 @@ module.exports = BeforeInputEventPlugin;
 
 
 
-var CSSProperty = __webpack_require__(55);
+var CSSProperty = __webpack_require__(63);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(8);
 
-var camelizeStyleName = __webpack_require__(90);
-var dangerousStyleValue = __webpack_require__(171);
-var hyphenateStyleName = __webpack_require__(97);
-var memoizeStringOnly = __webpack_require__(100);
+var camelizeStyleName = __webpack_require__(99);
+var dangerousStyleValue = __webpack_require__(184);
+var hyphenateStyleName = __webpack_require__(106);
+var memoizeStringOnly = __webpack_require__(109);
 var warning = __webpack_require__(2);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -26450,7 +22544,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 114 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26473,10 +22567,10 @@ var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(10);
 var SyntheticEvent = __webpack_require__(12);
 
-var inputValueTracking = __webpack_require__(72);
-var getEventTarget = __webpack_require__(44);
-var isEventSupported = __webpack_require__(45);
-var isTextInputElement = __webpack_require__(74);
+var inputValueTracking = __webpack_require__(80);
+var getEventTarget = __webpack_require__(48);
+var isEventSupported = __webpack_require__(49);
+var isTextInputElement = __webpack_require__(82);
 
 var eventTypes = {
   change: {
@@ -26767,7 +22861,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 115 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26788,7 +22882,7 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(16);
 var ExecutionEnvironment = __webpack_require__(6);
 
-var createNodesFromMarkup = __webpack_require__(93);
+var createNodesFromMarkup = __webpack_require__(102);
 var emptyFunction = __webpack_require__(9);
 var invariant = __webpack_require__(1);
 
@@ -26819,7 +22913,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 116 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26850,7 +22944,7 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 117 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26868,7 +22962,7 @@ module.exports = DefaultEventPluginOrder;
 
 var EventPropagators = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticMouseEvent = __webpack_require__(27);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 var eventTypes = {
   mouseEnter: {
@@ -26953,7 +23047,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 118 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26973,7 +23067,7 @@ var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(14);
 
-var getTextContentAccessor = __webpack_require__(71);
+var getTextContentAccessor = __webpack_require__(79);
 
 /**
  * This helper class stores information about text content of a target node,
@@ -27053,7 +23147,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 119 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27294,7 +23388,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 120 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27312,10 +23406,10 @@ module.exports = HTMLDOMPropertyConfig;
 
 var ReactReconciler = __webpack_require__(17);
 
-var instantiateReactComponent = __webpack_require__(73);
-var KeyEscapeUtils = __webpack_require__(36);
-var shouldUpdateReactComponent = __webpack_require__(46);
-var traverseAllChildren = __webpack_require__(76);
+var instantiateReactComponent = __webpack_require__(81);
+var KeyEscapeUtils = __webpack_require__(40);
+var shouldUpdateReactComponent = __webpack_require__(50);
+var traverseAllChildren = __webpack_require__(84);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -27453,7 +23547,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 121 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27469,8 +23563,8 @@ module.exports = ReactChildReconciler;
 
 
 
-var DOMChildrenOperations = __webpack_require__(33);
-var ReactDOMIDOperations = __webpack_require__(128);
+var DOMChildrenOperations = __webpack_require__(37);
+var ReactDOMIDOperations = __webpack_require__(141);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -27486,7 +23580,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 122 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27506,22 +23600,22 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var React = __webpack_require__(18);
-var ReactComponentEnvironment = __webpack_require__(38);
+var ReactComponentEnvironment = __webpack_require__(42);
 var ReactCurrentOwner = __webpack_require__(11);
-var ReactErrorUtils = __webpack_require__(39);
+var ReactErrorUtils = __webpack_require__(43);
 var ReactInstanceMap = __webpack_require__(22);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactNodeTypes = __webpack_require__(65);
+var ReactNodeTypes = __webpack_require__(73);
 var ReactReconciler = __webpack_require__(17);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(170);
+  var checkReactTypeSpec = __webpack_require__(183);
 }
 
-var emptyObject = __webpack_require__(24);
+var emptyObject = __webpack_require__(25);
 var invariant = __webpack_require__(1);
-var shallowEqual = __webpack_require__(32);
-var shouldUpdateReactComponent = __webpack_require__(46);
+var shallowEqual = __webpack_require__(35);
+var shouldUpdateReactComponent = __webpack_require__(50);
 var warning = __webpack_require__(2);
 
 var CompositeTypes = {
@@ -28392,7 +24486,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 123 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28411,15 +24505,15 @@ module.exports = ReactCompositeComponent;
 
 
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDefaultInjection = __webpack_require__(140);
-var ReactMount = __webpack_require__(64);
+var ReactDefaultInjection = __webpack_require__(153);
+var ReactMount = __webpack_require__(72);
 var ReactReconciler = __webpack_require__(17);
 var ReactUpdates = __webpack_require__(10);
-var ReactVersion = __webpack_require__(155);
+var ReactVersion = __webpack_require__(168);
 
-var findDOMNode = __webpack_require__(172);
-var getHostComponentFromComposite = __webpack_require__(70);
-var renderSubtreeIntoContainer = __webpack_require__(179);
+var findDOMNode = __webpack_require__(185);
+var getHostComponentFromComposite = __webpack_require__(78);
+var renderSubtreeIntoContainer = __webpack_require__(192);
 var warning = __webpack_require__(2);
 
 ReactDefaultInjection.inject();
@@ -28496,9 +24590,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(8);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(137);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(131);
-  var ReactDOMInvalidARIAHook = __webpack_require__(130);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(150);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(144);
+  var ReactDOMInvalidARIAHook = __webpack_require__(143);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -28509,7 +24603,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 124 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28530,32 +24624,32 @@ module.exports = ReactDOM;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var AutoFocusUtils = __webpack_require__(111);
-var CSSPropertyOperations = __webpack_require__(113);
+var AutoFocusUtils = __webpack_require__(124);
+var CSSPropertyOperations = __webpack_require__(126);
 var DOMLazyTree = __webpack_require__(16);
-var DOMNamespaces = __webpack_require__(34);
+var DOMNamespaces = __webpack_require__(38);
 var DOMProperty = __webpack_require__(13);
-var DOMPropertyOperations = __webpack_require__(57);
+var DOMPropertyOperations = __webpack_require__(65);
 var EventPluginHub = __webpack_require__(20);
-var EventPluginRegistry = __webpack_require__(25);
-var ReactBrowserEventEmitter = __webpack_require__(26);
-var ReactDOMComponentFlags = __webpack_require__(58);
+var EventPluginRegistry = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(28);
+var ReactDOMComponentFlags = __webpack_require__(66);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMInput = __webpack_require__(129);
-var ReactDOMOption = __webpack_require__(132);
-var ReactDOMSelect = __webpack_require__(59);
-var ReactDOMTextarea = __webpack_require__(135);
+var ReactDOMInput = __webpack_require__(142);
+var ReactDOMOption = __webpack_require__(145);
+var ReactDOMSelect = __webpack_require__(67);
+var ReactDOMTextarea = __webpack_require__(148);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactMultiChild = __webpack_require__(148);
-var ReactServerRenderingTransaction = __webpack_require__(153);
+var ReactMultiChild = __webpack_require__(161);
+var ReactServerRenderingTransaction = __webpack_require__(166);
 
 var emptyFunction = __webpack_require__(9);
-var escapeTextContentForBrowser = __webpack_require__(29);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
-var isEventSupported = __webpack_require__(45);
-var shallowEqual = __webpack_require__(32);
-var inputValueTracking = __webpack_require__(72);
-var validateDOMNesting = __webpack_require__(47);
+var isEventSupported = __webpack_require__(49);
+var shallowEqual = __webpack_require__(35);
+var inputValueTracking = __webpack_require__(80);
+var validateDOMNesting = __webpack_require__(51);
 var warning = __webpack_require__(2);
 
 var Flags = ReactDOMComponentFlags;
@@ -29525,7 +25619,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 125 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29541,7 +25635,7 @@ module.exports = ReactDOMComponent;
 
 
 
-var validateDOMNesting = __webpack_require__(47);
+var validateDOMNesting = __webpack_require__(51);
 
 var DOC_NODE_TYPE = 9;
 
@@ -29564,7 +25658,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 126 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29629,7 +25723,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 127 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29653,7 +25747,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 128 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29669,7 +25763,7 @@ module.exports = ReactDOMFeatureFlags;
 
 
 
-var DOMChildrenOperations = __webpack_require__(33);
+var DOMChildrenOperations = __webpack_require__(37);
 var ReactDOMComponentTree = __webpack_require__(5);
 
 /**
@@ -29691,7 +25785,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 129 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29710,8 +25804,8 @@ module.exports = ReactDOMIDOperations;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMPropertyOperations = __webpack_require__(57);
-var LinkedValueUtils = __webpack_require__(37);
+var DOMPropertyOperations = __webpack_require__(65);
+var LinkedValueUtils = __webpack_require__(41);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(10);
 
@@ -29984,7 +26078,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 130 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30083,7 +26177,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 131 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30132,7 +26226,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 132 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30152,7 +26246,7 @@ var _assign = __webpack_require__(4);
 
 var React = __webpack_require__(18);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMSelect = __webpack_require__(59);
+var ReactDOMSelect = __webpack_require__(67);
 
 var warning = __webpack_require__(2);
 var didWarnInvalidOptionChildren = false;
@@ -30260,7 +26354,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 133 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30278,8 +26372,8 @@ module.exports = ReactDOMOption;
 
 var ExecutionEnvironment = __webpack_require__(6);
 
-var getNodeForCharacterOffset = __webpack_require__(176);
-var getTextContentAccessor = __webpack_require__(71);
+var getNodeForCharacterOffset = __webpack_require__(189);
+var getTextContentAccessor = __webpack_require__(79);
 
 /**
  * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -30477,7 +26571,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 134 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30496,13 +26590,13 @@ module.exports = ReactDOMSelection;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMChildrenOperations = __webpack_require__(33);
+var DOMChildrenOperations = __webpack_require__(37);
 var DOMLazyTree = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var escapeTextContentForBrowser = __webpack_require__(29);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
-var validateDOMNesting = __webpack_require__(47);
+var validateDOMNesting = __webpack_require__(51);
 
 /**
  * Text nodes violate a couple assumptions that React makes about components:
@@ -30645,7 +26739,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 135 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30664,7 +26758,7 @@ module.exports = ReactDOMTextComponent;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(37);
+var LinkedValueUtils = __webpack_require__(41);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(10);
 
@@ -30811,7 +26905,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 136 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30953,7 +27047,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 137 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30970,7 +27064,7 @@ module.exports = {
 
 
 var DOMProperty = __webpack_require__(13);
-var EventPluginRegistry = __webpack_require__(25);
+var EventPluginRegistry = __webpack_require__(27);
 var ReactComponentTreeHook = __webpack_require__(7);
 
 var warning = __webpack_require__(2);
@@ -31071,7 +27165,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 138 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31088,12 +27182,12 @@ module.exports = ReactDOMUnknownPropertyHook;
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(146);
-var ReactHostOperationHistoryHook = __webpack_require__(144);
+var ReactInvalidSetStateWarningHook = __webpack_require__(159);
+var ReactHostOperationHistoryHook = __webpack_require__(157);
 var ReactComponentTreeHook = __webpack_require__(7);
 var ExecutionEnvironment = __webpack_require__(6);
 
-var performanceNow = __webpack_require__(102);
+var performanceNow = __webpack_require__(111);
 var warning = __webpack_require__(2);
 
 var hooks = [];
@@ -31438,7 +27532,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 139 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31457,7 +27551,7 @@ module.exports = ReactDebugTool;
 var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(10);
-var Transaction = __webpack_require__(28);
+var Transaction = __webpack_require__(30);
 
 var emptyFunction = __webpack_require__(9);
 
@@ -31511,7 +27605,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 140 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31527,25 +27621,25 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(110);
-var BeforeInputEventPlugin = __webpack_require__(112);
-var ChangeEventPlugin = __webpack_require__(114);
-var DefaultEventPluginOrder = __webpack_require__(116);
-var EnterLeaveEventPlugin = __webpack_require__(117);
-var HTMLDOMPropertyConfig = __webpack_require__(119);
-var ReactComponentBrowserEnvironment = __webpack_require__(121);
-var ReactDOMComponent = __webpack_require__(124);
+var ARIADOMPropertyConfig = __webpack_require__(123);
+var BeforeInputEventPlugin = __webpack_require__(125);
+var ChangeEventPlugin = __webpack_require__(127);
+var DefaultEventPluginOrder = __webpack_require__(129);
+var EnterLeaveEventPlugin = __webpack_require__(130);
+var HTMLDOMPropertyConfig = __webpack_require__(132);
+var ReactComponentBrowserEnvironment = __webpack_require__(134);
+var ReactDOMComponent = __webpack_require__(137);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMEmptyComponent = __webpack_require__(126);
-var ReactDOMTreeTraversal = __webpack_require__(136);
-var ReactDOMTextComponent = __webpack_require__(134);
-var ReactDefaultBatchingStrategy = __webpack_require__(139);
-var ReactEventListener = __webpack_require__(143);
-var ReactInjection = __webpack_require__(145);
-var ReactReconcileTransaction = __webpack_require__(151);
-var SVGDOMPropertyConfig = __webpack_require__(156);
-var SelectEventPlugin = __webpack_require__(157);
-var SimpleEventPlugin = __webpack_require__(158);
+var ReactDOMEmptyComponent = __webpack_require__(139);
+var ReactDOMTreeTraversal = __webpack_require__(149);
+var ReactDOMTextComponent = __webpack_require__(147);
+var ReactDefaultBatchingStrategy = __webpack_require__(152);
+var ReactEventListener = __webpack_require__(156);
+var ReactInjection = __webpack_require__(158);
+var ReactReconcileTransaction = __webpack_require__(164);
+var SVGDOMPropertyConfig = __webpack_require__(169);
+var SelectEventPlugin = __webpack_require__(170);
+var SimpleEventPlugin = __webpack_require__(171);
 
 var alreadyInjected = false;
 
@@ -31602,7 +27696,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 141 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31627,7 +27721,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 142 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31664,7 +27758,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 143 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31682,14 +27776,14 @@ module.exports = ReactEventEmitterMixin;
 
 var _assign = __webpack_require__(4);
 
-var EventListener = __webpack_require__(49);
+var EventListener = __webpack_require__(56);
 var ExecutionEnvironment = __webpack_require__(6);
 var PooledClass = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(10);
 
-var getEventTarget = __webpack_require__(44);
-var getUnboundedScrollPosition = __webpack_require__(95);
+var getEventTarget = __webpack_require__(48);
+var getUnboundedScrollPosition = __webpack_require__(104);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -31824,7 +27918,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 144 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31863,7 +27957,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 145 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31881,11 +27975,11 @@ module.exports = ReactHostOperationHistoryHook;
 
 var DOMProperty = __webpack_require__(13);
 var EventPluginHub = __webpack_require__(20);
-var EventPluginUtils = __webpack_require__(35);
-var ReactComponentEnvironment = __webpack_require__(38);
-var ReactEmptyComponent = __webpack_require__(60);
-var ReactBrowserEventEmitter = __webpack_require__(26);
-var ReactHostComponent = __webpack_require__(62);
+var EventPluginUtils = __webpack_require__(39);
+var ReactComponentEnvironment = __webpack_require__(42);
+var ReactEmptyComponent = __webpack_require__(68);
+var ReactBrowserEventEmitter = __webpack_require__(28);
+var ReactHostComponent = __webpack_require__(70);
 var ReactUpdates = __webpack_require__(10);
 
 var ReactInjection = {
@@ -31902,7 +27996,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 146 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31945,7 +28039,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 147 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31961,7 +28055,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 
 
 
-var adler32 = __webpack_require__(169);
+var adler32 = __webpack_require__(182);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -32000,7 +28094,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 148 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32018,16 +28112,16 @@ module.exports = ReactMarkupChecksum;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactComponentEnvironment = __webpack_require__(38);
+var ReactComponentEnvironment = __webpack_require__(42);
 var ReactInstanceMap = __webpack_require__(22);
 var ReactInstrumentation = __webpack_require__(8);
 
 var ReactCurrentOwner = __webpack_require__(11);
 var ReactReconciler = __webpack_require__(17);
-var ReactChildReconciler = __webpack_require__(120);
+var ReactChildReconciler = __webpack_require__(133);
 
 var emptyFunction = __webpack_require__(9);
-var flattenChildren = __webpack_require__(173);
+var flattenChildren = __webpack_require__(186);
 var invariant = __webpack_require__(1);
 
 /**
@@ -32452,7 +28546,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 149 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32551,7 +28645,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 150 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32582,7 +28676,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 151 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32600,13 +28694,13 @@ module.exports = ReactPropTypeLocationNames;
 
 var _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(56);
+var CallbackQueue = __webpack_require__(64);
 var PooledClass = __webpack_require__(14);
-var ReactBrowserEventEmitter = __webpack_require__(26);
-var ReactInputSelection = __webpack_require__(63);
+var ReactBrowserEventEmitter = __webpack_require__(28);
+var ReactInputSelection = __webpack_require__(71);
 var ReactInstrumentation = __webpack_require__(8);
-var Transaction = __webpack_require__(28);
-var ReactUpdateQueue = __webpack_require__(40);
+var Transaction = __webpack_require__(30);
+var ReactUpdateQueue = __webpack_require__(44);
 
 /**
  * Ensures that, when possible, the selection range (currently selected text
@@ -32766,7 +28860,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 152 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32783,7 +28877,7 @@ module.exports = ReactReconcileTransaction;
 
 
 
-var ReactOwner = __webpack_require__(149);
+var ReactOwner = __webpack_require__(162);
 
 var ReactRef = {};
 
@@ -32860,7 +28954,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 153 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32879,9 +28973,9 @@ module.exports = ReactRef;
 var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(14);
-var Transaction = __webpack_require__(28);
+var Transaction = __webpack_require__(30);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactServerUpdateQueue = __webpack_require__(154);
+var ReactServerUpdateQueue = __webpack_require__(167);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -32956,7 +29050,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 154 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32975,7 +29069,7 @@ module.exports = ReactServerRenderingTransaction;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ReactUpdateQueue = __webpack_require__(40);
+var ReactUpdateQueue = __webpack_require__(44);
 
 var warning = __webpack_require__(2);
 
@@ -33101,7 +29195,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 155 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33120,7 +29214,7 @@ module.exports = ReactServerUpdateQueue;
 module.exports = '15.6.1';
 
 /***/ }),
-/* 156 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33427,7 +29521,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 157 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33446,12 +29540,12 @@ module.exports = SVGDOMPropertyConfig;
 var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactInputSelection = __webpack_require__(63);
+var ReactInputSelection = __webpack_require__(71);
 var SyntheticEvent = __webpack_require__(12);
 
-var getActiveElement = __webpack_require__(51);
-var isTextInputElement = __webpack_require__(74);
-var shallowEqual = __webpack_require__(32);
+var getActiveElement = __webpack_require__(58);
+var isTextInputElement = __webpack_require__(82);
+var shallowEqual = __webpack_require__(35);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 
@@ -33620,7 +29714,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 158 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33639,23 +29733,23 @@ module.exports = SelectEventPlugin;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventListener = __webpack_require__(49);
+var EventListener = __webpack_require__(56);
 var EventPropagators = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticAnimationEvent = __webpack_require__(159);
-var SyntheticClipboardEvent = __webpack_require__(160);
+var SyntheticAnimationEvent = __webpack_require__(172);
+var SyntheticClipboardEvent = __webpack_require__(173);
 var SyntheticEvent = __webpack_require__(12);
-var SyntheticFocusEvent = __webpack_require__(163);
-var SyntheticKeyboardEvent = __webpack_require__(165);
-var SyntheticMouseEvent = __webpack_require__(27);
-var SyntheticDragEvent = __webpack_require__(162);
-var SyntheticTouchEvent = __webpack_require__(166);
-var SyntheticTransitionEvent = __webpack_require__(167);
+var SyntheticFocusEvent = __webpack_require__(176);
+var SyntheticKeyboardEvent = __webpack_require__(178);
+var SyntheticMouseEvent = __webpack_require__(29);
+var SyntheticDragEvent = __webpack_require__(175);
+var SyntheticTouchEvent = __webpack_require__(179);
+var SyntheticTransitionEvent = __webpack_require__(180);
 var SyntheticUIEvent = __webpack_require__(23);
-var SyntheticWheelEvent = __webpack_require__(168);
+var SyntheticWheelEvent = __webpack_require__(181);
 
 var emptyFunction = __webpack_require__(9);
-var getEventCharCode = __webpack_require__(42);
+var getEventCharCode = __webpack_require__(46);
 var invariant = __webpack_require__(1);
 
 /**
@@ -33852,7 +29946,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 159 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33896,7 +29990,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 160 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33939,7 +30033,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 161 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33980,7 +30074,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 162 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33996,7 +30090,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(27);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface DragEvent
@@ -34021,7 +30115,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 163 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34062,7 +30156,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 164 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34104,7 +30198,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 165 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34122,9 +30216,9 @@ module.exports = SyntheticInputEvent;
 
 var SyntheticUIEvent = __webpack_require__(23);
 
-var getEventCharCode = __webpack_require__(42);
-var getEventKey = __webpack_require__(174);
-var getEventModifierState = __webpack_require__(43);
+var getEventCharCode = __webpack_require__(46);
+var getEventKey = __webpack_require__(187);
+var getEventModifierState = __webpack_require__(47);
 
 /**
  * @interface KeyboardEvent
@@ -34193,7 +30287,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 166 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34211,7 +30305,7 @@ module.exports = SyntheticKeyboardEvent;
 
 var SyntheticUIEvent = __webpack_require__(23);
 
-var getEventModifierState = __webpack_require__(43);
+var getEventModifierState = __webpack_require__(47);
 
 /**
  * @interface TouchEvent
@@ -34243,7 +30337,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 167 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34287,7 +30381,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 168 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34303,7 +30397,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(27);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface WheelEvent
@@ -34343,7 +30437,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 169 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34392,7 +30486,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 170 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34410,8 +30504,8 @@ module.exports = adler32;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypeLocationNames = __webpack_require__(150);
-var ReactPropTypesSecret = __webpack_require__(66);
+var ReactPropTypeLocationNames = __webpack_require__(163);
+var ReactPropTypesSecret = __webpack_require__(74);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -34485,7 +30579,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 171 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34501,7 +30595,7 @@ module.exports = checkReactTypeSpec;
 
 
 
-var CSSProperty = __webpack_require__(55);
+var CSSProperty = __webpack_require__(63);
 var warning = __webpack_require__(2);
 
 var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -34570,7 +30664,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 172 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34592,7 +30686,7 @@ var ReactCurrentOwner = __webpack_require__(11);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstanceMap = __webpack_require__(22);
 
-var getHostComponentFromComposite = __webpack_require__(70);
+var getHostComponentFromComposite = __webpack_require__(78);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -34636,7 +30730,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 173 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34653,8 +30747,8 @@ module.exports = findDOMNode;
 
 
 
-var KeyEscapeUtils = __webpack_require__(36);
-var traverseAllChildren = __webpack_require__(76);
+var KeyEscapeUtils = __webpack_require__(40);
+var traverseAllChildren = __webpack_require__(84);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -34718,7 +30812,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 174 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34734,7 +30828,7 @@ module.exports = flattenChildren;
 
 
 
-var getEventCharCode = __webpack_require__(42);
+var getEventCharCode = __webpack_require__(46);
 
 /**
  * Normalization of deprecated HTML5 `key` values
@@ -34835,7 +30929,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 175 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34881,7 +30975,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 176 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34960,7 +31054,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 177 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35066,7 +31160,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 178 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35082,7 +31176,7 @@ module.exports = getVendorPrefixedEventName;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(29);
+var escapeTextContentForBrowser = __webpack_require__(31);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -35097,7 +31191,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 179 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35113,12 +31207,12 @@ module.exports = quoteAttributeValueForBrowser;
 
 
 
-var ReactMount = __webpack_require__(64);
+var ReactMount = __webpack_require__(72);
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 180 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35182,7 +31276,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 181 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35300,7 +31394,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 182 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35316,11 +31410,11 @@ module.exports = PooledClass;
 
 
 
-var PooledClass = __webpack_require__(181);
+var PooledClass = __webpack_require__(194);
 var ReactElement = __webpack_require__(15);
 
 var emptyFunction = __webpack_require__(9);
-var traverseAllChildren = __webpack_require__(192);
+var traverseAllChildren = __webpack_require__(205);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -35496,7 +31590,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 183 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35521,7 +31615,7 @@ var ReactElement = __webpack_require__(15);
  */
 var createDOMFactory = ReactElement.createFactory;
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(79);
+  var ReactElementValidator = __webpack_require__(87);
   createDOMFactory = ReactElementValidator.createFactory;
 }
 
@@ -35671,7 +31765,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 184 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35702,7 +31796,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 185 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35721,12 +31815,12 @@ module.exports = ReactPropTypeLocationNames;
 var _require = __webpack_require__(15),
     isValidElement = _require.isValidElement;
 
-var factory = __webpack_require__(53);
+var factory = __webpack_require__(61);
 
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 186 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35748,7 +31842,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 187 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35767,7 +31861,7 @@ module.exports = ReactPropTypesSecret;
 module.exports = '15.6.1';
 
 /***/ }),
-/* 188 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35785,8 +31879,8 @@ module.exports = '15.6.1';
 
 var _prodInvariant = __webpack_require__(19);
 
-var ReactPropTypeLocationNames = __webpack_require__(184);
-var ReactPropTypesSecret = __webpack_require__(186);
+var ReactPropTypeLocationNames = __webpack_require__(197);
+var ReactPropTypesSecret = __webpack_require__(199);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -35860,7 +31954,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 189 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35876,19 +31970,19 @@ module.exports = checkReactTypeSpec;
 
 
 
-var _require = __webpack_require__(77),
+var _require = __webpack_require__(85),
     Component = _require.Component;
 
 var _require2 = __webpack_require__(15),
     isValidElement = _require2.isValidElement;
 
-var ReactNoopUpdateQueue = __webpack_require__(80);
-var factory = __webpack_require__(85);
+var ReactNoopUpdateQueue = __webpack_require__(88);
+var factory = __webpack_require__(96);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 /***/ }),
-/* 190 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35914,7 +32008,7 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 191 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35958,7 +32052,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 192 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35977,11 +32071,11 @@ module.exports = onlyChild;
 var _prodInvariant = __webpack_require__(19);
 
 var ReactCurrentOwner = __webpack_require__(11);
-var REACT_ELEMENT_TYPE = __webpack_require__(78);
+var REACT_ELEMENT_TYPE = __webpack_require__(86);
 
-var getIteratorFn = __webpack_require__(81);
+var getIteratorFn = __webpack_require__(89);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(180);
+var KeyEscapeUtils = __webpack_require__(193);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -36140,957 +32234,243 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 193 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
 
-
-module.exports = __webpack_require__(18);
-
-
-/***/ }),
-/* 194 */
-/***/ (function(module, exports, __webpack_require__) {
-
-(function (factory) {
-    if (true) {
-        // Node/CommonJS
-        module.exports = factory();
-    } else if (typeof define === 'function' && define.amd) {
-        // AMD
-        define(factory);
-    } else {
-        // Browser globals (with support for web workers)
-        var glob;
-
-        try {
-            glob = window;
-        } catch (e) {
-            glob = self;
-        }
-
-        glob.SparkMD5 = factory();
-    }
-}(function (undefined) {
-
-    'use strict';
-
-    /*
-     * Fastest md5 implementation around (JKM md5).
-     * Credits: Joseph Myers
-     *
-     * @see http://www.myersdaily.org/joseph/javascript/md5-text.html
-     * @see http://jsperf.com/md5-shootout/7
-     */
-
-    /* this function is much faster,
-      so if possible we use it. Some IEs
-      are the only ones I know of that
-      need the idiotic second function,
-      generated by an if clause.  */
-    var add32 = function (a, b) {
-        return (a + b) & 0xFFFFFFFF;
-    },
-        hex_chr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
-
-
-    function cmn(q, a, b, x, s, t) {
-        a = add32(add32(a, q), add32(x, t));
-        return add32((a << s) | (a >>> (32 - s)), b);
+    if (global.setImmediate) {
+        return;
     }
 
-    function md5cycle(x, k) {
-        var a = x[0],
-            b = x[1],
-            c = x[2],
-            d = x[3];
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
 
-        a += (b & c | ~b & d) + k[0] - 680876936 | 0;
-        a  = (a << 7 | a >>> 25) + b | 0;
-        d += (a & b | ~a & c) + k[1] - 389564586 | 0;
-        d  = (d << 12 | d >>> 20) + a | 0;
-        c += (d & a | ~d & b) + k[2] + 606105819 | 0;
-        c  = (c << 17 | c >>> 15) + d | 0;
-        b += (c & d | ~c & a) + k[3] - 1044525330 | 0;
-        b  = (b << 22 | b >>> 10) + c | 0;
-        a += (b & c | ~b & d) + k[4] - 176418897 | 0;
-        a  = (a << 7 | a >>> 25) + b | 0;
-        d += (a & b | ~a & c) + k[5] + 1200080426 | 0;
-        d  = (d << 12 | d >>> 20) + a | 0;
-        c += (d & a | ~d & b) + k[6] - 1473231341 | 0;
-        c  = (c << 17 | c >>> 15) + d | 0;
-        b += (c & d | ~c & a) + k[7] - 45705983 | 0;
-        b  = (b << 22 | b >>> 10) + c | 0;
-        a += (b & c | ~b & d) + k[8] + 1770035416 | 0;
-        a  = (a << 7 | a >>> 25) + b | 0;
-        d += (a & b | ~a & c) + k[9] - 1958414417 | 0;
-        d  = (d << 12 | d >>> 20) + a | 0;
-        c += (d & a | ~d & b) + k[10] - 42063 | 0;
-        c  = (c << 17 | c >>> 15) + d | 0;
-        b += (c & d | ~c & a) + k[11] - 1990404162 | 0;
-        b  = (b << 22 | b >>> 10) + c | 0;
-        a += (b & c | ~b & d) + k[12] + 1804603682 | 0;
-        a  = (a << 7 | a >>> 25) + b | 0;
-        d += (a & b | ~a & c) + k[13] - 40341101 | 0;
-        d  = (d << 12 | d >>> 20) + a | 0;
-        c += (d & a | ~d & b) + k[14] - 1502002290 | 0;
-        c  = (c << 17 | c >>> 15) + d | 0;
-        b += (c & d | ~c & a) + k[15] + 1236535329 | 0;
-        b  = (b << 22 | b >>> 10) + c | 0;
-
-        a += (b & d | c & ~d) + k[1] - 165796510 | 0;
-        a  = (a << 5 | a >>> 27) + b | 0;
-        d += (a & c | b & ~c) + k[6] - 1069501632 | 0;
-        d  = (d << 9 | d >>> 23) + a | 0;
-        c += (d & b | a & ~b) + k[11] + 643717713 | 0;
-        c  = (c << 14 | c >>> 18) + d | 0;
-        b += (c & a | d & ~a) + k[0] - 373897302 | 0;
-        b  = (b << 20 | b >>> 12) + c | 0;
-        a += (b & d | c & ~d) + k[5] - 701558691 | 0;
-        a  = (a << 5 | a >>> 27) + b | 0;
-        d += (a & c | b & ~c) + k[10] + 38016083 | 0;
-        d  = (d << 9 | d >>> 23) + a | 0;
-        c += (d & b | a & ~b) + k[15] - 660478335 | 0;
-        c  = (c << 14 | c >>> 18) + d | 0;
-        b += (c & a | d & ~a) + k[4] - 405537848 | 0;
-        b  = (b << 20 | b >>> 12) + c | 0;
-        a += (b & d | c & ~d) + k[9] + 568446438 | 0;
-        a  = (a << 5 | a >>> 27) + b | 0;
-        d += (a & c | b & ~c) + k[14] - 1019803690 | 0;
-        d  = (d << 9 | d >>> 23) + a | 0;
-        c += (d & b | a & ~b) + k[3] - 187363961 | 0;
-        c  = (c << 14 | c >>> 18) + d | 0;
-        b += (c & a | d & ~a) + k[8] + 1163531501 | 0;
-        b  = (b << 20 | b >>> 12) + c | 0;
-        a += (b & d | c & ~d) + k[13] - 1444681467 | 0;
-        a  = (a << 5 | a >>> 27) + b | 0;
-        d += (a & c | b & ~c) + k[2] - 51403784 | 0;
-        d  = (d << 9 | d >>> 23) + a | 0;
-        c += (d & b | a & ~b) + k[7] + 1735328473 | 0;
-        c  = (c << 14 | c >>> 18) + d | 0;
-        b += (c & a | d & ~a) + k[12] - 1926607734 | 0;
-        b  = (b << 20 | b >>> 12) + c | 0;
-
-        a += (b ^ c ^ d) + k[5] - 378558 | 0;
-        a  = (a << 4 | a >>> 28) + b | 0;
-        d += (a ^ b ^ c) + k[8] - 2022574463 | 0;
-        d  = (d << 11 | d >>> 21) + a | 0;
-        c += (d ^ a ^ b) + k[11] + 1839030562 | 0;
-        c  = (c << 16 | c >>> 16) + d | 0;
-        b += (c ^ d ^ a) + k[14] - 35309556 | 0;
-        b  = (b << 23 | b >>> 9) + c | 0;
-        a += (b ^ c ^ d) + k[1] - 1530992060 | 0;
-        a  = (a << 4 | a >>> 28) + b | 0;
-        d += (a ^ b ^ c) + k[4] + 1272893353 | 0;
-        d  = (d << 11 | d >>> 21) + a | 0;
-        c += (d ^ a ^ b) + k[7] - 155497632 | 0;
-        c  = (c << 16 | c >>> 16) + d | 0;
-        b += (c ^ d ^ a) + k[10] - 1094730640 | 0;
-        b  = (b << 23 | b >>> 9) + c | 0;
-        a += (b ^ c ^ d) + k[13] + 681279174 | 0;
-        a  = (a << 4 | a >>> 28) + b | 0;
-        d += (a ^ b ^ c) + k[0] - 358537222 | 0;
-        d  = (d << 11 | d >>> 21) + a | 0;
-        c += (d ^ a ^ b) + k[3] - 722521979 | 0;
-        c  = (c << 16 | c >>> 16) + d | 0;
-        b += (c ^ d ^ a) + k[6] + 76029189 | 0;
-        b  = (b << 23 | b >>> 9) + c | 0;
-        a += (b ^ c ^ d) + k[9] - 640364487 | 0;
-        a  = (a << 4 | a >>> 28) + b | 0;
-        d += (a ^ b ^ c) + k[12] - 421815835 | 0;
-        d  = (d << 11 | d >>> 21) + a | 0;
-        c += (d ^ a ^ b) + k[15] + 530742520 | 0;
-        c  = (c << 16 | c >>> 16) + d | 0;
-        b += (c ^ d ^ a) + k[2] - 995338651 | 0;
-        b  = (b << 23 | b >>> 9) + c | 0;
-
-        a += (c ^ (b | ~d)) + k[0] - 198630844 | 0;
-        a  = (a << 6 | a >>> 26) + b | 0;
-        d += (b ^ (a | ~c)) + k[7] + 1126891415 | 0;
-        d  = (d << 10 | d >>> 22) + a | 0;
-        c += (a ^ (d | ~b)) + k[14] - 1416354905 | 0;
-        c  = (c << 15 | c >>> 17) + d | 0;
-        b += (d ^ (c | ~a)) + k[5] - 57434055 | 0;
-        b  = (b << 21 |b >>> 11) + c | 0;
-        a += (c ^ (b | ~d)) + k[12] + 1700485571 | 0;
-        a  = (a << 6 | a >>> 26) + b | 0;
-        d += (b ^ (a | ~c)) + k[3] - 1894986606 | 0;
-        d  = (d << 10 | d >>> 22) + a | 0;
-        c += (a ^ (d | ~b)) + k[10] - 1051523 | 0;
-        c  = (c << 15 | c >>> 17) + d | 0;
-        b += (d ^ (c | ~a)) + k[1] - 2054922799 | 0;
-        b  = (b << 21 |b >>> 11) + c | 0;
-        a += (c ^ (b | ~d)) + k[8] + 1873313359 | 0;
-        a  = (a << 6 | a >>> 26) + b | 0;
-        d += (b ^ (a | ~c)) + k[15] - 30611744 | 0;
-        d  = (d << 10 | d >>> 22) + a | 0;
-        c += (a ^ (d | ~b)) + k[6] - 1560198380 | 0;
-        c  = (c << 15 | c >>> 17) + d | 0;
-        b += (d ^ (c | ~a)) + k[13] + 1309151649 | 0;
-        b  = (b << 21 |b >>> 11) + c | 0;
-        a += (c ^ (b | ~d)) + k[4] - 145523070 | 0;
-        a  = (a << 6 | a >>> 26) + b | 0;
-        d += (b ^ (a | ~c)) + k[11] - 1120210379 | 0;
-        d  = (d << 10 | d >>> 22) + a | 0;
-        c += (a ^ (d | ~b)) + k[2] + 718787259 | 0;
-        c  = (c << 15 | c >>> 17) + d | 0;
-        b += (d ^ (c | ~a)) + k[9] - 343485551 | 0;
-        b  = (b << 21 | b >>> 11) + c | 0;
-
-        x[0] = a + x[0] | 0;
-        x[1] = b + x[1] | 0;
-        x[2] = c + x[2] | 0;
-        x[3] = d + x[3] | 0;
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
     }
 
-    function md5blk(s) {
-        var md5blks = [],
-            i; /* Andy King said do it this way. */
-
-        for (i = 0; i < 64; i += 4) {
-            md5blks[i >> 2] = s.charCodeAt(i) + (s.charCodeAt(i + 1) << 8) + (s.charCodeAt(i + 2) << 16) + (s.charCodeAt(i + 3) << 24);
-        }
-        return md5blks;
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
     }
 
-    function md5blk_array(a) {
-        var md5blks = [],
-            i; /* Andy King said do it this way. */
-
-        for (i = 0; i < 64; i += 4) {
-            md5blks[i >> 2] = a[i] + (a[i + 1] << 8) + (a[i + 2] << 16) + (a[i + 3] << 24);
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
         }
-        return md5blks;
     }
 
-    function md51(s) {
-        var n = s.length,
-            state = [1732584193, -271733879, -1732584194, 271733878],
-            i,
-            length,
-            tail,
-            tmp,
-            lo,
-            hi;
-
-        for (i = 64; i <= n; i += 64) {
-            md5cycle(state, md5blk(s.substring(i - 64, i)));
-        }
-        s = s.substring(i - 64);
-        length = s.length;
-        tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        for (i = 0; i < length; i += 1) {
-            tail[i >> 2] |= s.charCodeAt(i) << ((i % 4) << 3);
-        }
-        tail[i >> 2] |= 0x80 << ((i % 4) << 3);
-        if (i > 55) {
-            md5cycle(state, tail);
-            for (i = 0; i < 16; i += 1) {
-                tail[i] = 0;
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
             }
         }
-
-        // Beware that the final length might not fit in 32 bits so we take care of that
-        tmp = n * 8;
-        tmp = tmp.toString(16).match(/(.*?)(.{0,8})$/);
-        lo = parseInt(tmp[2], 16);
-        hi = parseInt(tmp[1], 16) || 0;
-
-        tail[14] = lo;
-        tail[15] = hi;
-
-        md5cycle(state, tail);
-        return state;
     }
 
-    function md51_array(a) {
-        var n = a.length,
-            state = [1732584193, -271733879, -1732584194, 271733878],
-            i,
-            length,
-            tail,
-            tmp,
-            lo,
-            hi;
-
-        for (i = 64; i <= n; i += 64) {
-            md5cycle(state, md5blk_array(a.subarray(i - 64, i)));
-        }
-
-        // Not sure if it is a bug, however IE10 will always produce a sub array of length 1
-        // containing the last element of the parent array if the sub array specified starts
-        // beyond the length of the parent array - weird.
-        // https://connect.microsoft.com/IE/feedback/details/771452/typed-array-subarray-issue
-        a = (i - 64) < n ? a.subarray(i - 64) : new Uint8Array(0);
-
-        length = a.length;
-        tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        for (i = 0; i < length; i += 1) {
-            tail[i >> 2] |= a[i] << ((i % 4) << 3);
-        }
-
-        tail[i >> 2] |= 0x80 << ((i % 4) << 3);
-        if (i > 55) {
-            md5cycle(state, tail);
-            for (i = 0; i < 16; i += 1) {
-                tail[i] = 0;
-            }
-        }
-
-        // Beware that the final length might not fit in 32 bits so we take care of that
-        tmp = n * 8;
-        tmp = tmp.toString(16).match(/(.*?)(.{0,8})$/);
-        lo = parseInt(tmp[2], 16);
-        hi = parseInt(tmp[1], 16) || 0;
-
-        tail[14] = lo;
-        tail[15] = hi;
-
-        md5cycle(state, tail);
-
-        return state;
-    }
-
-    function rhex(n) {
-        var s = '',
-            j;
-        for (j = 0; j < 4; j += 1) {
-            s += hex_chr[(n >> (j * 8 + 4)) & 0x0F] + hex_chr[(n >> (j * 8)) & 0x0F];
-        }
-        return s;
-    }
-
-    function hex(x) {
-        var i;
-        for (i = 0; i < x.length; i += 1) {
-            x[i] = rhex(x[i]);
-        }
-        return x.join('');
-    }
-
-    // In some cases the fast add32 function cannot be used..
-    if (hex(md51('hello')) !== '5d41402abc4b2a76b9719d911017c592') {
-        add32 = function (x, y) {
-            var lsw = (x & 0xFFFF) + (y & 0xFFFF),
-                msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-            return (msw << 16) | (lsw & 0xFFFF);
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
         };
     }
 
-    // ---------------------------------------------------
-
-    /**
-     * ArrayBuffer slice polyfill.
-     *
-     * @see https://github.com/ttaubert/node-arraybuffer-slice
-     */
-
-    if (typeof ArrayBuffer !== 'undefined' && !ArrayBuffer.prototype.slice) {
-        (function () {
-            function clamp(val, length) {
-                val = (val | 0) || 0;
-
-                if (val < 0) {
-                    return Math.max(val + length, 0);
-                }
-
-                return Math.min(val, length);
-            }
-
-            ArrayBuffer.prototype.slice = function (from, to) {
-                var length = this.byteLength,
-                    begin = clamp(from, length),
-                    end = length,
-                    num,
-                    target,
-                    targetArray,
-                    sourceArray;
-
-                if (to !== undefined) {
-                    end = clamp(to, length);
-                }
-
-                if (begin > end) {
-                    return new ArrayBuffer(0);
-                }
-
-                num = end - begin;
-                target = new ArrayBuffer(num);
-                targetArray = new Uint8Array(target);
-
-                sourceArray = new Uint8Array(this, begin, num);
-                targetArray.set(sourceArray);
-
-                return target;
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
             };
-        })();
-    }
-
-    // ---------------------------------------------------
-
-    /**
-     * Helpers.
-     */
-
-    function toUtf8(str) {
-        if (/[\u0080-\uFFFF]/.test(str)) {
-            str = unescape(encodeURIComponent(str));
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
         }
-
-        return str;
     }
 
-    function utf8Str2ArrayBuffer(str, returnUInt8Array) {
-        var length = str.length,
-           buff = new ArrayBuffer(length),
-           arr = new Uint8Array(buff),
-           i;
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
 
-        for (i = 0; i < length; i += 1) {
-            arr[i] = str.charCodeAt(i);
-        }
-
-        return returnUInt8Array ? arr : buff;
-    }
-
-    function arrayBuffer2Utf8Str(buff) {
-        return String.fromCharCode.apply(null, new Uint8Array(buff));
-    }
-
-    function concatenateArrayBuffers(first, second, returnUInt8Array) {
-        var result = new Uint8Array(first.byteLength + second.byteLength);
-
-        result.set(new Uint8Array(first));
-        result.set(new Uint8Array(second), first.byteLength);
-
-        return returnUInt8Array ? result : result.buffer;
-    }
-
-    function hexToBinaryString(hex) {
-        var bytes = [],
-            length = hex.length,
-            x;
-
-        for (x = 0; x < length - 1; x += 2) {
-            bytes.push(parseInt(hex.substr(x, 2), 16));
-        }
-
-        return String.fromCharCode.apply(String, bytes);
-    }
-
-    // ---------------------------------------------------
-
-    /**
-     * SparkMD5 OOP implementation.
-     *
-     * Use this class to perform an incremental md5, otherwise use the
-     * static methods instead.
-     */
-
-    function SparkMD5() {
-        // call reset to init the instance
-        this.reset();
-    }
-
-    /**
-     * Appends a string.
-     * A conversion will be applied if an utf8 string is detected.
-     *
-     * @param {String} str The string to be appended
-     *
-     * @return {SparkMD5} The instance itself
-     */
-    SparkMD5.prototype.append = function (str) {
-        // Converts the string to utf8 bytes if necessary
-        // Then append as binary
-        this.appendBinary(toUtf8(str));
-
-        return this;
-    };
-
-    /**
-     * Appends a binary string.
-     *
-     * @param {String} contents The binary string to be appended
-     *
-     * @return {SparkMD5} The instance itself
-     */
-    SparkMD5.prototype.appendBinary = function (contents) {
-        this._buff += contents;
-        this._length += contents.length;
-
-        var length = this._buff.length,
-            i;
-
-        for (i = 64; i <= length; i += 64) {
-            md5cycle(this._hash, md5blk(this._buff.substring(i - 64, i)));
-        }
-
-        this._buff = this._buff.substring(i - 64);
-
-        return this;
-    };
-
-    /**
-     * Finishes the incremental computation, reseting the internal state and
-     * returning the result.
-     *
-     * @param {Boolean} raw True to get the raw string, false to get the hex string
-     *
-     * @return {String} The result
-     */
-    SparkMD5.prototype.end = function (raw) {
-        var buff = this._buff,
-            length = buff.length,
-            i,
-            tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            ret;
-
-        for (i = 0; i < length; i += 1) {
-            tail[i >> 2] |= buff.charCodeAt(i) << ((i % 4) << 3);
-        }
-
-        this._finish(tail, length);
-        ret = hex(this._hash);
-
-        if (raw) {
-            ret = hexToBinaryString(ret);
-        }
-
-        this.reset();
-
-        return ret;
-    };
-
-    /**
-     * Resets the internal state of the computation.
-     *
-     * @return {SparkMD5} The instance itself
-     */
-    SparkMD5.prototype.reset = function () {
-        this._buff = '';
-        this._length = 0;
-        this._hash = [1732584193, -271733879, -1732584194, 271733878];
-
-        return this;
-    };
-
-    /**
-     * Gets the internal state of the computation.
-     *
-     * @return {Object} The state
-     */
-    SparkMD5.prototype.getState = function () {
-        return {
-            buff: this._buff,
-            length: this._length,
-            hash: this._hash
-        };
-    };
-
-    /**
-     * Gets the internal state of the computation.
-     *
-     * @param {Object} state The state
-     *
-     * @return {SparkMD5} The instance itself
-     */
-    SparkMD5.prototype.setState = function (state) {
-        this._buff = state.buff;
-        this._length = state.length;
-        this._hash = state.hash;
-
-        return this;
-    };
-
-    /**
-     * Releases memory used by the incremental buffer and other additional
-     * resources. If you plan to use the instance again, use reset instead.
-     */
-    SparkMD5.prototype.destroy = function () {
-        delete this._hash;
-        delete this._buff;
-        delete this._length;
-    };
-
-    /**
-     * Finish the final calculation based on the tail.
-     *
-     * @param {Array}  tail   The tail (will be modified)
-     * @param {Number} length The length of the remaining buffer
-     */
-    SparkMD5.prototype._finish = function (tail, length) {
-        var i = length,
-            tmp,
-            lo,
-            hi;
-
-        tail[i >> 2] |= 0x80 << ((i % 4) << 3);
-        if (i > 55) {
-            md5cycle(this._hash, tail);
-            for (i = 0; i < 16; i += 1) {
-                tail[i] = 0;
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
             }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
         }
 
-        // Do the final computation based on the tail and length
-        // Beware that the final length may not fit in 32 bits so we take care of that
-        tmp = this._length * 8;
-        tmp = tmp.toString(16).match(/(.*?)(.{0,8})$/);
-        lo = parseInt(tmp[2], 16);
-        hi = parseInt(tmp[1], 16) || 0;
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
 
-        tail[14] = lo;
-        tail[15] = hi;
-        md5cycle(this._hash, tail);
-    };
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
 
-    /**
-     * Performs the md5 hash on a string.
-     * A conversion will be applied if utf8 string is detected.
-     *
-     * @param {String}  str The string
-     * @param {Boolean} raw True to get the raw string, false to get the hex string
-     *
-     * @return {String} The result
-     */
-    SparkMD5.hash = function (str, raw) {
-        // Converts the string to utf8 bytes if necessary
-        // Then compute it using the binary function
-        return SparkMD5.hashBinary(toUtf8(str), raw);
-    };
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
 
-    /**
-     * Performs the md5 hash on a binary string.
-     *
-     * @param {String}  content The binary string
-     * @param {Boolean} raw     True to get the raw string, false to get the hex string
-     *
-     * @return {String} The result
-     */
-    SparkMD5.hashBinary = function (content, raw) {
-        var hash = md51(content),
-            ret = hex(hash);
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
 
-        return raw ? hexToBinaryString(ret) : ret;
-    };
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
 
-    // ---------------------------------------------------
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
 
-    /**
-     * SparkMD5 OOP implementation for array buffers.
-     *
-     * Use this class to perform an incremental md5 ONLY for array buffers.
-     */
-    SparkMD5.ArrayBuffer = function () {
-        // call reset to init the instance
-        this.reset();
-    };
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
 
-    /**
-     * Appends an array buffer.
-     *
-     * @param {ArrayBuffer} arr The array to be appended
-     *
-     * @return {SparkMD5.ArrayBuffer} The instance itself
-     */
-    SparkMD5.ArrayBuffer.prototype.append = function (arr) {
-        var buff = concatenateArrayBuffers(this._buff.buffer, arr, true),
-            length = buff.length,
-            i;
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
 
-        this._length += arr.byteLength;
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
 
-        for (i = 64; i <= length; i += 64) {
-            md5cycle(this._hash, md5blk_array(buff.subarray(i - 64, i)));
-        }
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
 
-        this._buff = (i - 64) < length ? new Uint8Array(buff.buffer.slice(i - 64)) : new Uint8Array(0);
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
 
-        return this;
-    };
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-    /**
-     * Finishes the incremental computation, reseting the internal state and
-     * returning the result.
-     *
-     * @param {Boolean} raw True to get the raw string, false to get the hex string
-     *
-     * @return {String} The result
-     */
-    SparkMD5.ArrayBuffer.prototype.end = function (raw) {
-        var buff = this._buff,
-            length = buff.length,
-            tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            i,
-            ret;
-
-        for (i = 0; i < length; i += 1) {
-            tail[i >> 2] |= buff[i] << ((i % 4) << 3);
-        }
-
-        this._finish(tail, length);
-        ret = hex(this._hash);
-
-        if (raw) {
-            ret = hexToBinaryString(ret);
-        }
-
-        this.reset();
-
-        return ret;
-    };
-
-    /**
-     * Resets the internal state of the computation.
-     *
-     * @return {SparkMD5.ArrayBuffer} The instance itself
-     */
-    SparkMD5.ArrayBuffer.prototype.reset = function () {
-        this._buff = new Uint8Array(0);
-        this._length = 0;
-        this._hash = [1732584193, -271733879, -1732584194, 271733878];
-
-        return this;
-    };
-
-    /**
-     * Gets the internal state of the computation.
-     *
-     * @return {Object} The state
-     */
-    SparkMD5.ArrayBuffer.prototype.getState = function () {
-        var state = SparkMD5.prototype.getState.call(this);
-
-        // Convert buffer to a string
-        state.buff = arrayBuffer2Utf8Str(state.buff);
-
-        return state;
-    };
-
-    /**
-     * Gets the internal state of the computation.
-     *
-     * @param {Object} state The state
-     *
-     * @return {SparkMD5.ArrayBuffer} The instance itself
-     */
-    SparkMD5.ArrayBuffer.prototype.setState = function (state) {
-        // Convert string to buffer
-        state.buff = utf8Str2ArrayBuffer(state.buff, true);
-
-        return SparkMD5.prototype.setState.call(this, state);
-    };
-
-    SparkMD5.ArrayBuffer.prototype.destroy = SparkMD5.prototype.destroy;
-
-    SparkMD5.ArrayBuffer.prototype._finish = SparkMD5.prototype._finish;
-
-    /**
-     * Performs the md5 hash on an array buffer.
-     *
-     * @param {ArrayBuffer} arr The array buffer
-     * @param {Boolean}     raw True to get the raw string, false to get the hex one
-     *
-     * @return {String} The result
-     */
-    SparkMD5.ArrayBuffer.hash = function (arr, raw) {
-        var hash = md51_array(new Uint8Array(arr)),
-            ret = hex(hash);
-
-        return raw ? hexToBinaryString(ret) : ret;
-    };
-
-    return SparkMD5;
-}));
-
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53), __webpack_require__(0)))
 
 /***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 207 */
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-/**
- * Stringify/parse functions that don't operate
- * recursively, so they avoid call stack exceeded
- * errors.
- */
-exports.stringify = function stringify(input) {
-  var queue = [];
-  queue.push({obj: input});
-
-  var res = '';
-  var next, obj, prefix, val, i, arrayPrefix, keys, k, key, value, objPrefix;
-  while ((next = queue.pop())) {
-    obj = next.obj;
-    prefix = next.prefix || '';
-    val = next.val || '';
-    res += prefix;
-    if (val) {
-      res += val;
-    } else if (typeof obj !== 'object') {
-      res += typeof obj === 'undefined' ? null : JSON.stringify(obj);
-    } else if (obj === null) {
-      res += 'null';
-    } else if (Array.isArray(obj)) {
-      queue.push({val: ']'});
-      for (i = obj.length - 1; i >= 0; i--) {
-        arrayPrefix = i === 0 ? '' : ',';
-        queue.push({obj: obj[i], prefix: arrayPrefix});
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    ctor.prototype = Object.create(superCtor.prototype, {
+      constructor: {
+        value: ctor,
+        enumerable: false,
+        writable: true,
+        configurable: true
       }
-      queue.push({val: '['});
-    } else { // object
-      keys = [];
-      for (k in obj) {
-        if (obj.hasOwnProperty(k)) {
-          keys.push(k);
-        }
-      }
-      queue.push({val: '}'});
-      for (i = keys.length - 1; i >= 0; i--) {
-        key = keys[i];
-        value = obj[key];
-        objPrefix = (i > 0 ? ',' : '');
-        objPrefix += JSON.stringify(key) + ':';
-        queue.push({obj: value, prefix: objPrefix});
-      }
-      queue.push({val: '{'});
-    }
-  }
-  return res;
-};
-
-// Convenience function for the parse function.
-// This pop function is basically copied from
-// pouchCollate.parseIndexableString
-function pop(obj, stack, metaStack) {
-  var lastMetaElement = metaStack[metaStack.length - 1];
-  if (obj === lastMetaElement.element) {
-    // popping a meta-element, e.g. an object whose value is another object
-    metaStack.pop();
-    lastMetaElement = metaStack[metaStack.length - 1];
-  }
-  var element = lastMetaElement.element;
-  var lastElementIndex = lastMetaElement.index;
-  if (Array.isArray(element)) {
-    element.push(obj);
-  } else if (lastElementIndex === stack.length - 2) { // obj with key+value
-    var key = stack.pop();
-    element[key] = obj;
-  } else {
-    stack.push(obj); // obj with key only
+    });
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    var TempCtor = function () {}
+    TempCtor.prototype = superCtor.prototype
+    ctor.prototype = new TempCtor()
+    ctor.prototype.constructor = ctor
   }
 }
 
-exports.parse = function (str) {
-  var stack = [];
-  var metaStack = []; // stack for arrays and objects
-  var i = 0;
-  var collationIndex,parsedNum,numChar;
-  var parsedString,lastCh,numConsecutiveSlashes,ch;
-  var arrayElement, objElement;
-  while (true) {
-    collationIndex = str[i++];
-    if (collationIndex === '}' ||
-        collationIndex === ']' ||
-        typeof collationIndex === 'undefined') {
-      if (stack.length === 1) {
-        return stack.pop();
-      } else {
-        pop(stack.pop(), stack, metaStack);
-        continue;
-      }
-    }
-    switch (collationIndex) {
-      case ' ':
-      case '\t':
-      case '\n':
-      case ':':
-      case ',':
-        break;
-      case 'n':
-        i += 3; // 'ull'
-        pop(null, stack, metaStack);
-        break;
-      case 't':
-        i += 3; // 'rue'
-        pop(true, stack, metaStack);
-        break;
-      case 'f':
-        i += 4; // 'alse'
-        pop(false, stack, metaStack);
-        break;
-      case '0':
-      case '1':
-      case '2':
-      case '3':
-      case '4':
-      case '5':
-      case '6':
-      case '7':
-      case '8':
-      case '9':
-      case '-':
-        parsedNum = '';
-        i--;
-        while (true) {
-          numChar = str[i++];
-          if (/[\d\.\-e\+]/.test(numChar)) {
-            parsedNum += numChar;
-          } else {
-            i--;
-            break;
-          }
-        }
-        pop(parseFloat(parsedNum), stack, metaStack);
-        break;
-      case '"':
-        parsedString = '';
-        lastCh = void 0;
-        numConsecutiveSlashes = 0;
-        while (true) {
-          ch = str[i++];
-          if (ch !== '"' || (lastCh === '\\' &&
-              numConsecutiveSlashes % 2 === 1)) {
-            parsedString += ch;
-            lastCh = ch;
-            if (lastCh === '\\') {
-              numConsecutiveSlashes++;
-            } else {
-              numConsecutiveSlashes = 0;
-            }
-          } else {
-            break;
-          }
-        }
-        pop(JSON.parse('"' + parsedString + '"'), stack, metaStack);
-        break;
-      case '[':
-        arrayElement = { element: [], index: stack.length };
-        stack.push(arrayElement.element);
-        metaStack.push(arrayElement);
-        break;
-      case '{':
-        objElement = { element: {}, index: stack.length };
-        stack.push(objElement.element);
-        metaStack.push(objElement);
-        break;
-      default:
-        throw new Error(
-          'unexpectedly reached end of input: ' + collationIndex);
-    }
-  }
-};
-
 
 /***/ }),
-/* 196 */
+/* 208 */
+/***/ (function(module, exports) {
+
+module.exports = function isBuffer(arg) {
+  return arg && typeof arg === 'object'
+    && typeof arg.copy === 'function'
+    && typeof arg.fill === 'function'
+    && typeof arg.readUInt8 === 'function';
+}
+
+/***/ }),
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(83);
+module.exports = __webpack_require__(92);
 
 
 /***/ })
