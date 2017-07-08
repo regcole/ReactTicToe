@@ -4,6 +4,7 @@ React/Election/Tic-Tac-Toe in 4 hours of healthy time.
 
 ## How to Run
 
+
 ### Download the Repo with git
 [source,script]
 ----
@@ -34,6 +35,10 @@ npm run-script build
 ----
 npm run-script start
 ----
+
+### Enjoy the Program
+
+*Note:* Must refresh screen in order for 'Past Winners' section to update.
 
 ## Wishes For project
 
