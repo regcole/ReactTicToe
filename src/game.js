@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import Datastore from 'nedb';
 import Board from './board';
 
-const db = new Datastore({filename: '/app/db/data.db', autoload: true});
+const db = new Datastore({filename: './app/db/data.db', autoload: true});
 
 
 // The Game will keep track of who's turn it is and the history of moves made.
@@ -56,6 +56,7 @@ class Game extends React.Component {
             );
         });
 
+        var winners = this.state.records;
         let status;
         if (winner) {
             status = "Winner: " + winner;
@@ -64,22 +65,23 @@ class Game extends React.Component {
         }
 
         return (
-            <div className="game">
-                <div className="game-board panel panel-default">
+            <div className="game  panel panel-default">
+                <div className="game-board">
                     <Board
                         squares={current.squares}
                         onClick={i => this.handleClick(i)}
                     />
-                </div>
-                <div className="well well-lg game-info-well">
                     <div className="game-info">
                         <div>{status}</div>
                         <ol>{moves}</ol>
                     </div>
                 </div>
-                <div className="well well-lg game-info-well">
-                    <div>Past Winners!</div>
-                    <ol>{this.state.records}</ol>
+                <div className="">
+
+                    <div className="panel-body">
+                        <div>Past Winners!</div>
+                        <ol>{winners}</ol>
+                    </div>
                 </div>
 
             </div>
@@ -167,15 +169,18 @@ function renderPlayer(doc) {
 /**
  * Load winners from DB
  */
-function loadWinners(board) {
+function loadWinners(game) {
     var winners = new Set();
     db.find({}, function (err, docs) {
         for (let doc of docs) {
             winners.add(renderPlayer(doc));
         }
-        board.setState({
-            records: winners
-        });
+        if(winners.size != game.state.records.size) {
+            game.setState({
+                records: winners
+            });
+        }
+
         console.log('Successfully got all winners!');
     });
 

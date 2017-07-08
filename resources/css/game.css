@@ -40,9 +40,14 @@ ol, ul {
     background: #ddd;
 }
 
-.game {
+.game-board  {
     display: flex;
     flex-direction: row;
+}
+
+.past-winners {
+    align-self: flex-end;
+
 }
 
 .game-info {
