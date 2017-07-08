@@ -1,4 +1,4 @@
-# ReactTicToe
+# Desktop Tic-Tac-Toe using React and Electron
 React/Election/Tic-Tac-Toe
 
 ## How to Run
