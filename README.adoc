@@ -3,7 +3,6 @@ React/Election/Tic-Tac-Toe
 
 ## How to Run
 
-
 ### Download the Repo with git
 [source,script]
 ----
@@ -30,7 +29,7 @@ npm run-script build
 ----
 
 ### Start the prorgam
-source,script]
+[source,script]
 ----
 npm run-script start
 ----
