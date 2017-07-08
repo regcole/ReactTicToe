@@ -1,5 +1,5 @@
 # Desktop Tic-Tac-Toe using React and Electron
-React/Election/Tic-Tac-Toe
+React/Election/Tic-Tac-Toe in 4 hours of healthy time.
 
 ## How to Run
 
@@ -33,3 +33,11 @@ npm run-script build
 ----
 npm run-script start
 ----
+
+## Wishes For project
+
+- Added player profiles and saved whole games per player to feed into a Machine Learning Algo to help train the AI on how best to defeat a particular player.
+
+- Added something new to tic-tac-toe gameplay (on last space, the first 3 spaces played become available to prevent tie)
+
+- Come up with better graphic design
